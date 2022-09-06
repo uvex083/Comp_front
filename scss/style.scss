@@ -1,9 +1,7 @@
 @import "_null";
 @import "_fonts";
 
-html {
-	background-color: #181818;
-}
+$color_bg: #181818;
 
 $color_violet: #363A78;
 $color_violet_light: #5E64A9;
@@ -15,6 +13,10 @@ $color_default: #EEEEEE;
 $color_p: #8C8C8C;
 
 $color_btn_gray: #B6B6B6;
+
+html {
+	background-color: $color_bg;
+}
 
 h1 {
 	font-family: 'Press Start 2P';
@@ -37,6 +39,7 @@ h2 {
 	color: $color_orange;
 	text-shadow: 2px 2px 0px #350EB0;
 	text-align: center;
+	margin-bottom: 50px;
 }
 
 h3 {
@@ -83,6 +86,10 @@ p {
 	font-weight: 700;
 	font-size: 26px;
 	line-height: 31px;
+}
+
+.section-padding-170 {
+	padding: 170px 0;
 }
 
 .center-cnt {
@@ -386,45 +393,71 @@ p {
 }
 
 .tpl-btn {
-	text-transform: uppercase;
-	background-color: $color_violet_light;
-	border: 2px solid $color_violet;
-	border-radius: 6px;
 	width: fit-content;
-	max-width: 300px;
-	text-align: center;
-	padding: 10px 45px;
-	color: white;
-	font-size: 17px;
-	line-height: 24px;
-	letter-spacing: 1px;
 	position: relative;
-	display: flex;
-	gap: 10px;
+	transition: all ease-in-out 0.2s;
+	width: 100%;
+	max-width: 300px;
+	background-color: $color_bg;
 
-	& span:nth-child(2) {
-		transition: all ease-in-out 0.2s;
+	transition: all ease-in-out 0.2s;
+
+	.tpl-btn__first {
+		text-transform: uppercase;
+		background-color: $color_violet_light;
+		border: 2px solid $color_violet;
+		border-radius: 6px;
+		width: 100%;
+		max-width: 300px;
+		text-align: center;
+		padding: 10px 45px;
+		color: white;
+		font-size: 17px;
+		line-height: 24px;
+		letter-spacing: 1px;
+		position: relative;
+		display: flex;
+		gap: 10px;
+		justify-content: center;
+		z-index: 2;
+
+		& span {
+			position: relative;
+		}
+
+		& span:after {
+			content: '/>>';
+			position: absolute;
+			right: -35px;
+			opacity: 0;
+		}
 	}
 
-	&:after {
+	.tpl-btn__second {
 		content: '';
 		position: absolute;
-		width: calc(100% + 4px);
-		height: 20px;
+		width: 100%;
+		height: 50px;
 		background-color: $color_btn_gray;
 		border: 2px solid $color_violet;
 		border-radius: 6px;
 		bottom: -8px;
-		left: -2px;
-		z-index: -1;
+		z-index: 1;
+	}
+
+	&:hover .tpl-btn__first span {
+		transform: translateX(-5px);
 		transition: all ease-in-out 0.2s;
 	}
 
-	&:hover span:nth-child(2) {
-		transform: translateX(3px);
+	&:hover .tpl-btn__first span:after {
+		//transform: translateX(3px);
+		right: -45px;
+		opacity: 1;
+		transition: all ease-in-out 0.2s;
 	}
 
-	&:hover:after {
+	&:hover .tpl-btn__second {
 		background-color: $color_default;
 	}
 }
@@ -432,16 +465,17 @@ p {
 .tpl-btn-line {
 	width: 100%;
 	height: 5px;
-	padding: 1px;
 	position: absolute;
 	min-width: 120px;
 	transform: translate(-100%, -50%);
 	left: 0%;
 	top: 55%;
 	cursor: auto;
-	background-color: $color_violet_light;	
-	background-repeat: space;
-	background-size: contain;
+	background-color: $color_violet_light;
+	background-image: url(/img/yellow_dot.svg);
+	background-position: center;
+	background-size: 50px 3px;
+	background-repeat: repeat-x;
 }
 
 .main-section {
@@ -568,7 +602,6 @@ p {
 
 	&:hover .show-video-cnt__icon::after {
 		background: url(/img/show_video_hover_triangle.svg) no-repeat center;
-
 	}
 
 	&:hover .show-video-cnt__text {
@@ -627,7 +660,6 @@ p {
 				border-radius: 6px;
 				z-index: -1;
 			}
-
 		}
 	}
 }
@@ -637,53 +669,175 @@ p {
 	height: 5px;
 	background-color: #5E64A9;
 	border-radius: 5px;
+	background-image: url(/img/yellow_dot.svg);
+	background-position: center;
+	background-size: 50px 3px;
+	background-repeat: repeat-x;
 }
 
 .assemble-collection {
-	padding: 170px 0;
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
 
-	.assemble-collection__item {
+	.assemble-collection__column {
+		width: 100%;
+		max-width: 430px;
+		display: flex;
+		justify-content: center;
+
+		.assemble-collection__item-link {
+			padding: 0 20px;
+			border-radius: 8px;
+		}
+
+		&:not(:last-child) .assemble-collection__item-link:hover {
+			background: linear-gradient(360deg, #232323 -0.96%, rgba(27, 27, 27, 0) 61.73%);
+
+			& .tpl-btn .tpl-btn__first span {
+				transform: translateX(-5px);
+				transition: all ease-in-out 0.2s;
+			}
+
+			& .tpl-btn .tpl-btn__first span:after {
+				right: -45px;
+				opacity: 1;
+				transition: all ease-in-out 0.2s;
+			}
+		}
+
+		.assemble-collection__item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			cursor: pointer;
+			border-radius: 10px;
+			padding: 0 0 50px 0;
+
+			.assemble-collection__img {
+				max-height: 380px;
+				width: auto;
+				max-width: 100%;
+			}
+
+			.assemble-collection__title {
+				font-size: 40px;
+				font-weight: 700;
+				font-size: 40px;
+				line-height: 48px;
+				color: $color_orange;
+				text-transform: uppercase;
+				margin-bottom: 20px;
+			}
+
+			.assemble-collection__price-cnt {
+				margin-bottom: 30px;
+
+				.assemble-collection__price {
+					text-transform: none;
+					font-style: normal;
+					font-weight: 400;
+					font-size: 17px;
+					line-height: 24px;
+					color: $color_default;
+					margin-bottom: 5px;
+
+					span,
+					.assemble-collection__price-value {
+						text-transform: uppercase;
+						font-family: 'Jura';
+						font-weight: 700;
+						font-size: 22px;
+						line-height: 26px;
+						color: $color_default;
+					}
+				}
+
+				.assemble-collection__payment {
+					font-family: 'Jura';
+					font-style: normal;
+					font-weight: 700;
+					font-size: 17px;
+					line-height: 24px;
+					text-transform: uppercase;
+					color: #8C8C8C;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	.assemble-collection__item-link {
+		display: flex;
+		flex: 1 1;
+
+		&:hover .show-all-assemble__item span:nth-child(2) {
+			transform: translateX(16px);
+			color: $color_orange;
+		}
+
+		&:hover .show-all-assemble__item span:nth-child(1) {
+			color: $color_orange;
+		}
+	}
+
+	.show-all-assemble__item {
+		background-color: $color_violet;
+		flex: 1 1 auto;
+		border-radius: 8px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		span {
+			font-family: 'Press Start 2P';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 27px;
+			text-align: center;
+			text-transform: uppercase;
+			color: $color_violet_light;
+			transition: all ease-in-out 0.2s;
+		}
+
+		span:nth-child(2) {
+			transform: translateX(10px);
+			transition: all ease-in-out 0.2s;
+		}
+	}
+}
+
+
+
+.main-page-services__bg {
+	background-image: url(/img/brick_bg.png);
+	padding: 110px 0;
+}
+
+.main-page-services__cnt {
+	display: flex;
+	justify-content: space-around;
+
+	.main-page-services__item {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
 
-	.assemble-collection__title {
-		font-size: 40px;
-		font-weight: 700;
-		font-size: 40px;
-		line-height: 48px;
-		color: $color_orange;
-		text-transform: uppercase;
+	.main-page-services__img {
+		margin-bottom: 50px;
 	}
 
-	.assemble-collection__price {
+	.main-page-services__title {
+		font-family: 'Press Start 2P';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 30px;
+		text-align: center;
 		text-transform: uppercase;
-		font-family: 'Jura';
-		font-weight: 700;
-		font-size: 22px;
-		line-height: 26px;
 		color: $color_default;
-
-		span {
-			text-transform: none;
-			font-style: normal;
-			font-weight: 400;
-			font-size: 17px;
-			line-height: 24px;
-			color: $color_default;
-		}
-	}
-	.assemble-collection__payment {
-		font-family: 'Jura';
-font-style: normal;
-font-weight: 700;
-font-size: 17px;
-line-height: 24px;
-/* or 20px */
-
-text-transform: uppercase;
-
-color: #8C8C8C;
+		text-shadow: 2px 5px 0px rgba(0, 0, 0, 0.8);
 	}
 }
