@@ -638,13 +638,16 @@ p {
   margin-bottom: 30px;
   position: relative;
 }
-.main-section__img:after {
-  content: "";
+.main-section__img .main-section__img-add {
   position: absolute;
-  background: url(/img/granny.png) right bottom no-repeat;
-  width: 200px;
-  height: auto;
-  top: 0;
+  background: url(/img/granny.png) no-repeat center;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  right: -50px;
+  bottom: 0;
+  max-width: 400px;
+  max-height: 400px;
 }
 
 .ms-slider-controls-cnt {
@@ -865,24 +868,24 @@ p {
   transition: all ease-in-out 0.2s;
 }
 
-.main-page-services__bg {
+.our-services__bg {
   background-image: url(/img/brick_bg.png);
   padding: 110px 0;
 }
 
-.main-page-services__cnt {
+.our-services__cnt {
   display: flex;
   justify-content: space-around;
 }
-.main-page-services__cnt .main-page-services__item {
+.our-services__cnt .our-services__item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.main-page-services__cnt .main-page-services__img {
+.our-services__cnt .our-services__img {
   margin-bottom: 50px;
 }
-.main-page-services__cnt .main-page-services__title {
+.our-services__cnt .our-services__title {
   font-family: "Press Start 2P";
   font-style: normal;
   font-weight: 400;
@@ -892,4 +895,20 @@ p {
   text-transform: uppercase;
   color: #EEEEEE;
   text-shadow: 2px 5px 0px rgba(0, 0, 0, 0.8);
+}
+
+.selection {
+  padding: 150px 0;
+}
+.selection h2 {
+  text-align: left;
+}
+.selection .selection__cnt {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.selection .selection__cnt .selection__first-clm {
+  display: flex;
+  flex-direction: column;
 }
