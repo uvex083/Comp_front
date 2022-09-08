@@ -708,6 +708,10 @@ p {
   right: 15%;
 }
 .ms-slider-controls .ms-slider-controls__item {
+  cursor: pointer;
+  transform: translate(0px, -6px);
+}
+.ms-slider-controls .ms-slider-controls__item .ms-slider-controls__item-first {
   width: 40px;
   height: 24px;
   background: #5E64A9;
@@ -715,39 +719,24 @@ p {
   border-radius: 6px;
   position: relative;
   transition: all ease-in-out 0.2s;
-  cursor: pointer;
+  z-index: 2;
 }
-.ms-slider-controls .ms-slider-controls__item:after {
-  content: "";
+.ms-slider-controls .ms-slider-controls__item .ms-slider-controls__item-second {
   top: 10px;
-  left: -2px;
   position: absolute;
   width: 40px;
   height: 24px;
   background: #B6B6B6;
   border: 2px solid #363A78;
   border-radius: 6px;
-  z-index: -1;
+  z-index: 1;
 }
-.ms-slider-controls .ms-slider-controls__item:hover {
+.ms-slider-controls .ms-slider-controls__item:hover .ms-slider-controls__item-first {
   background: #EE5A60;
 }
-.ms-slider-controls .ms-slider-controls__item.active {
+.ms-slider-controls .ms-slider-controls__item.active .ms-slider-controls__item-first {
   background: #EE5A60;
   transform: translate(0px, 5px);
-  position: relative;
-}
-.ms-slider-controls .ms-slider-controls__item.active:after {
-  content: "";
-  top: 5px;
-  left: -2px;
-  position: absolute;
-  width: 40px;
-  height: 24px;
-  background: #B6B6B6;
-  border: 2px solid #363A78;
-  border-radius: 6px;
-  z-index: -1;
 }
 
 .tpl-line {
