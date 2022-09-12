@@ -157,7 +157,7 @@ p {
 		}
 
 		&:nth-child(2) {
-			top: 14px;
+			top: 13px;
 		}
 
 		&:nth-child(3) {
@@ -181,7 +181,6 @@ p {
 
 .active .burger-menu-piece:nth-child(2) {
 	opacity: 0;
-
 	transition: opacity 0s linear 0.15s;
 	transition: transform 0.3s ease-out, opacity 0s linear 0.15s;
 	transition: transform 0.3s ease-out, opacity 0s linear 0.15s;
@@ -768,7 +767,7 @@ p {
 		}
 
 		&:hover .show-all-assemble__item span:nth-child(1) {
-			color: $color_orange;
+			color: $color_default;
 		}
 	}
 
@@ -797,6 +796,10 @@ p {
 			transition: all ease-in-out 0.2s;
 		}
 	}
+}
+
+.our-services {
+	overflow: hidden;
 }
 
 .our-services__bg {
@@ -839,97 +842,6 @@ p {
 		text-align: left;
 	}
 
-	.strip {
-		background-color: $color_violet_light;
-		background-image: url(/img/yellow_dot.svg);
-		background-position: bottom 1px left;
-		background-size: 50px 3px;
-		background-repeat: repeat-x;
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-		padding: 11px 0;
-		width: 100%;
-
-		.strip-cnt {
-			display: flex;
-			width: 100%;
-			height: 100%;
-			max-height: 40px;
-		}
-
-		.strip-cnt {
-			display: flex;
-			width: 100%;
-
-			.strip-cnt__ref {
-				width: 100%;
-				max-width: 45%;
-				display: flex;
-
-				.strip-cnt__phone {
-					font-family: 'Jura';
-					font-style: normal;
-					font-weight: 700;
-					font-size: 28px;
-					line-height: 39px;
-					color: $color_default;
-					margin-right: 55px;
-				}
-
-				.strip-cnt__mail {
-					font-family: 'Roboto Mono';
-					font-style: normal;
-					font-weight: 500;
-					font-size: 26px;
-					line-height: 36px;
-					color: $color_default;
-				}
-			}
-
-			.strip-btn {
-				width: 100%;
-				max-width: 620px;
-				position: relative;
-				transition: all ease-in-out 0.2s;
-				border-radius: 6px;
-				background-color: $color_violet;
-				height: fit-content;
-				transform: translateY(-70%);
-
-				.strip-btn__first {
-					font-family: 'Roboto Mono';
-					text-transform: uppercase;
-					background-color: $color_red;
-					border: 2px solid $color_violet;
-					border-radius: 6px;
-					text-align: center;
-					padding: 20px 0;
-					color: white;
-					font-size: 20px;
-					line-height: 24px;
-					font-weight: 500;
-					position: relative;
-					display: flex;
-					justify-content: center;
-					z-index: 2;
-				}
-
-				.strip-btn__second {
-					content: "";
-					position: absolute;
-					width: 100%;
-					height: 50px;
-					background-color: #B6B6B6;
-					border: 2px solid $color_violet;
-					border-radius: 6px;
-					bottom: -8px;
-					z-index: 1;
-				}
-			}
-		}
-	}
-
 	.selection__cnt {
 		display: flex;
 		justify-content: space-between;
@@ -950,6 +862,11 @@ p {
 				border-radius: 6px;
 				align-items: center;
 				cursor: pointer;
+				transition: all ease-in-out 0.2s;
+
+				&:hover {
+					background: $color_violet;
+				}
 
 				&:first-child {
 					margin-bottom: 37px;
@@ -1000,6 +917,97 @@ p {
 				color: $color_orange;
 				text-shadow: 1.27682px 2.55364px 2.55364px $color_blue;
 				margin-left: 45px;
+			}
+		}
+	}
+}
+
+.strip {
+	background-color: $color_violet_light;
+	background-image: url(/img/yellow_dot.svg);
+	background-position: bottom 1px left;
+	background-size: 50px 3px;
+	background-repeat: repeat-x;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 11px 0;
+	width: 100%;
+
+	.strip-cnt {
+		display: flex;
+		width: 100%;
+		height: 100%;
+		max-height: 40px;
+	}
+
+	.strip-cnt {
+		display: flex;
+		width: 100%;
+
+		.strip-cnt__ref {
+			width: 100%;
+			max-width: 45%;
+			display: flex;
+
+			.strip-cnt__phone {
+				font-family: 'Jura';
+				font-style: normal;
+				font-weight: 700;
+				font-size: 28px;
+				line-height: 39px;
+				color: $color_default;
+				margin-right: 55px;
+			}
+
+			.strip-cnt__mail {
+				font-family: 'Roboto Mono';
+				font-style: normal;
+				font-weight: 500;
+				font-size: 26px;
+				line-height: 36px;
+				color: $color_default;
+			}
+		}
+
+		.strip-btn {
+			width: 100%;
+			max-width: 620px;
+			position: relative;
+			transition: all ease-in-out 0.2s;
+			border-radius: 6px;
+			background-color: $color_violet;
+			height: fit-content;
+			transform: translateY(-70%);
+
+			.strip-btn__first {
+				font-family: 'Roboto Mono';
+				text-transform: uppercase;
+				background-color: $color_red;
+				border: 2px solid $color_violet;
+				border-radius: 6px;
+				text-align: center;
+				padding: 20px 0;
+				color: white;
+				font-size: 20px;
+				line-height: 24px;
+				font-weight: 500;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				z-index: 2;
+			}
+
+			.strip-btn__second {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 50px;
+				background-color: #B6B6B6;
+				border: 2px solid $color_violet;
+				border-radius: 6px;
+				bottom: -8px;
+				z-index: 1;
 			}
 		}
 	}
@@ -1127,6 +1135,7 @@ p {
 
 .main-why {
 	overflow: hidden;
+	margin-bottom: 170px;
 
 	h2 {
 		text-align: left;
@@ -1183,4 +1192,304 @@ p {
 		}
 
 	}
+}
+
+.faq {
+	overflow: hidden;
+
+	h2 {
+		text-align: left;
+	}
+
+	.strip .center-cnt {
+		position: relative;
+
+		&::before {
+			content: 'мы на связи';
+			position: absolute;
+			font-family: 'Press Start 2P';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 28px;
+			line-height: 160%;
+			text-align: center;
+			text-transform: uppercase;
+			color: $color_orange;
+			text-shadow: 2px 2px 0px #350EB0;
+			top: -80px;
+		}
+	}
+}
+
+.faq__cnt {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+
+	ul.faq__list-cnt {
+		display: flex;
+		flex-direction: column;
+		max-width: 50%;
+		width: 100%;
+		gap: 50px;
+
+		li {
+			padding-left: 50px;
+			position: relative;
+
+			.faq__btn {
+				position: absolute;
+				top: -10px;
+				left: 0;
+				cursor: pointer;
+
+				&.active .faq__btn-first {
+					transform: translateY(5px);
+					background: $color_red;
+				}
+
+				&:hover .faq__btn-first {
+					background: $color_red;
+				}
+
+				.faq__btn-first {
+					width: 40px;
+					height: 40px;
+					background: #5E64A9;
+					border: 2px solid #363A78;
+					border-radius: 50%;
+					position: relative;
+					transition: all ease-in-out 0.2s;
+					z-index: 2;
+				}
+
+				.faq__btn-second {
+					top: 8px;
+					position: absolute;
+					width: 40px;
+					height: 40px;
+					background: #B6B6B6;
+					border: 2px solid #363A78;
+					border-radius: 50%;
+					z-index: 1;
+				}
+			}
+
+			.faq__quest {
+				font-weight: 500;
+				font-size: 22px;
+				line-height: 31px;
+				color: $color_default;
+			}
+
+			.faq__answer {
+				margin: 10px 0 30px;
+			}
+		}
+	}
+
+	.faq__img-cnt {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		margin-top: 200px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 200%;
+			height: 120%;
+			transform: translate(2%, 0px);
+			top: 10%;
+			z-index: -1;
+			background: linear-gradient(#5E64A9, transparent 1px), linear-gradient(90deg, #5E64A9, transparent 1px);
+			background-size: 50px 50px;
+			background-position: center center;
+		}
+
+		.faq__img {
+			max-width: 480px;
+			width: auto;
+			height: auto;
+		}
+
+		.faq__name {
+			font-family: "Press Start 2P";
+			font-style: normal;
+			font-weight: 400;
+			font-size: 32px;
+			line-height: 38px;
+			text-transform: uppercase;
+			color: #D0A220;
+			text-shadow: 1.27682px 2.55364px 2.55364px #2305c2;
+			margin-left: 45px;
+		}
+	}
+}
+
+.footer-cnt {
+	display: flex;
+	padding: 130px 0 50px 0;
+
+	.footer-cnt__logo {
+		display: flex;
+		flex-direction: column;
+		flex: 0 1 40%;
+
+		a {
+			margin-bottom: 15px;
+		}
+	}
+
+	.footer-cnt__clm-cnt {
+		display: flex;
+		flex: 0 1 60%;
+		flex-direction: row;
+		justify-content: space-between;
+
+		.footer-cnt__clm {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			max-width: 320px;
+
+			a p {
+				transition: all ease-in-out 0.2s;
+			}
+
+			a:hover p {
+				color: $color_orange;
+			}
+
+			.footer-cnt__clm-title {
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 140%;
+				color: $color_default;
+			}
+
+			.messenger {
+				display: flex;
+				align-items: center;
+				gap: 30px;
+
+				.messenger__wa {
+					background: url(/img/wa_btm.svg) no-repeat center;
+					width: 32px;
+					height: 30px;
+					background-size: contain;
+
+					&:hover {
+						background: url(/img/wa_btm_hover.svg) no-repeat center;
+						background-size: contain;
+					}
+				}
+
+				.messenger__tg {
+					background: url(/img/telegram_btm.svg) no-repeat center;
+					width: 32px;
+					height: 30px;
+					background-size: contain;
+
+					&:hover {
+						background: url(/img/telegram_btm_hover.svg) no-repeat center;
+						background-size: contain;
+					}
+				}
+			}
+
+			.phone-footer__cnt {
+				display: flex;
+				flex-direction: column;
+				flex: 1;
+				gap: 4px;
+			}
+
+			.phone-footer {
+				font-family: 'Jura';
+				font-weight: 700;
+				font-size: 20px;
+				line-height: 140%;
+				color: $color_default;
+			}
+
+			.phone-footer__call-back {
+				cursor: pointer;
+				border-bottom: 2px dashed $color_p;
+				width: fit-content;
+
+				p {
+					transition: all ease-in-out 0.2s;
+				}
+
+				&:hover {
+					border-bottom: 2px dashed $color_orange;
+				}
+
+				&:hover p {
+					color: $color_orange;
+				}
+			}
+
+			.follow-us {
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 140%;
+				color: $color_default;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+
+				.follow-us__icon-cnt {
+					display: flex;
+					align-items: center;
+					gap: 30px;
+
+					a.follow-us__icon {
+						display: flex;
+						width: 32px;
+						height: 30px;
+
+						&.inst-icon {
+							background: url(/img/Instagram.svg) no-repeat center;
+							background-size: contain;
+
+							&:hover {
+								background: url(/img/Instagram-hover.svg) no-repeat center;
+								background-size: contain;
+							}
+						}
+
+						&.yt-icon {
+							background: url(/img/YouTube.svg) no-repeat center;
+							background-size: contain;
+
+							&:hover {
+								background: url(/img/YouTube-hover.svg) no-repeat center;
+								background-size: contain;
+							}
+						}
+
+						&.vk-icon {
+							background: url(/img/Vkontakte.svg) no-repeat center;
+							background-size: contain;
+
+							&:hover {
+								background: url(/img/Vkontakte-hover.svg) no-repeat center;
+								background-size: contain;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.copyright {
+	font-size: 15px;
+	line-height: 140%;
+	color: $color_p;
+	padding: 29px 0;
 }
