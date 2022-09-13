@@ -80,6 +80,10 @@ p {
 	color: $color_p;
 }
 
+.dark-header {
+	background-color: #0a0708;
+}
+
 .price {
 	color: $color_default;
 	font-family: 'Jura';
@@ -157,7 +161,7 @@ p {
 		}
 
 		&:nth-child(2) {
-			top: 13px;
+			top: 14px;
 		}
 
 		&:nth-child(3) {
@@ -311,11 +315,11 @@ p {
 .header-icon-cnt__find {
 	height: 29px;
 	width: 29px;
-	background: url(img/search_icon.svg) no-repeat center;
+	background: url(/img/search_icon.svg) no-repeat center;
 	background-size: contain;
 
 	&:hover {
-		background: url(img/search_icon_hover.svg) no-repeat center;
+		background: url(/img/search_icon_hover.svg) no-repeat center;
 		background-size: contain;
 	}
 }
@@ -323,11 +327,11 @@ p {
 .header-icon-cnt__compare {
 	height: 29px;
 	width: 26px;
-	background: url(img/compare_icon.svg) no-repeat center;
+	background: url(/img/compare_icon.svg) no-repeat center;
 	background-size: contain;
 
 	&:hover {
-		background: url(img/compare_icon_hover.svg) no-repeat center;
+		background: url(/img/compare_icon_hover.svg) no-repeat center;
 		background-size: contain;
 	}
 }
@@ -335,11 +339,11 @@ p {
 .header-icon-cnt__login {
 	height: 29px;
 	width: 25px;
-	background: url(img/login_icon.svg) no-repeat center;
+	background: url(/img/login_icon.svg) no-repeat center;
 	background-size: contain;
 
 	&:hover {
-		background: url(img/login_icon_hover.svg) no-repeat center;
+		background: url(/img/login_icon_hover.svg) no-repeat center;
 		background-size: contain;
 	}
 }
@@ -469,7 +473,7 @@ p {
 	top: 55%;
 	cursor: auto;
 	background-color: $color_violet_light;
-	background-image: url(img/yellow_dot.svg);
+	background-image: url(/img/yellow_dot.svg);
 	background-position: center;
 	background-size: 50px 3px;
 	background-repeat: repeat-x;
@@ -532,14 +536,14 @@ p {
 	width: 100%;
 	height: auto;
 	min-height: 680px;
-	background: url(img/main_img.png) right no-repeat;
+	background: url(/img/main_img.png) right no-repeat;
 	background-size: contain;
 	margin-bottom: 30px;
 	position: relative;
 
 	.main-section__img-add {
 		position: absolute;
-		background: url(img/granny.png) no-repeat center;
+		background: url(/img/granny.png) no-repeat center;
 		background-size: contain;
 		height: 100%;
 		width: 100%;
@@ -580,7 +584,7 @@ p {
 			transform: translate(-50%, -50%);
 			width: 16px;
 			height: 16px;
-			background: url(img/show_video_triangle.svg) no-repeat center;
+			background: url(/img/show_video_triangle.svg) no-repeat center;
 			transition: all ease-in-out 0.2s;
 		}
 	}
@@ -601,7 +605,7 @@ p {
 	}
 
 	&:hover .show-video-cnt__icon::after {
-		background: url(img/show_video_hover_triangle.svg) no-repeat center;
+		background: url(/img/show_video_hover_triangle.svg) no-repeat center;
 	}
 
 	&:hover .show-video-cnt__text {
@@ -659,7 +663,7 @@ p {
 	height: 5px;
 	background-color: #5E64A9;
 	border-radius: 5px;
-	background-image: url(img/yellow_dot.svg);
+	background-image: url(/img/yellow_dot.svg);
 	background-position: center;
 	background-size: 50px 3px;
 	background-repeat: repeat-x;
@@ -803,7 +807,7 @@ p {
 }
 
 .our-services__bg {
-	background-image: url(img/brick_bg.png);
+	background-image: url(/img/brick_bg.png);
 	padding: 110px 0;
 }
 
@@ -924,7 +928,7 @@ p {
 
 .strip {
 	background-color: $color_violet_light;
-	background-image: url(img/yellow_dot.svg);
+	background-image: url(/img/yellow_dot.svg);
 	background-position: bottom 1px left;
 	background-size: 50px 3px;
 	background-repeat: repeat-x;
@@ -1375,25 +1379,25 @@ p {
 				gap: 30px;
 
 				.messenger__wa {
-					background: url(img/wa_btm.svg) no-repeat center;
+					background: url(/img/wa_btm.svg) no-repeat center;
 					width: 32px;
 					height: 30px;
 					background-size: contain;
 
 					&:hover {
-						background: url(img/wa_btm_hover.svg) no-repeat center;
+						background: url(/img/wa_btm_hover.svg) no-repeat center;
 						background-size: contain;
 					}
 				}
 
 				.messenger__tg {
-					background: url(img/telegram_btm.svg) no-repeat center;
+					background: url(/img/telegram_btm.svg) no-repeat center;
 					width: 32px;
 					height: 30px;
 					background-size: contain;
 
 					&:hover {
-						background: url(img/telegram_btm_hover.svg) no-repeat center;
+						background: url(/img/telegram_btm_hover.svg) no-repeat center;
 						background-size: contain;
 					}
 				}
@@ -1452,31 +1456,31 @@ p {
 						height: 30px;
 
 						&.inst-icon {
-							background: url(img/Instagram.svg) no-repeat center;
+							background: url(/img/Instagram.svg) no-repeat center;
 							background-size: contain;
 
 							&:hover {
-								background: url(img/Instagram-hover.svg) no-repeat center;
+								background: url(/img/Instagram-hover.svg) no-repeat center;
 								background-size: contain;
 							}
 						}
 
 						&.yt-icon {
-							background: url(img/YouTube.svg) no-repeat center;
+							background: url(/img/YouTube.svg) no-repeat center;
 							background-size: contain;
 
 							&:hover {
-								background: url(img/YouTube-hover.svg) no-repeat center;
+								background: url(/img/YouTube-hover.svg) no-repeat center;
 								background-size: contain;
 							}
 						}
 
 						&.vk-icon {
-							background: url(img/Vkontakte.svg) no-repeat center;
+							background: url(/img/Vkontakte.svg) no-repeat center;
 							background-size: contain;
 
 							&:hover {
-								background: url(img/Vkontakte-hover.svg) no-repeat center;
+								background: url(/img/Vkontakte-hover.svg) no-repeat center;
 								background-size: contain;
 							}
 						}
@@ -1493,4 +1497,75 @@ p {
 	color: $color_p;
 	padding: 29px 0;
 	display: flex;
+}
+
+.bread-cnt {
+	display: flex;
+	justify-content: start;
+	gap: 30px;
+	align-items: center;
+	flex-direction: row;
+	padding: 15px 0;
+
+	.bread-item {
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 140%;
+		color: $color_p;
+
+		&.divider {
+			display: flex;
+			align-items: center;
+		}
+
+		a {
+			color: $color_p;
+			transition: all ease-in-out 0.2s;
+
+			&:hover {
+				color: $color_orange;
+			}
+		}
+	}
+}
+
+.main-img-section {
+	min-height: 720px;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	color: white;
+	padding-bottom: 50px;
+
+	.breadcrumbs-section {
+		flex: 1 1 auto;
+	}
+
+	.main-img-section__title-cnt {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 30px;
+		
+		.show-video-cnt {
+			margin-bottom: 30px;
+		}	
+
+		h1 {
+			font-family: 'Press Start 2P';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 45px;
+			line-height: 140%;
+			text-transform: uppercase;
+			color: $color_default;			
+			text-shadow: 2px 2px 0px #350EB0;
+		}
+	}
+	.arr-down {
+		text-align: center;
+	}
 }

@@ -225,6 +225,10 @@ p {
   color: #8C8C8C;
 }
 
+.dark-header {
+  background-color: #0a0708;
+}
+
 .price {
   color: #EEEEEE;
   font-family: "Jura";
@@ -295,7 +299,7 @@ p {
   top: 0px;
 }
 .burger-btn .burger-menu-piece:nth-child(2) {
-  top: 13px;
+  top: 14px;
 }
 .burger-btn .burger-menu-piece:nth-child(3) {
   top: 27px;
@@ -1468,4 +1472,68 @@ p {
   line-height: 140%;
   color: #8C8C8C;
   padding: 29px 0;
+  display: flex;
+}
+
+.bread-cnt {
+  display: flex;
+  justify-content: start;
+  gap: 30px;
+  align-items: center;
+  flex-direction: row;
+  padding: 15px 0;
+}
+.bread-cnt .bread-item {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: #8C8C8C;
+}
+.bread-cnt .bread-item.divider {
+  display: flex;
+  align-items: center;
+}
+.bread-cnt .bread-item a {
+  color: #8C8C8C;
+  transition: all ease-in-out 0.2s;
+}
+.bread-cnt .bread-item a:hover {
+  color: #D0A220;
+}
+
+.main-img-section {
+  min-height: 720px;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding-bottom: 50px;
+}
+.main-img-section .breadcrumbs-section {
+  flex: 1 1 auto;
+}
+.main-img-section .main-img-section__title-cnt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.main-img-section .main-img-section__title-cnt .show-video-cnt {
+  margin-bottom: 30px;
+}
+.main-img-section .main-img-section__title-cnt h1 {
+  font-family: "Press Start 2P";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #EEEEEE;
+  text-shadow: 2px 2px 0px #350EB0;
+}
+.main-img-section .arr-down {
+  text-align: center;
 }
