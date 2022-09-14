@@ -839,7 +839,7 @@ p {
 }
 
 .selection {
-	padding: 150px 0;
+	padding-top: 150px;
 	overflow: hidden;
 
 	h2 {
@@ -1549,10 +1549,10 @@ p {
 		justify-content: center;
 		align-items: center;
 		margin-bottom: 30px;
-		
+
 		.show-video-cnt {
 			margin-bottom: 30px;
-		}	
+		}
 
 		h1 {
 			font-family: 'Press Start 2P';
@@ -1561,11 +1561,223 @@ p {
 			font-size: 45px;
 			line-height: 140%;
 			text-transform: uppercase;
-			color: $color_default;			
+			color: $color_default;
 			text-shadow: 2px 2px 0px #350EB0;
 		}
 	}
+
 	.arr-down {
 		text-align: center;
+	}
+}
+
+.assemble-cat {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 30px;
+	grid-row-gap: 170px;
+
+	.assemble-cat__column {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+
+		& .assemble-cat__item-link:hover {
+			background: linear-gradient(360deg, #232323 -0.96%, rgba(27, 27, 27, 0) 61.73%);
+
+			& .tpl-btn .tpl-btn__first span {
+				transform: translateX(-5px);
+				transition: all ease-in-out 0.2s;
+			}
+
+			& .tpl-btn .tpl-btn__first span:after {
+				right: -45px;
+				opacity: 1;
+				transition: all ease-in-out 0.2s;
+			}
+		}
+
+		.assemble-cat__item {
+			display: flex;
+			flex-direction: column;
+			border-radius: 10px;
+			padding: 0 0 50px 0;
+			position: relative;
+
+			.assemble-cat__label-cnt {
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+
+				.assemble-cat__label {
+					font-weight: 400;
+					font-size: 15px;
+					line-height: 140%;
+					padding: 2px 8px;
+					border-radius: 6px;
+					text-align: center;
+					width: fit-content;
+					cursor: default;
+
+					&.stock-label {
+						color: $color_p;
+						border: 1px solid $color_p;						
+					}
+
+					&.promo-label {
+						color: $color_default;
+						border: 1px solid $color_red;
+						background-color: $color_red;
+						position: relative;
+
+						.promo-label__desc {
+							font-weight: 400;
+							font-size: 15px;
+							line-height: 140%;
+							padding: 2px 8px;
+							border-radius: 6px;
+							position: absolute;
+							top: 0;
+							left: calc(100% + 10px);
+							width: 220px;
+							color: $color_default;
+							border: 1px solid $color_red;
+							background-color: $color_red;
+							opacity: 0;
+							transition: all ease-in-out 0.2s;
+						}
+
+						&:hover .promo-label__desc {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			.assemble-cat__img {
+				width: 100%;
+				height: auto;
+				max-width: 380px;
+			}
+
+			p {
+				text-align: left;
+			}
+
+			.assemble-cat__title {
+				font-size: 40px;
+				font-weight: 700;
+				font-size: 40px;
+				line-height: 48px;
+				color: $color_orange;
+				text-transform: uppercase;
+				margin-bottom: 20px;
+				text-align: left;
+			}
+
+			.assemble-cat__char-cnt {
+				margin-bottom: 30px;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+
+				.assemble-cat__char {
+					display: flex;
+					align-items: center;
+				}
+
+				.assemble-cat__char-name {
+					width: 50%;
+				}
+
+				.assemble-cat__char-value {
+					display: flex;
+					gap: 10px;
+				}
+
+				.item-color {
+					width: 32px;
+					height: 32px;
+					border-radius: 50%;
+					border: 1px solid $color_btn_gray;
+					cursor: pointer;
+
+					&.color-black {
+						background-color: #1A1A1A;
+					}
+
+					&.color-gray {
+						background-color: $color_btn_gray;
+					}
+				}
+
+				p {
+					color: $color_default;
+				}
+			}
+
+			.assemble-cat__buy-cnt {
+				margin-bottom: 30px;
+				display: flex;
+				align-items: center;
+
+				.assemble-cat__buy {
+					display: flex;
+					flex-direction: column;
+					flex: 1 0 50%;
+				}
+
+				.assemble-cat__price {
+					text-transform: none;
+					font-style: normal;
+					font-weight: 400;
+					font-size: 17px;
+					line-height: 24px;
+					color: $color_default;
+					margin-bottom: 5px;
+
+					span,
+					.assemble-cat__price-value {
+						text-transform: uppercase;
+						font-family: 'Jura';
+						font-weight: 700;
+						font-size: 22px;
+						line-height: 26px;
+						color: $color_default;
+					}
+				}
+
+				.assemble-cat__payment {
+					font-family: 'Jura';
+					font-style: normal;
+					font-weight: 700;
+					font-size: 17px;
+					line-height: 24px;
+					text-transform: uppercase;
+					color: #8C8C8C;
+				}
+			}
+		}
+	}
+
+	.assemble-cat__item-link {
+		padding: 0 20px;
+		border-radius: 8px;
+		display: flex;
+		justify-content: center;
+		flex: 1 1;
+		position: relative;
+
+		&:hover .show-all-assemble__item span:nth-child(2) {
+			transform: translateX(16px);
+			color: $color_orange;
+		}
+
+		&:hover .show-all-assemble__item span:nth-child(1) {
+			color: $color_default;
+		}
 	}
 }
