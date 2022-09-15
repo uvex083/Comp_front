@@ -1501,6 +1501,10 @@ p {
   color: #D0A220;
 }
 
+.breadcrumbs-section {
+  margin-bottom: 50px;
+}
+
 .main-img-section {
   min-height: 720px;
   height: 100vh;
@@ -1510,9 +1514,22 @@ p {
   flex-direction: column;
   color: white;
   padding-bottom: 50px;
+  position: relative;
+}
+.main-img-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 75vh;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgb(24, 24, 24) 70%);
 }
 .main-img-section .breadcrumbs-section {
   flex: 1 1 auto;
+}
+.main-img-section .main-img-section__title {
+  z-index: 1;
 }
 .main-img-section .main-img-section__title-cnt {
   display: flex;
@@ -1719,4 +1736,81 @@ p {
 }
 .assemble-cat .assemble-cat__item-link:hover .show-all-assemble__item span:nth-child(1) {
   color: #EEEEEE;
+}
+
+.serias-main__title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.serias-main__subtitle {
+  text-align: center;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  font-size: 15px;
+  line-height: 140%;
+  color: #B6B6B6;
+}
+
+.serias-main__color-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.color-link__item-divider {
+  width: 55px;
+  height: 2px;
+  background: #B6B6B6;
+  transform: matrix(0.63, -0.93, 0.62, 0.66, 0, 0);
+}
+
+.color-link__item {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #B6B6B6;
+  transition: all ease-in-out 0.2s;
+}
+.color-link__item:hover {
+  color: #D0A220;
+}
+.color-link__item.active {
+  color: #EE5A60;
+}
+
+.serias-main__img {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+}
+.serias-main__img::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  top: 50%;
+  height: inherit;
+  width: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0) 33%, rgb(24, 24, 24) 56%);
+  transform: translate(-50%, -50%);
+}
+
+.serias-main__thumb-cnt {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 50px;
+}
+.serias-main__thumb-cnt .serias-main__thumb {
+  border-radius: 8px;
+  border: 2px solid #363A78;
+  width: 128px;
+  height: 86px;
+  background-size: contain;
 }
