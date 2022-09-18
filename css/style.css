@@ -2303,26 +2303,44 @@ p {
 .card-cnt .card-preview__cnt .card-preview__add-bnt .add-bnt__item.save-config {
   border-bottom-left-radius: 6px;
 }
+.card-cnt .card-preview__cnt .card-preview__add-bnt .add-bnt__item.save-config:hover span {
+  background: url(/img/save-cnf_icon_hover.svg) no-repeat center;
+  background-size: contain;
+}
+.card-cnt .card-preview__cnt .card-preview__add-bnt .add-bnt__item.send-config:hover span {
+  background: url(/img/send-cnf_icon_hover.svg) no-repeat center;
+  background-size: contain;
+}
 .card-cnt .card-preview__cnt .card-preview__add-bnt .add-bnt__item.reset-config {
   border-bottom-right-radius: 6px;
+}
+.card-cnt .card-preview__cnt .card-preview__add-bnt .add-bnt__item.reset-config:hover div {
+  color: #EE5A60;
+}
+.card-cnt .card-preview__cnt .card-preview__add-bnt .add-bnt__item.reset-config:hover span {
+  background: url(/img/reset-cnf_icon_hover.svg) no-repeat center;
+  background-size: contain;
 }
 .card-cnt .card-preview__cnt .card-preview__add-bnt .add-bnt__item.save-config span {
   background: url(/img/save-cnf_icon.svg) no-repeat center;
   background-size: contain;
   height: 18px;
   width: 18px;
+  transition: all ease-in-out 0.2s;
 }
 .card-cnt .card-preview__cnt .card-preview__add-bnt .add-bnt__item.send-config span {
   background: url(/img/send-cnf_icon.svg) no-repeat center;
   background-size: contain;
-  height: 16px;
+  height: 18px;
   width: 20px;
+  transition: all ease-in-out 0.2s;
 }
 .card-cnt .card-preview__cnt .card-preview__add-bnt .add-bnt__item.reset-config span {
   background: url(/img/reset-cnf_icon.svg) no-repeat center;
   background-size: contain;
   height: 18px;
   width: 14px;
+  transition: all ease-in-out 0.2s;
 }
 
 .cmp-btn {
