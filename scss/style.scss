@@ -51,6 +51,7 @@ h3 {
 	line-height: 34px;
 	text-transform: uppercase;
 	color: $color_default;
+	margin-bottom: 30px;
 }
 
 h4 {
@@ -80,6 +81,19 @@ p {
 	color: $color_p;
 }
 
+a {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 140%;
+	transition: all ease-in-out 0.2s;
+	color: $color_btn_gray;
+}
+
+a:hover {
+	color: $color_orange;
+}
+
 .dark-header {
 	background-color: #0a0708;
 }
@@ -95,6 +109,17 @@ p {
 
 .section-padding-170 {
 	padding: 170px 0;
+}
+
+header {
+	position: fixed;
+	top: 0;	
+	z-index: 1;
+	width: 100%;
+}
+
+main {
+	margin-top: 145px;
 }
 
 .center-cnt {
@@ -126,6 +151,234 @@ p {
 			display: flex;
 			justify-content: space-between;
 			gap: 26px;
+		}
+	}
+
+	.dropdown-menu {
+		position: absolute;
+		//top: 0;
+		left: 0;
+		width: 100%;
+		background: rgba(0, 0, 0, 0.95);
+		z-index: 10;
+		display: flex;
+		flex-wrap: wrap;
+		display: none;
+		//height: 100vh;
+		height: calc(100vh - 145px);
+
+		.menu__cnt {
+			// display: flex;
+			// justify-content: space-between;
+			width: 100%;
+			padding-top: 80px;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 30px;
+
+			.menu-clm {
+				display: flex;
+				flex-direction: column;
+				gap: 25px;
+
+				& .menu-title h3 {
+					margin-bottom: 20px;
+				}
+
+				.menu-clm__row {
+					display: flex;
+					flex-direction: column;
+					gap: 20px;
+
+					&:not(:last-child) {
+						margin-bottom: 35px;
+					}
+
+					.menu-adress {
+						position: relative;
+						padding-left: 35px;
+
+						&::before {
+							content: '';
+							position: absolute;
+							left: 0;
+							top: 50%;
+							transform: translate(0, -50%);
+							width: 16px;
+							height: 20px;
+							background: url(/img/icon-adress.svg) center no-repeat;
+							background-size: contain;
+						}
+					}
+
+					.menu-time {
+						position: relative;
+						padding-left: 35px;
+
+						&::before {
+							content: '';
+							position: absolute;
+							left: 0;
+							top: 50%;
+							transform: translate(0, -50%);
+							width: 20px;
+							height: 20px;
+							background: url(/img/icon-time.svg) center no-repeat;
+							background-size: contain;
+						}
+					}
+
+					.messenger__wa {
+						width: 22px;
+						height: 23px;
+					}
+
+					.messenger__tg {
+						width: 23px;
+						height: 22px;
+					}
+
+					.menu-blog__cnt {
+						display: flex;
+						flex-direction: column;
+						gap: 90px;
+
+						.menu-blog__item {
+							display: flex;
+							gap: 30px;
+
+							.menu-blog__desc {
+								display: flex;
+								flex-direction: column;
+
+								.menu-blog__title a {
+									font-weight: 500;
+									font-size: 22px;
+									line-height: 140%;
+									text-transform: uppercase;
+									color: $color_default;
+								}
+
+								.menu-blog__link {
+									text-transform: uppercase;
+									color: $color_p;
+									flex: 0 1 100%;
+									display: flex;
+									align-items: end;
+
+									a {
+										display: flex;
+										gap: 6px;
+
+										span {
+											font-weight: 500;
+											font-size: 17px;
+											line-height: 140%;
+											letter-spacing: 0.02em;
+											text-transform: uppercase;
+										}
+									}
+								}
+							}
+						}
+					}
+
+					.menu-blog__cnt {
+						display: flex;
+						flex-direction: column;
+						gap: 90px;
+
+						.menu-blog__item {
+							display: flex;
+							gap: 30px;
+
+							.menu-blog__desc {
+								display: flex;
+								flex-direction: column;
+
+								.menu-blog__title a {
+									font-weight: 500;
+									font-size: 22px;
+									line-height: 140%;
+									text-transform: uppercase;
+									color: $color_default;
+									transition: all ease-in-out 0.2s;
+									&:hover {
+										color: $color_orange;
+									}
+								}
+
+								.menu-blog__link {
+									text-transform: uppercase;
+									color: $color_p;
+									flex: 0 1 100%;
+									display: flex;
+									align-items: end;
+
+									a {
+										display: flex;
+										gap: 6px;
+
+										&:hover span {
+											color: $color_orange;
+										}
+
+										&:hover span:last-child {
+											transform: translateX(5px);
+										}
+
+										span {
+											font-weight: 500;
+											font-size: 17px;
+											line-height: 140%;
+											letter-spacing: 0.02em;
+											text-transform: uppercase;
+											transition: all ease-in-out 0.2s;
+										}
+									}
+								}
+							}
+						}
+					}
+
+					.menu-blog__all a {
+						display: flex;
+						gap: 7px;
+
+						&:hover span {
+							color: $color_orange;
+						}
+
+						&:hover span:last-child {
+							transform: translateX(5px);
+						}
+
+						span {
+							font-weight: 500;
+							font-size: 17px;
+							line-height: 140%;
+							letter-spacing: 0.02em;
+							text-transform: uppercase;
+							color: $color_violet_light;
+							transition: all ease-in-out 0.2s;
+						}
+					}
+				}
+
+				.menu-time p,
+				.menu-adress p {
+					color: $color_btn_gray
+				}
+
+				span {
+					font-weight: 400;
+					font-size: 17px;
+					line-height: 140%;
+					display: flex;
+					align-items: center;
+					color: #545454;
+				}
+			}
 		}
 	}
 }
@@ -1147,16 +1400,31 @@ p {
 
 	.main-why__cnt {
 		width: 100%;
+		display: flex;
+
+		.test-main {			
+			.test1 {
+				width: 200px;
+    height: 5px;
+    background-color: red;
+	 transform: rotate(-41deg) translate(-88%, -61px);
+			}			
+			.test2 {
+				width: 200px;
+			height: 5px;
+			background-color: red;
+			}
+		}
 
 		.main-why__img-cnt {
 			position: relative;
 			width: 100%;
-			max-width: 50%;
+			max-width: 75%;
 
 			&:before {
 				content: "";
 				position: absolute;
-				width: 140%;
+				width: 80%;
 				height: 120%;
 				transform: translate(-10%, 0px);
 				top: -5px;
@@ -1186,6 +1454,11 @@ p {
 				width: 100%;
 				height: auto;
 			}
+		}
+
+		.main-why__item-cnt {
+			display: flex;
+			flex-direction: column;
 		}
 
 	}
@@ -1325,6 +1598,78 @@ p {
 	}
 }
 
+.messenger {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+
+	.messenger__wa {
+		background: url(/img/wa_btm.svg) no-repeat center;
+		width: 32px;
+		height: 30px;
+		background-size: contain;
+
+		&:hover {
+			background: url(/img/wa_btm_hover.svg) no-repeat center;
+			background-size: contain;
+		}
+	}
+
+	.messenger__tg {
+		background: url(/img/telegram_btm.svg) no-repeat center;
+		width: 32px;
+		height: 30px;
+		background-size: contain;
+
+		&:hover {
+			background: url(/img/telegram_btm_hover.svg) no-repeat center;
+			background-size: contain;
+		}
+	}
+}
+
+.follow-us__icon-cnt {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+
+	a.follow-us__icon {
+		display: flex;
+		width: 32px;
+		height: 30px;
+
+		&.inst-icon {
+			background: url(/img/Instagram.svg) no-repeat center;
+			background-size: contain;
+
+			&:hover {
+				background: url(/img/Instagram-hover.svg) no-repeat center;
+				background-size: contain;
+			}
+		}
+
+		&.yt-icon {
+			background: url(/img/YouTube.svg) no-repeat center;
+			background-size: contain;
+
+			&:hover {
+				background: url(/img/YouTube-hover.svg) no-repeat center;
+				background-size: contain;
+			}
+		}
+
+		&.vk-icon {
+			background: url(/img/Vkontakte.svg) no-repeat center;
+			background-size: contain;
+
+			&:hover {
+				background: url(/img/Vkontakte-hover.svg) no-repeat center;
+				background-size: contain;
+			}
+		}
+	}
+}
+
 .footer-cnt {
 	display: flex;
 	padding: 130px 0 50px 0;
@@ -1364,36 +1709,6 @@ p {
 				font-size: 20px;
 				line-height: 140%;
 				color: $color_default;
-			}
-
-			.messenger {
-				display: flex;
-				align-items: center;
-				gap: 30px;
-
-				.messenger__wa {
-					background: url(/img/wa_btm.svg) no-repeat center;
-					width: 32px;
-					height: 30px;
-					background-size: contain;
-
-					&:hover {
-						background: url(/img/wa_btm_hover.svg) no-repeat center;
-						background-size: contain;
-					}
-				}
-
-				.messenger__tg {
-					background: url(/img/telegram_btm.svg) no-repeat center;
-					width: 32px;
-					height: 30px;
-					background-size: contain;
-
-					&:hover {
-						background: url(/img/telegram_btm_hover.svg) no-repeat center;
-						background-size: contain;
-					}
-				}
 			}
 
 			.phone-footer__cnt {
@@ -1522,10 +1837,6 @@ p {
 	}
 }
 
-.breadcrumbs-section {
-	margin-bottom: 50px;
-}
-
 .main-img-section {
 	min-height: 720px;
 	height: 100vh;
@@ -1536,6 +1847,7 @@ p {
 	color: white;
 	padding-bottom: 50px;
 	position: relative;
+	margin-top: -145px;
 
 	&::after {
 		content: '';
@@ -1549,6 +1861,7 @@ p {
 
 	.breadcrumbs-section {
 		flex: 1 1 auto;
+		margin-top: 145px;
 	}
 
 	.main-img-section__title {
