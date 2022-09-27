@@ -2768,25 +2768,44 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px;
   padding-left: 20px;
 }
-.configurator-section .config-cnt .config-menu .config-menu__title {
+.configurator-section .config-cnt .config-menu .config-menu__item.acitve .config-menu__list {
+  display: flex;
+}
+.configurator-section .config-cnt .config-menu .config-menu__item .config-menu__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 140%;
   color: #5E64A9;
   cursor: pointer;
   transition: all ease-in-out 0.2s;
+  position: relative;
 }
-.configurator-section .config-cnt .config-menu .config-menu__title:not(:last-child) {
-  margin-bottom: 15px;
+.configurator-section .config-cnt .config-menu .config-menu__item .config-menu__title.active {
+  color: #D0A220;
+  position: relative;
 }
-.configurator-section .config-cnt .config-menu .config-menu__title:hover {
+.configurator-section .config-cnt .config-menu .config-menu__item .config-menu__title.active:before {
+  content: "-";
+  top: 50%;
+  left: -21px;
+  position: absolute;
+  transform: translate(0, -50%);
+}
+.configurator-section .config-cnt .config-menu .config-menu__item .config-menu__title:hover {
   color: #D0A220;
 }
+.configurator-section .config-cnt .config-menu .config-menu__item .config-menu__title:before {
+  content: "+";
+  top: 50%;
+  left: -21px;
+  position: absolute;
+  transform: translate(0, -50%);
+}
 .configurator-section .config-cnt .config-menu .config-menu__list {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 10px;
 }
@@ -2799,6 +2818,12 @@ main {
   transition: all ease-in-out 0.2s;
 }
 .configurator-section .config-cnt .config-menu .config-menu__list .config-menu__list-item:hover {
+  color: #D0A220;
+}
+.configurator-section .config-cnt .config-menu .config-menu__list .config-menu__list-item:first-child {
+  margin-top: 15px;
+}
+.configurator-section .config-cnt .config-menu .config-menu__list .config-menu__list-item.active {
   color: #D0A220;
 }
 .configurator-section .config-cnt .config-body {

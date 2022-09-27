@@ -1,3 +1,5 @@
+/* Бургер и меню НАЧАЛО */
+
 function menuHandler() {
 
 	let menuLogic = false;
@@ -50,6 +52,24 @@ function menuHandler() {
 }
 
 menuHandler();
+
+/* Бургер и меню КОНЕЦ */
+
+
+
+/* Карточка товара НАЧАЛО */
+
+/* Расскрываем меню  */
+$(document).ready(function () {
+	$(".config-menu__title").click(function () {
+		$(".config-menu__title").removeClass('active');
+		$('.config-menu__list').css('display', 'none');
+		$(this).next('.config-menu__list').css('display', 'flex');
+		$(this).toggleClass('active');
+	});
+});
+
+/* Карточка товара КОНЕЦ */
 
 
 
