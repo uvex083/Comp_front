@@ -14,6 +14,7 @@ $color_default: #EEEEEE;
 $color_p: #8C8C8C;
 
 $color_btn_gray: #B6B6B6;
+$color_config: #545454;
 
 html {
 	background-color: $color_bg;
@@ -109,6 +110,62 @@ a:hover {
 
 .section-padding-170 {
 	padding: 140px 0;
+}
+
+.custom-radio {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.custom-radio+label {
+	display: inline-flex;
+	align-items: center;
+	user-select: none;
+}
+
+.custom-radio+label::before {
+	content: '';
+	display: inline-block;
+	width: 29px;
+	height: 29px;
+	border: 2px solid $color_orange;
+	border-radius: 50%;
+	margin-right: 20px;
+	flex-shrink: 0;
+}
+
+.custom-radio:not(:disabled):not(:checked)+label:hover::before {
+	border-color: $color_orange;
+}
+
+.custom-radio:not(:disabled):active+label::before {
+	background-color: $color_orange;
+	border-color: $color_orange;
+}
+
+.custom-radio:checked+label::before {
+	border-color: $color_orange;
+	background: url(/img/radio.svg) no-repeat center;
+	background-size: 17px;
+}
+
+.info {
+	position: absolute;
+	background: url(/img/info.svg) no-repeat center;
+	width: 18px;
+	height: 18px;
+	background-size: contain;
+	cursor: pointer;
+	transition: all ease-in-out 0.2s;
+
+	&:hover {
+		content: '';
+		background: url(/img/info-hover.svg) no-repeat center;
+		width: 18px;
+		height: 18px;
+		background-size: contain;
+	}
 }
 
 header {
@@ -377,7 +434,7 @@ main {
 					line-height: 140%;
 					display: flex;
 					align-items: center;
-					color: #545454;
+					color: $color_config;
 				}
 			}
 		}
@@ -2646,7 +2703,7 @@ main {
 					.card-char__item-name {
 						font-size: 15px;
 						line-height: 24px;
-						color: #545454;
+						color: $color_config;
 					}
 
 					.card-char__item-value {
@@ -3001,8 +3058,6 @@ main {
 
 			.config-menu__item {
 
-				
-
 				&.acitve .config-menu__list {
 					display: flex;
 				}
@@ -3016,9 +3071,10 @@ main {
 					transition: all ease-in-out 0.2s;
 					position: relative;
 
-					&.active {
+					&.open {
 						color: $color_orange;
 						position: relative;
+
 						&:before {
 							content: '-';
 							top: 50%;
@@ -3064,22 +3120,300 @@ main {
 						margin-top: 15px;
 					}
 
-					&.active {
+					&.open {
 						color: $color_orange;
 					}
 				}
 			}
 		}
 
-		.config-body {
+		.config-wrap {
 			flex: 1;
 			display: flex;
 			flex-direction: column;
+			gap: 22px;
 
-			.config-body__item {
-				border: 2px solid #545454;
+			.config-wrap__item {
+				border: 2px solid $color_config;
 				border-radius: 6px;
 				gap: 24px;
+
+				&.open .config-wrap__item-title {
+					color: $color_orange;
+
+					&:after {
+						content: '-';
+						top: 50%;
+						right: 35px;
+						position: absolute;
+						transform: translate(0, -50%);
+						color: $color_orange;
+					}
+				}
+
+				.item-body__img {
+					width: 100%;
+					max-width: 300px;
+					height: auto;
+				}
+
+				.item-body__personal-cnt {
+					display: flex;
+					flex-direction: column;
+					gap: 22px;
+					padding: 20px 0;
+					flex: 1;
+				}
+
+				.item-body__price {
+					font-family: 'Jura';
+					font-weight: 700;
+					font-size: 20px;
+					line-height: 120%;
+					color: $color_config;
+					white-space: nowrap;
+				}
+
+				.config-wrap__item-title {
+					font-weight: 500;
+					font-size: 28px;
+					line-height: 120%;
+					text-transform: uppercase;
+					color: $color_config;
+					padding: 24px 0 24px 48px;
+					border-bottom: 2px solid $color_config;
+					position: relative;
+					transition: all ease-in-out 0.2s;
+
+					&:after {
+						content: '+';
+						top: 50%;
+						right: 35px;
+						position: absolute;
+						transform: translate(0, -50%);
+					}
+				}
+
+				.config-wrap__item-body {
+					display: flex;
+					padding: 24px 48px;
+				}
+
+				.config-wrap__item-body.column {
+					gap: 60px;
+
+					.item-body__color-item {
+						display: flex;
+						cursor: pointer;
+
+						.custom-radio+label {
+							flex: 1;
+							cursor: pointer;
+						}
+
+						.color-cnt {
+							display: flex;
+							justify-content: space-between;
+							flex: 1 0 auto;
+						}
+					}
+
+					.item-body__img img {
+						max-width: 300px;
+						width: 100%;
+						height: auto;
+					}
+
+					.item-body__color {
+						font-weight: 400;
+						font-size: 17px;
+						line-height: 140%;
+						color: $color_btn_gray;
+						white-space: nowrap;
+					}
+
+					.what-link {
+						cursor: pointer;
+						width: fit-content;
+						margin-top: 20px;
+
+						p {
+							transition: all ease-in-out 0.2s;
+							border-bottom: 2px dashed $color_p;
+						}
+
+						&:hover p {
+							color: $color_orange;
+							border-bottom: 2px dashed rgba(0, 0, 0, 0);
+						}
+					}
+				}
+
+				.config-wrap__item-body.row {
+					flex-direction: column;
+
+					.item-body__row {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						margin-bottom: 30px;
+
+						.view-type__cnt {
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+							gap: 16px;
+
+							.view-type__row {
+								background: url(/img/view-row.svg) no-repeat center;
+								background-size: contain;
+								width: 24px;
+								height: 24px;
+								cursor: pointer;
+								transition: all ease-in-out 0.2s;
+
+								&.active,
+								&:hover {
+									background: url(/img/view-row-active.svg) no-repeat center;
+									background-size: contain;
+									width: 24px;
+									height: 24px;
+								}
+							}
+
+							.view-type__tab {
+								background: url(/img/view-tab.svg) no-repeat center;
+								background-size: contain;
+								width: 22px;
+								height: 22px;
+								cursor: pointer;
+								transition: all ease-in-out 0.2s;
+
+								&.active,
+								&:hover {
+									background: url(/img/view-tab-active.svg) no-repeat center;
+									background-size: contain;
+									width: 22px;
+									height: 22px;
+								}
+							}
+						}
+
+						.item-body__subtitle {
+							font-weight: 500;
+							font-size: 28px;
+							line-height: 120%;
+							text-transform: uppercase;
+							color: $color_default;
+							position: relative;
+							width: fit-content;
+
+							.info {
+								top: -6px;
+								right: -23px;
+							}
+						}
+					}
+
+					.config-item__cnt.tab-view {
+						display: grid;
+						grid-template-columns: repeat(3, 1fr);
+						gap: 50px;
+
+						.config-item {
+							position: relative;
+
+							.info {
+								right: 5px;
+								top: 5px;
+
+							}
+
+							.config-item__img {
+								margin: 0 0 14px 45px;
+
+								img {
+									width: 140px;
+									height: 110px;
+									object-fit: contain;
+								}
+							}
+
+							.config-item__title {
+								position: relative;
+
+								label {
+									font-weight: 400;
+									font-size: 15px;
+									line-height: 140%;
+									color: $color_btn_gray;
+									cursor: pointer;
+									transition: all ease-in-out 0.2s;
+
+									&:hover {
+										color: $color_orange;
+									}
+								}
+							}
+
+							.config-item__bottom {
+								display: flex;
+
+								.cs {
+
+
+									.cs-input {
+										position: relative;
+
+										display: flex;
+
+										border: 1.75px solid $color_violet_light;
+										border-radius: 6px;
+										padding: 7px 13px;
+										font-family: 'Jura';
+										font-style: normal;
+										font-weight: 700;
+										font-size: 20px;
+										line-height: 120%;
+										color: $color_default;
+
+									}
+
+									.cs-value {
+										
+									}
+								}
+							}
+						}
+					}
+
+					.item-body__tab-cnt {
+						display: flex;
+						border-bottom: 2px solid #393939;
+						margin-bottom: 40px;
+
+						.item-body__tab {
+							padding: 13px 22px;
+							font-weight: 500;
+							font-size: 15px;
+							line-height: 140%;
+							text-transform: uppercase;
+							color: $color_p;
+							background-color: #252525;
+							transition: all ease-in-out 0.2s;
+							cursor: pointer;
+
+							&:not(:last-child) {
+								border-right: 2px solid #393939;
+							}
+
+							&:hover {
+								background-color: $color_orange;
+								color: #1A1A1A;
+							}
+						}
+					}
+				}
 			}
 		}
 	}

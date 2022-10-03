@@ -60,16 +60,25 @@ menuHandler();
 /* Карточка товара НАЧАЛО */
 
 /* Расскрываем меню  */
+
 $(document).ready(function () {
 	$(".config-menu__title").click(function () {
-		$(".config-menu__title").removeClass('active');
-		$('.config-menu__list').css('display', 'none');
-		$(this).next('.config-menu__list').css('display', 'flex');
-		$(this).toggleClass('active');
-	});
+		$(".config-menu__title").not(this).removeClass("open");
+		$(".config-menu__title").not(this).next().slideUp(300);
+		$(this).toggleClass("open");
+		$(this).next().slideToggle(300);
+	 });
 });
 
 /* Карточка товара КОНЕЦ */
 
+
+$(document).ready(function () {
+	$(".item-body__color-item").click(function () {
+		$(".item-body__color").css('color', '#B6B6B6');
+		$(".item-body__price").css('color', '#545454');
+		$(this).find(".item-body__color, .item-body__price").css('color', '#D0A220');
+	 });
+});
 
 
