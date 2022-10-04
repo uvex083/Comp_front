@@ -314,6 +314,57 @@ a:hover {
   background-size: contain;
 }
 
+.cs {
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  color: #EEEEEE;
+  position: relative;
+}
+.cs .cs-input {
+  display: flex;
+  border: 2px solid #5E64A9;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.cs .cs-input .cs-value {
+  padding: 5px 12px;
+  width: 37px;
+  display: flex;
+  justify-content: center;
+}
+.cs .cs-input .cs-icon {
+  display: flex;
+  align-items: center;
+  background-color: #5E64A9;
+  padding: 0 10px;
+}
+.cs .cs-list {
+  display: flex;
+  border: 2px solid #5E64A9;
+  border-radius: 6px;
+  position: absolute;
+  top: 43px;
+  width: 100%;
+  flex-direction: column;
+  z-index: 1;
+  background-color: #181818;
+  align-items: center;
+}
+.cs .cs-list .cs-list__item {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+  padding: 5px 0;
+}
+.cs .cs-list .cs-list__item:hover {
+  background-color: rgba(94, 100, 169, 0.3098039216);
+}
+
 header {
   position: fixed;
   top: 0;
@@ -3065,7 +3116,7 @@ main {
   margin: 0 0 14px 45px;
 }
 .configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__img img {
-  width: 140px;
+  width: 100%;
   height: 110px;
   -o-object-fit: contain;
      object-fit: contain;
@@ -3087,18 +3138,9 @@ main {
 .configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__bottom {
   display: flex;
 }
-.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__bottom .cs .cs-input {
-  position: relative;
-  display: flex;
-  border: 1.75px solid #5E64A9;
-  border-radius: 6px;
-  padding: 7px 13px;
-  font-family: "Jura";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 120%;
-  color: #EEEEEE;
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__bottom .cs-icon img {
+  width: 14px;
+  height: 8px;
 }
 .configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .item-body__tab-cnt {
   display: flex;
