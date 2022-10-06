@@ -120,7 +120,7 @@ a:hover {
 
 .custom-radio+label {
 	display: inline-flex;
-	align-items: center;
+
 	user-select: none;
 }
 
@@ -211,20 +211,24 @@ a:hover {
 		z-index: 1;
 		background-color: #181818;
 		align-items: center;
+		display: none;
+		&.open {
+			display: block;
+		}
 
-		.cs-list__item {			
+		.cs-list__item {
 			display: flex;
 			width: 100%;
 			justify-content: center;
 			cursor: pointer;
 			transition: all ease-in-out 0.2s;
 			padding: 5px 0;
-			
-			
+
+
 			&:hover {
-				background-color: #5e64a94f;				
-				
-				
+				background-color: #5e64a94f;
+
+
 			}
 		}
 	}
@@ -3387,10 +3391,10 @@ main {
 						.config-item {
 							position: relative;
 
-							.info {
-								right: 5px;
-								top: 5px;
-
+							span.info {
+								margin-top: 2px;
+								width: 30px;
+								background-position: right;
 							}
 
 							.config-item__img {
@@ -3405,6 +3409,7 @@ main {
 
 							.config-item__title {
 								position: relative;
+								margin-bottom: 14px;
 
 								label {
 									font-weight: 400;
@@ -3422,10 +3427,38 @@ main {
 
 							.config-item__bottom {
 								display: flex;
+								align-items: center;
+								gap: 19px;
+								margin-left: 49px;								
 
 								.cs-icon img {
 									width: 14px;
 									height: 8px;
+								}
+
+								.config-item__price {
+									font-family: "Jura";
+									font-weight: 700;
+									font-size: 20px;
+									line-height: 120%;
+									color: $color_config;
+									white-space: nowrap;
+								}
+
+								.config-item__cmp {
+									width: 25px;
+									height: 16px;
+									background: url(/img/cnf-cmp-add.svg) no-repeat center;
+									background-size: contain;
+									cursor: pointer;
+									transition: all ease-in-out 0.2s;
+
+									&:hover {
+										width: 25px;
+										height: 16px;
+										background: url(/img/cnf-cmp-add_h.svg) no-repeat center;
+										background-size: contain;
+									}
 								}
 							}
 						}

@@ -59,7 +59,7 @@ menuHandler();
 
 /* Карточка товара НАЧАЛО */
 
-/* Расскрываем меню  */
+/* Расскрываем меню начало*/
 
 $(document).ready(function () {
 	$(".config-menu__title").click(function () {
@@ -68,17 +68,36 @@ $(document).ready(function () {
 		$(this).toggleClass("open");
 		$(this).next().slideToggle(300);
 	 });
-});
 
-/* Карточка товара КОНЕЦ */
+/* Расскрываем меню конец*/
 
+/* Красим блок с цветом начало*/
 
-$(document).ready(function () {
 	$(".item-body__color-item").click(function () {
 		$(".item-body__color").css('color', '#B6B6B6');
 		$(".item-body__price").css('color', '#545454');
 		$(this).find(".item-body__color, .item-body__price").css('color', '#D0A220');
 	 });
+
+	$(".item-body__color-item").mouseover(function () {
+	 	$(".item-body__color").css('color', '#B6B6B6');
+	 	$(".item-body__price").css('color', '#545454');
+	 	$(this).find(".item-body__color, .item-body__price").css('color', '#D0A220');
+	});
+
+/* Красим блок с цветом начало*/
+
+/* Выпадающий кастомный список начало */
+$(".cs-input").click(function () {	
+	$(this).next().toggleClass('open');
+ });
+/* Выпадающий кастомный список конец */
+
 });
+
+/* Карточка товара КОНЕЦ */
+
+
+
 
 

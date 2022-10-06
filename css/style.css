@@ -264,7 +264,6 @@ a:hover {
 
 .custom-radio + label {
   display: inline-flex;
-  align-items: center;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -352,6 +351,10 @@ a:hover {
   z-index: 1;
   background-color: #181818;
   align-items: center;
+  display: none;
+}
+.cs .cs-list.open {
+  display: block;
 }
 .cs .cs-list .cs-list__item {
   display: flex;
@@ -3108,9 +3111,10 @@ main {
 .configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item {
   position: relative;
 }
-.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .info {
-  right: 5px;
-  top: 5px;
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item span.info {
+  margin-top: 2px;
+  width: 30px;
+  background-position: right;
 }
 .configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__img {
   margin: 0 0 14px 45px;
@@ -3123,6 +3127,7 @@ main {
 }
 .configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__title {
   position: relative;
+  margin-bottom: 14px;
 }
 .configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__title label {
   font-weight: 400;
@@ -3137,10 +3142,35 @@ main {
 }
 .configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__bottom {
   display: flex;
+  align-items: center;
+  gap: 19px;
+  margin-left: 49px;
 }
 .configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__bottom .cs-icon img {
   width: 14px;
   height: 8px;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__bottom .config-item__price {
+  font-family: "Jura";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  color: #545454;
+  white-space: nowrap;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__bottom .config-item__cmp {
+  width: 25px;
+  height: 16px;
+  background: url(/img/cnf-cmp-add.svg) no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__bottom .config-item__cmp:hover {
+  width: 25px;
+  height: 16px;
+  background: url(/img/cnf-cmp-add_h.svg) no-repeat center;
+  background-size: contain;
 }
 .configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .item-body__tab-cnt {
   display: flex;
