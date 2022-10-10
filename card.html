@@ -155,7 +155,7 @@
 							<div class="config-cnt">
 								<div class="config-menu">
 									<div class="config-menu__item">
-										<div class="config-menu__title">
+										<div class="config-menu__title" id="conf-pers">
 											Персонализация
 										</div>
 										<div class="config-menu__list"></div>
@@ -182,18 +182,18 @@
 									</div>
 								</div>
 								<div class="config-wrap">
-									<div class="config-wrap__item open">
+									<div class="config-wrap__item">
 										<div class="config-wrap__item-title">1. Персонализация (внешний вид)</div>
 										<div class="config-wrap__item-body column">
 											<div class="item-body__img"><img src="img/config_img.png" alt=""></div>
 											<div class="item-body__personal-cnt">
 												<div class="item-body__color-item">
-													<input type="radio" class="custom-radio" id="color-1" name="color"
-														value=" два три">
+													<input type="radio" class="custom-radio" id="color-1" name="color" value=""
+														checked>
 													<label for="color-1">
 														<div class="color-cnt">
 															<div class="item-body__color">Стандартный цвет</div>
-															<div class="item-body__price">+ 2400 ₽</div>
+															<div class="item-body__price">0 ₽</div>
 														</div>
 													</label>
 												</div>
@@ -247,7 +247,7 @@
 										<div class="config-wrap__item-title">2. Комплектующие</div>
 										<div class="config-wrap__item-body row">
 											<div class="item-body__row">
-												<div class="item-body__subtitle">Оперативная память<div class="info"></div>
+												<div class="item-body__subtitle">Видеокарта<div class="info"></div>
 												</div>
 												<div class="view-type__cnt">
 													<div class="view-type__row active"></div>
@@ -256,18 +256,24 @@
 											</div>
 											<div class="item-body__tab-cnt">
 												<div class="item-body__tab">Все</div>
-												<div class="item-body__tab">kingston hyperx</div>
+												<div class="item-body__tab active">kingston hyperx</div>
 												<div class="item-body__tab">G.skill</div>
 												<div class="item-body__tab">thermaltake</div>
 												<div class="item-body__tab">microne</div>
 											</div>
-											<div class="config-item__cnt tab-view">
+
+											<div class="config-item__cnt row-view">
+												<div class="config-item__img-row">
+													<img src="/img/img-row.png" alt="">
+												</div>
 												<div class="config-item">
 													<div class="config-item__img"><img src="/img/videocard-1.png" alt=""></div>
 													<div class="config-item__title">
 														<input type="radio" class="custom-radio" id="v1" name="color" value="">
 														<label for="v1">
-															<div>8Гб Kingston HyperX Fury 3000МГц<span class="info"></span></div>
+															<div>8Гб Kingston HyperX Fury 3000МГц<span class="info"></span>
+																<div class="stock-a"></div>
+															</div>
 														</label>
 													</div>
 													<div class="config-item__bottom">
@@ -284,16 +290,18 @@
 																</div>
 															</div>
 														</div>
-														<div class="config-item__price">11 110 ₽</div>
+														<div class="config-item__price">- 11 110 ₽</div>
 														<div class="config-item__cmp"></div>
 													</div>
-												</div>												
+												</div>
 												<div class="config-item">
 													<div class="config-item__img"><img src="/img/videocard-1.png" alt=""></div>
 													<div class="config-item__title">
-														<input type="radio" class="custom-radio" id="v1" name="color" value="">
-														<label for="v1">
-															<div>8Гб Kingston HyperX Fury 3000МГц<span class="info"></span></div>
+														<input type="radio" class="custom-radio" id="v2" name="color" value="">
+														<label for="v2">
+															<div>8Гб Kingston HyperX Fury 3000МГц<span class="info"></span>
+																<div class="stock-a"></div>
+															</div>
 														</label>
 													</div>
 													<div class="config-item__bottom">
@@ -310,16 +318,18 @@
 																</div>
 															</div>
 														</div>
-														<div class="config-item__price">11 110 ₽</div>
+														<div class="config-item__price">+ 2 550 ₽</div>
 														<div class="config-item__cmp"></div>
 													</div>
-												</div>												
+												</div>
 												<div class="config-item">
 													<div class="config-item__img"><img src="/img/videocard-2.png" alt=""></div>
 													<div class="config-item__title">
-														<input type="radio" class="custom-radio" id="v1" name="color" value="">
-														<label for="v1">
-															<div>8Гб Kingston HyperX Fury 3000МГц<span class="info"></span></div>
+														<input type="radio" class="custom-radio" id="v3" name="color" value="">
+														<label for="v3">
+															<div>8Гб Kingston HyperX Fury 3000МГц<span class="info"></span>
+																<div class="stock-a"></div>
+															</div>
 														</label>
 													</div>
 													<div class="config-item__bottom">
@@ -336,16 +346,18 @@
 																</div>
 															</div>
 														</div>
-														<div class="config-item__price">11 110 ₽</div>
+														<div class="config-item__price">+ 99 555 ₽</div>
 														<div class="config-item__cmp"></div>
 													</div>
-												</div>												
+												</div>
 												<div class="config-item">
 													<div class="config-item__img"><img src="/img/videocard-3.png" alt=""></div>
 													<div class="config-item__title">
-														<input type="radio" class="custom-radio" id="v1" name="color" value="">
-														<label for="v1">
-															<div>8Гб Kingston HyperX<span class="info"></span></div>
+														<input type="radio" class="custom-radio" id="v4" name="color" value="">
+														<label for="v4">
+															<div>8Гб Kingston HyperX<span class="info"></span>
+																<div class="stock-na"></div>
+															</div>
 														</label>
 													</div>
 													<div class="config-item__bottom">
@@ -362,16 +374,19 @@
 																</div>
 															</div>
 														</div>
-														<div class="config-item__price">11 110 ₽</div>
+														<div class="config-item__price">- 110 ₽</div>
 														<div class="config-item__cmp"></div>
 													</div>
-												</div>												
+												</div>
 												<div class="config-item">
 													<div class="config-item__img"><img src="/img/videocard-1.png" alt=""></div>
 													<div class="config-item__title">
-														<input type="radio" class="custom-radio" id="v1" name="color" value="">
-														<label for="v1">
-															<div>8Гб Kingston HyperX Fury 3000МГц 3000МГц 3000МГц<span class="info"></span></div>
+														<input type="radio" class="custom-radio" id="v5" name="color" value="">
+														<label for="v5">
+															<div>8Гб Kingston HyperX Fury 3000МГц 3000МГц 3000МГц<span
+																	class="info"></span>
+																<div class="stock-na"></div>
+															</div>
 														</label>
 													</div>
 													<div class="config-item__bottom">
@@ -391,8 +406,191 @@
 														<div class="config-item__price">11 110 ₽</div>
 														<div class="config-item__cmp"></div>
 													</div>
-												</div>												
+												</div>
+												<div class="config-item no-config-item">
+													<div class="config-item__img"><img src="/img/no-img.svg" alt=""></div>
+													<div class="config-item__title">
+														<input type="radio" class="custom-radio" id="v15" name="color" value="">
+														<label for="v15">
+															<div>Без видеокарты</div>
+														</label>
+													</div>
+													<div class="config-item__bottom">
+														<div class="config-item__qnt">
+															<div class="cs">
+																<div class="cs-input">
+																	<div class="cs-value">1</div>
+																	<div class="cs-icon"><img src="/img/arr-cs-white.svg" alt=""></div>
+																</div>
+																<div class="cs-list">
+																	<div class="cs-list__item">1</div>
+																	<div class="cs-list__item">2</div>
+																	<div class="cs-list__item">3</div>
+																</div>
+															</div>
+														</div>
+														<div class="config-item__price">11 110 ₽</div>
+														<div class="config-item__cmp"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="config-wrap__item-body row">
+											<div class="item-body__row">
+												<div class="item-body__subtitle">Процессор<div class="info"></div>
+												</div>
+												<div class="view-type__cnt">
+													<div class="view-type__row active"></div>
+													<div class="view-type__tab"></div>
+												</div>
+											</div>
+											<div class="item-body__tab-cnt">
+												<div class="item-body__tab">Все</div>
+												<div class="item-body__tab active">kingston hyperx</div>
+												<div class="item-body__tab">G.skill</div>
+												<div class="item-body__tab">thermaltake</div>
+												<div class="item-body__tab">microne</div>
+											</div>
 
+											<div class="config-item__cnt row-view">
+												<div class="config-item__img-row">
+													<img src="/img/img-row.png" alt="">
+												</div>
+												<div class="config-item">
+													<div class="config-item__img"><img src="/img/videocard-1.png" alt=""></div>
+													<div class="config-item__title">
+														<input type="radio" class="custom-radio" id="v6" name="color" value="">
+														<label for="v6">
+															<div>8Гб Kingston HyperX Fury 3000МГц<span class="info"></span>
+																<div class="stock-na"></div>
+															</div>
+														</label>
+													</div>
+													<div class="config-item__bottom">
+														<div class="config-item__qnt">
+															<div class="cs">
+																<div class="cs-input">
+																	<div class="cs-value">1</div>
+																	<div class="cs-icon"><img src="/img/arr-cs-white.svg" alt=""></div>
+																</div>
+																<div class="cs-list">
+																	<div class="cs-list__item">1</div>
+																	<div class="cs-list__item">2</div>
+																	<div class="cs-list__item">3</div>
+																</div>
+															</div>
+														</div>
+														<div class="config-item__price">11 110 ₽</div>
+														<div class="config-item__cmp"></div>
+													</div>
+												</div>
+												<div class="config-item">
+													<div class="config-item__img"><img src="/img/videocard-1.png" alt=""></div>
+													<div class="config-item__title">
+														<input type="radio" class="custom-radio" id="v7" name="color" value="">
+														<label for="v7">
+															<div>8Гб Kingston HyperX Fury 3000МГц<span class="info"></span>
+																<div class="stock-na"></div>
+															</div>
+														</label>
+													</div>
+													<div class="config-item__bottom">
+														<div class="config-item__qnt">
+															<div class="cs">
+																<div class="cs-input">
+																	<div class="cs-value">1</div>
+																	<div class="cs-icon"><img src="/img/arr-cs-white.svg" alt=""></div>
+																</div>
+																<div class="cs-list">
+																	<div class="cs-list__item">1</div>
+																	<div class="cs-list__item">2</div>
+																	<div class="cs-list__item">3</div>
+																</div>
+															</div>
+														</div>
+														<div class="config-item__price">11 110 ₽</div>
+														<div class="config-item__cmp"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="config-wrap__item-body row">
+											<div class="item-body__row">
+												<div class="item-body__subtitle">Материнская плата<div class="info"></div>
+												</div>
+												<div class="view-type__cnt">
+													<div class="view-type__row active"></div>
+													<div class="view-type__tab"></div>
+												</div>
+											</div>
+											<div class="item-body__tab-cnt">
+												<div class="item-body__tab">Все</div>
+												<div class="item-body__tab active">kingston hyperx</div>
+												<div class="item-body__tab">G.skill</div>
+												<div class="item-body__tab">thermaltake</div>
+												<div class="item-body__tab">microne</div>
+											</div>
+
+											<div class="config-item__cnt row-view">
+												<div class="config-item__img-row">
+													<img src="/img/img-row.png" alt="">
+												</div>
+												<div class="config-item">
+													<div class="config-item__img"><img src="/img/videocard-1.png" alt=""></div>
+													<div class="config-item__title">
+														<input type="radio" class="custom-radio" id="v9" name="color" value="">
+														<label for="v9">
+															<div>8Гб Kingston HyperX Fury 3000МГц<span class="info"></span>
+																<div class="stock-a"></div>
+															</div>
+														</label>
+													</div>
+													<div class="config-item__bottom">
+														<div class="config-item__qnt">
+															<div class="cs">
+																<div class="cs-input">
+																	<div class="cs-value">1</div>
+																	<div class="cs-icon"><img src="/img/arr-cs-white.svg" alt=""></div>
+																</div>
+																<div class="cs-list">
+																	<div class="cs-list__item">1</div>
+																	<div class="cs-list__item">2</div>
+																	<div class="cs-list__item">3</div>
+																</div>
+															</div>
+														</div>
+														<div class="config-item__price">11 110 ₽</div>
+														<div class="config-item__cmp"></div>
+													</div>
+												</div>
+												<div class="config-item">
+													<div class="config-item__img"><img src="/img/videocard-1.png" alt=""></div>
+													<div class="config-item__title">
+														<input type="radio" class="custom-radio" id="v10" name="color" value="">
+														<label for="v10">
+															<div>8Гб Kingston HyperX Fury 3000МГц<span class="info"></span>
+																<div class="stock-a"></div>
+															</div>
+														</label>
+													</div>
+													<div class="config-item__bottom">
+														<div class="config-item__qnt">
+															<div class="cs">
+																<div class="cs-input">
+																	<div class="cs-value">1</div>
+																	<div class="cs-icon"><img src="/img/arr-cs-white.svg" alt=""></div>
+																</div>
+																<div class="cs-list">
+																	<div class="cs-list__item">1</div>
+																	<div class="cs-list__item">2</div>
+																	<div class="cs-list__item">3</div>
+																</div>
+															</div>
+														</div>
+														<div class="config-item__price">11 110 ₽</div>
+														<div class="config-item__cmp"></div>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -413,45 +611,237 @@
 
 					</div>
 					<div class="card-preview__cnt">
-						<div class="card-preview__item">
-							<div class="card-preview__price-cmp">
-								<div class="card-preview__price-cnt">
-									<div class="card-preview__price-old">130 150 ₽</div>
-									<div class="card-preview__price">123 456 ₽</div>
-								</div>
-								<div class="card-preview__cmp-cnt">
-									<button class="cmp-btn">
-										<div class="cmp-btn__first"><span>Сравнить</span></div>
-										<div class="cmp-btn__second"></div>
-									</button>
-								</div>
-							</div>
-							<div class="card-preview__img"><img src="/img/card-preview.png" alt=""></div>
-							<div class="card-preview__order-btn">
-								<button class="tpl-btn">
-									<div class="tpl-btn__first">
-										<span>Заказать</span>
+						<div class="fixed-box">
+							<div class="fixed-div">
+								<div class="card-preview__item">
+									<div class="card-preview__price-cmp">
+										<div class="card-preview__price-cnt">
+											<div class="card-preview__price-old">130 150 ₽</div>
+											<div class="card-preview__price">123 456 ₽</div>
+										</div>
+										<div class="card-preview__cmp-cnt">
+											<button class="cmp-btn">
+												<div class="cmp-btn__first"><span>Сравнить</span></div>
+												<div class="cmp-btn__second"></div>
+											</button>
+										</div>
 									</div>
-									<div class="tpl-btn__second"></div>
-								</button>
-								<button class="cmp-btn">
-									<div class="cmp-btn__first"><span>Сравнить</span></div>
-									<div class="cmp-btn__second"></div>
-								</button>
-								<div class="card-preview__show-config">
-									Посмотреть конфигурацию
+									<div class="card-preview__img"><img src="/img/card-preview.png" alt=""></div>
+									<div class="card-preview__order-btn">
+										<button class="tpl-btn">
+											<div class="tpl-btn__first">
+												<span>Заказать</span>
+											</div>
+											<div class="tpl-btn__second"></div>
+										</button>
+										<button class="cmp-btn">
+											<div class="cmp-btn__first"><span>Сравнить</span></div>
+											<div class="cmp-btn__second"></div>
+										</button>
+										<div class="card-preview__show-config">
+											Посмотреть конфигурацию
+										</div>
+									</div>
+								</div>
+								<div class="card-preview__add-bnt">
+									<div class="add-bnt__item save-config"><span></span>
+										<div>Сохранить</div>
+									</div>
+									<div class="add-bnt__item send-config"><span></span>
+										<div>Отправить</div>
+									</div>
+									<div class="add-bnt__item reset-config"><span></span>
+										<div>Сбросить</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="card-preview__add-bnt">
-							<div class="add-bnt__item save-config"><span></span>
-								<div>Сохранить</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="seria-section section-padding-170">
+			<div class="center-cnt">
+				<h2>Другие игровые серии</h2>
+				<div class="cat-item__cnt assemble-cnt">
+					<div class="cat-item__hover">
+						<div class="cat-item__item">
+							<div class="cat-item__label-cnt">
+								<div class="cat-item__label stock-label">В наличии</div>
+								<div class="cat-item__label promo-label">Акция
+									<div class="promo-label__desc">
+										В подарок клавиатура проводная Defender Spark GK-300L [45300] [мембранная, клавиш - 104,
+										USB, черная]
+									</div>
+								</div>
 							</div>
-							<div class="add-bnt__item send-config"><span></span>
-								<div>Отправить</div>
+							<a class="cat-item__img-link" href="/">
+								<img class="cat-item__img" src="img/top_comp_1.png" alt="">
+							</a>
+							<p>cерия</p>
+							<a class="cat-item__title" href="/">Терминатор</a>
+							<div class="cat-item__char-cnt">
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										<p>Цветовая схема</p>
+									</div>
+									<div class="cat-item__char-value">
+										<div class="item-color color-gray"></div>
+										<div class="item-color color-black"></div>
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										<p>Процессор от</p>
+									</div>
+									<div class="cat-item__char-value">
+										<p>32 ядер</p>
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										<p>Видеокарта от</p>
+									</div>
+									<div class="cat-item__char-value">
+										<p>GeForce RTX 3090</p>
+									</div>
+								</div>
 							</div>
-							<div class="add-bnt__item reset-config"><span></span>
-								<div>Сбросить</div>
+							<div class="cat-item__buy-cnt">
+								<div class="cat-item__buy">
+									<div class="cat-item__price">от <span class="cat-item__price-value">87
+											000</span> <span>₽</span></div>
+									<div class="cat-item__payment">30 150 Р/мес</div>
+								</div>
+								<a class="tpl-btn__link" href="/">
+									<button class="tpl-btn">
+										<div class="tpl-btn__first">
+											<span>Подробнее</span>
+										</div>
+										<div class="tpl-btn__second"></div>
+									</button>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="cat-item__hover">
+						<div class="cat-item__item">
+							<div class="cat-item__label-cnt">
+								<div class="cat-item__label stock-label">В наличии</div>
+								<div class="cat-item__label promo-label">Акция
+									<div class="promo-label__desc">
+										В подарок клавиатура проводная Defender Spark GK-300L [45300] [мембранная, клавиш - 104,
+										USB, черная]
+									</div>
+								</div>
+							</div>
+							<a class="cat-item__img-link" href="/">
+								<img class="cat-item__img" src="img/top_comp_1.png" alt="">
+							</a>
+							<p>cерия</p>
+							<a class="cat-item__title" href="/">Робокоп</a>
+							<div class="cat-item__char-cnt">
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										<p>Цветовая схема</p>
+									</div>
+									<div class="cat-item__char-value">
+										<div class="item-color color-gray"></div>
+										<div class="item-color color-black"></div>
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										<p>Процессор от</p>
+									</div>
+									<div class="cat-item__char-value">
+										<p>32 ядер</p>
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										<p>Видеокарта от</p>
+									</div>
+									<div class="cat-item__char-value">
+										<p>GeForce RTX 3090</p>
+									</div>
+								</div>
+							</div>
+							<div class="cat-item__buy-cnt">
+								<div class="cat-item__buy">
+									<div class="cat-item__price">от <span class="cat-item__price-value">87
+											000</span> <span>₽</span></div>
+									<div class="cat-item__payment">30 150 Р/мес</div>
+								</div>
+								<a class="tpl-btn__link" href="/">
+									<button class="tpl-btn">
+										<div class="tpl-btn__first">
+											<span>Подробнее</span>
+										</div>
+										<div class="tpl-btn__second"></div>
+									</button>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="cat-item__hover">
+						<div class="cat-item__item">
+							<div class="cat-item__label-cnt">
+								<div class="cat-item__label stock-label">В наличии</div>
+								<div class="cat-item__label promo-label">Акция
+									<div class="promo-label__desc">
+										В подарок клавиатура проводная Defender Spark GK-300L [45300] [мембранная, клавиш - 104,
+										USB, черная]
+									</div>
+								</div>
+							</div>
+							<a class="cat-item__img-link" href="/">
+								<img class="cat-item__img" src="img/top_comp_1.png" alt="">
+							</a>
+							<p>cерия</p>
+							<a class="cat-item__title" href="/">Супермен</a>
+							<div class="cat-item__char-cnt">
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										<p>Цветовая схема</p>
+									</div>
+									<div class="cat-item__char-value">
+										<div class="item-color color-gray"></div>
+										<div class="item-color color-black"></div>
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										<p>Процессор от</p>
+									</div>
+									<div class="cat-item__char-value">
+										<p>32 ядер</p>
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										<p>Видеокарта от</p>
+									</div>
+									<div class="cat-item__char-value">
+										<p>GeForce RTX 3090</p>
+									</div>
+								</div>
+							</div>
+							<div class="cat-item__buy-cnt">
+								<div class="cat-item__buy">
+									<div class="cat-item__price">от <span class="cat-item__price-value">87
+											000</span> <span>₽</span></div>
+									<div class="cat-item__payment">30 150 Р/мес</div>
+								</div>
+								<a class="tpl-btn__link" href="/">
+									<button class="tpl-btn">
+										<div class="tpl-btn__first">
+											<span>Подробнее</span>
+										</div>
+										<div class="tpl-btn__second"></div>
+									</button>
+								</a>
 							</div>
 						</div>
 					</div>

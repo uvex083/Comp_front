@@ -277,7 +277,7 @@ a:hover {
   height: 29px;
   border: 2px solid #D0A220;
   border-radius: 50%;
-  margin-right: 20px;
+  margin-right: 26px;
   flex-shrink: 0;
 }
 
@@ -1887,6 +1887,19 @@ main {
   position: relative;
   margin-top: -145px;
 }
+.main-img-section.podbor {
+  position: relative;
+}
+.main-img-section.podbor::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100vh - 145px);
+  width: 100%;
+  background: #181818;
+  opacity: 0.9;
+}
 .main-img-section::after {
   content: "";
   position: absolute;
@@ -2237,7 +2250,7 @@ main {
   white-space: nowrap;
 }
 .cat-item__cnt.catalog-cnt .cat-item__buy-cnt.catalog-cnt .cat-item__buy .cat-item__credit:hover {
-  border: none;
+  border-bottom: 1px dashed rgba(208, 162, 32, 0);
 }
 .cat-item__cnt.catalog-cnt .cat-item__buy-cnt.catalog-cnt .config-btn {
   width: 100%;
@@ -2593,6 +2606,11 @@ main {
   height: -moz-fit-content;
   height: fit-content;
 }
+.card-cnt .card-preview__cnt .fixed {
+  position: fixed;
+  z-index: 9999;
+  top: 160px;
+}
 .card-cnt .card-preview__cnt .card-preview__item {
   display: flex;
   flex-direction: column;
@@ -2876,8 +2894,7 @@ main {
   gap: 30px;
 }
 .configurator-section .config-cnt .config-menu {
-  max-width: 255px;
-  width: 100%;
+  width: 225px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -2951,6 +2968,7 @@ main {
 }
 .configurator-section .config-cnt .config-wrap .config-wrap__item.open .config-wrap__item-title {
   color: #D0A220;
+  border-bottom: 2px solid #545454;
 }
 .configurator-section .config-cnt .config-wrap .config-wrap__item.open .config-wrap__item-title:after {
   content: "-";
@@ -2964,6 +2982,8 @@ main {
   width: 100%;
   max-width: 300px;
   height: auto;
+  float: left;
+  margin-right: 50px;
 }
 .configurator-section .config-cnt .config-wrap .config-wrap__item .item-body__personal-cnt {
   display: flex;
@@ -2987,9 +3007,12 @@ main {
   text-transform: uppercase;
   color: #545454;
   padding: 24px 0 24px 48px;
-  border-bottom: 2px solid #545454;
   position: relative;
   transition: all ease-in-out 0.2s;
+  cursor: pointer;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-title:hover {
+  color: #D0A220;
 }
 .configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-title:after {
   content: "+";
@@ -2999,8 +3022,11 @@ main {
   transform: translate(0, -50%);
 }
 .configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body {
-  display: flex;
-  padding: 24px 48px;
+  display: none;
+  padding: 50px 48px;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body:not(:last-child) {
+  border-bottom: 1px solid #545454;
 }
 .configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.column {
   gap: 60px;
@@ -3017,6 +3043,12 @@ main {
   display: flex;
   justify-content: space-between;
   flex: 1 0 auto;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.column .item-body__color-item:hover .item-body__color {
+  color: #D0A220;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.column .item-body__color-item:hover .item-body__price {
+  color: #D0A220;
 }
 .configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.column .item-body__img img {
   max-width: 300px;
@@ -3103,75 +3135,6 @@ main {
   top: -6px;
   right: -23px;
 }
-.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
-}
-.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item {
-  position: relative;
-}
-.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item span.info {
-  margin-top: 2px;
-  width: 30px;
-  background-position: right;
-}
-.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__img {
-  margin: 0 0 14px 45px;
-}
-.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__img img {
-  width: 100%;
-  height: 110px;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__title {
-  position: relative;
-  margin-bottom: 14px;
-}
-.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__title label {
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 140%;
-  color: #B6B6B6;
-  cursor: pointer;
-  transition: all ease-in-out 0.2s;
-}
-.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__title label:hover {
-  color: #D0A220;
-}
-.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__bottom {
-  display: flex;
-  align-items: center;
-  gap: 19px;
-  margin-left: 49px;
-}
-.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__bottom .cs-icon img {
-  width: 14px;
-  height: 8px;
-}
-.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__bottom .config-item__price {
-  font-family: "Jura";
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 120%;
-  color: #545454;
-  white-space: nowrap;
-}
-.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__bottom .config-item__cmp {
-  width: 25px;
-  height: 16px;
-  background: url(/img/cnf-cmp-add.svg) no-repeat center;
-  background-size: contain;
-  cursor: pointer;
-  transition: all ease-in-out 0.2s;
-}
-.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__bottom .config-item__cmp:hover {
-  width: 25px;
-  height: 16px;
-  background: url(/img/cnf-cmp-add_h.svg) no-repeat center;
-  background-size: contain;
-}
 .configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .item-body__tab-cnt {
   display: flex;
   border-bottom: 2px solid #393939;
@@ -3194,4 +3157,230 @@ main {
 .configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .item-body__tab-cnt .item-body__tab:hover {
   background-color: #D0A220;
   color: #1A1A1A;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .item-body__tab-cnt .item-body__tab.active {
+  background-color: #D0A220;
+  color: #1A1A1A;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt label div {
+  position: relative;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt label div .stock-a {
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background-color: #5E64A9;
+  top: 50%;
+  left: -10px;
+  transform: translate(-50%, -50%);
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt label div .stock-na {
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background-color: #545454;
+  top: 50%;
+  left: -10px;
+  transform: translate(-50%, -50%);
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt .no-config-item .config-item__qnt,
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt .no-config-item .config-item__cmp {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt .config-item__cmp {
+  width: 25px;
+  height: 16px;
+  background: url(/img/cnf-cmp-add.svg) no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+  position: relative;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt .config-item__cmp:hover {
+  width: 25px;
+  height: 16px;
+  background: url(/img/cnf-cmp-add_h.svg) no-repeat center;
+  background-size: contain;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt .config-item__cmp:hover:after {
+  content: "СРАВНИТЬ";
+  position: absolute;
+  background: #D0A220;
+  border-radius: 6px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -130%);
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #EEEEEE;
+  padding: 4px 10px;
+  transition: all ease-in-out 0.2s;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt .config-item__cmp.active {
+  width: 25px;
+  height: 16px;
+  background: url(/img/cnf-cmp-add_d.svg) no-repeat center;
+  background-size: contain;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt .config-item__cmp.active:hover:after {
+  content: "Убрать из сравнения";
+  position: absolute;
+  background: #D0A220;
+  border-radius: 6px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -130%);
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #EEEEEE;
+  padding: 4px 10px;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view label div {
+  padding-top: 5px;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item__qnt {
+  visibility: hidden;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item span.info {
+  margin-top: 2px;
+  width: 30px;
+  background-position: right;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__img {
+  margin: 0 0 10px 0;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__img img {
+  width: 100%;
+  height: 110px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__title {
+  position: relative;
+  margin-bottom: 14px;
+  flex: 1;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__title label {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: #B6B6B6;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__title label div .stock-a {
+  top: 16px;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__title label div .stock-na {
+  top: 16px;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__title label:hover {
+  color: #D0A220 !important;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__bottom {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 40px;
+  transform: translateX(-75px);
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__bottom .cs-icon img {
+  width: 14px;
+  height: 8px;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__bottom .config-item__price {
+  font-family: "Jura";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  color: #545454;
+  white-space: nowrap;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.row-view {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: flex-end;
+  position: relative;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.row-view .config-item__qnt {
+  visibility: hidden;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.row-view .config-item__img-row {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.row-view .config-item {
+  display: flex;
+  align-items: center;
+  width: 75%;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.row-view .config-item span.info {
+  margin-top: 2px;
+  width: 30px;
+  background-position: right;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.row-view .config-item .config-item__img {
+  margin: 0;
+  display: none;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.row-view .config-item .config-item__img img {
+  width: 100%;
+  height: 110px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.row-view .config-item .config-item__title {
+  position: relative;
+  margin-bottom: 0;
+  flex: 1;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.row-view .config-item .config-item__title label {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: #B6B6B6;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+  display: flex;
+  align-items: center;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.row-view .config-item .config-item__title label:hover {
+  color: #D0A220 !important;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.row-view .config-item .config-item__bottom {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  margin-left: 49px;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.row-view .config-item .config-item__bottom .cs-icon img {
+  width: 14px;
+  height: 8px;
+}
+.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.row-view .config-item .config-item__bottom .config-item__price {
+  font-family: "Jura";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  color: #545454;
+  white-space: nowrap;
+  min-width: 120px;
+  display: flex;
+  justify-content: end;
 }
