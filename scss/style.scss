@@ -1977,19 +1977,7 @@ main {
 	position: relative;
 	margin-top: -145px;
 
-	&.podbor {
-		position: relative;
-		&::after {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: calc(100vh - 145px);
-			width: 100%;
-			background: #181818;
-			opacity: 0.9;
-		}
-	}
+
 
 	&::after {
 		content: '';
@@ -3546,7 +3534,7 @@ main {
 
 					.config-item__cnt.tab-view {
 						display: grid;
-						grid-template-columns: repeat(3, 1fr);
+						grid-template-columns: repeat(3, minmax(0, 1fr));
 						gap: 50px;
 
 						label div {
@@ -3624,7 +3612,7 @@ main {
 								.config-item__price {
 									font-family: "Jura";
 									font-weight: 700;
-									font-size: 20px;
+									font-size: 18px;
 									line-height: 120%;
 									color: $color_config;
 									white-space: nowrap;
@@ -3712,7 +3700,7 @@ main {
 								.config-item__price {
 									font-family: "Jura";
 									font-weight: 700;
-									font-size: 20px;
+									font-size: 18px;
 									line-height: 120%;
 									color: $color_config;
 									white-space: nowrap;
@@ -3720,8 +3708,6 @@ main {
 									display: flex;
 									justify-content: end;
 								}
-
-
 							}
 						}
 					}
@@ -3729,4 +3715,34 @@ main {
 			}
 		}
 	}
+}
+
+.main-img-section.podbor {
+	position: relative;	
+
+	.breadcrumbs-section {
+		flex: inherit;
+		margin: 0;
+		z-index: 2;
+		margin-top: 145px;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: calc(100vh - 0px);
+		width: 100%;
+		background: #181818;
+		opacity: 0.9;
+	}
+
+	.main-img-section__title {
+		z-index: 1;
+		display: flex;
+		flex: 1;
+		align-items: center;
+	}
+
 }

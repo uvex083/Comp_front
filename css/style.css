@@ -1887,19 +1887,6 @@ main {
   position: relative;
   margin-top: -145px;
 }
-.main-img-section.podbor {
-  position: relative;
-}
-.main-img-section.podbor::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: calc(100vh - 145px);
-  width: 100%;
-  background: #181818;
-  opacity: 0.9;
-}
 .main-img-section::after {
   content: "";
   position: absolute;
@@ -3240,7 +3227,7 @@ main {
 }
 .configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 50px;
 }
 .configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view label div {
@@ -3304,7 +3291,7 @@ main {
 .configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.tab-view .config-item .config-item__bottom .config-item__price {
   font-family: "Jura";
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 120%;
   color: #545454;
   white-space: nowrap;
@@ -3376,11 +3363,37 @@ main {
 .configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body.row .config-item__cnt.row-view .config-item .config-item__bottom .config-item__price {
   font-family: "Jura";
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 120%;
   color: #545454;
   white-space: nowrap;
   min-width: 120px;
   display: flex;
   justify-content: end;
+}
+
+.main-img-section.podbor {
+  position: relative;
+}
+.main-img-section.podbor .breadcrumbs-section {
+  flex: inherit;
+  margin: 0;
+  z-index: 2;
+  margin-top: 145px;
+}
+.main-img-section.podbor::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100vh - 0px);
+  width: 100%;
+  background: #181818;
+  opacity: 0.9;
+}
+.main-img-section.podbor .main-img-section__title {
+  z-index: 1;
+  display: flex;
+  flex: 1;
+  align-items: center;
 }

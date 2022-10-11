@@ -186,7 +186,7 @@ $(document).ready(function () {
 		$window = $(window);
 		$h = $nav.offset().top;
 		$window.scroll(function(){
-			if ($window.scrollTop() > $h) {
+			if ($window.scrollTop() > ($h - 145)) {
 				$nav.addClass('fixed');
 			} else {
 				$nav.removeClass('fixed');
