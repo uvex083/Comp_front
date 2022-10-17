@@ -430,6 +430,23 @@ header {
   top: 0;
   z-index: 2;
   width: 100%;
+  transition: all ease-in-out 0.4s;
+}
+
+header.anim-header {
+  transition: all ease-in-out 0.2s;
+  box-shadow: rgb(40, 42, 75) 0px 5px 15px -1px;
+  background-color: #181818;
+}
+
+header.menu-header {
+  background-color: rgba(0, 0, 0, 0.99);
+  transition: all ease-in-out 0.2s;
+}
+
+body.menu-body {
+  overflow: hidden;
+  transition: all ease-in-out 0.2s;
 }
 
 main {
@@ -468,7 +485,7 @@ main {
   position: absolute;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(0, 0, 0, 0.99);
   z-index: 10;
   display: flex;
   flex-wrap: wrap;
@@ -1161,7 +1178,7 @@ main {
 }
 
 .tpl-line {
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   height: 5px;
   background-color: #5E64A9;
   border-radius: 5px;
@@ -3602,22 +3619,34 @@ main {
   margin: 0;
 }
 
-.lvl-1 {
+.podbor-start {
   padding: 200px 0;
 }
 
-.lvl-2,
-.lvl-3 {
-  background: url(/img/bg-podbor.png) center;
-}
-.lvl-2 h2,
-.lvl-3 h2 {
+.podbor-icons h2,
+.podbor-checkbox h2 {
   margin-bottom: 80px;
 }
 
+.podbor-icons .podbor-item__cnt {
+  padding-bottom: 220px;
+}
+
+.podbor-bg {
+  background: url(/img/bg-podbor.png) center;
+  width: 100%;
+}
+
+.podbor-lvl {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .podbor-lvl .next {
   cursor: pointer;
-  margin: 0 auto 80px;
+  margin: 0 auto;
+  padding-bottom: 135px;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -3686,7 +3715,6 @@ main {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  padding-bottom: 230px;
 }
 .podbor-lvl .podbor-item__cnt.tab-view {
   display: grid;
@@ -3855,7 +3883,7 @@ main {
 .lvl-finish__btn-cnt {
   display: flex;
   gap: 30px;
-  margin-bottom: 140px;
+  margin-bottom: 135px;
   justify-content: center;
 }
 .lvl-finish__btn-cnt .repeat-btn .tpl-btn__first {

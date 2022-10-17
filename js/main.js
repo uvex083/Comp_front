@@ -45,10 +45,25 @@ function menuHandler() {
 				}, 300);
 			}
 		}
+
+		$("body").toggleClass("menu-body");
+		$("header").toggleClass("menu-header");
 	});
 }
 
 menuHandler();
+
+/* Стилизация липкого меню начало*/
+
+$(window).scroll(function () {
+	if ($(this).scrollTop() > 0) {
+		$("header").addClass("anim-header");
+	} else {
+		$("header").removeClass("anim-header");
+	}
+});
+
+/* Стилизация липкого меню конец*/
 
 
 
@@ -234,7 +249,7 @@ $(document).ready(function () {
 	});
 
 
-/* Подбор КОНЕЦ */
+	/* Подбор КОНЕЦ */
 
 
 
