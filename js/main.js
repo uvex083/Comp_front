@@ -255,6 +255,16 @@ $(document).ready(function () {
 
 
 
+	/* Сравнение НАЧАЛО */
+
+	$(".compare-filter__show-diff label").click(function () {
+		$(this).toggleClass("active");
+	});
+
+	/* Сравнение КОНЕЦ */
+
+
+
 
 
 });
