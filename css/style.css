@@ -3963,33 +3963,53 @@ main {
 .compare-section .cat-item__cnt.catalog-cnt .cat-item__img-link {
   margin-bottom: 60px;
 }
-.compare-section .group-char__cnt .group-char__title-cnt {
+.compare-section .compare-char__cnt {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+.compare-section .compare-char__cnt .group-char__cnt .group-char__title-cnt {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 13px;
   border-bottom: 2px solid #545454;
+  margin-bottom: 40px;
 }
-.compare-section .group-char__cnt .group-char__title-cnt .group-char__title {
+.compare-section .compare-char__cnt .group-char__cnt .group-char__title-cnt .group-char__title {
   font-weight: 500;
   font-size: 28px;
   line-height: 120%;
   text-transform: uppercase;
   color: #545454;
 }
-.compare-section .group-char__cnt .group-char__title-cnt .group-char__show-btn.hide p {
+.compare-section .compare-char__cnt .group-char__cnt .group-char__title-cnt .group-char__show-btn.hide p {
   position: relative;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
 }
-.compare-section .group-char__cnt .group-char__title-cnt .group-char__show-btn.hide p:before {
+.compare-section .compare-char__cnt .group-char__cnt .group-char__title-cnt .group-char__show-btn.hide p:before {
   content: "-";
   position: absolute;
-  top: 50%;
   left: -25px;
-  transform: translate(0%, -50%);
   font-weight: 400;
   font-size: 30px;
-  line-height: 120%;
-  color: #8C8C8C;
+}
+.compare-section .compare-char__cnt .group-char__cnt .group-char__title-cnt .group-char__show-btn.hide p:hover {
+  color: #D0A220;
+}
+.compare-section .compare-char__cnt .group-char__cnt .group-char__title-cnt .group-char__show-btn.show p {
+  position: relative;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+  color: #D0A220;
+}
+.compare-section .compare-char__cnt .group-char__cnt .group-char__title-cnt .group-char__show-btn.show p:before {
+  content: "+";
+  position: absolute;
+  left: -25px;
+  font-weight: 400;
+  font-size: 26px;
 }
 .compare-section .char-item__name {
   display: flex;

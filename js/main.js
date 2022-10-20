@@ -261,6 +261,26 @@ $(document).ready(function () {
 		$(this).toggleClass("active");
 	});
 
+
+	$(".group-char__show-btn").click(function () {
+
+		if ($(this).hasClass("hide")) {
+			$(this).children("p").html("Показать");
+			$(this).removeClass("hide");
+			$(this).addClass("show");
+			$(this).siblings(".group-char__title").css("color", "#D0A220");
+			$(this).parent(".group-char__title-cnt").siblings("div").slideToggle();
+		} else if ($(this).hasClass("show")) {
+			$(this).children("p").html("Свернуть");
+			$(this).removeClass("show");
+			$(this).addClass("hide");
+			$(this).siblings(".group-char__title").css("color", "#545454");
+			$(this).parent(".group-char__title-cnt").siblings("div").slideToggle();
+		}
+	});
+
+
+
 	/* Сравнение КОНЕЦ */
 
 

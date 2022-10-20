@@ -4388,35 +4388,67 @@ main {
 		}
 	}
 
-	.group-char__cnt {
-		.group-char__title-cnt {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			padding-bottom: 13px;
-			border-bottom: 2px solid $color_config;
+	.compare-char__cnt {
+		display: flex;
+		flex-direction: column;
+		gap: 70px;
 
-			.group-char__title {
-				font-weight: 500;
-				font-size: 28px;
-				line-height: 120%;
-				text-transform: uppercase;
-				color: $color_config;
-			}
+		.group-char__cnt {
 
-			.group-char__show-btn.hide p {
-				position: relative;
+			.group-char__title-cnt {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding-bottom: 13px;
+				border-bottom: 2px solid $color_config;
+				margin-bottom: 40px;
 
-				&:before {
-					content: "-";
-					position: absolute;
-					top: 50%;
-					left: -25px;
-					transform: translate(0%, -50%);
-					font-weight: 400;
-					font-size: 30px;
+				.group-char__title {
+					font-weight: 500;
+					font-size: 28px;
 					line-height: 120%;
-					color: $color_p;
+					text-transform: uppercase;
+					color: $color_config;
+				}
+
+				.group-char__show-btn {
+					&.hide {
+						p {
+							position: relative;
+							transition: all ease-in-out 0.2s;
+							cursor: pointer;
+
+							&:before {
+								content: "-";
+								position: absolute;
+								left: -25px;
+								font-weight: 400;
+								font-size: 30px;
+							}
+
+							&:hover {
+								color: $color_orange;
+							}
+						}
+					}
+
+					&.show {
+						p {
+							position: relative;
+							transition: all ease-in-out 0.2s;
+							cursor: pointer;
+							color: $color_orange;
+
+							&:before {
+								content: "+";
+								position: absolute;
+								left: -25px;
+								font-weight: 400;
+								font-size: 26px;
+
+							}
+						}
+					}
 				}
 			}
 		}
