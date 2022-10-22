@@ -942,7 +942,7 @@ main {
   width: inherit;
   max-width: inherit;
   text-align: center;
-  padding: 10px 45px;
+  padding: 10px 10px;
   color: #EEEEEE;
   font-size: 17px;
   line-height: 24px;
@@ -951,6 +951,7 @@ main {
   display: flex;
   justify-content: center;
   z-index: 2;
+  white-space: nowrap;
 }
 .tpl-btn .tpl-btn__first span {
   position: relative;
@@ -971,6 +972,7 @@ main {
   border-radius: 6px;
   bottom: -8px;
   z-index: 1;
+  transition: all ease-in-out 0.2s;
 }
 .tpl-btn:hover .tpl-btn__first span {
   transform: translateX(-5px);
@@ -996,7 +998,8 @@ main {
 .tpl-btn.transparent .tpl-btn__first {
   background: #181818;
   color: #5E64A9;
-  border: 2px solid #5E64A9;
+  border: 2px solid #363A78;
+  padding: 10px 10px;
 }
 .tpl-btn.transparent .tpl-btn__first span:after {
   content: none;
@@ -1004,11 +1007,11 @@ main {
 .tpl-btn.transparent .tpl-btn__second {
   content: "";
   background: none;
-  border: 2px solid #5E64A9;
+  border: 2px solid #363A78;
+  transition: all ease-in-out 0.2s;
 }
 .tpl-btn.transparent:hover .tpl-btn__first {
-  background-color: #5E64A9;
-  border: 2px solid #5E64A9;
+  background-color: #363A78;
 }
 .tpl-btn.transparent:hover .tpl-btn__first span {
   transform: translate(0);
@@ -1016,7 +1019,6 @@ main {
 }
 .tpl-btn.transparent:hover .tpl-btn__second {
   background-color: #EEEEEE;
-  border: 2px solid #5E64A9;
 }
 
 .tpl-btn-line {
@@ -4026,4 +4028,126 @@ main {
   font-size: 17px;
   line-height: 140%;
   color: #B6B6B6;
+}
+
+.assembly-table .number-cell {
+  width: 100%;
+  max-width: 100px;
+  text-align: center;
+}
+.assembly-table .name-cell {
+  width: 100%;
+  max-width: 360px;
+}
+.assembly-table .id-cell {
+  width: 100%;
+  max-width: 150px;
+}
+.assembly-table .coast-cell {
+  width: 100%;
+  max-width: 150px;
+}
+.assembly-table .proceed-cell {
+  width: 100%;
+  max-width: 220px;
+}
+.assembly-table .button-cell {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.assembly-table .delete-cell {
+  width: 5%;
+  background: url(/img/bin-gray.svg) no-repeat center;
+  background-size: 23px 23px;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+.assembly-table .delete-cell:hover {
+  background: url(/img/bin.svg) no-repeat center;
+  background-size: 23px 23px;
+}
+.assembly-table .assembly-table__header {
+  border-bottom: 2px solid #545454;
+  padding-bottom: 25px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.assembly-table .assembly-table__header .header-cell {
+  padding-right: 15px;
+  font-size: 17px;
+  line-height: 140%;
+  color: #8C8C8C;
+}
+.assembly-table .assembly-table__row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  transition: all ease-in-out 0.2s;
+  border-bottom: 1px solid #545454;
+}
+.assembly-table .assembly-table__row:hover {
+  background-color: #252525;
+}
+.assembly-table .assembly-table__row:hover .tpl-btn.transparent .tpl-btn__first {
+  background-color: #252525;
+}
+.assembly-table .assembly-table__row:hover .tpl-btn.transparent .tpl-btn__second {
+  background-color: transparent;
+}
+.assembly-table .assembly-table__row .tpl-btn {
+  max-width: 200px;
+}
+.assembly-table .assembly-table__row .tpl-btn.transparent {
+  max-width: 250px;
+}
+.assembly-table .assembly-table__row .tpl-btn.transparent:hover .tpl-btn__second {
+  background-color: #B6B6B6;
+}
+.assembly-table .assembly-table__row .row-cell {
+  padding: 36px 5px 36px 5px;
+}
+.assembly-table .assembly-table__row .row-cell.number-cell, .assembly-table .assembly-table__row .row-cell.id-cell, .assembly-table .assembly-table__row .row-cell.coast-cell {
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  color: #EEEEEE;
+}
+.assembly-table .assembly-table__row .row-cell.proceed-cell a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #5E64A9;
+  transition: all ease-in-out 0.2s;
+}
+.assembly-table .assembly-table__row .row-cell.proceed-cell a:hover {
+  color: #D0A220;
+}
+.assembly-table .assembly-table__row .row-cell .assemble-name {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #D0A220;
+  margin-bottom: 2px;
+}
+.assembly-table .assembly-table__row .row-cell .assemble-show {
+  font-size: 15px;
+  line-height: 140%;
+  color: #8C8C8C;
+  border-bottom: 1px dashed #8C8C8C;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+.assembly-table .assembly-table__row .row-cell .assemble-show:hover {
+  border-bottom: 1px dashed #252525;
 }
