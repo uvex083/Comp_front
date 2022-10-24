@@ -68,6 +68,23 @@ $(window).scroll(function () {
 
 
 
+/* Карточка товара Begin */
+
+$(document).ready(function () {
+	$('.arr-down').click(function () {
+		var win = $(window).height() - 100;
+		$('body,html').animate({
+			scrollTop: win
+		}, 800);
+		return false;
+	});
+});
+
+/* Карточка товара End */
+
+
+
+
 
 /* Карточка товара НАЧАЛО */
 
@@ -278,7 +295,6 @@ $(document).ready(function () {
 			$(this).parent(".group-char__title-cnt").siblings("div").slideToggle();
 		}
 	});
-
 
 
 	/* Сравнение КОНЕЦ */

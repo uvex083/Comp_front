@@ -324,6 +324,7 @@ header.anim-header {
 	// box-shadow:rgb(208 162 32) 0px -5px 20px -1px;
 	box-shadow: rgb(40 42 75) 0px 5px 15px -1px;
 	background-color: $color_bg;
+	z-index: 10;
 }
 
 header.menu-header {
@@ -1082,7 +1083,6 @@ main {
 	display: flex;
 	align-items: center;
 	cursor: pointer;
-	margin-right: 50px;
 
 	.show-video-cnt__icon {
 		width: 46px;
@@ -1184,6 +1184,8 @@ main {
 	background-position: center;
 	background-size: 50px 3px;
 	background-repeat: repeat-x;
+	z-index: 2;
+	position: relative;
 }
 
 .tpl-btn__link {
@@ -2201,6 +2203,9 @@ main {
 
 	.arr-down {
 		text-align: center;
+		width: fit-content;
+		margin: 0 auto;
+		cursor: pointer;
 	}
 }
 
@@ -3907,6 +3912,8 @@ main {
 
 	.start-cnt {
 		cursor: pointer;
+		width: fit-content;
+		margin: 0 auto;
 
 		h2 {
 			margin-bottom: 20px;
@@ -4478,6 +4485,8 @@ main {
 }
 
 .assembly-table {
+	margin-bottom: 200px;
+
 	.number-cell {
 		width: 100%;
 		max-width: 100px;
@@ -4557,11 +4566,14 @@ main {
 		&:hover .tpl-btn.transparent .tpl-btn__second {
 			background-color: transparent;
 		}
+
 		.tpl-btn {
 			max-width: 200px;
 		}
+
 		.tpl-btn.transparent {
 			max-width: 250px;
+
 			&:hover .tpl-btn__second {
 				background-color: #B6B6B6;
 			}
@@ -4592,7 +4604,7 @@ main {
 
 				&:hover {
 					color: $color_orange;
-				}				
+				}
 			}
 
 			.assemble-name {
@@ -4612,10 +4624,196 @@ main {
 				width: fit-content;
 				cursor: pointer;
 				transition: all ease-in-out 0.2s;
+
 				&:hover {
 					border-bottom: 1px dashed #252525;
 				}
 			}
 		}
 	}
+}
+
+.about-img-section {
+	background-position: center;
+	background: no-repeat;
+	margin-top: -145px;
+	position: relative;
+
+	.breadcrumbs-section {
+		padding-top: 145px;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 75vh;
+		width: 100%;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0) 35%, rgb(24, 24, 24) 60%);
+	}
+}
+
+.about-title {
+	width: 100%;
+	max-width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+	z-index: 2;
+	position: relative;
+	margin-bottom: 150px;
+}
+
+.video-cnt {
+	width: 100%;
+	height: auto;
+	position: relative;
+	margin-top: 40px;
+
+	.show-video-cnt {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+	}
+
+	img {
+		width: 100%;
+		max-width: 950px;
+		height: auto;
+	}
+}
+
+.text-img {
+	.center-cnt {
+		padding: 100px 0;
+	}
+}
+
+.tpl-block {
+	display: flex;
+	align-items: center;
+	gap: 50px;
+	justify-content: space-between;
+
+	&.reverse {
+		flex-direction: row-reverse;
+
+	}
+
+	.tpl-block__title-cnt {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		max-width: 680px;
+		width: 100%;
+	}
+
+	.tpl-block__img {
+		position: relative;
+		height: 100%;
+		width: auto;
+
+		img {
+			width: 100%;
+			height: auto;
+			max-width: 880px;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			right: 0;
+			top: 50%;
+			height: inherit;
+			width: 100%;
+			background: radial-gradient(circle, rgba(255, 255, 255, 0) 54%, rgb(24, 24, 24) 73%);
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+.who-section {
+	padding: 180px 0;
+	p {
+		max-width: 1000px;
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+.who-item__cnt {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 50px;
+	padding: 85px 0;
+
+	.who-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 5px;
+
+		.who-item__name {
+			font-weight: 500;
+			font-size: 22px;
+			line-height: 140%;
+			color: $color_orange;
+		}
+
+		.who-item__function {
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 140%;
+			color: $color_p;
+			text-align: center;
+		}
+
+		img {
+			width: 100%;
+			height: 220px;
+			object-fit: contain;
+			margin-bottom: 5px;
+		}
+
+		.who-photo {
+			display: none;
+		}
+	}
+}
+
+a.join-us {
+	font-family: "Press Start 2P";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 148%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color_violet_light;
+	 position: relative;
+	 width: fit-content;	 
+	 margin: 0 auto;
+	 display: flex;
+	 span {
+		transition: all ease-in-out 0.2s;
+	 }
+	 
+	 &:after {
+		content: '>>';
+		position: absolute;
+		left: calc(100% + 15px);
+		transition: all ease-in-out 0.1s;
+	 }
+	 &:hover:after {
+		transform: translateX(5px);
+		color: $color_orange;
+	 }
+	 &:hover span{
+		color: $color_orange;
+	 }
+	 
 }
