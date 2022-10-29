@@ -218,7 +218,7 @@ h3 {
   font-style: normal;
   font-weight: 500;
   font-size: 28px;
-  line-height: 34px;
+  line-height: 140%;
   text-transform: uppercase;
   color: #EEEEEE;
   margin-bottom: 30px;
@@ -249,6 +249,7 @@ p {
   font-size: 17px;
   line-height: 140%;
   color: #8C8C8C;
+  margin-bottom: 20px;
 }
 
 a {
@@ -262,6 +263,48 @@ a {
 
 a:hover {
   color: #D0A220;
+}
+
+ul {
+  margin-top: 35px;
+}
+ul li {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  color: #B6B6B6;
+  padding-left: 35px;
+  position: relative;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+}
+ul li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  background: url(/img/li-icon.svg) no-repeat center;
+  background-size: contain;
+  transition: all ease-in-out 0.2s;
+}
+ul li:hover {
+  color: #EEEEEE;
+}
+ul li:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  background: url(/img/li-icon__active.svg) no-repeat center;
+  background-size: contain;
+  transition: all ease-in-out 0.2s;
+}
+ul li:not(:last-child) {
+  margin-bottom: 35px;
 }
 
 .dark-header {
@@ -1356,6 +1399,8 @@ main {
 .our-services__cnt .our-services__item:hover .our-services__title {
   color: #D0A220;
   text-shadow: 2px 2px 0px #2305C2;
+  -webkit-animation: AnimationShadow 0.7s linear 0s infinite normal none;
+          animation: AnimationShadow 0.7s linear 0s infinite normal none;
 }
 .our-services__cnt .our-services__img {
   margin-bottom: 50px;
@@ -1507,6 +1552,9 @@ main {
   height: fit-content;
   transform: translateY(-70%);
 }
+.strip .strip-cnt .strip-btn:hover .strip-btn__second {
+  background-color: #EEEEEE;
+}
 .strip .strip-cnt .strip-btn .strip-btn__first {
   font-family: "Roboto Mono";
   text-transform: uppercase;
@@ -1534,6 +1582,7 @@ main {
   border-radius: 6px;
   bottom: -8px;
   z-index: 1;
+  transition: all ease-in-out 0.2s;
 }
 
 .gallery__item {
@@ -1739,6 +1788,7 @@ main {
   max-width: 50%;
   width: 100%;
   gap: 50px;
+  margin: 0;
 }
 .faq__cnt ul.faq__list-cnt li {
   padding-left: 50px;
@@ -1746,7 +1796,7 @@ main {
 }
 .faq__cnt ul.faq__list-cnt li .faq__btn {
   position: absolute;
-  top: -10px;
+  top: -5px;
   left: 0;
   cursor: pointer;
 }
@@ -3910,7 +3960,7 @@ main {
   height: 32px;
 }
 .switch-cnt .switch-btn .switch-btn__y.switch-on {
-  transform: translateX(100%);
+  transform: translateX(34px);
 }
 .switch-cnt .switch-btn .switch-btn__d {
   width: 50%;
@@ -4478,4 +4528,213 @@ a.tpl-link:hover span {
   font-size: 20px;
   line-height: 140%;
   color: #D0A220;
+}
+
+.guarantee-item__cnt {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 100px 200px;
+}
+.guarantee-item__cnt .guarantee-item {
+  width: 100%;
+}
+.guarantee-item__cnt .guarantee-item .guarantee-item__title {
+  font-family: "Press Start 2P";
+  font-size: 20px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #D0A220;
+  margin-bottom: 20px;
+}
+
+.tpl-section .strip {
+  margin-top: 145px;
+}
+
+.delivery-section h3 {
+  margin-bottom: 145px;
+}
+
+.quest .quest-end__title,
+.quest .quest-start__title {
+  font-family: "Press Start 2P";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 148%;
+  text-transform: uppercase;
+  color: #D0A220;
+  text-shadow: 2px 2px 0px #350EB0;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+.quest .quest-end__title:hover,
+.quest .quest-start__title:hover {
+  -webkit-animation: AnimationShadow 0.7s linear 0s infinite normal none;
+          animation: AnimationShadow 0.7s linear 0s infinite normal none;
+}
+.quest .quest-end__title:hover:after,
+.quest .quest-start__title:hover:after {
+  content: ">>";
+  position: absolute;
+  font-family: "Press Start 2P";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 148%;
+  text-transform: uppercase;
+  color: #D0A220;
+  text-shadow: 2px 2px 0px #350EB0;
+  text-align: center;
+  transition: all ease-in-out 0.2s;
+  left: calc(100% + 30px);
+  -webkit-animation: AnimationArrow 0.7s linear 0s infinite normal none;
+          animation: AnimationArrow 0.7s linear 0s infinite normal none;
+}
+.quest .quest-end__title:after,
+.quest .quest-start__title:after {
+  content: ">>";
+  position: absolute;
+  font-family: "Press Start 2P";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 148%;
+  text-transform: uppercase;
+  color: #D0A220;
+  text-shadow: 2px 2px 0px #350EB0;
+  text-align: center;
+  transition: all ease-in-out 0.2s;
+  left: calc(100% + 20px);
+  transition: all ease-in-out 0.2s;
+}
+.quest .quest-end__title {
+  margin: 0;
+}
+.quest .quest-end__title:after {
+  content: none !important;
+}
+.quest .quest__item-cnt {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 80px;
+  position: relative;
+}
+.quest .quest__item-cnt .tpl-line {
+  position: absolute;
+  width: 100%;
+  top: 33%;
+}
+.quest .quest__item-cnt .quest__item {
+  z-index: 3;
+}
+.quest .quest__item-cnt .quest__item:nth-child(4) {
+  position: relative;
+}
+.quest .quest__item-cnt .quest__item:nth-child(4) .tpl-line {
+  position: absolute;
+  top: 90%;
+  right: -64%;
+  transform: rotate(90deg);
+  z-index: -1;
+  width: 560px;
+}
+.quest .quest__item-cnt .quest__item .quest__item-lvl {
+  font-family: "Press Start 2P";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 148%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #5E64A9;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.quest .quest__item-cnt .quest__item .quest__item-img {
+  margin-bottom: 20px;
+  border: 4px solid #5E64A9;
+  border-radius: 6px;
+  padding: 0 0 70% 0;
+  overflow: hidden;
+  position: relative;
+}
+.quest .quest__item-cnt .quest__item .quest__item-img img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.quest .quest-end {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.quest .quest-end .quest-end__btn {
+  position: relative;
+}
+.quest .quest-end .quest-end__btn .tpl-btn-line {
+  transform: translate(0, -50%);
+  z-index: -1;
+  width: 1632px;
+}
+
+@-webkit-keyframes AnimationShadow {
+  0% {
+    text-shadow: 2px 2px 0px #350EB0;
+  }
+  50% {
+    text-shadow: 4px 4px 1px #350EB0;
+  }
+  100% {
+    text-shadow: 2px 2px 0px #350EB0;
+  }
+}
+
+@keyframes AnimationShadow {
+  0% {
+    text-shadow: 2px 2px 0px #350EB0;
+  }
+  50% {
+    text-shadow: 4px 4px 1px #350EB0;
+  }
+  100% {
+    text-shadow: 2px 2px 0px #350EB0;
+  }
+}
+@-webkit-keyframes AnimationArrow {
+  0% {
+    left: calc(100% + 20px);
+    text-shadow: 2px 2px 0px #350EB0;
+  }
+  50% {
+    left: calc(100% + 30px);
+    text-shadow: 3px 3px 0px #350EB0;
+  }
+  100% {
+    left: calc(100% + 20px);
+    text-shadow: 2px 2px 0px #350EB0;
+  }
+}
+@keyframes AnimationArrow {
+  0% {
+    left: calc(100% + 20px);
+    text-shadow: 2px 2px 0px #350EB0;
+  }
+  50% {
+    left: calc(100% + 30px);
+    text-shadow: 3px 3px 0px #350EB0;
+  }
+  100% {
+    left: calc(100% + 20px);
+    text-shadow: 2px 2px 0px #350EB0;
+  }
 }
