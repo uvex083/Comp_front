@@ -29,7 +29,7 @@ h1 {
 	line-height: 47px;
 	text-transform: uppercase;
 	color: $color_orange;
-	text-shadow: 2px 2px 0px #350EB0;
+	text-shadow: 2px 2px 0px $color_shadow;
 }
 
 h1.white-h1 {
@@ -40,7 +40,7 @@ h1.white-h1 {
 	line-height: 140%;
 	text-transform: uppercase;
 	color: $color_default;
-	text-shadow: 2px 2px 0px #350EB0;
+	text-shadow: 2px 2px 0px $color_shadow;
 	margin-bottom: 85px;
 }
 
@@ -52,8 +52,21 @@ h2 {
 	line-height: 41px;
 	text-transform: uppercase;
 	color: $color_orange;
-	text-shadow: 2px 2px 0px #350EB0;
+	text-shadow: 2px 2px 0px $color_shadow;
 	text-align: center;
+	margin-bottom: 50px;
+}
+
+h2.white-h2 {
+	font-family: 'Press Start 2P';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 28px;
+	line-height: 41px;
+	text-transform: uppercase;
+	color: $color_default;
+	text-shadow: 2px 2px 0px $color_shadow;
+	text-align: left;
 	margin-bottom: 50px;
 }
 
@@ -110,7 +123,7 @@ a:hover {
 }
 
 ul {
-	margin-top: 35px;
+	margin: 40px 0;
 
 	li {
 		font-weight: 400;
@@ -472,8 +485,8 @@ main {
 							content: '';
 							position: absolute;
 							left: 0;
-							top: 50%;
-							transform: translate(0, -50%);
+							top: 2px;
+							transform: translate(0, 0);
 							width: 16px;
 							height: 20px;
 							background: url(/img/icon-adress.svg) center no-repeat;
@@ -489,8 +502,8 @@ main {
 							content: '';
 							position: absolute;
 							left: 0;
-							top: 50%;
-							transform: translate(0, -50%);
+							top: 2px;
+							transform: translate(0, 0);
 							width: 20px;
 							height: 20px;
 							background: url(/img/icon-time.svg) center no-repeat;
@@ -922,7 +935,7 @@ main {
 
 .tpl-btn {
 	width: 100%;
-	max-width: 300px;
+	max-width: 320px;
 	background-color: $color_bg;
 	position: relative;
 	transition: all ease-in-out 0.2s;
@@ -4770,12 +4783,13 @@ main {
 	.tpl-block__img {
 		position: relative;
 		height: 100%;
-		width: auto;
+		width: 100%;
+		max-width: 880px;
 
 		img {
 			width: 100%;
-			height: auto;
-			max-width: 880px;
+			height: 100%;
+			object-fit: cover;
 		}
 
 		&::after {
@@ -4878,6 +4892,7 @@ a.tpl-link {
 	}
 }
 
+.delivery-map,
 .about-map {
 	position: relative;
 
@@ -5047,6 +5062,10 @@ a.tpl-link {
 	margin-bottom: 145px;
 }
 
+.delivery-section {
+	overflow-x: hidden;
+}
+
 .quest {
 
 	.quest-end__title,
@@ -5184,13 +5203,30 @@ a.tpl-link {
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
+
 		.quest-end__btn {
 			position: relative;
+
 			.tpl-btn-line {
 				transform: translate(0, -50%);
 				z-index: -1;
 				width: 1632px;
 			}
+
+			span {
+				&:before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: -31px;
+					transform: translate(0, -50%);
+					background: url(/img/download-icon.svg) no-repeat center;
+					background-size: contain;
+					width: 16px;
+					height: 18px;
+				}
+			}
+
 		}
 	}
 }
@@ -5223,5 +5259,228 @@ a.tpl-link {
 	100% {
 		left: calc(100% + 20px);
 		text-shadow: 2px 2px 0px $color_shadow;
+	}
+}
+
+.delivery-page {
+
+	.tpl-block__img {
+		border: 5px solid $color_violet_light;
+		border-radius: 6px;
+
+		&:after {
+			content: none;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			width: 150%;
+			height: 110%;
+			transform: translate(10%, 10%);
+			z-index: -1;
+			background: linear-gradient($color_violet_light, transparent 1px), linear-gradient(90deg, $color_violet_light, transparent 1px);
+			background-size: 50px 50px;
+			background-position: center center;
+		}
+
+		.ms-slider-controls {
+			display: flex;
+			color: $color_default;
+			gap: 30px;
+			position: absolute;
+			left: 50%;
+			bottom: -50px;
+			transform: translate(-50%, 0);
+			right: auto;
+		}
+	}
+
+	&.reverse {
+		.tpl-block__img {
+			&:before {
+				transform: translate(-40%, 10%);
+			}
+		}
+	}
+
+	.delivery-adv__cnt {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 180px;
+
+		.delivery-adv__item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			.delivery-adv__img {
+				margin-bottom: 40px;
+			}
+
+			.delivery-adv__title {
+				font-family: "Press Start 2P";
+				font-style: normal;
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 30px;
+				text-align: center;
+				text-transform: uppercase;
+				color: $color_default;
+				text-shadow: 2px 5px 0px rgb(0 0 0 / 80%);
+				transition: all ease-in-out 0.2s;
+				margin-bottom: 20px;
+			}
+
+			.delivery-adv__subtitle {
+				font-family: 'Roboto Mono';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 17px;
+				line-height: 140%;
+				color: $color_p;
+				text-align: center;
+			}
+		}
+	}
+}
+
+.map-section.delivery-page {
+	padding: 155px 0;
+
+	h2 {
+		margin-bottom: 10px;
+	}
+
+	p.subtitle {
+		text-align: center;
+		margin-bottom: 60px;
+	}
+
+	.delivery-map {
+		margin-bottom: 120px;
+	}
+
+	.delivery-map__desc {
+		max-width: 70%;
+		position: relative;
+		margin-bottom: 40px;
+
+		p {
+			text-align: left;
+		}
+
+		.tpl-btn {
+			position: absolute;
+			top: 50%;
+			left: 100%;
+			transform: translate(10%, -50%);
+
+			span {
+				&:before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: -31px;
+					transform: translate(0, -50%);
+					background: url(/img/download-icon.svg) no-repeat center;
+					background-size: contain;
+					width: 16px;
+					height: 18px;
+				}
+			}
+		}
+	}
+
+	.delivery-map__quest-text {
+		margin-bottom: 15px;
+
+		p {
+			text-align: left;
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 140%;
+			color: $color_orange;
+		}
+	}
+
+	.delivery-map__contact {
+		display: flex;
+		gap: 30px;
+		flex-wrap: wrap;
+
+		a {
+			font-weight: 500;
+			font-size: 26px;
+			line-height: 140%;
+			color: $color_default;
+			transition: all ease-in-out 0.2s;
+
+			&:hover {
+				color: $color_orange;
+			}
+		}
+	}
+}
+
+.clients-section {
+	.center-cnt {
+		padding: 150px 0;
+	}
+
+	h2 {
+		margin-bottom: 85px;
+	}
+
+	.clients-cnt {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		align-items: center;
+		padding: 0 10%;
+
+		.clients-item {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			position: relative;
+			padding: 0 0 25% 0;
+
+			&:hover img {
+				filter: none;
+			}
+
+			img {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				object-fit: scale-down;
+				filter: grayscale(100%);
+				max-height: 80px;
+				transition: all ease-in-out 0.2s;
+			}
+		}
+	}
+}
+
+.credit-main__section {
+	.credit-main__hello {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10%;	
+
+		h3 {
+			color: $color_orange;
+			max-width: 55%;
+		}
+
+		.credit-btn {
+			width: 35%;
+		}
+	}
+}
+.credit-how__section {
+	.center-cnt {
+		padding: 160px 0;
 	}
 }
