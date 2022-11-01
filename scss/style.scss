@@ -5054,6 +5054,70 @@ a.tpl-link {
 	}
 }
 
+.credit-how__item-label.end,
+.quest-end__title,
+.credit-how__item-label.start,
+.quest-start__title {
+	font-family: 'Press Start 2P';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 148%;
+	text-transform: uppercase;
+	color: $color_orange;
+	text-shadow: 2px 2px 0px $color_shadow;
+	position: relative;
+	width: fit-content;
+	cursor: pointer;
+	margin-bottom: 25px;
+
+	&:hover {
+		animation: AnimationShadow 0.7s linear 0s infinite normal none;
+	}
+
+	&:hover:after {
+		content: ">>";
+		position: absolute;
+		font-family: "Press Start 2P";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 17px;
+		line-height: 148%;
+		text-transform: uppercase;
+		color: $color_orange;
+		text-shadow: 2px 2px 0px $color_shadow;
+		text-align: center;
+		transition: all ease-in-out 0.2s;
+		left: calc(100% + 30px);
+		animation: AnimationArrow 0.7s linear 0s infinite normal none;
+	}
+
+	&:after {
+		content: ">>";
+		position: absolute;
+		font-family: "Press Start 2P";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 17px;
+		line-height: 148%;
+		text-transform: uppercase;
+		color: $color_orange;
+		text-shadow: 2px 2px 0px $color_shadow;
+		text-align: center;
+		transition: all ease-in-out 0.2s;
+		left: calc(100% + 20px);
+		transition: all ease-in-out 0.2s;
+	}
+}
+
+.credit-how__item-label.end:after {
+	content: none !important;
+}
+
+.quest-end__title:after {
+	content: none !important;
+}
+
 .tpl-section .strip {
 	margin-top: 145px;
 }
@@ -5068,66 +5132,8 @@ a.tpl-link {
 
 .quest {
 
-	.quest-end__title,
-	.quest-start__title {
-		font-family: 'Press Start 2P';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 17px;
-		line-height: 148%;
-		text-transform: uppercase;
-		color: $color_orange;
-		text-shadow: 2px 2px 0px $color_shadow;
-		position: relative;
-		width: fit-content;
-		cursor: pointer;
-		margin-bottom: 25px;
-
-		&:hover {
-			animation: AnimationShadow 0.7s linear 0s infinite normal none;
-		}
-
-		&:hover:after {
-			content: ">>";
-			position: absolute;
-			font-family: "Press Start 2P";
-			font-style: normal;
-			font-weight: 400;
-			font-size: 17px;
-			line-height: 148%;
-			text-transform: uppercase;
-			color: $color_orange;
-			text-shadow: 2px 2px 0px $color_shadow;
-			text-align: center;
-			transition: all ease-in-out 0.2s;
-			left: calc(100% + 30px);
-			animation: AnimationArrow 0.7s linear 0s infinite normal none;
-		}
-
-		&:after {
-			content: ">>";
-			position: absolute;
-			font-family: "Press Start 2P";
-			font-style: normal;
-			font-weight: 400;
-			font-size: 17px;
-			line-height: 148%;
-			text-transform: uppercase;
-			color: $color_orange;
-			text-shadow: 2px 2px 0px $color_shadow;
-			text-align: center;
-			transition: all ease-in-out 0.2s;
-			left: calc(100% + 20px);
-			transition: all ease-in-out 0.2s;
-		}
-	}
-
 	.quest-end__title {
 		margin: 0;
-	}
-
-	.quest-end__title:after {
-		content: none !important;
 	}
 
 	.quest__item-cnt {
@@ -5465,9 +5471,9 @@ a.tpl-link {
 
 .credit-main__section {
 	.credit-main__hello {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 10%;	
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10%;
 
 		h3 {
 			color: $color_orange;
@@ -5479,8 +5485,136 @@ a.tpl-link {
 		}
 	}
 }
+
 .credit-how__section {
 	.center-cnt {
-		padding: 160px 0;
+		padding: 160px 40px;
+
+		.credit-how__cnt {
+			height: 490px;
+			display: flex;
+			gap: 35px;
+
+			.credit-how__item {
+				height: fit-content;
+				position: relative;
+
+				&:first-child {
+					transform: translateY(60px);
+
+					&:after {
+						content: '';
+						position: absolute;
+						right: -66px;
+						top: 78px;
+						background: url(/img/credit-line-1.svg) no-repeat center;
+						background-size: cover;
+						width: 70px;
+						height: 163px;
+					}
+				}
+
+				&:nth-child(2) {
+					transform: translateY(250px);
+					&:after {
+						content: '';
+						position: absolute;
+						right: -59px;
+						top: -90px;
+						background: url(/img/credit-line-2.svg) no-repeat center;
+						background-size: cover;
+						width: 65px;
+						height: 163px;
+					}
+				}
+
+				&:nth-child(3) {
+					transform: translateY(10px);
+					&:after {
+						content: '';
+						position: absolute;
+						right: -39px;
+						top: 90px;
+						background: url(/img/credit-line-3.svg) no-repeat center;
+						background-size: cover;
+						width: 43px;
+						height: 13px;
+					}
+				}
+
+				&:nth-child(4) {
+					transform: translateY(10px);
+					&:after {
+						content: '';
+						position: absolute;
+						right: -67px;
+						top: 99px;
+						background: url(/img/credit-line-4.svg) no-repeat center;
+						background-size: cover;
+						width: 70px;
+						height: 120px;
+					}
+				}
+
+				&:nth-child(5) {
+					transform: translateY(180px);
+					&:after {
+						content: '';
+						position: absolute;
+						right: -60px;
+						top: 95px;
+						background: url(/img/credit-line-5.svg) no-repeat center;
+						background-size: contain;
+						width: 85px;
+						height: 14px;
+					}
+				}
+
+				&:nth-child(6) {
+					transform: translateY(180px);
+					.credit-how__item-title {
+						background: $color_violet_light;
+					}
+				}
+
+				.credit-how__item-label {
+					margin-bottom: 15px;
+				}
+
+				.credit-how__item-label.lvl {
+					font-family: 'Press Start 2P';
+					font-style: normal;
+					font-weight: 400;
+					font-size: 17px;
+					line-height: 148%;
+					text-align: center;
+					text-transform: uppercase;
+					color: $color_violet_light;
+					text-align: left;
+				}
+
+				.credit-how__item-title {
+					border: 3px solid $color_violet_light;
+					border-radius: 6px;
+					width: 250px;
+					height: 110px;
+					font-weight: 500;
+					font-size: 22px;
+					line-height: 140%;
+					color: $color_default;
+					display: flex;
+					align-items: center;
+					padding-left: 20px;
+				}
+
+				.credit-how__item-desc {
+					font-size: 15px;
+					line-height: 140%;
+					color: $color_btn_gray;
+					max-width: 250px;
+					padding: 20px 0;
+				}
+			}
+		}
 	}
 }
