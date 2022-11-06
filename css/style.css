@@ -1615,6 +1615,7 @@ main {
   line-height: 39px;
   color: #EEEEEE;
   margin-right: 55px;
+  white-space: nowrap;
 }
 .strip .strip-cnt .strip-cnt__ref .strip-cnt__mail {
   font-family: "Roboto Mono";
@@ -5780,6 +5781,7 @@ a.tpl-link:hover span {
   width: 100%;
   max-width: 1110px;
   margin: 0 auto;
+  margin-bottom: 45px;
 }
 .leasing-form__section .leasing-form__cnt .cf__leasing-name,
 .leasing-form__section .leasing-form__cnt .cf__leasing-tel {
@@ -5801,4 +5803,22 @@ a.tpl-link:hover span {
 }
 .leasing-form__section .leasing-form__cnt .leasing-form__btn {
   flex: 1 0 250px;
+}
+.leasing-form__section .leasing-form__personal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leasing-form__section .leasing-form__personal .custom-label {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  color: #8C8C8C;
+  transition: all ease-in-out 0.2s;
+}
+.leasing-form__section .leasing-form__personal .custom-label:hover {
+  color: #D0A220;
+}
+.leasing-form__section .leasing-form__personal .custom-checkbox:checked + label {
+  color: #D0A220;
 }

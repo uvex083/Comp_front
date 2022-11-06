@@ -1624,6 +1624,7 @@ main {
 				line-height: 39px;
 				color: $color_default;
 				margin-right: 55px;
+				white-space: nowrap;
 			}
 
 			.strip-cnt__mail {
@@ -6414,6 +6415,7 @@ a.tpl-link {
 		width: 100%;
 		max-width: 1110px;
 		margin: 0 auto;
+		margin-bottom: 45px;
 
 		.cf__leasing-name,
 		.cf__leasing-tel {
@@ -6428,6 +6430,7 @@ a.tpl-link {
 			color: $color_default;
 			background-color: #202020;
 			transition: all ease-in-out 0.2s;
+
 			&:focus {
 				border: 2px solid $color_violet_light;
 			}
@@ -6435,6 +6438,26 @@ a.tpl-link {
 
 		.leasing-form__btn {
 			flex: 1 0 250px;
+		}
+	}
+
+	.leasing-form__personal {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.custom-label {
+			font-weight: 400;
+			font-size: 17px;
+			line-height: 140%;
+			color: $color_p;
+			transition: all ease-in-out 0.2s;
+			&:hover {
+				color: $color_orange;
+			}			
+		}
+		.custom-checkbox:checked+label {
+			color: $color_orange;
 		}
 	}
 }
