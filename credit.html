@@ -92,7 +92,8 @@
 					<div class="credit-how__item">
 						<div class="credit-how__item-label lvl">lvl 1</div>
 						<div class="credit-how__item-title">Перейдите в корзину</div>
-						<div class="credit-how__item-desc">В корзине выберите «Заявка на кредит/рассрочку» и заполните форму</div>
+						<div class="credit-how__item-desc">В корзине выберите «Заявка на кредит/рассрочку» и заполните форму
+						</div>
 					</div>
 					<div class="credit-how__item">
 						<div class="credit-how__item-label lvl">lvl 2</div>
@@ -107,19 +108,708 @@
 					<div class="credit-how__item">
 						<div class="credit-how__item-label lvl">lvl 4</div>
 						<div class="credit-how__item-title">Подпишите договор</div>
-						<div class="credit-how__item-desc">Курьерская служба магазина свяжется с вами, как только мы получим подтверждение одобрения Вашей заявки.</div>
+						<div class="credit-how__item-desc">Курьерская служба магазина свяжется с вами, как только мы получим
+							подтверждение одобрения Вашей заявки.</div>
 					</div>
 					<div class="credit-how__item">
 						<div class="credit-how__item-label end">End</div>
 						<div class="credit-how__item-title">Получите свой компьютер</div>
-						<div class="credit-how__item-desc">Полностью готовый и настроенный игровой компьютер привезет курьер прямо к вам домой или в офис.</div>
+						<div class="credit-how__item-desc">Полностью готовый и настроенный игровой компьютер привезет курьер
+							прямо к вам домой или в офис.</div>
 					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="credit-calculator">
+			<div class="center-cnt">
+				<div class="credit-programm">
+					<h2>Выберите кредитную программу</h2>
+					<div class="credit-calc__cnt">
+						<div class="credit-calc__title">Сумма займа</div>
+						<div class="credit-calc__range">
+							<input type="text" class="cf__credit-sum" placeholder="Введите сумму" name="cf__credit-sum"
+								value="" oninput="changeHandler(this)">
+						</div>
+						<div class="credit-calc__btn">
+							<button class="tpl-btn">
+								<div class="tpl-btn__first">
+									<span>Рассчитать</span>
+								</div>
+								<div class="tpl-btn__second"></div>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="credit-total__cnt">
+					<div class="credit-total__item installment-pay active">
+						<div class="pay-title installment">Рассрочка</div>
+						<div class="pay-details installment">
+							<div class="pay-row installment">
+								<div class="pay-row__name">Срок кредита</div>
+								<div class="pay-row__value">6 месяцев</div>
+							</div>
+							<div class="pay-row installment">
+								<div class="pay-row__name">Кредитная ставка</div>
+								<div class="pay-row__value">0%</div>
+							</div>
+							<div class="pay-row installment">
+								<div class="pay-row__name">Ежемесячный платеж</div>
+								<div class="pay-row__value">16 667 ₽</div>
+							</div>
+							<div class="pay-row installment">
+								<div class="pay-row__name">Сумма к выплате</div>
+								<div class="pay-row__value">100 000 ₽</div>
+							</div>
+							<div class="pay-row installment">
+								<div class="pay-row__name">Переплата</div>
+								<div class="pay-row__value">0₽ / 0%</div>
+							</div>
+						</div>
+						<div class="total-pay installment active">
+							<div class="total-pay__item">
+								<div class="total-pay__item-name">Срок кредита</div>
+								<div class="total-pay__item-value">6 <span>месяцев</span></div>
+							</div>
+							<div class="total-pay__item">
+								<div class="total-pay__item-name">Платеж в месяц</div>
+								<div class="total-pay__item-value">4 626 ₽</div>
+							</div>
+							<div class="total-pay__item">
+								<div class="total-pay__item-name">Сумма к оплате</div>
+								<div class="total-pay__item-value">127 800 ₽</div>
+							</div>
+						</div>
+					</div>
+					<div class="credit-total__item credit-pay">
+						<div class="pay-title credit">Кредит</div>
+						<div class="pay-details credit">
+							<div class="pay-row credit">
+								<div class="pay-row__name">Срок кредита</div>
+								<div class="pay-row__value">слайдер</div>
+							</div>
+							<div class="pay-row credit">
+								<div class="pay-row__name">Кредитная ставка</div>
+								<div class="pay-row__value">20%</div>
+							</div>
+							<div class="pay-row credit">
+								<div class="pay-row__name">Ежемесячный платеж</div>
+								<div class="pay-row__value">4 157 ₽</div>
+							</div>
+							<div class="pay-row credit">
+								<div class="pay-row__name">Сумма к выплате</div>
+								<div class="pay-row__value">128 867 ₽</div>
+							</div>
+							<div class="pay-row credit">
+								<div class="pay-row__name">Переплата</div>
+								<div class="pay-row__value">28 867₽ / 28.87%</div>
+							</div>
+						</div>
+						<div class="total-pay credit">
+							<div class="total-pay__item">
+								<div class="total-pay__item-name">Срок кредита</div>
+								<div class="total-pay__item-value">6 <span>месяцев</span></div>
+							</div>
+							<div class="total-pay__item">
+								<div class="total-pay__item-name">Платеж в месяц</div>
+								<div class="total-pay__item-value">4 626 ₽</div>
+							</div>
+							<div class="total-pay__item">
+								<div class="total-pay__item-name">Сумма к оплате</div>
+								<div class="total-pay__item-value">127 800 ₽</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="credit-inf">Расчет, сформированный при помощи кредитного калькулятора, является предварительным
+					и носит исключительно
+					информационный характер. Он также не является публичной офертой, определяемой положениями Статьи 437 ч.2
+					Гражданского кодекса Российской Федерации.</div>
+			</div>
+		</section>
+
+		<section class="bank-section">
+			<div class="tpl-line"></div>
+			<div class="center-cnt">
+				<h2>Банки партнеры</h2>
+				<div class="bank-cnt">
+					<div class="bank-item"><img src="/img/sber.svg" alt=""></div>
+					<div class="bank-item"><img src="/img/tink.svg" alt=""></div>
+				</div>
+				<div class="bank-slogan">
+					<p>Мы выбираем самых надежных партнеров, с минимальным временем согласования кредита</p>
 				</div>
 			</div>
 			<div class="tpl-line"></div>
 		</section>
 
+		<section class="terms-section">
+			<div class="center-cnt">
+				<h2>Условия предоставления</h2>
+				<div class="terms-condition__filter-cnt">
+					<div class="terms-condition__filter installment active">Рассрочка</div>
+					<div class="terms-condition__div"></div>
+					<div class="terms-condition__filter credit">Кредит</div>
+				</div>
+				<div class="terms-condition__cnt">
+					<div class="terms-condition__item installment show">
+						<div class="terms-condition__item-title">Программа рассрочки</div>
+						<div class="terms-condition__item-subtitle">Рассрочка без переплаты от Сбербанка России. Выгодные
+							условия. Высокий уровень сервиса.</div>
+						<ul class="terms-condition__item-terms">Условия:
+							<li>Гражданство РФ с постоянной регистрацией;
+							</li>
+							<li>возраст от 18 лет;
+							</li>
+							<li>срок 6 месяцев;</li>
+							<li>первоначальный взнос - 20%;</li>
+							<li>сумма покупки от 2 000 до 750 000 руб.;</li>
+							<li>необходимые документы: паспорт РФ, СНИЛС.</li>
+						</ul>
+						<div class="terms-condition__item-qst">
+							По вопросам оформления заявки обращайтесь к нашему партнеру
+						</div>
+					</div>
+					<div class="terms-condition__item installment show">
+						<div class="terms-condition__item-title">Программа рассрочки</div>
+						<div class="terms-condition__item-subtitle">Рассрочка без переплаты от Сбербанка России. Выгодные
+							условия. Высокий уровень сервиса.</div>
+						<ul class="terms-condition__item-terms">Условия:
+							<li>Гражданство РФ с постоянной регистрацией;
+							</li>
+							<li>возраст от 18 лет;
+							</li>
+							<li>срок 6 месяцев;</li>
+							<li>первоначальный взнос - 20%;</li>
+							<li>сумма покупки от 2 000 до 750 000 руб.;</li>
+							<li>необходимые документы: паспорт РФ, СНИЛС.</li>
+						</ul>
+						<div class="terms-condition__item-qst">
+							По вопросам оформления заявки обращайтесь к нашему партнеру
+						</div>
+					</div>
+					<div class="terms-condition__item credit hide">
+						<div class="terms-condition__item-title">Программа кредитования</div>
+						<div class="terms-condition__item-subtitle">Кредит без переплаты от Сбербанка России. Выгодные
+							условия. Высокий уровень сервиса.</div>
+						<ul class="terms-condition__item-terms">Условия:
+							<li>возраст от 18 лет; </li>
+							<li>срок от 2 до 36 месяцев;</li>
+							<li>первоначальный взнос от 10%;</li>
+							<li>Заполнение анкеты и получение решения по заявке за 2 минуты;</li>
+							<li>Без комиссий и дополнительных платежей.</li>
+						</ul>
+						<div class="terms-condition__item-qst">
+							По вопросам оформления заявки обращайтесь к нашему партнеру
+						</div>
+					</div>
+				</div>
+				<div class="faq__cnt">
+					<div class="faq__title">Ваши вопросы и наши ответы</div>
+					<ul class="faq__list-cnt">
+						<li>
+							<div class="faq__btn active">
+								<div class="faq__btn-first"></div>
+								<div class="faq__btn-second"></div>
+							</div>
+							<div class="faq__quest">
+								Что делает сумасшедшая бабка на сайте?
+							</div>
+							<div class="faq__answer">
+								<p>Мы сократили моменты сервиса, убрали топовое железо и моддинг, оставив
+									наше качество и возможности. Чем-то пришлось пожертвовать, но эффект от работы и итоговой
+									цены
+									уже превзошел все ожидания!</p>
+							</div>
+							<button class="tpl-btn">
+								<div class="tpl-btn__first">
+									<span>Видео о бабке</span>
+								</div>
+								<div class="tpl-btn__second"></div>
+							</button>
+						</li>
+						<li>
+							<div class="faq__btn">
+								<div class="faq__btn-first"></div>
+								<div class="faq__btn-second"></div>
+							</div>
+							<div class="faq__quest">
+								Зачем такому известному бренду создавать такую бюджетную линейку?
+							</div>
+						</li>
+						<li>
+							<div class="faq__btn">
+								<div class="faq__btn-first"></div>
+								<div class="faq__btn-second"></div>
+							</div>
+							<div class="faq__quest">
+								Можно ли оформить кредит или купить компьютер в рассрочку? </div>
+						</li>
+						<li>
+							<div class="faq__btn">
+								<div class="faq__btn-first"></div>
+								<div class="faq__btn-second"></div>
+							</div>
+							<div class="faq__quest">
+								Если у меня сломался ваш компьютер </div>
+						</li>
+					</ul>
+					<div class="faq__img-cnt">
+						<div class="faq__img"><img src="img/grandma_white.png" alt=""></div>
+						<div class="faq__name"></div>
+					</div>
+				</div>
+			</div>
+		</section>
 
+		<section class="cat-section__credit">
+			<div class="tpl-line"></div>
+				<div class="center-cnt">
+					<h2>Компьютеры, которые берут в рассрочку/кредит</h2>
+					<div class="cat-item__cnt catalog-cnt">
+						<div class="cat-item__hover">
+							<div class="cat-item__item">
+								<div class="cat-item__label-cnt">
+									<div class="cat-item__label stock-label">В наличии</div>
+									<div class="cat-item__label promo-label">Акция
+										<div class="promo-label__desc">
+											В подарок клавиатура проводная Defender Spark GK-300L [45300] [мембранная, клавиш - 104,
+											USB, черная]
+										</div>
+									</div>
+								</div>
+								<a class="cat-item__img-link" href="/">
+									<img class="cat-item__img" src="img/top_comp_1.png" alt="">
+								</a>
+								<div class="cat-item__color-cnt">
+									<div class="item-color color-gray"></div>
+									<div class="item-color color-black"></div>
+								</div>
+								<a class="cat-item__title" href="/">Терминатор Т-600</a>
+								<div class="cat-item__sub-title">
+									<p>Лучший выбор для игры в 4К разрешение на ультра настройках. Построен на базе видеокарты
+										NVIDIA
+										GeForce RTX 3070 Ti и процессора AMD Ryzen 7 5800X.</p>
+								</div>
+								<div class="cat-item__char-cnt catalog-cnt">
+									<div class="cat-item__char">
+										<div class="cat-item__char-name fps-name">
+											<p>AVG FPS</p>
+										</div>
+										<div class="cat-item__char-value fps-value">
+											<div class="fps-value__cnt">
+												<div class="fps-value__active"></div>
+											</div>
+											<div class="fps-value__numb">
+												<p>132</p>
+											</div>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>Процессор</p>
+										</div>
+										<div class="cat-item__char-value">
+											<p>AMD Ryzen 5 5600X</p>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>Видеокарта</p>
+										</div>
+										<div class="cat-item__char-value">
+											<p>NVIDIA GeForce RTX 3070 Ti</p>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>Материнская плата
+											</p><p>
+										</p></div>
+										<div class="cat-item__char-value">
+											<p>GIGABYTE B550M S2H</p>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>Оперативная память</p>
+										</div>
+										<div class="cat-item__char-value">
+											<p>16GB HYPERPC RGB DDR4-3600 (2 x 8GB)</p>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>SSD накопитель</p>
+										</div>
+										<div class="cat-item__char-value">
+											<p>500GB HYPERPC PLUS</p>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>Жесткий диск</p>
+										</div>
+										<div class="cat-item__char-value">
+											<p>1TB Seagate BarraCuda</p>
+										</div>
+									</div>
+								</div>
+								<div class="cat-item__buy-cnt catalog-cnt">
+									<div class="cat-item__buy">
+										<div class="cat-item__price"><span class="cat-item__price-value">187
+												000</span> <span>₽</span></div>
+										<a href="" class="cat-item__credit">Пк в кредит</a>
+									</div>
+									<div class="cat-item__btns">
+										<a class="config-btn__link" href="/">
+											<button class="config-btn">
+												<div class="config-btn__first">
+													<span>Конфигуратор</span>
+												</div>
+												<div class="config-btn__second"></div>
+											</button>
+										</a>
+										<div class="add-cmp__btn"></div>
+										<div class="add-basket__btn"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cat-item__hover">
+							<div class="cat-item__item">
+								<div class="cat-item__label-cnt">
+									<div class="cat-item__label stock-label">В наличии</div>
+									<div class="cat-item__label promo-label">Акция
+										<div class="promo-label__desc">
+											В подарок клавиатура проводная Defender Spark GK-300L [45300] [мембранная, клавиш - 104,
+											USB, черная]
+										</div>
+									</div>
+								</div>
+								<a class="cat-item__img-link" href="/">
+									<img class="cat-item__img" src="img/top_comp_1.png" alt="">
+								</a>
+								<div class="cat-item__color-cnt">
+									<div class="item-color color-gray"></div>
+									<div class="item-color color-black"></div>
+								</div>
+								<a class="cat-item__title" href="/">Терминатор Т-800</a>
+								<div class="cat-item__sub-title">
+									<p>Лучший выбор для игры в 4К разрешение на ультра настройках. Построен на базе видеокарты
+										NVIDIA
+										GeForce RTX 3070 Ti и процессора AMD Ryzen 7 5800X.</p>
+								</div>
+								<div class="cat-item__char-cnt catalog-cnt">
+									<div class="cat-item__char">
+										<div class="cat-item__char-name fps-name">
+											<p>AVG FPS</p>
+										</div>
+										<div class="cat-item__char-value fps-value">
+											<div class="fps-value__cnt">
+												<div class="fps-value__active"></div>
+											</div>
+											<div class="fps-value__numb">
+												<p>132</p>
+											</div>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>Процессор</p>
+										</div>
+										<div class="cat-item__char-value">
+											<p>AMD Ryzen 5 5600X</p>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>Видеокарта</p>
+										</div>
+										<div class="cat-item__char-value">
+											<p>NVIDIA GeForce RTX 3070 Ti</p>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>Материнская плата
+											</p><p>
+										</p></div>
+										<div class="cat-item__char-value">
+											<p>GIGABYTE B550M S2H</p>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>Оперативная память</p>
+										</div>
+										<div class="cat-item__char-value">
+											<p>16GB HYPERPC RGB DDR4-3600 (2 x 8GB)</p>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>SSD накопитель</p>
+										</div>
+										<div class="cat-item__char-value">
+											<p>500GB HYPERPC PLUS</p>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>Жесткий диск</p>
+										</div>
+										<div class="cat-item__char-value">
+											<p>1TB Seagate BarraCuda</p>
+										</div>
+									</div>
+								</div>
+								<div class="cat-item__buy-cnt catalog-cnt">
+									<div class="cat-item__buy">
+										<div class="cat-item__price"><span class="cat-item__price-value">187
+												000</span> <span>₽</span></div>
+										<a href="" class="cat-item__credit">Пк в кредит</a>
+									</div>
+									<div class="cat-item__btns">
+										<a class="config-btn__link" href="/">
+											<button class="config-btn">
+												<div class="config-btn__first">
+													<span>Конфигуратор</span>
+												</div>
+												<div class="config-btn__second"></div>
+											</button>
+										</a>
+										<div class="add-cmp__btn active"></div>
+										<div class="add-basket__btn"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cat-item__hover">
+							<div class="cat-item__item">
+								<div class="cat-item__label-cnt">
+									<div class="cat-item__label stock-label">В наличии</div>
+									<div class="cat-item__label promo-label">Акция
+										<div class="promo-label__desc">
+											В подарок клавиатура проводная Defender Spark GK-300L [45300] [мембранная, клавиш - 104,
+											USB, черная]
+										</div>
+									</div>
+								</div>
+								<a class="cat-item__img-link" href="/">
+									<img class="cat-item__img" src="img/top_comp_1.png" alt="">
+								</a>
+								<div class="cat-item__color-cnt">
+									<div class="item-color color-gray"></div>
+									<div class="item-color color-black"></div>
+								</div>
+								<a class="cat-item__title" href="/">Терминатор Т-1000</a>
+								<div class="cat-item__sub-title">
+									<p>Лучший выбор для игры в 4К разрешение на ультра настройках. Построен на базе видеокарты
+										NVIDIA
+										GeForce RTX 3070 Ti и процессора AMD Ryzen 7 5800X.</p>
+								</div>
+								<div class="cat-item__char-cnt catalog-cnt">
+									<div class="cat-item__char">
+										<div class="cat-item__char-name fps-name">
+											<p>AVG FPS</p>
+										</div>
+										<div class="cat-item__char-value fps-value">
+											<div class="fps-value__cnt">
+												<div class="fps-value__active"></div>
+											</div>
+											<div class="fps-value__numb">
+												<p>132</p>
+											</div>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>Процессор</p>
+										</div>
+										<div class="cat-item__char-value">
+											<p>AMD Ryzen 5 5600X</p>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>Видеокарта</p>
+										</div>
+										<div class="cat-item__char-value">
+											<p>NVIDIA GeForce RTX 3070 Ti</p>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>Материнская плата
+											</p><p>
+										</p></div>
+										<div class="cat-item__char-value">
+											<p>GIGABYTE B550M S2H</p>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>Оперативная память</p>
+										</div>
+										<div class="cat-item__char-value">
+											<p>16GB HYPERPC RGB DDR4-3600 (2 x 8GB)</p>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>SSD накопитель</p>
+										</div>
+										<div class="cat-item__char-value">
+											<p>500GB HYPERPC PLUS</p>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>Жесткий диск</p>
+										</div>
+										<div class="cat-item__char-value">
+											<p>1TB Seagate BarraCuda</p>
+										</div>
+									</div>
+								</div>
+								<div class="cat-item__buy-cnt catalog-cnt">
+									<div class="cat-item__buy">
+										<div class="cat-item__price"><span class="cat-item__price-value">187
+												000</span> <span>₽</span></div>
+										<a href="" class="cat-item__credit">Пк в кредит</a>
+									</div>
+									<div class="cat-item__btns">
+										<a class="config-btn__link" href="/">
+											<button class="config-btn">
+												<div class="config-btn__first">
+													<span>Конфигуратор</span>
+												</div>
+												<div class="config-btn__second"></div>
+											</button>
+										</a>
+										<div class="add-cmp__btn"></div>
+										<div class="add-basket__btn"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cat-item__hover">
+							<div class="cat-item__item">
+								<div class="cat-item__label-cnt">
+									<div class="cat-item__label stock-label">В наличии</div>
+									<div class="cat-item__label promo-label">Акция
+										<div class="promo-label__desc">
+											В подарок клавиатура проводная Defender Spark GK-300L [45300] [мембранная, клавиш - 104,
+											USB, черная]
+										</div>
+									</div>
+								</div>
+								<a class="cat-item__img-link" href="/">
+									<img class="cat-item__img" src="img/top_comp_1.png" alt="">
+								</a>
+								<div class="cat-item__color-cnt">
+									<div class="item-color color-gray"></div>
+									<div class="item-color color-black"></div>
+								</div>
+								<a class="cat-item__title" href="/">Терминатор Т-1001</a>
+								<div class="cat-item__sub-title">
+									<p>Лучший выбор для игры в 4К разрешение на ультра настройках. Построен на базе видеокарты
+										NVIDIA
+										GeForce RTX 3070 Ti и процессора AMD Ryzen 7 5800X.</p>
+								</div>
+								<div class="cat-item__char-cnt catalog-cnt">
+									<div class="cat-item__char">
+										<div class="cat-item__char-name fps-name">
+											<p>AVG FPS</p>
+										</div>
+										<div class="cat-item__char-value fps-value">
+											<div class="fps-value__cnt">
+												<div class="fps-value__active"></div>
+											</div>
+											<div class="fps-value__numb">
+												<p>132</p>
+											</div>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>Процессор</p>
+										</div>
+										<div class="cat-item__char-value">
+											<p>AMD Ryzen 5 5600X</p>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>Видеокарта</p>
+										</div>
+										<div class="cat-item__char-value">
+											<p>NVIDIA GeForce RTX 3070 Ti</p>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>Материнская плата
+											</p><p>
+										</p></div>
+										<div class="cat-item__char-value">
+											<p>GIGABYTE B550M S2H</p>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>Оперативная память</p>
+										</div>
+										<div class="cat-item__char-value">
+											<p>16GB HYPERPC RGB DDR4-3600 (2 x 8GB)</p>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>SSD накопитель</p>
+										</div>
+										<div class="cat-item__char-value">
+											<p>500GB HYPERPC PLUS</p>
+										</div>
+									</div>
+									<div class="cat-item__char">
+										<div class="cat-item__char-name">
+											<p>Жесткий диск</p>
+										</div>
+										<div class="cat-item__char-value">
+											<p>1TB Seagate BarraCuda</p>
+										</div>
+									</div>
+								</div>
+								<div class="cat-item__buy-cnt catalog-cnt">
+									<div class="cat-item__buy">
+										<div class="cat-item__price"><span class="cat-item__price-value">187
+												000</span> <span>₽</span></div>
+										<a href="" class="cat-item__credit">Пк в кредит</a>
+									</div>
+									<div class="cat-item__btns">
+										<a class="config-btn__link" href="/">
+											<button class="config-btn">
+												<div class="config-btn__first">
+													<span>Конфигуратор</span>
+												</div>
+												<div class="config-btn__second"></div>
+											</button>
+										</a>
+										<div class="add-cmp__btn"></div>
+										<div class="add-basket__btn"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+	
+					</div>
+				</div>
+				<div class="tpl-line"></div>
+		</section>
+		
 
 		<section class="selection">
 			<div class="center-cnt">

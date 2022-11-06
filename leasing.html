@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Лизинг</title>
+</head>
+
+<body>
+	<header>
+		<div class="center-cnt">
+			<div class="header-cnt">
+				<div class="header-cnt-side">
+					<div class="burger-btn">
+						<span class="burger-menu-piece"></span>
+						<span class="burger-menu-piece"></span>
+						<span class="burger-menu-piece"></span>
+					</div>
+					<a class="logo" href="/">
+						<img src="img/logo.svg" alt="">
+					</a>
+				</div>
+				<div class="header-cnt-side">
+					<nav class="header-nav">
+						<a href="">Игровые ПК</a>
+						<a href="">Офисные ПК</a>
+						<a href="">Профессиональные ПК</a>
+						<a href="">Конфигуратор</a>
+						<a href="">Подобрать</a>
+					</nav>
+				</div>
+				<div class="header-cnt-side">
+					<div class="header-phone">
+						<a href="tel:+123456789">8-800-123-45-67</a>
+						<div class="call-back">Заказать звонок</div>
+					</div>
+					<div class="header-icon-cnt">
+						<div class="header-icon-cnt__find"></div>
+						<div class="header-icon-cnt__compare"></div>
+						<div class="header-icon-cnt__login"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section class="breadcrumbs-section">
+			<div class="center-cnt">
+				<div class="bread-cnt">
+					<div class="bread-item"><a href="/">Главная</a></div>
+					<div class="bread-item divider"><img src="/img/bread_arr.svg" alt=""></div>
+					<div class="bread-item"><a href="/">О нас</a></div>
+					<div class="bread-item divider"><img src="/img/bread_arr.svg" alt=""></div>
+					<div class="bread-item">Лизинг</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="leasing-main-section">
+			<div class="center-cnt">
+				<h1 class="white-h1">IT-оборудование в лизинг от ittelo.ru</h1>
+				<div class="leasing-main__subtitle">
+					<p>БУ и новые серверы и оборудование Supermicro, HP, DELL, IBM, Asus на условиях лизинга для роста вашего
+						бизнеса</p>
+				</div>
+				<div class="leasing-main__img">
+					<img src="/img/leasing-img-crop.png" alt="">
+				</div>
+			</div>
+			<div class="tpl-line"></div>
+		</section>
+
+		<section class="leasing-calc__section section-padding-170">
+			<div class="center-cnt">
+				<h2>Рассчитайте стоимость лизинга</h2>
+				<div class="leasing-calc__cnt">
+					<div class="leasing-calc__row price-row">
+						<div class="leasing-calc__price">Стоимость оборудования</div>
+						<div class="leasing-calc__range">
+							<input type="text" id="rub-mask" class="cf__leasing-sum" placeholder="Введите сумму" name="cf__leasing-sum"
+								value="" oninput="changeHandler(this)">
+						</div>
+					</div>
+					<div class="leasing-calc__row term-row">
+						<div class="leasing-calc__term">Срок лизинга</div>
+						<div class="leasing-calc__btn-cnt">
+							<div class="leasing-calc__btn active">
+								1 год
+							</div>
+							<div class="leasing-calc__btn">
+								2 года
+							</div>
+						</div>
+					</div>
+					<div class="leasing-calc__row total-row">
+						<div class="leasing-calc__total-item">
+							<div class="leasing-calc__name">Общая сумма сделки:</div>
+							<div class="leasing-calc__value">948 750 ₽</div>
+						</div>
+						<div class="leasing-calc__total-item">
+							<div class="leasing-calc__name">Первый платеж (30% от общей суммы):</div>
+							<div class="leasing-calc__value">247 500 ₽</div>
+						</div>
+						<div class="leasing-calc__total-item">
+							<div class="leasing-calc__name">Ежемесячный платеж:</div>
+							<div class="leasing-calc__value">58 437 ₽</div>
+						</div>
+					</div>
+					<div class="leasing-calc__row info-row">
+						Расчет, сформированный при помощи кредитного калькулятора, является предварительным и носит
+						исключительно информационный характер. Он также не является публичной офертой, определяемой
+						положениями Статьи 437 ч.2 Гражданского кодекса Российской Федерации.
+					</div>
+					<div class="leasing-calc__btn">
+						<button class="tpl-btn">
+							<div class="tpl-btn__first">
+								<span>Оставить заявку</span>
+							</div>
+							<div class="tpl-btn__second"></div>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="our-services">
+			<div class="tpl-line"></div>
+			<div class="our-services__bg">
+				<div class="center-cnt">
+					<div class="leasing-adv__cnt">
+						<div class="leasing-adv__item">
+							<div class="leasing-adv__item-title">Сумма от 150 000 рублей</div>
+							<div class="leasing-adv__item-subtitle">по РФ при заказе от 20 000 рублей</div>
+						</div>
+						<div class="leasing-adv__item">
+							<div class="leasing-adv__item-title">Максимальный срок 24 месяца</div>
+							<div class="leasing-adv__item-subtitle">протестируем и отправляем в течении 3 дней после оплаты
+							</div>
+						</div>
+						<div class="leasing-adv__item">
+							<div class="leasing-adv__item-title">от 15% удорожания в год</div>
+							<div class="leasing-adv__item-subtitle">доставляем даже в удаленные точки РФ Калининград, Сахалин,
+								Приморский край</div>
+						</div>
+						<div class="leasing-adv__item">
+							<div class="leasing-adv__item-title">Первый платёж - 30%</div>
+							<div class="leasing-adv__item-subtitle">по РФ при заказе от 20 000 рублей</div>
+						</div>
+						<div class="leasing-adv__item">
+							<div class="leasing-adv__item-title">Индивидуальные условия при заказе от 500 000 ₽</div>
+							<div class="leasing-adv__item-subtitle">протестируем и отправляем в течении 3 дней после оплаты
+							</div>
+						</div>
+						<div class="leasing-adv__item">
+							<div class="leasing-adv__item-title">Прозрачность и оперативность заключения договора</div>
+							<div class="leasing-adv__item-subtitle">доставляем даже в удаленные точки РФ Калининград, Сахалин,
+								Приморский край</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tpl-line"></div>
+		</section>
+
+		<section class="leasing-how__section">
+			<div class="center-cnt">
+				<h2>5 простых шагов для получения лизинга</h2>
+				<div class="leasing-how__cnt">
+					<div class="leasing-how__item">
+						<div class="leasing-how__item-label start">Start</div>
+						<div class="leasing-calc__btn">
+							<button class="tpl-btn">
+								<div class="tpl-btn__first">
+									<span>Оставить заявку</span>
+								</div>
+								<div class="tpl-btn__second"></div>
+							</button>
+						</div>
+						<div class="leasing-how__item-desc">на утвержденную менеджером конфигурауцию</div>
+					</div>
+					<div class="leasing-how__item">
+						<div class="leasing-how__item-label lvl">lvl 2</div>
+						<div class="leasing-how__item-title">Получить расчет от лизинговой компании</div>
+					</div>
+					<div class="leasing-how__item">
+						<div class="leasing-how__item-label lvl">lvl 3</div>
+						<div class="leasing-how__item-title">Предоставить необходимые документы</div>
+					</div>
+					<div class="leasing-how__item">
+						<div class="leasing-how__item-label lvl">lvl 4</div>
+						<div class="leasing-how__item-title">Заключить договор лизинга</div>
+					</div>
+					<div class="leasing-how__item">
+						<div class="leasing-how__item-label end">end</div>
+						<div class="leasing-how__item-title">Внести первый взнос и получить оборудование</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="list-grandma__section">
+			<div class="tpl-line"></div>
+			<div class="center-cnt">
+				<h2 class="white-h2">Выгоды лизинга от Procomp</h2>
+				<div class="list-grandma__cnt">
+					<div class="list-grandma">
+						<ul>
+							<li>Использование оборудования при ограниченном годовом бюджете</li>
+							<li>Отнесение лизинговых платежей в полном объеме на затраты
+							</li>
+							<li>Экономия по налогу на прибыль
+							</li>
+							<li>Возможность не учитывать актив на своем балансе
+							</li>
+							<li>Возможность сдавать актив в субаренду
+							</li>
+							<li>Досрочное погашение лизинга с компенсацией будущих процентов</li>
+						</ul>
+						<div class="list-grandma__btn">
+							<button class="tpl-btn">
+								<div class="tpl-btn__first">
+									<span>Скачать документы</span>
+								</div>
+								<div class="tpl-btn__second"></div>
+							</button>
+						</div>
+					</div>
+					<div class="list-grandma__img-cnt">
+						<div class="list-grandma__img"><img src="img/grandma_white.png" alt=""></div>
+						<div class="list-grandma__name">бабуля знает, как не переплатить</div>
+					</div>
+				</div>
+			</div>
+			<div class="tpl-line"></div>
+		</section>
+		
+		<section class="leasing-form__section">
+			<div class="center-cnt">
+				<h2>Готовы обсудить лизинг</h2>
+				<div class="leasing-form__subtitle">
+					Подберем оптимальное решение для вашего бизнеса
+				</div>
+				<div class="leasing-form__cnt">
+					<input type="text" class="cf__leasing-name" placeholder="Имя" name="cf__leasing-name" value="">
+					<input type="text" id="phone-mask" class="cf__leasing-tel" placeholder="Телефон" name="cf__leasing-tel" value="">
+					<div class="leasing-form__btn">
+						<button class="tpl-btn">
+							<div class="tpl-btn__first">
+								<span>Обсудить</span>
+							</div>
+							<div class="tpl-btn__second"></div>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+	</main>
+	
+	<footer>
+		<div class="center-cnt">
+			<div class="footer-cnt">
+				<div class="footer-cnt__logo">
+					<a href=""><img src="img/logo.svg" alt=""></a>
+					<div>
+						<p>Тут есть твой компьютер</p>
+					</div>
+				</div>
+				<div class="footer-cnt__clm-cnt">
+					<div class="footer-cnt__clm">
+						<div class="footer-cnt__clm-title">Каталог</div>
+						<a href="/">
+							<p>Игровые ПК</p>
+						</a>
+						<a href="/">
+							<p>Офисные ПК</p>
+						</a>
+						<a href="/">
+							<p>Для работы ПК</p>
+						</a>
+					</div>
+					<div class="footer-cnt__clm">
+						<div class="footer-cnt__clm-title">Наши сервисы</div>
+						<a href="/">
+							<p>Конфигуратор</p>
+						</a>
+						<a href="/">
+							<p>ПК в наличии</p>
+						</a>
+						<a href="/">
+							<p>Расчет кредита</p>
+						</a>
+					</div>
+					<div class="footer-cnt__clm">
+						<div class="footer-cnt__clm-title">Контакты</div>
+						<a href="/">
+							<p>comp@mail.ru</p>
+						</a>
+						<a href="/">
+							<p>Екатеринбург,<br>ул. Ленина, 245,<br> оф. 25</p>
+						</a>
+						<div class="messenger">
+							<a class="messenger__wa" href="/"></a>
+							<a class="messenger__tg" href="/"></a>
+						</div>
+					</div>
+					<div class="footer-cnt__clm">
+						<div class="phone-footer__cnt">
+							<a class="phone-footer" href="tel:+123456789">8-800-123-45-67</a>
+							<div class="phone-footer__call-back">
+								<p> Заказать звонок</p>
+							</div>
+						</div>
+						<div class="follow-us">
+							Мы в соц сетях
+							<div class="follow-us__icon-cnt">
+								<a href="" class="follow-us__icon inst-icon"></a>
+								<a href="" class="follow-us__icon yt-icon"></a>
+								<a href="" class="follow-us__icon vk-icon"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">&copy; 2022. Все права защищены</div>
+		</div>
+	</footer>
+
+	<script src="js/imask.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/main.js"></script>
+	
+
+</body>
+
+</html>

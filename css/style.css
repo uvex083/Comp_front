@@ -291,6 +291,9 @@ ul li {
   transition: all ease-in-out 0.2s;
   cursor: pointer;
 }
+ul li:not(:last-child) {
+  margin-bottom: 35px;
+}
 ul li:before {
   content: "";
   position: absolute;
@@ -315,9 +318,6 @@ ul li:hover:before {
   background: url(/img/li-icon__active.svg) no-repeat center;
   background-size: contain;
   transition: all ease-in-out 0.2s;
-}
-ul li:not(:last-child) {
-  margin-bottom: 35px;
 }
 
 .dark-header {
@@ -1467,6 +1467,77 @@ main {
   height: auto;
 }
 .selection .selection__cnt .selection__img-cnt .selection__name {
+  font-family: "Press Start 2P";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 31.9205px;
+  line-height: 38px;
+  text-transform: uppercase;
+  color: #D0A220;
+  text-shadow: 1.27682px 2.55364px 2.55364px #2305C2;
+  transform: translateX(100px);
+}
+
+.list-grandma__section {
+  overflow: hidden;
+}
+.list-grandma__section .center-cnt {
+  padding: 140px 0 0 0;
+}
+.list-grandma__section h2 {
+  text-align: left;
+}
+.list-grandma__section .list-grandma__cnt {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.list-grandma__section .list-grandma__cnt .list-grandma {
+  display: flex;
+  flex-direction: column;
+  max-width: 45%;
+  width: 100%;
+}
+.list-grandma__section .list-grandma__cnt .list-grandma ul {
+  margin-bottom: 70px;
+}
+.list-grandma__section .list-grandma__cnt .list-grandma .list-grandma__btn {
+  position: relative;
+}
+.list-grandma__section .list-grandma__cnt .list-grandma .list-grandma__btn:after {
+  content: "Список документов для получения лизинга";
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: #545454;
+}
+.list-grandma__section .list-grandma__cnt .list-grandma__img-cnt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.list-grandma__section .list-grandma__cnt .list-grandma__img-cnt::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 120%;
+  transform: translate(-2%, 0px);
+  top: -5px;
+  z-index: -1;
+  background: linear-gradient(#5E64A9, transparent 1px), linear-gradient(90deg, #5E64A9, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center center;
+}
+.list-grandma__section .list-grandma__cnt .list-grandma__img-cnt .list-grandma__img {
+  max-width: 480px;
+  width: auto;
+  height: auto;
+}
+.list-grandma__section .list-grandma__cnt .list-grandma__img-cnt .list-grandma__name {
   font-family: "Press Start 2P";
   font-style: normal;
   font-weight: 400;
@@ -3979,6 +4050,9 @@ main {
   width: 50%;
   height: 32px;
 }
+.switch-cnt .switch-title {
+  color: #8C8C8C;
+}
 .switch-cnt .switch-title.hide {
   display: none;
 }
@@ -4248,6 +4322,7 @@ main {
   background: no-repeat;
   margin-top: -145px;
   position: relative;
+  background-size: cover;
 }
 .about-img-section .breadcrumbs-section {
   padding-top: 145px;
@@ -4564,6 +4639,10 @@ a.tpl-link:hover span {
   margin-bottom: 20px;
 }
 
+.leasing-how__item-label.end,
+.quest-end__title,
+.leasing-how__item-label.start,
+.quest-start__title,
 .credit-how__item-label.end,
 .quest-end__title,
 .credit-how__item-label.start,
@@ -4583,6 +4662,10 @@ a.tpl-link:hover span {
   cursor: pointer;
   margin-bottom: 25px;
 }
+.leasing-how__item-label.end:hover,
+.quest-end__title:hover,
+.leasing-how__item-label.start:hover,
+.quest-start__title:hover,
 .credit-how__item-label.end:hover,
 .quest-end__title:hover,
 .credit-how__item-label.start:hover,
@@ -4590,6 +4673,10 @@ a.tpl-link:hover span {
   -webkit-animation: AnimationShadow 0.7s linear 0s infinite normal none;
           animation: AnimationShadow 0.7s linear 0s infinite normal none;
 }
+.leasing-how__item-label.end:hover:after,
+.quest-end__title:hover:after,
+.leasing-how__item-label.start:hover:after,
+.quest-start__title:hover:after,
 .credit-how__item-label.end:hover:after,
 .quest-end__title:hover:after,
 .credit-how__item-label.start:hover:after,
@@ -4610,6 +4697,10 @@ a.tpl-link:hover span {
   -webkit-animation: AnimationArrow 0.7s linear 0s infinite normal none;
           animation: AnimationArrow 0.7s linear 0s infinite normal none;
 }
+.leasing-how__item-label.end:after,
+.quest-end__title:after,
+.leasing-how__item-label.start:after,
+.quest-start__title:after,
 .credit-how__item-label.end:after,
 .quest-end__title:after,
 .credit-how__item-label.start:after,
@@ -4630,6 +4721,7 @@ a.tpl-link:hover span {
   transition: all ease-in-out 0.2s;
 }
 
+.leasing-how__item-label.end:after,
 .credit-how__item-label.end:after {
   content: none !important;
 }
@@ -4650,6 +4742,9 @@ a.tpl-link:hover span {
   overflow-x: hidden;
 }
 
+.quest {
+  overflow: hidden;
+}
 .quest .quest-end__title {
   margin: 0;
 }
@@ -4983,7 +5078,7 @@ a.tpl-link:hover span {
   content: "";
   position: absolute;
   right: -66px;
-  top: 78px;
+  top: 77px;
   background: url(/img/credit-line-1.svg) no-repeat center;
   background-size: cover;
   width: 70px;
@@ -4991,6 +5086,9 @@ a.tpl-link:hover span {
 }
 .credit-how__section .center-cnt .credit-how__cnt .credit-how__item:nth-child(2) {
   transform: translateY(250px);
+}
+.credit-how__section .center-cnt .credit-how__cnt .credit-how__item:nth-child(2) .credit-how__item-label.lvl {
+  padding-left: 50px;
 }
 .credit-how__section .center-cnt .credit-how__cnt .credit-how__item:nth-child(2):after {
   content: "";
@@ -5004,6 +5102,9 @@ a.tpl-link:hover span {
 }
 .credit-how__section .center-cnt .credit-how__cnt .credit-how__item:nth-child(3) {
   transform: translateY(10px);
+}
+.credit-how__section .center-cnt .credit-how__cnt .credit-how__item:nth-child(3) .credit-how__item-desc {
+  padding-left: 40px;
 }
 .credit-how__section .center-cnt .credit-how__cnt .credit-how__item:nth-child(3):after {
   content: "";
@@ -5030,6 +5131,9 @@ a.tpl-link:hover span {
 }
 .credit-how__section .center-cnt .credit-how__cnt .credit-how__item:nth-child(5) {
   transform: translateY(180px);
+}
+.credit-how__section .center-cnt .credit-how__cnt .credit-how__item:nth-child(5) .credit-how__item-label.lvl {
+  padding-left: 50px;
 }
 .credit-how__section .center-cnt .credit-how__cnt .credit-how__item:nth-child(5):after {
   content: "";
@@ -5066,7 +5170,7 @@ a.tpl-link:hover span {
   border-radius: 6px;
   width: 250px;
   height: 110px;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 22px;
   line-height: 140%;
   color: #EEEEEE;
@@ -5080,4 +5184,621 @@ a.tpl-link:hover span {
   color: #B6B6B6;
   max-width: 250px;
   padding: 20px 0;
+}
+
+.credit-programm {
+  padding: 120px 0;
+  background-color: rgba(94, 100, 169, 0.1450980392);
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+.credit-programm .credit-calc__cnt {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.credit-programm .credit-calc__cnt .credit-calc__title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #EEEEEE;
+}
+.credit-programm .credit-calc__cnt .credit-calc__range .cf__credit-sum {
+  width: 100%;
+  border: 2px solid #545454;
+  border-radius: 6px;
+  padding: 10px 25px;
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 120%;
+  color: #D0A220;
+  background-color: #181818;
+}
+.credit-programm .credit-calc__cnt .credit-calc__btn {
+  width: 300px;
+}
+
+.credit-total__cnt {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.credit-total__cnt .credit-total__item {
+  width: 50%;
+  padding: 80px 70px;
+  background: rgba(84, 84, 84, 0.2196078431);
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+.credit-total__cnt .credit-total__item .pay-title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  color: #B6B6B6;
+  transition: all ease-in-out 0.2s;
+  position: relative;
+}
+.credit-total__cnt .credit-total__item .pay-title:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  background: url(/img/credit-check__icon.svg) no-repeat center;
+  background-size: contain;
+  opacity: 0;
+}
+.credit-total__cnt .credit-total__item .pay-details {
+  margin-bottom: 100px;
+}
+.credit-total__cnt .credit-total__item .pay-details .pay-row {
+  display: flex;
+  gap: 50px;
+  color: #EEEEEE;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 48px;
+  border-bottom: 1px solid #343434;
+}
+.credit-total__cnt .credit-total__item .pay-details .pay-row .pay-row__name {
+  max-width: 200px;
+  width: 100%;
+}
+.credit-total__cnt .credit-total__item .total-pay {
+  display: flex;
+  justify-content: space-between;
+  opacity: 1;
+  opacity: 0;
+  transition: all ease-in-out 0.2s;
+}
+.credit-total__cnt .credit-total__item .total-pay .total-pay__item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.credit-total__cnt .credit-total__item .total-pay .total-pay__item .total-pay__item-name {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  color: #EEEEEE;
+}
+.credit-total__cnt .credit-total__item .total-pay .total-pay__item .total-pay__item-name {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  color: #EEEEEE;
+}
+.credit-total__cnt .credit-total__item .total-pay .total-pay__item .total-pay__item-value {
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #D0A220;
+}
+.credit-total__cnt .credit-total__item .total-pay .total-pay__item .total-pay__item-value span {
+  font-size: 20px;
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  text-transform: none;
+}
+.credit-total__cnt .credit-total__item.active {
+  background: rgba(94, 100, 169, 0.1450980392);
+  cursor: auto;
+}
+.credit-total__cnt .credit-total__item.active .pay-title {
+  color: #D0A220;
+  position: relative;
+  padding-left: 60px;
+}
+.credit-total__cnt .credit-total__item.active .pay-title:before {
+  opacity: 1;
+}
+.credit-total__cnt .credit-total__item.active .total-pay {
+  opacity: 1;
+}
+
+.credit-inf {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: #545454;
+}
+
+.bank-section {
+  margin: 120px 0;
+}
+.bank-section .center-cnt {
+  padding: 140px 0;
+}
+.bank-section .center-cnt .bank-cnt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 100px;
+  margin-bottom: 40px;
+}
+.bank-section .center-cnt .bank-slogan {
+  width: 100%;
+}
+.bank-section .center-cnt .bank-slogan p {
+  text-align: center;
+}
+
+.terms-section .faq__cnt {
+  display: flex;
+  flex-direction: column;
+}
+.terms-section .faq__cnt ul.faq__list-cnt {
+  max-width: 100%;
+}
+.terms-section .faq__cnt .faq__img-cnt {
+  display: none;
+}
+.terms-section .faq__title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #EEEEEE;
+  margin-bottom: 50px;
+}
+.terms-section .faq__img-cnt:before {
+  content: none;
+}
+.terms-section .terms-condition__filter-cnt {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+.terms-section .terms-condition__filter-cnt .terms-condition__filter {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #B6B6B6;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+}
+.terms-section .terms-condition__filter-cnt .terms-condition__filter.active {
+  color: #D0A220;
+  cursor: auto;
+}
+.terms-section .terms-condition__filter-cnt .terms-condition__div {
+  border: 2px solid #8C8C8C;
+  transform: matrix(0.63, -0.93, 0.62, 0.66, 0, 0);
+  width: 55px;
+  background: #8C8C8C;
+}
+.terms-section .terms-condition__cnt {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 120px;
+}
+.terms-section .terms-condition__cnt .terms-condition__item.show {
+  flex: 1;
+  background: rgba(94, 100, 169, 0.1450980392);
+  border-radius: 6px;
+  padding: 70px 110px;
+}
+.terms-section .terms-condition__cnt .terms-condition__item.show .terms-condition__item-title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #EEEEEE;
+  margin-bottom: 40px;
+}
+.terms-section .terms-condition__cnt .terms-condition__item.show .terms-condition__item-subtitle,
+.terms-section .terms-condition__cnt .terms-condition__item.show .terms-condition__item-qst {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: #B6B6B6;
+  margin-bottom: 30px;
+}
+.terms-section .terms-condition__cnt .terms-condition__item.show .terms-condition__item-terms {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+  color: #EEEEEE;
+  margin: 0 0 40px 0;
+}
+.terms-section .terms-condition__cnt .terms-condition__item.show .terms-condition__item-terms li {
+  margin: 15px 0;
+}
+.terms-section .terms-condition__cnt .terms-condition__item.hide {
+  display: none;
+}
+
+.cat-section__credit {
+  margin-top: 170px;
+}
+.cat-section__credit .center-cnt {
+  padding: 140px;
+}
+
+.leasing-main-section .center-cnt {
+  position: relative;
+  padding-bottom: 170px;
+}
+.leasing-main-section h1,
+.leasing-main-section .leasing-main__subtitle {
+  max-width: 35%;
+}
+
+.leasing-main__img {
+  top: -249px;
+  position: absolute;
+  right: -71px;
+}
+.leasing-main__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.leasing-calc__section .leasing-calc__cnt {
+  padding: 120px 140px;
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 100%;
+  background: #252525;
+}
+.leasing-calc__section .leasing-calc__cnt .leasing-calc__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.leasing-calc__section .leasing-calc__cnt .leasing-calc__row.price-row {
+  margin-bottom: 90px;
+}
+.leasing-calc__section .leasing-calc__cnt .leasing-calc__row.term-row {
+  margin-bottom: 130px;
+}
+.leasing-calc__section .leasing-calc__cnt .leasing-calc__row.total-row {
+  gap: 30px;
+  margin-bottom: 35px;
+}
+.leasing-calc__section .leasing-calc__cnt .leasing-calc__row.info-row {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: #545454;
+  margin-bottom: 35px;
+}
+.leasing-calc__section .leasing-calc__cnt .leasing-calc__price {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #EEEEEE;
+  position: relative;
+}
+.leasing-calc__section .leasing-calc__cnt .leasing-calc__price:after {
+  content: "В том числе НДС";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: #545454;
+  text-transform: none;
+}
+.leasing-calc__section .leasing-calc__cnt .leasing-calc__term {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #EEEEEE;
+  position: relative;
+}
+.leasing-calc__section .leasing-calc__cnt .leasing-calc__range {
+  max-width: 680px;
+  width: 100%;
+}
+.leasing-calc__section .leasing-calc__cnt .leasing-calc__range .cf__leasing-sum {
+  width: 100%;
+  border: 2px solid #545454;
+  border-radius: 6px;
+  padding: 10px 25px;
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 120%;
+  color: #D0A220;
+  background-color: #181818;
+}
+.leasing-calc__section .leasing-calc__cnt .leasing-calc__btn-cnt {
+  display: flex;
+  gap: 40px;
+  justify-content: flex-end;
+  max-width: 680px;
+  width: 100%;
+}
+.leasing-calc__section .leasing-calc__cnt .leasing-calc__btn-cnt .leasing-calc__btn {
+  padding: 16px 0;
+  text-align: center;
+  color: #5E64A9;
+  border: 2px solid #5E64A9;
+  border-radius: 6px;
+  max-width: 300px;
+  width: 100%;
+  cursor: pointer;
+}
+.leasing-calc__section .leasing-calc__cnt .leasing-calc__btn-cnt .leasing-calc__btn.active {
+  color: #EEEEEE;
+  background: #5E64A9;
+  cursor: auto;
+}
+.leasing-calc__section .leasing-calc__cnt .leasing-calc__total-item {
+  background: rgba(94, 100, 169, 0.1450980392);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px 45px;
+  min-height: 180px;
+  justify-content: center;
+  gap: 15px;
+  max-height: 180px;
+}
+.leasing-calc__section .leasing-calc__cnt .leasing-calc__total-item .leasing-calc__name {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 140%;
+  color: #EEEEEE;
+  flex: 1;
+}
+.leasing-calc__section .leasing-calc__cnt .leasing-calc__total-item .leasing-calc__value {
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #D0A220;
+}
+.leasing-calc__section .leasing-calc__cnt .leasing-calc__btn {
+  display: flex;
+  justify-content: center;
+}
+
+.leasing-adv__cnt {
+  display: grid;
+  gap: 100px 120px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.leasing-adv__cnt .leasing-adv__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.leasing-adv__cnt .leasing-adv__item .leasing-adv__item-title {
+  font-family: "Press Start 2P";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #D0A220;
+  text-shadow: 2px 5px 0px rgba(0, 0, 0, 0.8);
+}
+.leasing-adv__cnt .leasing-adv__item .leasing-adv__item-subtitle {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  color: #8C8C8C;
+  text-align: center;
+}
+
+.leasing-how__section .center-cnt {
+  padding: 170px 0 100px 0;
+}
+
+.leasing-how__cnt {
+  height: 460px;
+  display: flex;
+  gap: 35px;
+}
+.leasing-how__cnt .leasing-how__item {
+  display: flex;
+  flex-direction: column;
+}
+.leasing-how__cnt .leasing-how__item .leasing-calc__btn {
+  z-index: 1;
+}
+.leasing-how__cnt .leasing-how__item:nth-child(1) {
+  transform: translate(0%, 10%);
+  position: relative;
+}
+.leasing-how__cnt .leasing-how__item:nth-child(1):after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 163px;
+  top: 71px;
+  right: 56px;
+  background: url(/img/leasing-line-1.svg) no-repeat center;
+  background-size: cover;
+  z-index: 0;
+}
+.leasing-how__cnt .leasing-how__item:nth-child(2) {
+  transform: translate(-33%, 43%);
+  position: relative;
+}
+.leasing-how__cnt .leasing-how__item:nth-child(2):after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 163px;
+  top: -86px;
+  right: 56px;
+  background: url(/img/leasing-line-1.svg) no-repeat center;
+  background-size: cover;
+  z-index: 0;
+}
+.leasing-how__cnt .leasing-how__item:nth-child(2) .leasing-how__item-label.lvl {
+  padding-left: 60px;
+}
+.leasing-how__cnt .leasing-how__item:nth-child(3) {
+  transform: translate(-66%, 0);
+  position: relative;
+}
+.leasing-how__cnt .leasing-how__item:nth-child(3):after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 163px;
+  top: 29px;
+  right: -76px;
+  background: url(/img/leasing-line-1.svg) no-repeat center;
+  background-size: cover;
+  z-index: 0;
+  transform: rotate(90deg);
+}
+.leasing-how__cnt .leasing-how__item:nth-child(4) {
+  transform: translate(-37%, 0);
+  position: relative;
+}
+.leasing-how__cnt .leasing-how__item:nth-child(4):after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 163px;
+  top: 150px;
+  right: 56px;
+  background: url(/img/leasing-line-1.svg) no-repeat center;
+  background-size: cover;
+  z-index: 0;
+}
+.leasing-how__cnt .leasing-how__item:last-child {
+  transform: translate(-95%, 50%);
+}
+.leasing-how__cnt .leasing-how__item:last-child .leasing-how__item-title {
+  background: #5E64A9;
+}
+.leasing-how__cnt .leasing-how__item .tpl-btn {
+  width: 400px;
+  max-width: 400px;
+}
+.leasing-how__cnt .leasing-how__item .leasing-how__item-label.lvl {
+  font-family: "Press Start 2P";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 148%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #5E64A9;
+  text-align: left;
+  margin-bottom: 25px;
+}
+.leasing-how__cnt .leasing-how__item .leasing-how__item-title {
+  border: 3px solid #5E64A9;
+  border-radius: 6px;
+  width: 400px;
+  height: 110px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 140%;
+  color: #EEEEEE;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  background: #181818;
+  z-index: 1;
+}
+.leasing-how__cnt .leasing-how__item .leasing-how__item-desc {
+  font-size: 15px;
+  line-height: 140%;
+  color: #B6B6B6;
+  max-width: 250px;
+  padding: 20px 0;
+}
+
+.leasing-form__section {
+  padding: 170px 0;
+}
+.leasing-form__section h2 {
+  margin-bottom: 10px;
+}
+.leasing-form__section .leasing-form__subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #8C8C8C;
+  text-align: center;
+  margin-bottom: 90px;
+}
+.leasing-form__section .leasing-form__cnt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+.leasing-form__section .leasing-form__cnt .cf__leasing-name,
+.leasing-form__section .leasing-form__cnt .cf__leasing-tel {
+  width: 100%;
+  border: 2px solid #545454;
+  border-radius: 6px;
+  padding: 14px 25px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  color: #EEEEEE;
+  background-color: #202020;
+  transition: all ease-in-out 0.2s;
+}
+.leasing-form__section .leasing-form__cnt .cf__leasing-name:focus,
+.leasing-form__section .leasing-form__cnt .cf__leasing-tel:focus {
+  border: 2px solid #5E64A9;
+}
+.leasing-form__section .leasing-form__cnt .leasing-form__btn {
+  flex: 1 0 250px;
 }

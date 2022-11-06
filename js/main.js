@@ -296,11 +296,64 @@ $(document).ready(function () {
 		}
 	});
 
-
 	/* Сравнение КОНЕЦ */
 
 
 
 
 
+	/* Кредит begin */
+
+	$(".installment-pay").click(function () {
+		$(".credit-pay").removeClass("active");
+		$(".installment-pay").addClass("active");
+	});
+
+	$(".credit-pay").click(function () {
+		$(".installment-pay").removeClass("active");
+		$(".credit-pay").addClass("active");
+	});
+
+
+	$(".terms-condition__filter").click(function () {
+		$(".terms-condition__filter").removeClass("active");
+		$(this).addClass("active");
+		if ($(".terms-condition__filter.installment").hasClass("active")) {
+			$(".terms-condition__item.credit").addClass("hide");
+			$(".terms-condition__item.installment").removeClass("hide").addClass("show");
+		} else {
+			$(".terms-condition__item.installment").addClass("hide");
+			$(".terms-condition__item.credit").removeClass("hide").addClass("show");
+		}
+	
+	});
+
+	/* Кредит end */
+
+
+
+
 });
+
+/* В инпут пишутся только числовые значения  */
+const changeHandler = e => {
+	const value = e.value
+	e.value = value.replace(/\D/g, '')
+}
+
+var phoneMask = IMask(
+	document.getElementById('phone-mask'), {
+	  mask: '+{7}(000)000-00-00'
+	});
+
+	var currencyMask = IMask(
+		document.getElementById('rub-mask'),
+		{
+		  mask: 'num ₽',
+		  blocks: {
+			 num: {
+				mask: Number,
+				thousandsSeparator: ' '
+			 }
+		  }
+		});
