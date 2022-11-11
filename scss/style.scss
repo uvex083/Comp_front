@@ -94,7 +94,7 @@ h4 {
 h5 {
 	font-family: 'Roboto Mono';
 	font-style: normal;
-	font-weight: 500;
+	font-weight: 400;
 	font-size: 20px;
 	line-height: 28px;
 	color: $color_default;
@@ -396,6 +396,7 @@ header.menu-header {
 
 a.logo {
 	max-width: 180px;
+
 	img {
 		width: 100%;
 		height: 100%;
@@ -1089,7 +1090,7 @@ main {
 
 .main-section__img-cnt {
 	flex: 1 1 auto;
-	min-height: 600px;
+	min-height: 600px;	
 
 	&:before {
 		content: '';
@@ -1104,33 +1105,35 @@ main {
 		background-size: 50px 50px;
 		background-position: center center;
 		//border: 1px solid #2d2f44;
-	}
-
-	&:after {
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: calc(100% - 100px);
-		top: -5px;
-		background-color: rgba(238, 238, 238, 0.1725490);
-		border-radius: 50%;
-		filter: blur(150px);
-		z-index: -1;
-	}
+	}	
 }
 
 .main-section__img {
 	width: 100%;
 	height: auto;
-	min-height: 680px;
-	background: url(/img/main_img.png) right no-repeat;
+	min-height: 650px;
+	background: url(/img/pc-main__4.png) center no-repeat;
 	background-size: contain;
 	margin-bottom: 30px;
 	position: relative;
+	&:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: calc(100% - 100px);
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		//background-color: rgba(238, 238, 238, 0.4725490);
+		background-color: rgb(94 100 169 / 30%);
+		border-radius: 50%;
+		filter: blur(150px);
+		z-index: -1;
+	}
 
 	.main-section__img-add {
 		position: absolute;
-		background: url(/img/granny.png) no-repeat center;
+		background: url(/img/gr1.png) no-repeat center;
 		background-size: contain;
 		height: 100%;
 		width: 100%;
@@ -1446,6 +1449,7 @@ main {
 			justify-content: space-between;
 			align-items: center;
 			position: relative;
+			flex: 1;
 
 			&::before {
 				content: "";
@@ -1462,8 +1466,14 @@ main {
 
 			.selection__img {
 				max-width: 480px;
-				width: auto;
-				height: auto;
+				width: 100%;
+				height: 100%;
+				max-height: 580px;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+				}
 			}
 
 			.selection__name {
@@ -1475,7 +1485,9 @@ main {
 				text-transform: uppercase;
 				color: $color_orange;
 				text-shadow: 1.27682px 2.55364px 2.55364px $color_blue;
-				transform: translateX(100px);
+				position: absolute;
+				max-width: 450px;
+				right: 0;
 			}
 		}
 	}
@@ -1566,7 +1578,7 @@ main {
 .selection__btn-cnt {
 	display: flex;
 	flex-direction: column;
-	max-width: 45%;
+	max-width: 43%;
 	width: 100%;
 
 	.selection__btn {
@@ -1997,7 +2009,7 @@ main {
 		justify-content: space-between;
 		align-items: center;
 		position: relative;
-		margin-top: 200px;
+		margin-top: 150px;
 
 		&::before {
 			content: "";
@@ -2016,6 +2028,11 @@ main {
 			max-width: 480px;
 			width: auto;
 			height: auto;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
 		}
 
 		.faq__name {
@@ -4988,6 +5005,7 @@ a.tpl-link {
 	}
 }
 
+.contacts-map,
 .delivery-map,
 .about-map {
 	position: relative;
@@ -6735,67 +6753,149 @@ a.tpl-link {
 		display: flex;
 		flex-direction: column;
 		gap: 15px;
+	}
+}
 
-		.find-job__phone a {
-			font-family: 'Jura';
-			font-style: normal;
-			font-weight: 700;
-			font-size: 20px;
-			line-height: 120%;
-			position: relative;
-			color: $color_default;
-			padding: 0 0 0 45px;
-			transition: all ease-in-out 0.2s;
+.call__phone a {
+	font-family: 'Jura';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 120%;
+	position: relative;
+	color: $color_default;
+	padding: 0 0 0 45px;
+	transition: all ease-in-out 0.2s;
 
-			&:hover {
-				color: $color_orange;
-			}
+	&:hover {
+		color: $color_orange;
+	}
 
-			&::before {
-				position: absolute;
-				content: '';
-				left: 0;
-				top: 50%;
-				transform: translateY(-50%);
-				width: 30px;
-				height: 30px;
-				background: url(/img/phone-icon.svg) no-repeat center;
-				background-size: contain;
+	&::before {
+		position: absolute;
+		content: '';
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 30px;
+		height: 30px;
+		background: url(/img/phone-icon.svg) no-repeat center;
+		background-size: contain;
+	}
+}
+
+.write__email a {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 140%;
+	color: $color_default;
+	position: relative;
+	padding: 0 0 0 45px;
+	transition: all ease-in-out 0.2s;
+
+	&:hover {
+		color: $color_orange;
+	}
+
+	&::before {
+		position: absolute;
+		content: '';
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 30px;
+		height: 30px;
+		background: url(/img/mail-icon.svg) no-repeat center;
+		background-size: contain;
+	}
+}
+
+.contacts-main__cnt {
+	display: flex;
+	flex: 0 0 100%;
+}
+
+.contacts-main__img {
+
+	img {
+		max-width: 100%;
+	}
+}
+
+@media (min-width: 767px) {
+	.contacts-main__section {
+		display: flex;
+	}
+
+	.contacts-main__info {
+		width: 46%;
+		padding: 0 50px 0 0;
+
+		.download-btn {
+			margin-bottom: 50px;
+
+			button {
+				margin-bottom: 10px;
 			}
 		}
+	}
 
-		.find-job__email a {
-			font-weight: 400;
-			font-size: 20px;
-			line-height: 140%;
-			color: $color_default;
-			position: relative;
-			padding: 0 0 0 45px;
-			transition: all ease-in-out 0.2s;
+	.contacts-main__img {
+		flex: 0 0 54%;
+		transform: translate(-100%, -60px);
+		position: relative;
+		padding: 0 0 31% 0;
 
-			&:hover {
-				color: $color_orange;
-			}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
 
-			&::before {
-				position: absolute;
-				content: '';
-				left: 0;
-				top: 50%;
-				transform: translateY(-50%);
-				width: 30px;
-				height: 30px;
-				background: url(/img/mail-icon.svg) no-repeat center;
-				background-size: contain;
-			}
 		}
 	}
 }
 
-.contacts-main__section {
-	.center-cnt {
+.contactus__cnt {
+	display: flex;
+	gap: 50px;
+	margin-bottom: 50px;
+}
+
+.download-btn {
+	position: relative;
+
+	span {
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: -31px;
+			transform: translate(0, -50%);
+			background: url(/img/download-icon.svg) no-repeat center;
+			background-size: contain;
+			width: 16px;
+			height: 18px;
+		}
+	}
+}
+
+.adress-map__cnt {
+	display: flex;
+
+	.adress-cnt {
 		display: flex;
-		justify-content: space-between;
-		.contacts-main__title-cnt {}
+		flex-direction: column;
+
+
+		.adress-title {
+			font-weight: 500;
+			font-size: 28px;
+			line-height: 120%;
+			text-transform: uppercase;
+			color: $color_orange;
+		}
 	}
 }

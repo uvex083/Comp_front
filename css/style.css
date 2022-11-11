@@ -249,7 +249,7 @@ h4 {
 h5 {
   font-family: "Roboto Mono";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 20px;
   line-height: 28px;
   color: #EEEEEE;
@@ -1153,30 +1153,32 @@ main {
   background-size: 50px 50px;
   background-position: center center;
 }
-.main-section__img-cnt:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: calc(100% - 100px);
-  top: -5px;
-  background-color: rgba(238, 238, 238, 0.172549);
-  border-radius: 50%;
-  filter: blur(150px);
-  z-index: -1;
-}
 
 .main-section__img {
   width: 100%;
   height: auto;
-  min-height: 680px;
-  background: url(/img/main_img.png) right no-repeat;
+  min-height: 650px;
+  background: url(/img/pc-main__4.png) center no-repeat;
   background-size: contain;
   margin-bottom: 30px;
   position: relative;
 }
+.main-section__img:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 100px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(94, 100, 169, 0.3);
+  border-radius: 50%;
+  filter: blur(150px);
+  z-index: -1;
+}
 .main-section__img .main-section__img-add {
   position: absolute;
-  background: url(/img/granny.png) no-repeat center;
+  background: url(/img/gr1.png) no-repeat center;
   background-size: contain;
   height: 100%;
   width: 100%;
@@ -1459,6 +1461,7 @@ main {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  flex: 1;
 }
 .selection .selection__cnt .selection__img-cnt::before {
   content: "";
@@ -1474,8 +1477,15 @@ main {
 }
 .selection .selection__cnt .selection__img-cnt .selection__img {
   max-width: 480px;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  max-height: 580px;
+}
+.selection .selection__cnt .selection__img-cnt .selection__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .selection .selection__cnt .selection__img-cnt .selection__name {
   font-family: "Press Start 2P";
@@ -1486,7 +1496,9 @@ main {
   text-transform: uppercase;
   color: #D0A220;
   text-shadow: 1.27682px 2.55364px 2.55364px #2305C2;
-  transform: translateX(100px);
+  position: absolute;
+  max-width: 450px;
+  right: 0;
 }
 
 .list-grandma__section {
@@ -1563,7 +1575,7 @@ main {
 .selection__btn-cnt {
   display: flex;
   flex-direction: column;
-  max-width: 45%;
+  max-width: 43%;
   width: 100%;
 }
 .selection__btn-cnt .selection__btn {
@@ -1937,7 +1949,7 @@ main {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  margin-top: 200px;
+  margin-top: 150px;
 }
 .faq__cnt .faq__img-cnt::before {
   content: "";
@@ -1955,6 +1967,12 @@ main {
   max-width: 480px;
   width: auto;
   height: auto;
+}
+.faq__cnt .faq__img-cnt .faq__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .faq__cnt .faq__img-cnt .faq__name {
   font-family: "Press Start 2P";
@@ -4498,10 +4516,12 @@ a.tpl-link:hover span {
   color: #D0A220;
 }
 
+.contacts-map,
 .delivery-map,
 .about-map {
   position: relative;
 }
+.contacts-map:after,
 .delivery-map:after,
 .about-map:after {
   position: absolute;
@@ -6045,7 +6065,8 @@ a.tpl-link:hover span {
   flex-direction: column;
   gap: 15px;
 }
-.find-job__cnt .find-job__info .find-job__phone a {
+
+.call__phone a {
   font-family: "Jura";
   font-style: normal;
   font-weight: 700;
@@ -6056,10 +6077,10 @@ a.tpl-link:hover span {
   padding: 0 0 0 45px;
   transition: all ease-in-out 0.2s;
 }
-.find-job__cnt .find-job__info .find-job__phone a:hover {
+.call__phone a:hover {
   color: #D0A220;
 }
-.find-job__cnt .find-job__info .find-job__phone a::before {
+.call__phone a::before {
   position: absolute;
   content: "";
   left: 0;
@@ -6070,7 +6091,8 @@ a.tpl-link:hover span {
   background: url(/img/phone-icon.svg) no-repeat center;
   background-size: contain;
 }
-.find-job__cnt .find-job__info .find-job__email a {
+
+.write__email a {
   font-weight: 400;
   font-size: 20px;
   line-height: 140%;
@@ -6079,10 +6101,10 @@ a.tpl-link:hover span {
   padding: 0 0 0 45px;
   transition: all ease-in-out 0.2s;
 }
-.find-job__cnt .find-job__info .find-job__email a:hover {
+.write__email a:hover {
   color: #D0A220;
 }
-.find-job__cnt .find-job__info .find-job__email a::before {
+.write__email a::before {
   position: absolute;
   content: "";
   left: 0;
@@ -6094,7 +6116,77 @@ a.tpl-link:hover span {
   background-size: contain;
 }
 
-.contacts-main__section .center-cnt {
+.contacts-main__cnt {
   display: flex;
-  justify-content: space-between;
+  flex: 0 0 100%;
+}
+
+.contacts-main__img img {
+  max-width: 100%;
+}
+
+@media (min-width: 767px) {
+  .contacts-main__section {
+    display: flex;
+  }
+  .contacts-main__info {
+    width: 46%;
+    padding: 0 50px 0 0;
+  }
+  .contacts-main__info .download-btn {
+    margin-bottom: 50px;
+  }
+  .contacts-main__info .download-btn button {
+    margin-bottom: 10px;
+  }
+  .contacts-main__img {
+    flex: 0 0 54%;
+    transform: translate(-100%, -60px);
+    position: relative;
+    padding: 0 0 31% 0;
+  }
+  .contacts-main__img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.contactus__cnt {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.download-btn {
+  position: relative;
+}
+.download-btn span:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -31px;
+  transform: translate(0, -50%);
+  background: url(/img/download-icon.svg) no-repeat center;
+  background-size: contain;
+  width: 16px;
+  height: 18px;
+}
+
+.adress-map__cnt {
+  display: flex;
+}
+.adress-map__cnt .adress-cnt {
+  display: flex;
+  flex-direction: column;
+}
+.adress-map__cnt .adress-cnt .adress-title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #D0A220;
 }

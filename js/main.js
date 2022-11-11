@@ -349,7 +349,7 @@ var phoneMask = IMask(
 	var currencyMask = IMask(
 		document.getElementById('rub-mask'),
 		{
-		  mask: 'num ₽',
+		  mask: '₽ num',
 		  blocks: {
 			 num: {
 				mask: Number,
