@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
-	<title>Грид</title>
+	<title>Результат поиска</title>
 </head>
 
 <body>
@@ -47,128 +47,79 @@
 		</div>
 	</header>
 
-	<style>
-		.test {
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
-			grid-template-rows: repeat(3, minmax(40px, auto));
-
-			grid-template-areas:
-				"b b a"
-				"b b c"
-				"b b c";
-		}
-
-		.test1 {
-			background-color: rgba(255, 0, 200, .2);
-			border: 3px solid #663399;
-			grid-area: a;
-		}
-
-		.test2 {
-			background-color: red;
-			border: 3px solid red;
-			grid-area: b;
-		}
-
-		.test3 {
-			background-color: green;
-			border: 3px solid green;
-			grid-area: c;
-		}
-
-		.test222 {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 8px;
-		}
-
-		.test21 {
-			background-color: red;
-		}
-
-		.test25 {
-			grid-row-start: 1;
-			grid-row-end: 3;
-			grid-column-start: 3;
-			background-color: red;
-		}
-	</style>
-
 	<main>
-		<div class="center-cnt">
-			<div>
-				<h3>Тест 1</h3>
-				<div class="test">
-					<div class="test1"></div>
-					<div class="test2"></div>
-					<div class="test3"></div>
+		<section class="breadcrumbs-section">
+			<div class="center-cnt">
+				<div class="bread-cnt">
+					<div class="bread-item"><a href="/">Главная</a></div>
+					<div class="bread-item divider"><img src="/img/bread_arr.svg" alt=""></div>
+					<div class="bread-item">Результат поиска</div>
 				</div>
 			</div>
+		</section>
 
-			<div>
-				<h3>Тест 2</h3>
-				<div class="test222">
-					<div class="test21">123</div>
-					<div class="test22">123</div>
-					<div class="test23">123</div>
-					<div class="test24">123</div>
-					<div class="test25">123456</div>
-				</div>
-			</div>
-
-		</div>
-
-		<style>
-			.section {
-				display: flex;
-			}
-
-			.section__content {
-				flex: 0 0 100%;
-			}
-
-			.section__body {
-				background: gray;
-				max-width: 50%;
-			}
-
-			.section__image {
-				flex: 0 0 50%;
-				transform: translate(-100%, 0);
-			}
-
-			.section__image img {
-				max-width: 100%;
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-			}
-		</style>
-
-
-
-		<h3>тест 3</h3>
-		<div class="wrapper">
-			<div class="section">
-				<div class="section__content">
-					<div class="center-cnt">
-						<div class="section__body">
-							<div class="section__title">TITLE</div>
-							<div class="section__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-								dolorum nemo et laudantium quia, voluptates doloribus doloremque exercitationem in
-								necessitatibus, nihil at consectetur magni dicta nulla nostrum, nobis porro nesciunt.</div>
+		<section class="search-section">
+			<div class="center-cnt">
+				<h1 class="white-h1">Результат поиска</h1>
+				<p class="search-ads">По вашему поисковому запросу, к сожалению, ничего не найдено.<br>Попробуйте ввести другой запрос или воспользуйтесь нашими сервисами подобра или конфигуратора.</p>
+				<div class="search-cnt">
+					<div class="search-row__cnt">
+						<div class="search-field">
+							<input class="search-field" type="search" name="" id="search" placeholder="Поиск" pattern=".{1,}"
+								required>
+							<div class="clear-search"></div>
+						</div>
+						<div class="search-btn">
+							<button class="tpl-btn">
+								<div class="tpl-btn__first">
+									<span>Искать</span>
+								</div>
+								<div class="tpl-btn__second"></div>
+							</button>
 						</div>
 					</div>
 				</div>
-				<div class="section__image">
-					<img src="/img/about-2.png" alt="">
+			</div>
+		</section>
+
+		<section class="selection">
+			<div class="center-cnt">
+				<h2>Быстрый подбор компьютера</h2>
+				<div class="selection__cnt">
+					<div class="selection__btn-cnt">
+						<div class="selection__btn">
+							<div class="selection__btn-icon"><img src="img/select_param.png" alt=""></div>
+							<div class="selection__btn-name">Выбрать ПК по параметрам</div>
+						</div>
+						<div class="selection__btn">
+							<div class="selection__btn-icon"><img src="img/select_games.png" alt=""></div>
+							<div class="selection__btn-name">Выбрать ПК по игре</div>
+						</div>
+					</div>
+					<div class="selection__img-cnt">
+						<div class="selection__img"><img src="img/grandma_white.png" alt=""></div>
+						<div class="selection__name">Бабуля знает, что понравится её пирожочку</div>
+					</div>
 				</div>
 			</div>
-		</div>
+			<div class="strip">
+				<div class="center-cnt">
+					<div class="strip-cnt">
+						<div class="strip-cnt__ref">
+							<a class="strip-cnt__phone" href="tel:88000000000">8-800-123-45-67</a>
+							<a class="strip-cnt__mail" href="mailto:comp@comp.ru">comp@comp.ru</a>
+						</div>
+						<button class="strip-btn">
+							<div class="strip-btn__first">
+								<span>Получить консультацию</span>
+							</div>
+							<div class="strip-btn__second"></div>
 
-
-
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
 
 	</main>
 
