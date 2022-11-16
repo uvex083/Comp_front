@@ -325,12 +325,18 @@ $(document).ready(function () {
 			$(".terms-condition__item.installment").addClass("hide");
 			$(".terms-condition__item.credit").removeClass("hide").addClass("show");
 		}
-	
+
 	});
 
 	/* Кредит end */
 
 
+	/* Очистить форму поиска */
+
+	$(".clear-search").click(function () {
+		$('#search').val('');
+	}
+	)
 
 
 });
@@ -343,17 +349,17 @@ const changeHandler = e => {
 
 var phoneMask = IMask(
 	document.getElementById('phone-mask'), {
-	  mask: '+{7}(000)000-00-00'
-	});
+	mask: '+{7}(000)000-00-00'
+});
 
-	var currencyMask = IMask(
-		document.getElementById('rub-mask'),
-		{
-		  mask: '₽ num',
-		  blocks: {
-			 num: {
+var currencyMask = IMask(
+	document.getElementById('rub-mask'),
+	{
+		mask: '₽ num',
+		blocks: {
+			num: {
 				mask: Number,
 				thousandsSeparator: ' '
-			 }
-		  }
-		});
+			}
+		}
+	});
