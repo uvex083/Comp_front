@@ -212,19 +212,23 @@ $(document).ready(function () {
 
 	/* Фиксируем правый блок*/
 
-	$(function () {
+	function FixRightBlock(){
 		$nav = $('.fixed-div');
-		$nav.css('width', $nav.outerWidth());
-		$window = $(window);
-		$h = $nav.offset().top;
-		$window.scroll(function () {
-			if ($window.scrollTop() > ($h - 145)) {
-				$nav.addClass('fixed');
-			} else {
-				$nav.removeClass('fixed');
-			}
-		});
-	});
+		
+		if ($nav.length > 0){
+			$nav.css('width', $nav.outerWidth());
+			$window = $(window);
+			$h = $nav.offset().top;
+			$window.scroll(function () {
+				if ($window.scrollTop() > ($h - 145)) {
+					$nav.addClass('fixed');
+				} else {
+					$nav.removeClass('fixed');
+				}
+			});
+		}
+	}
+
 
 
 	/* Карточка товара КОНЕЦ */
@@ -241,6 +245,8 @@ $(document).ready(function () {
 			}, 800);
 			return false;
 		});
+
+		FixRightBlock();
 	});
 
 
@@ -325,18 +331,12 @@ $(document).ready(function () {
 			$(".terms-condition__item.installment").addClass("hide");
 			$(".terms-condition__item.credit").removeClass("hide").addClass("show");
 		}
-
+	
 	});
 
 	/* Кредит end */
 
 
-	/* Очистить форму поиска */
-
-	$(".clear-search").click(function () {
-		$('#search').val('');
-	}
-	)
 
 
 });
@@ -347,19 +347,97 @@ const changeHandler = e => {
 	e.value = value.replace(/\D/g, '')
 }
 
-var phoneMask = IMask(
-	document.getElementById('phone-mask'), {
-	mask: '+{7}(000)000-00-00'
+// var phoneMask = IMask(
+// 	document.getElementById('phone-mask'), {
+// 	  mask: '+{7}(000)000-00-00'
+// 	});
+
+// 	var currencyMask = IMask(
+// 		document.getElementById('rub-mask'),
+// 		{
+// 		  mask: 'num ₽',
+// 		  blocks: {
+// 			 num: {
+// 				mask: Number,
+// 				thousandsSeparator: ' '
+// 			 }
+// 		  }
+// 		});
+
+
+
+
+
+
+// new scripts
+
+// detect element position on screen
+$.fn.isInViewport = function(){
+    var elementTop = $(this).offset().top + 100,
+        elementBottom = elementTop + $(this).outerHeight(),
+        viewportTop = $(window).scrollTop(),
+        viewportBottom = viewportTop + $(window).height();
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+$(document).ready(function () {
+	mainScreenInit();
+	showElments();
+
+	$(window).on('scroll', function(){
+		showElments();
+	});
 });
 
-var currencyMask = IMask(
-	document.getElementById('rub-mask'),
-	{
-		mask: '₽ num',
-		blocks: {
-			num: {
-				mask: Number,
-				thousandsSeparator: ' '
-			}
-		}
-	});
+function showElments(){
+    var scrollTop = $(window).scrollTop();
+
+    if ($('.seria-section').isInViewport() || scrollTop >= $('.seria-section').offset().top){
+    	TweenMax.staggerTo($('.cat-item__hover'), 1, {delay: 0.5, autoAlpha: 1, top: '0px', ease: Elastic.easeOut.config(2, 1)}, 0.2);
+    }
+
+    if ($('.our-services').isInViewport() || scrollTop >= $('.our-services').offset().top){
+		TweenMax.staggerTo($('.our-services__item'), 1, {delay: 0.5, autoAlpha: 1, top: '0px', ease: Elastic.easeOut.config(2, 1)}, 0.2);
+    }
+	
+    if ($('.selection__btn-cnt').isInViewport() || scrollTop >= $('.selection__btn-cnt').offset().top){
+
+    	TweenMax.staggerTo($('.selection__btn'), 1, {delay: 0.5, autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1)}, 0.2);
+
+		let sstl = new TimelineLite();
+
+		sstl.to($('.selection__img img'), 1, {delay: 0.7, autoAlpha: 1, y: '10px', ease: Elastic.easeOut.config(1, 0.5)})
+			.to($('.selection__name'), 0.7, {autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1)}, '-=0.5')
+			.to($('.selection .glitchy-btn'), 0.7, {autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1)}, '-=0.3');
+    }
+
+    if ($('.photo-section').isInViewport() || scrollTop >= $('.photo-section').offset().top){
+		TweenMax.staggerTo($('.gallery__item'), 1, {delay: 0.5, autoAlpha: 1, top: '0px', ease: Elastic.easeOut.config(2, 1)}, 0.2);
+    }
+
+    if ($('.main-why').isInViewport() || scrollTop >= $('.main-why').offset().top){
+		TweenMax.to($('.main-why-img'), 1, {delay: 0.5, autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1)})
+		TweenMax.staggerTo($('.main-why-text-item .mwti-line'), 1, {delay: 0.5, width: '500px', ease: Power1.easeOut}, .3);
+		TweenMax.staggerTo($('.mwti-text'), .5, {delay: 1.6, autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1)}, .3);
+		TweenMax.staggerTo($('.mwti-line .path'), 1, {delay: 1.6, autoAlpha: 1, ease: Power1.easeOut}, .3);
+    }
+
+    if ($('.faq').isInViewport() || scrollTop >= $('.faq').offset().top){
+		let faqtl = new TimelineLite();
+
+		faqtl.to($('.faq__img img'), 1, {delay: 0.7, autoAlpha: 1, y: '10px', ease: Elastic.easeOut.config(1, 0.5)})
+			 .to($('.faq .glitchy-btn.red-btn'), 0.7, {autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1)}, '-=0.5');
+    }
+}
+
+function mainScreenInit(){
+    let mstl = new TimelineLite();
+    mstl.to($('.main-section__cnt h1'), 0.3, {delay: 0.5, autoAlpha: 1, left: '0px', ease: Elastic.easeOut.config(2, 1)})
+		.to($('.main-section__cnt h5'), 0.3, {autoAlpha: 1, left: '0px', ease: Elastic.easeOut.config(2, 1)})
+		.to($('.ms-btn-container'), 0.3, {autoAlpha: 1, left: '0px', ease: Elastic.easeOut.config(2, 1)})
+		.to($('.ms-slider-controls-cnt'), 0.3, {autoAlpha: 1, left: '0px', ease: Elastic.easeOut.config(2, 1)})
+		.to($('.show-video-cnt .animated-line '), 0.7, {width: '2000px', ease: Power1.easeOut})
+		.to($('.ms-slider-controls'), 0.3, {autoAlpha: 1, top: '10px', ease: Elastic.easeOut.config(2, 1)}, '-=0.3')
+		.to($('.main-section__img-cnt'), 2, {autoAlpha: 1, ease: Elastic.easeOut.config(2, 1)}, '-=1.5')
+}
+
