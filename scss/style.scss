@@ -7671,6 +7671,7 @@ a.blog-link {
 
 				.custom-checkbox:checked+label {
 					color: $color_default;
+					
 				}
 
 				.custom-checkbox:not(:disabled):not(:checked) + label:hover::before {
