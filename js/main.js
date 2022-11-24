@@ -33,8 +33,10 @@ function menuHandler() {
 					menuLogic = false;
 					$('html, body').removeClass('menu_opened');
 				}, 300);
-
+				
 				$('body').css('position', '').css('left', 'auto').css('right', 'auto').css('top', 'auto');
+
+
 
 			} else {
 				$('.dropdown-menu').addClass('opened').slideDown(300);
@@ -46,8 +48,8 @@ function menuHandler() {
 			}
 		}
 
-		$("body").toggleClass("menu-body");
 		$("header").toggleClass("menu-header");
+		$("body").toggleClass("menu-open");
 	});
 }
 
@@ -58,8 +60,10 @@ menuHandler();
 $(window).scroll(function () {
 	if ($(this).scrollTop() > 0) {
 		$("header").addClass("anim-header");
+		$(".search-cnt.header-search").css("background-color", "#181818");
 	} else {
 		$("header").removeClass("anim-header");
+		$(".search-cnt.header-search").css("background-color", "#252525");
 	}
 });
 
@@ -88,7 +92,7 @@ $(document).ready(function () {
 
 /* Карточка товара НАЧАЛО */
 
-/* Расскрываем меню начало*/
+/* Расскрываем меню */
 
 $(document).ready(function () {
 
@@ -109,7 +113,7 @@ $(document).ready(function () {
 
 
 
-	/* Красим блок с цветом начало*/
+	/* Красим блок с цветом */
 
 	$(".item-body__color-item").click(function () {
 		$(".item-body__color").css('color', '#B6B6B6');
@@ -131,7 +135,7 @@ $(document).ready(function () {
 
 
 
-	/* Добавление товара в конфигураторе начало */
+	/* Добавление товара в конфигураторе */
 
 	$(".config-item__title").click(function () {
 		$(".config-item__title label").css('color', '#B6B6B6');
@@ -151,7 +155,7 @@ $(document).ready(function () {
 
 
 
-	/* Добавление товара в конфигураторе в сравнение начало */
+	/* Добавление товара в конфигураторе в сравнение */
 
 	$(".config-item__cmp").click(function () {
 		$(this).toggleClass("active");
@@ -212,10 +216,10 @@ $(document).ready(function () {
 
 	/* Фиксируем правый блок*/
 
-	function FixRightBlock(){
+	function FixRightBlock() {
 		$nav = $('.fixed-div');
-		
-		if ($nav.length > 0){
+
+		if ($nav.length > 0) {
 			$nav.css('width', $nav.outerWidth());
 			$window = $(window);
 			$h = $nav.offset().top;
@@ -331,7 +335,7 @@ $(document).ready(function () {
 			$(".terms-condition__item.installment").addClass("hide");
 			$(".terms-condition__item.credit").removeClass("hide").addClass("show");
 		}
-	
+
 	});
 
 	/* Кредит end */
@@ -341,103 +345,211 @@ $(document).ready(function () {
 
 });
 
-/* В инпут пишутся только числовые значения  */
+/* В инпут c кредитом пишутся только числовые значения  */
 const changeHandler = e => {
 	const value = e.value
 	e.value = value.replace(/\D/g, '')
 }
 
-// var phoneMask = IMask(
-// 	document.getElementById('phone-mask'), {
-// 	  mask: '+{7}(000)000-00-00'
-// 	});
 
-// 	var currencyMask = IMask(
-// 		document.getElementById('rub-mask'),
-// 		{
-// 		  mask: 'num ₽',
-// 		  blocks: {
-// 			 num: {
-// 				mask: Number,
-// 				thousandsSeparator: ' '
-// 			 }
-// 		  }
-// 		});
+$(".clear-search").click(function () {
+	$(".search-field").val('');
+})
 
 
+$(".header-icon-cnt__find").click(function () {
+	$(".search-cnt.header-search").slideToggle(200).toggleClass('open');
+})
+
+$(".search-close").click(function () {
+	$(".search-cnt.header-search").slideUp(200).removeClass('open');
+})
 
 
-
-
-// new scripts
+// max scripts
 
 // detect element position on screen
-$.fn.isInViewport = function(){
-    var elementTop = $(this).offset().top + 100,
-        elementBottom = elementTop + $(this).outerHeight(),
-        viewportTop = $(window).scrollTop(),
-        viewportBottom = viewportTop + $(window).height();
-    return elementBottom > viewportTop && elementTop < viewportBottom;
+$.fn.isInViewport = function () {
+	var elementTop = $(this).offset().top + 100,
+		elementBottom = elementTop + $(this).outerHeight(),
+		viewportTop = $(window).scrollTop(),
+		viewportBottom = viewportTop + $(window).height();
+	return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
 $(document).ready(function () {
-	mainScreenInit();
+
+	if ($('.main-section__cnt').length) {
+		mainScreenInit();
+	}
+
 	showElments();
 
-	$(window).on('scroll', function(){
+	modalWindow();
+
+	faqSpoilers();
+
+	$(window).on('scroll', function () {
 		showElments();
 	});
 });
 
-function showElments(){
-    var scrollTop = $(window).scrollTop();
+function showElments() {
+	var scrollTop = $(window).scrollTop();
 
-    if ($('.seria-section').isInViewport() || scrollTop >= $('.seria-section').offset().top){
-    	TweenMax.staggerTo($('.cat-item__hover'), 1, {delay: 0.5, autoAlpha: 1, top: '0px', ease: Elastic.easeOut.config(2, 1)}, 0.2);
-    }
+	if ($('.seria-section').isInViewport() || scrollTop >= $('.seria-section').offset().top) {
+		TweenMax.staggerTo($('.cat-item__hover'), 1, { delay: 0.5, autoAlpha: 1, top: '0px', ease: Elastic.easeOut.config(2, 1) }, 0.2);
+		TweenMax.to($('.cat-item__cnt-progress, .cat-item__cnt-btns'), 1, { delay: 1.1, autoAlpha: 1, y: '0px', ease: Elastic.easeOut.config(2, 1) })
+	}
 
-    if ($('.our-services').isInViewport() || scrollTop >= $('.our-services').offset().top){
-		TweenMax.staggerTo($('.our-services__item'), 1, {delay: 0.5, autoAlpha: 1, top: '0px', ease: Elastic.easeOut.config(2, 1)}, 0.2);
-    }
-	
-    if ($('.selection__btn-cnt').isInViewport() || scrollTop >= $('.selection__btn-cnt').offset().top){
+	if ($('.our-services').isInViewport() || scrollTop >= $('.our-services').offset().top) {
+		TweenMax.staggerTo($('.our-services__item'), 1, { delay: 0.5, autoAlpha: 1, top: '0px', ease: Elastic.easeOut.config(2, 1) }, 0.2);
+	}
 
-    	TweenMax.staggerTo($('.selection__btn'), 1, {delay: 0.5, autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1)}, 0.2);
+	if ($('.selection__btn-cnt').isInViewport() || scrollTop >= $('.selection__btn-cnt').offset().top) {
+
+		TweenMax.staggerTo($('.selection__btn'), 1, { delay: 0.5, autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1) }, 0.2);
 
 		let sstl = new TimelineLite();
 
-		sstl.to($('.selection__img img'), 1, {delay: 0.7, autoAlpha: 1, y: '10px', ease: Elastic.easeOut.config(1, 0.5)})
-			.to($('.selection__name'), 0.7, {autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1)}, '-=0.5')
-			.to($('.selection .glitchy-btn'), 0.7, {autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1)}, '-=0.3');
-    }
+		sstl.to($('.selection__img img'), 1, { delay: 0.7, autoAlpha: 1, y: '10px', ease: Elastic.easeOut.config(1, 0.5) })
+			.to($('.selection__name'), 0.7, { autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1) }, '-=0.5')
+			.to($('.selection .glitchy-btn'), 0.7, { autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1) }, '-=0.3');
+	}
 
-    if ($('.photo-section').isInViewport() || scrollTop >= $('.photo-section').offset().top){
-		TweenMax.staggerTo($('.gallery__item'), 1, {delay: 0.5, autoAlpha: 1, top: '0px', ease: Elastic.easeOut.config(2, 1)}, 0.2);
-    }
+	if ($('.photo-section').isInViewport() || scrollTop >= $('.photo-section').offset().top) {
+		TweenMax.staggerTo($('.gallery__item'), 1, { delay: 0.5, autoAlpha: 1, top: '0px', ease: Elastic.easeOut.config(2, 1) }, 0.2);
+	}
 
-    if ($('.main-why').isInViewport() || scrollTop >= $('.main-why').offset().top){
-		TweenMax.to($('.main-why-img'), 1, {delay: 0.5, autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1)})
-		TweenMax.staggerTo($('.main-why-text-item .mwti-line'), 1, {delay: 0.5, width: '500px', ease: Power1.easeOut}, .3);
-		TweenMax.staggerTo($('.mwti-text'), .5, {delay: 1.6, autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1)}, .3);
-		TweenMax.staggerTo($('.mwti-line .path'), 1, {delay: 1.6, autoAlpha: 1, ease: Power1.easeOut}, .3);
-    }
+	if ($('.main-why').isInViewport() || scrollTop >= $('.main-why').offset().top) {
+		TweenMax.to($('.main-why-img'), 1, { delay: 0.5, autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1) })
+		TweenMax.staggerTo($('.main-why-text-item .mwti-line'), 1, { delay: 0.5, width: '500px', ease: Power1.easeOut }, .3);
+		TweenMax.staggerTo($('.mwti-text'), .5, { delay: 1.6, autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1) }, .3);
+		TweenMax.staggerTo($('.mwti-line .path'), 1, { delay: 1.6, autoAlpha: 1, ease: Power1.easeOut }, .3);
+	}
 
-    if ($('.faq').isInViewport() || scrollTop >= $('.faq').offset().top){
+	if ($('.faq').isInViewport() || scrollTop >= $('.faq').offset().top) {
 		let faqtl = new TimelineLite();
 
-		faqtl.to($('.faq__img img'), 1, {delay: 0.7, autoAlpha: 1, y: '10px', ease: Elastic.easeOut.config(1, 0.5)})
-			 .to($('.faq .glitchy-btn.red-btn'), 0.7, {autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1)}, '-=0.5');
-    }
+		faqtl.to($('.faq__img img'), 1, { delay: 1.3, autoAlpha: 1, y: '10px', ease: Elastic.easeOut.config(1, 0.5) })
+			.to($('.faq .glitchy-btn.red-btn'), 0.7, { autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1) }, '-=0.5');
+	}
 }
 
-function mainScreenInit(){
-    let mstl = new TimelineLite();
-    mstl.to($('.main-section__cnt h1'), 0.3, {delay: 0.5, autoAlpha: 1, left: '0px', ease: Elastic.easeOut.config(2, 1)})
-		.to($('.main-section__cnt h5'), 0.3, {autoAlpha: 1, left: '0px', ease: Elastic.easeOut.config(2, 1)})
-		.to($('.ms-btn-container'), 0.3, {autoAlpha: 1, left: '0px', ease: Elastic.easeOut.config(2, 1)})
-		.to($('.ms-slider-controls-cnt'), 0.3, {autoAlpha: 1, left: '0px', ease: Elastic.easeOut.config(2, 1)})
-		.to($('.show-video-cnt .animated-line '), 0.7, {width: '2000px', ease: Power1.easeOut})
-		.to($('.ms-slider-controls'), 0.3, {autoAlpha: 1, top: '10px', ease: Elastic.easeOut.config(2, 1)}, '-=0.3')
-		.to($('.main-section__img-cnt'), 2, {autoAlpha: 1, ease: Elastic.easeOut.config(2, 1)}, '-=1.5')
+function mainScreenInit() {
+	let mstl = new TimelineLite();
+	mstl.to($('.main-section__cnt h1'), 0.3, { delay: 0.5, autoAlpha: 1, left: '0px', ease: Elastic.easeOut.config(2, 1) })
+		.to($('.main-section__cnt h5'), 0.3, { autoAlpha: 1, left: '0px', ease: Elastic.easeOut.config(2, 1) })
+		.to($('.ms-btn-container'), 0.3, { autoAlpha: 1, left: '0px', ease: Elastic.easeOut.config(2, 1) })
+		.to($('.ms-slider-controls-cnt'), 0.3, { autoAlpha: 1, left: '0px', ease: Elastic.easeOut.config(2, 1) })
+		.to($('.show-video-cnt .animated-line '), 0.7, { width: '2000px', ease: Power1.easeOut })
+		.to($('.ms-slider-pager'), 0.3, { autoAlpha: 1, bottom: '18px', ease: Elastic.easeOut.config(2, 1) }, '-=0.3')
+		.to($('.main-section__img-cnt'), 2, { autoAlpha: 1, ease: Elastic.easeOut.config(2, 1) }, '-=1.5')
+		.to($('.main-section__img-swiper-babka'), 1, { autoAlpha: 1, y: '10px', ease: Elastic.easeOut.config(0.5, 0.3) }, '-=0.5')
 }
 
+const mainBabka = new Swiper('.main-section__img-swiper', {
+	pagination: {
+		el: '.ms-slider-pager',
+		clickable: true
+	},
+	autoplay: {
+		delay: 4000,
+		disableOnInteraction: false
+	},
+});
+
+mainBabka.on('slideChange', function () {
+	let itemIndex = this.activeIndex;
+
+	$('.main-section__cnt-item').fadeOut(200);
+
+	setTimeout(function () {
+		$('.main-section__cnt-item').eq(itemIndex).fadeIn(200);
+	}, 200);
+});
+
+const mainProductSlider = new Swiper('.cat-item__cnt.swiper', {
+	loop: false,
+	slidesPerView: 3,
+	spaceBetween: 30,
+	pagination: {
+		el: '.cat-item__cnt-scroll',
+		type: 'progressbar',
+	},
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+			spaceBetween: 20,
+		 },
+		640: {
+		  slidesPerView: 1,
+		  spaceBetween: 10,
+		},
+		768: {
+		  slidesPerView: 2,
+		  spaceBetween: 20,
+		},
+		1024: {
+		  slidesPerView: 3,
+		  spaceBetween: 30,
+		},
+	 },
+	navigation: {
+		nextEl: '.cat-item__cnt-btns .swiper-button-next',
+		prevEl: '.cat-item__cnt-btns .swiper-button-prev',
+	},
+	on: {
+		init: () => {
+			let productItems = $('.swiper-slide.cat-item__hover').length;
+
+			$('.cat-item__cnt-last-slide').html('0' + productItems);
+		},
+	},
+});
+
+function modalWindow() {
+	$('.open-modal').on('click', function (e) {
+		e.preventDefault();
+		let currentModal = $(this).attr('href');
+		$('.overlay, #' + currentModal).css('display', 'flex').hide().fadeIn(200);
+	});
+
+	$('.modal-close, .overlay').on('click', function () {
+		$('.modal, .overlay').fadeOut(200);
+	});
+}
+
+function faqSpoilers() {
+	$('.faq-title').on('click', function () {
+		let parent = $(this).parent();
+
+		if (!parent.hasClass('active')) {
+			$('.faq-body').slideUp(200);
+
+			setTimeout(function () {
+				$('.faq__list-cnt li').removeClass('active');
+				parent.addClass('active').find('.faq-body').slideDown(200);
+			}, 250)
+		}
+
+	});
+}
+
+
+var phoneMask = IMask(
+	document.getElementById('phone-mask') || document.getElementById('phone-mask__callback'), {
+	mask: '+{7}(000)000-00-00'
+});
+
+var currencyMask = IMask(
+	document.getElementById('rub-mask'),
+	{
+		mask: 'num ₽',
+		blocks: {
+			num: {
+				mask: Number,
+				thousandsSeparator: ' '
+			}
+		}
+	});
