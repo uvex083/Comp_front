@@ -1509,6 +1509,11 @@ a.call-back {
 
 	.our-services__img {
 		margin-bottom: 50px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
 	}
 
 	.our-services__title {
@@ -2383,10 +2388,11 @@ a.follow-us__icon {
 .bread-cnt {
 	display: flex;
 	justify-content: start;
-	gap: 30px;
+	gap: 2vw;
 	align-items: center;
 	flex-direction: row;
 	padding: 15px 0;
+	flex-wrap: wrap;
 
 	.bread-item {
 		font-weight: 400;
@@ -2402,6 +2408,7 @@ a.follow-us__icon {
 		a {
 			color: $color_p;
 			transition: all ease-in-out 0.2s;
+			white-space: nowrap;
 
 			&:hover {
 				color: $color_orange;
@@ -3063,10 +3070,6 @@ a.follow-us__icon {
 			}
 		}
 	}
-}
-
-.assemble__cat-section .center-cnt {
-	padding: 160px 0;
 }
 
 .card-cnt {
@@ -5392,10 +5395,14 @@ a.tpl-link {
 	}
 }
 
+.guarantee-section {
+	margin-bottom: 150px;
+}
+
 .guarantee-item__cnt {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 100px 200px;
+	gap: 7vw 6vw;
 
 	.guarantee-item {
 		width: 100%;
