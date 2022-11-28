@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
 	<title>О нас</title>
 </head>
 
@@ -20,7 +21,7 @@
 						<span class="burger-menu-piece"></span>
 					</div>
 					<a class="logo" href="/">
-						<img src="img/logo.svg" alt="">
+						<img src="img/logo_l.png" alt="">
 					</a>
 				</div>
 				<div class="header-cnt-side">
@@ -35,12 +36,138 @@
 				<div class="header-cnt-side">
 					<div class="header-phone">
 						<a href="tel:+123456789">8-800-123-45-67</a>
-						<div class="call-back">Заказать звонок</div>
+						<a href="call-back" class="call-back open-modal">Заказать звонок</a>
 					</div>
 					<div class="header-icon-cnt">
 						<div class="header-icon-cnt__find"></div>
-						<div class="header-icon-cnt__compare"></div>
-						<div class="header-icon-cnt__login"></div>
+						<a href="/compare.html" class="header-icon-cnt__compare"></a>
+						<a href="/cabinet.html" class="header-icon-cnt__login"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="search-cnt header-search">
+			<div class="center-cnt">
+				<div class="search-row__cnt">
+					<div class="search-field">
+						<input class="search-field" type="search" name="" id="search" placeholder="Поиск" pattern=".{1,}"
+							required="">
+						<div class="clear-search"></div>
+					</div>
+					<div class="search-btn">
+						<button class="tpl-btn">
+							<div class="tpl-btn__first">
+								<span>Искать</span>
+							</div>
+							<div class="tpl-btn__second"></div>
+						</button>
+					</div>
+					<div class="search-close"></div>
+				</div>
+			</div>
+		</div>
+		<div class="dropdown-menu">
+			<div class="center-cnt">
+				<div class="menu__cnt">
+					<div class="search-mobile__cnt">
+						<div class="search-row__cnt">
+							<div class="search-field">
+								<input class="search-field" type="search" name="" id="search" placeholder="Поиск"
+									pattern=".{1,}" required="">
+								<div class="clear-search"></div>
+							</div>
+							<div class="search-btn">
+								<button class="tpl-btn">
+									<div class="tpl-btn__first">
+										<span></span>
+									</div>
+									<div class="tpl-btn__second"></div>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="menu-clm">
+						<div class="menu-title">
+							<h3>Мы предлагаем</h3>
+						</div>
+						<a class="menu-link" href="/">Игровые ПК</a>
+						<a class="menu-link" href="/">Офисные ПК</a>
+						<a class="menu-link" href="/">Профессиональные ПК</a>
+						<a class="menu-link" href="/">Подбор</a>
+						<a class="menu-link" href="/">Конфигуратор</a>
+						<a class="menu-link" href="/">Кто мы</a>
+						<a class="menu-link" href="/">Отзывы</a>
+						<a class="menu-link" href="/">Доставка и оплата</a>
+						<a class="menu-link" href="/">Работа у нас</a>
+						<a class="menu-link" href="/">Наш блог</a>
+						<a class="menu-link" href="/">Расчитать кредит</a>
+					</div>
+					<div class="menu-clm">
+						<div class="menu-clm__row">
+							<div class="menu-title">
+								<h3>Контакты</h3>
+							</div>
+							<div class="menu-adress">
+								БЦ Клевер парк, Ткачей, 23, офис 714
+							</div>
+							<div class="menu-time">
+								Понедельник-Пятница 9:00 - 18:00
+							</div>
+							<span>Приходите в гости и не забудьте документ
+								удостоверяющий личность</span>
+						</div>
+						<div class="menu-clm__row">
+							<div class="menu-title">
+								<h3>На связи</h3>
+							</div>
+							<div class="menu-phone"><a href="tel:+78005518012">+7 (800) 551-80-12</a></div>
+							<div class="messenger">
+								<a class="messenger__wa" href="/"></a>
+								<a class="messenger__tg" href="/"></a>
+							</div>
+						</div>
+						<div class="menu-clm__row">
+							<div class="menu-title">
+								<h3>В соцсетях</h3>
+							</div>
+							<div class="follow-us__icon-cnt">
+								<a href="" class="follow-us__icon inst-icon"></a>
+								<a href="" class="follow-us__icon yt-icon"></a>
+								<a href="" class="follow-us__icon vk-icon"></a>
+							</div>
+						</div>
+					</div>
+					<div class="menu-clm">
+						<div class="menu-clm__row">
+							<div class="menu-title">
+								<h3>Блог</h3>
+							</div>
+							<div class="menu-blog__cnt">
+								<div class="menu-blog__item">
+									<div class="menu-blog__img"><a href="/"><img src="img/menu-blog-1.png" alt=""></a>
+									</div>
+									<div class="menu-blog__desc">
+										<div class="menu-blog__title"><a href="">20 игр с котиками на PC</a> </div>
+										<div class="menu-blog__link"><a href=""><span>Читать
+													статью</span><span>>></span></a></div>
+									</div>
+								</div>
+								<div class="menu-blog__item">
+									<div class="menu-blog__img"><a href=""><img src="img/menu-blog-2.png" alt=""></a>
+									</div>
+									<div class="menu-blog__desc">
+										<div class="menu-blog__title"><a href="">Лучшие машины в 2022</a> </div>
+										<div class="menu-blog__link"><a href=""><span>Читать
+													статью</span><span>>></span></a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="menu-clm__row">
+							<div class="menu-blog__all"><a href="/"><span>Почитать наш блог</span><span>>></span></a>
+							</div>
+						</div>
+
 					</div>
 				</div>
 			</div>
@@ -78,8 +205,8 @@
 			</div>
 		</section>
 
-		<section class="text-img-section">
-			<div class="tpl-line"></div>
+		<div class="animated-line"></div>
+		<section class="text-img-section section-padding-170">
 			<div class="center-cnt">
 				<div class="tpl-block">
 					<div class="tpl-block__title-cnt">
@@ -114,8 +241,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="tpl-line"></div>
 		</section>
+		<div class="animated-line"></div>
 
 		<section class="who-section section-padding-170">
 			<div class="center-cnt">
@@ -125,45 +252,68 @@
 					вручает вам за небольшое вознаграждение.</p>
 				<div class="who-item__cnt">
 					<div class="who-item">
-						<img class="who-super" src="/img/who-1.png" alt="">
-						<img class="who-photo" src="/img/who-1.png" alt="">
+						<div class="who-photo__cnt">
+							<img class="who-super" src="/img/who-1.png" alt="">
+							<img class="who-photo" src="/img/who-r-1.png" alt="">
+						</div>
 						<div class="who-item__name">Игорь Ильин</div>
 						<div class="who-item__function">Директор</div>
 					</div>
 					<div class="who-item">
-						<img src="/img/who-2.png" alt="">
-						<div class="who-item__name">Игорь Ильин</div>
-						<div class="who-item__function">Директор</div>
-					</div>
-					<div class="who-item">
-						<img src="/img/who-1.png" alt="">
-						<div class="who-item__name">Игорь Ильин</div>
-						<div class="who-item__function">Директор</div>
-					</div>
-					<div class="who-item">
-						<img src="/img/who-1.png" alt="">
+						<div class="who-photo__cnt">
+							<img class="who-super" src="/img/who-2.png" alt="">
+							<img class="who-photo" src="/img/who-r-1.png" alt="">
+						</div>
 						<div class="who-item__name">Дмитрий Давлятшин</div>
 						<div class="who-item__function">Руководитель склада и производства</div>
 					</div>
 					<div class="who-item">
-						<img src="/img/who-2.png" alt="">
-						<div class="who-item__name">Игорь Ильин</div>
-						<div class="who-item__function">Директор</div>
+						<div class="who-photo__cnt">
+							<img class="who-super" src="/img/who-3.png" alt="">
+							<img class="who-photo" src="/img/who-r-1.png" alt="">
+						</div>
+						<div class="who-item__name">Валерий Удачин</div>
+						<div class="who-item__function">Инженер технической поддержки</div>
 					</div>
 					<div class="who-item">
-						<img src="/img/who-1.png" alt="">
+						<div class="who-photo__cnt">
+							<img class="who-super" src="/img/who-4.png" alt="">
+							<img class="who-photo" src="/img/who-r-1.png" alt="">
+						</div>
 						<div class="who-item__name">Никита Возчиков</div>
+						<div class="who-item__function">Инженер по серверному оборудованию</div>
+					</div>
+					<div class="who-item">
+						<div class="who-photo__cnt">
+							<img class="who-super" src="/img/who-5.png" alt="">
+							<img class="who-photo" src="/img/who-r-1.png" alt="">
+						</div>
+						<div class="who-item__name">Антон Печёркин</div>
+						<div class="who-item__function">Инженер по серверному оборудованию</div>
+					</div>
+					<div class="who-item">
+						<div class="who-photo__cnt">
+							<img class="who-super" src="/img/who-6.png" alt="">
+							<img class="who-photo" src="/img/who-r-1.png" alt="">
+						</div>
+						<div class="who-item__name">Елена Юркина</div>
 						<div class="who-item__function">Ведущий менеджер по продажам</div>
 					</div>
 					<div class="who-item">
-						<img src="/img/who-2.png" alt="">
-						<div class="who-item__name">Игорь Ильин</div>
-						<div class="who-item__function">Директор</div>
+						<div class="who-photo__cnt">
+							<img class="who-super" src="/img/who-7.png" alt="">
+							<img class="who-photo" src="/img/who-r-1.png" alt="">
+						</div>
+						<div class="who-item__name">Татьяна Батанова</div>
+						<div class="who-item__function">Специалист по логистике и работе с клиентами</div>
 					</div>
 					<div class="who-item">
-						<img src="/img/who-1.png" alt="">
-						<div class="who-item__name">Игорь Ильин</div>
-						<div class="who-item__function">Директор</div>
+						<div class="who-photo__cnt">
+							<img class="who-super" src="/img/who-8.png" alt="">
+							<img class="who-photo" src="/img/who-r-1.png" alt="">
+						</div>
+						<div class="who-item__name">Елена Слаутина</div>
+						<div class="who-item__function">Бухгалтер</div>
 					</div>
 				</div>
 				<a href="/" class="tpl-link join-us">
@@ -183,74 +333,175 @@
 			</div>
 		</section>
 
-		<section class="feedback-section section-padding-170">
+		<section class="feedback-section about-page">
 			<div class="center-cnt">
 				<h2>Какие отзывы нам присылают</h2>
-				<div class="feedback-cnt">
-					<div class="feedback-item__cnt">
-						<div class="feedback-item">
-							<div class="feedback-item__text">
-								Приобретал серверные платформы. Все работает по сей день, к качеству нет никаких претензий. Да и
-								цены порадовали. Теперь даже вопроса не стоит о том, к кому обращаться, всех коллег направляю к
-								вам. В общем, вы молодцы, не болейте)
+				<div class="about-review-slider__cnt">
+					<div class="about-reviews-swiper feedback-cnt swiper">
+						<div class="swiper-wrapper">
+							<div class="feedback-item__cnt swiper-slide">
+								<div class="feedback-item">
+									<div class="feedback-item__text">
+										Приобретал серверные платформы. Все работает по сей день, к качеству нет никаких
+										претензий.
+										Да и
+										цены порадовали. Теперь даже вопроса не стоит о том, к кому обращаться, всех коллег
+										направляю
+										к
+										вам. В общем, вы молодцы, не болейте)
+									</div>
+									<div class="feedback-item-photo-cnt">
+										<div class="feedback-item-photo"><img src="/img/fb-img1.jpg" alt=""></div>
+										<div class="feedback-item-photo"><img src="/img/fb-img2.jpg" alt=""></div>
+										<div class="feedback-item-photo"><img src="/img/fb-img3.jpg" alt=""></div>
+									</div>
+									<a href="feedback-popup" class="feedback-item__link open-modal">
+										Читать весь отзыв
+									</a>
+								</div>
+								<div class="feedback-item__name">Артем Анисимов</div>
+								<div class="feedback-item__date">
+									<p>12 июня 2022</p>
+								</div>
 							</div>
-							<div class="feedback-item-photo-cnt">
-								<div class="feedback-item-photo"><img src="/img/fb-img1.jpg" alt=""></div>
-								<div class="feedback-item-photo"><img src="/img/fb-img2.jpg" alt=""></div>
-								<div class="feedback-item-photo"><img src="/img/fb-img3.jpg" alt=""></div>
+							<div class="feedback-item__cnt swiper-slide">
+								<div class="feedback-item">
+									<div class="feedback-item__text">
+										Приобретал серверные платформы. Все работает по сей день, к качеству нет никаких
+										претензий.
+										Да и
+										цены порадовали. Теперь даже вопроса не стоит о том, к кому обращаться, всех коллег
+										направляю
+										к
+										вам. В общем, вы молодцы, не болейте)
+									</div>
+									<div class="feedback-item-photo-cnt">
+										<div class="feedback-item-photo"><img src="/img/fb-img1.jpg" alt=""></div>
+										<div class="feedback-item-photo"><img src="/img/fb-img2.jpg" alt=""></div>
+										<div class="feedback-item-photo"><img src="/img/fb-img3.jpg" alt=""></div>
+									</div>
+									<a href="feedback-popup" class="feedback-item__link open-modal">
+										Читать весь отзыв
+									</a>
+								</div>
+								<div class="feedback-item__name">Артем Анисимов</div>
+								<div class="feedback-item__date">
+									<p>12 июня 2022</p>
+								</div>
 							</div>
-							<div class="feedback-item__link">
-								Читать весь отзыв
+							<div class="feedback-item__cnt swiper-slide">
+								<div class="feedback-item">
+									<div class="feedback-item__text">
+										Приобретал серверные платформы. Все работает по сей день, к качеству нет никаких
+										претензий.
+										Да и
+										цены порадовали. Теперь даже вопроса не стоит о том, к кому обращаться, всех коллег
+										направляю
+										к
+										вам. В общем, вы молодцы, не болейте)
+									</div>
+									<div class="feedback-item-photo-cnt">
+										<div class="feedback-item-photo"><img src="/img/fb-img1.jpg" alt=""></div>
+										<div class="feedback-item-photo"><img src="/img/fb-img2.jpg" alt=""></div>
+										<div class="feedback-item-photo"><img src="/img/fb-img3.jpg" alt=""></div>
+									</div>
+									<a href="feedback-popup" class="feedback-item__link open-modal">
+										Читать весь отзыв
+									</a>
+								</div>
+								<div class="feedback-item__name">Артем Анисимов</div>
+								<div class="feedback-item__date">
+									<p>12 июня 2022</p>
+								</div>
+							</div>
+							<div class="feedback-item__cnt swiper-slide">
+								<div class="feedback-item">
+									<div class="feedback-item__text">
+										Приобретал серверные платформы. Все работает по сей день, к качеству нет никаких
+										претензий.
+										Да и
+										цены порадовали. Теперь даже вопроса не стоит о том, к кому обращаться, всех коллег
+										направляю
+										к
+										вам. В общем, вы молодцы, не болейте)
+									</div>
+									<div class="feedback-item-photo-cnt">
+										<div class="feedback-item-photo"><img src="/img/fb-img1.jpg" alt=""></div>
+										<div class="feedback-item-photo"><img src="/img/fb-img2.jpg" alt=""></div>
+										<div class="feedback-item-photo"><img src="/img/fb-img3.jpg" alt=""></div>
+									</div>
+									<a href="feedback-popup" class="feedback-item__link open-modal">
+										Читать весь отзыв
+									</a>
+								</div>
+								<div class="feedback-item__name">Артем Анисимов</div>
+								<div class="feedback-item__date">
+									<p>12 июня 2022</p>
+								</div>
+							</div>
+							<div class="feedback-item__cnt swiper-slide">
+								<div class="feedback-item">
+									<div class="feedback-item__text">
+										Приобретал серверные платформы. Все работает по сей день, к качеству нет никаких
+										претензий.
+										Да и
+										цены порадовали. Теперь даже вопроса не стоит о том, к кому обращаться, всех коллег
+										направляю
+										к
+										вам. В общем, вы молодцы, не болейте)
+									</div>
+									<div class="feedback-item-photo-cnt">
+										<div class="feedback-item-photo"><img src="/img/fb-img1.jpg" alt=""></div>
+										<div class="feedback-item-photo"><img src="/img/fb-img2.jpg" alt=""></div>
+										<div class="feedback-item-photo"><img src="/img/fb-img3.jpg" alt=""></div>
+									</div>
+									<a href="feedback-popup" class="feedback-item__link open-modal">
+										Читать весь отзыв
+									</a>
+								</div>
+								<div class="feedback-item__name">Артем Анисимов</div>
+								<div class="feedback-item__date">
+									<p>12 июня 2022</p>
+								</div>
+							</div>
+							<div class="feedback-item__cnt swiper-slide">
+								<div class="feedback-item">
+									<div class="feedback-item__text">
+										Приобретал серверные платформы. Все работает по сей день, к качеству нет никаких
+										претензий.
+										Да и
+										цены порадовали. Теперь даже вопроса не стоит о том, к кому обращаться, всех коллег
+										направляю
+										к
+										вам. В общем, вы молодцы, не болейте)
+									</div>
+									<div class="feedback-item-photo-cnt">
+										<div class="feedback-item-photo"><img src="/img/fb-img1.jpg" alt=""></div>
+										<div class="feedback-item-photo"><img src="/img/fb-img2.jpg" alt=""></div>
+										<div class="feedback-item-photo"><img src="/img/fb-img3.jpg" alt=""></div>
+									</div>
+									<a href="feedback-popup" class="feedback-item__link open-modal">
+										Читать весь отзыв
+									</a>
+								</div>
+								<div class="feedback-item__name">Артем Анисимов</div>
+								<div class="feedback-item__date">
+									<p>12 июня 2022</p>
+								</div>
 							</div>
 						</div>
-						<div class="feedback-item__name">Артем Анисимов</div>
-						<div class="feedback-item__date"><p>12 июня 2022</p></div>
 					</div>
-					<div class="feedback-item__cnt">
-						<div class="feedback-item">
-							<div class="feedback-item__text">
-								Приобретал серверные платформы. Все работает по сей день, к качеству нет никаких претензий. Да и
-								цены порадовали. Теперь даже вопроса не стоит о том, к кому обращаться, всех коллег направляю к
-								вам. В общем, вы молодцы, не болейте)
-							</div>
-							<div class="feedback-item-photo-cnt">
-								<div class="feedback-item-photo"><img src="/img/fb-img1.jpg" alt=""></div>
-								<div class="feedback-item-photo"><img src="/img/fb-img2.jpg" alt=""></div>
-								<div class="feedback-item-photo"><img src="/img/fb-img3.jpg" alt=""></div>
-							</div>
-							<div class="feedback-item__link">
-								Читать весь отзыв
-							</div>
-						</div>
-						<div class="feedback-item__name">Артем Анисимов</div>
-						<div class="feedback-item__date"><p>12 июня 2022</p></div>
-					</div>
-					<div class="feedback-item__cnt">
-						<div class="feedback-item">
-							<div class="feedback-item__text">
-								Приобретал серверные платформы. Все работает по сей день, к качеству нет никаких претензий. Да и
-								цены порадовали. Теперь даже вопроса не стоит о том, к кому обращаться, всех коллег направляю к
-								вам. В общем, вы молодцы, не болейте)
-							</div>
-							<div class="feedback-item-photo-cnt">
-								<div class="feedback-item-photo"><img src="/img/fb-img1.jpg" alt=""></div>
-								<div class="feedback-item-photo"><img src="/img/fb-img2.jpg" alt=""></div>
-								<div class="feedback-item-photo"><img src="/img/fb-img3.jpg" alt=""></div>
-							</div>
-							<div class="feedback-item__link">
-								Читать весь отзыв
-							</div>
-						</div>
-						<div class="feedback-item__name">Артем Анисимов</div>
-						<div class="feedback-item__date"><p>12 июня 2022</p></div>
-					</div>
+					<div class="swiper-button-next slider-arrow-right"></div>
+					<div class="swiper-button-prev slider-arrow-left"></div>
 				</div>
+
 				<a href="/" class="tpl-link all-feedback">
 					<span>Все отзывы (34)</span>
 				</a>
 			</div>
-			<div class="tpl-line"></div>
 		</section>
+		<div class="animated-line"></div>
+		</div>
 
 		<section class="selection">
 			<div class="center-cnt">
@@ -258,16 +509,20 @@
 				<div class="selection__cnt">
 					<div class="selection__btn-cnt">
 						<div class="selection__btn">
-							<div class="selection__btn-icon"><img src="img/select_param.png" alt=""></div>
+							<div class="selection__btn-icon">
+								<img src="img/select_param.gif" alt="">
+							</div>
 							<div class="selection__btn-name">Выбрать ПК по параметрам</div>
 						</div>
 						<div class="selection__btn">
-							<div class="selection__btn-icon"><img src="img/select_games.png" alt=""></div>
+							<div class="selection__btn-icon select_games_gif">
+								<img src="img/select_games.gif" alt="">
+							</div>
 							<div class="selection__btn-name">Выбрать ПК по игре</div>
 						</div>
 					</div>
 					<div class="selection__img-cnt">
-						<div class="selection__img"><img src="img/grandma_white.png" alt=""></div>
+						<div class="selection__img"><img src="img/gr2.png" alt=""></div>
 						<div class="selection__name">Бабуля знает, что понравится её пирожочку</div>
 					</div>
 				</div>
@@ -279,19 +534,15 @@
 							<a class="strip-cnt__phone" href="tel:88000000000">8-800-123-45-67</a>
 							<a class="strip-cnt__mail" href="mailto:comp@comp.ru">comp@comp.ru</a>
 						</div>
-						<button class="strip-btn">
-							<div class="strip-btn__first">
-								<span>Получить консультацию</span>
-							</div>
-							<div class="strip-btn__second"></div>
-
-						</button>
+						<a href="/" class="glitchy-btn red-btn">
+							<span class="link-inner">Спросить ещё что-нибудь</span>
+							<span class="btn-gray-element"></span>
+						</a>
 					</div>
 				</div>
-			</div>			
+			</div>
 		</section>
-
-
+		<div class="animated-line"></div>
 	</main>
 
 	<footer>
@@ -344,9 +595,9 @@
 					<div class="footer-cnt__clm">
 						<div class="phone-footer__cnt">
 							<a class="phone-footer" href="tel:+123456789">8-800-123-45-67</a>
-							<div class="phone-footer__call-back">
+							<a href="call-back" class="phone-footer__call-back open-modal">
 								Заказать звонок
-							</div>
+							</a>
 						</div>
 						<div class="follow-us">
 							Мы в соц сетях
@@ -363,9 +614,54 @@
 		</div>
 	</footer>
 
+	<div class="overlay">
+	</div>
+
+	<div class="modal feedback__modal" id="feedback-popup">
+		<div class="modal-close">
+		</div>
+		<div class="feedback-popup__cnt">
+			<div class="feedback-item__name">Артем Анисимов</div>
+			<div class="feedback-item__date">
+				<p>12 июня 2022</p>
+			</div>
+			<div class="feedback-item__text">
+				Приобретал серверные платформы. Все работает по сей день, к качеству нет никаких
+				претензий. Да и цены порадовали. Теперь даже вопроса не стоит о том, к кому обращаться, всех коллег
+				направляю к вам. В общем, вы молодцы, не болейте) пвапавп павпавп павпав пав павп апвп вап авпавп авп впавп
+				авп апав пав
+				пав пав пав павпв
+			</div>
+			<div class="feedback-popup__img-swiper-cnt">
+				<div class="feedback-popup__img-cnt feedback-popup__img-swiper swiper">
+					<div class="swiper-wrapper">
+						<div class="feedback-popup__img swiper-slide">
+							<img src="/img/feddback-img.jpg" alt="">
+						</div>
+						<div class="feedback-popup__img swiper-slide">
+							<img src="/img/feddback-img.jpg" alt="">
+						</div>
+						<div class="feedback-popup__img swiper-slide">
+							<img src="/img/feddback-img.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="swiper-button-next slider-arrow-right"></div>
+			<div class="swiper-button-prev slider-arrow-left"></div>
+			</div>
+			
+		</div>
+		
+	</div>
+
+
+
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/jquery.keep-ratio.js"></script>
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/imask.js"></script>
 	<script src="js/main.js"></script>
 
 </body>

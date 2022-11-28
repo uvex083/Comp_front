@@ -30,10 +30,11 @@ function menuHandler() {
 				$('.dropdown-menu').removeClass('opened').slideUp(300);
 
 				setTimeout(function () {
+					console.log(123)
 					menuLogic = false;
-					$('html, body').removeClass('menu_opened');
+					$('html, body').removeClass('menu-opened');
 				}, 300);
-				
+
 				$('body').css('position', '').css('left', 'auto').css('right', 'auto').css('top', 'auto');
 
 
@@ -49,7 +50,6 @@ function menuHandler() {
 		}
 
 		$("header").toggleClass("menu-header");
-		$("body").toggleClass("menu-open");
 	});
 }
 
@@ -279,9 +279,6 @@ $(document).ready(function () {
 	/* Подбор КОНЕЦ */
 
 
-
-
-
 	/* Сравнение НАЧАЛО */
 
 	$(".compare-filter__show-diff label").click(function () {
@@ -397,42 +394,54 @@ $(document).ready(function () {
 function showElments() {
 	var scrollTop = $(window).scrollTop();
 
-	if ($('.seria-section').isInViewport() || scrollTop >= $('.seria-section').offset().top) {
-		TweenMax.staggerTo($('.cat-item__hover'), 1, { delay: 0.5, autoAlpha: 1, top: '0px', ease: Elastic.easeOut.config(2, 1) }, 0.2);
-		TweenMax.to($('.cat-item__cnt-progress, .cat-item__cnt-btns'), 1, { delay: 1.1, autoAlpha: 1, y: '0px', ease: Elastic.easeOut.config(2, 1) })
+	if ($('.seria-section').length) {
+		if ($('.seria-section').isInViewport() || scrollTop >= $('.seria-section').offset().top) {
+			TweenMax.staggerTo($('.cat-item__hover'), 1, { delay: 0.5, autoAlpha: 1, top: '0px', ease: Elastic.easeOut.config(2, 1) }, 0.2);
+			TweenMax.to($('.cat-item__cnt-progress, .cat-item__cnt-btns'), 1, { delay: 1.1, autoAlpha: 1, y: '0px', ease: Elastic.easeOut.config(2, 1) })
+		}
 	}
 
-	if ($('.our-services').isInViewport() || scrollTop >= $('.our-services').offset().top) {
-		TweenMax.staggerTo($('.our-services__item'), 1, { delay: 0.5, autoAlpha: 1, top: '0px', ease: Elastic.easeOut.config(2, 1) }, 0.2);
+	if ($('.our-services').length) {
+		if ($('.our-services').isInViewport() || scrollTop >= $('.our-services').offset().top) {
+			TweenMax.staggerTo($('.our-services__item'), 1, { delay: 0.5, autoAlpha: 1, top: '0px', ease: Elastic.easeOut.config(2, 1) }, 0.2);
+		}
 	}
 
-	if ($('.selection__btn-cnt').isInViewport() || scrollTop >= $('.selection__btn-cnt').offset().top) {
+	if ($('.selection__btn-cnt').length) {
+		if ($('.selection__btn-cnt').isInViewport() || scrollTop >= $('.selection__btn-cnt').offset().top) {
 
-		TweenMax.staggerTo($('.selection__btn'), 1, { delay: 0.5, autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1) }, 0.2);
+			TweenMax.staggerTo($('.selection__btn'), 1, { delay: 0.5, autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1) }, 0.2);
 
-		let sstl = new TimelineLite();
+			let sstl = new TimelineLite();
 
-		sstl.to($('.selection__img img'), 1, { delay: 0.7, autoAlpha: 1, y: '10px', ease: Elastic.easeOut.config(1, 0.5) })
-			.to($('.selection__name'), 0.7, { autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1) }, '-=0.5')
-			.to($('.selection .glitchy-btn'), 0.7, { autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1) }, '-=0.3');
+			sstl.to($('.selection__img img'), 1, { delay: 0.7, autoAlpha: 1, y: '10px', ease: Elastic.easeOut.config(1, 0.5) })
+				.to($('.selection__name'), 0.7, { autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1) }, '-=0.5')
+				.to($('.selection .glitchy-btn'), 0.7, { autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1) }, '-=0.3');
+		}
 	}
 
-	if ($('.photo-section').isInViewport() || scrollTop >= $('.photo-section').offset().top) {
-		TweenMax.staggerTo($('.gallery__item'), 1, { delay: 0.5, autoAlpha: 1, top: '0px', ease: Elastic.easeOut.config(2, 1) }, 0.2);
+	if ($('.photo-section').length) {
+		if ($('.photo-section').isInViewport() || scrollTop >= $('.photo-section').offset().top) {
+			TweenMax.staggerTo($('.gallery__item'), 1, { delay: 0.5, autoAlpha: 1, top: '0px', ease: Elastic.easeOut.config(2, 1) }, 0.2);
+		}
 	}
 
-	if ($('.main-why').isInViewport() || scrollTop >= $('.main-why').offset().top) {
-		TweenMax.to($('.main-why-img'), 1, { delay: 0.5, autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1) })
-		TweenMax.staggerTo($('.main-why-text-item .mwti-line'), 1, { delay: 0.5, width: '500px', ease: Power1.easeOut }, .3);
-		TweenMax.staggerTo($('.mwti-text'), .5, { delay: 1.6, autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1) }, .3);
-		TweenMax.staggerTo($('.mwti-line .path'), 1, { delay: 1.6, autoAlpha: 1, ease: Power1.easeOut }, .3);
+	if ($('.main-why').length) {
+		if ($('.main-why').isInViewport() || scrollTop >= $('.main-why').offset().top) {
+			TweenMax.to($('.main-why-img'), 1, { delay: 0.5, autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1) })
+			TweenMax.staggerTo($('.main-why-text-item .mwti-line'), 1, { delay: 0.5, width: '500px', ease: Power1.easeOut }, .3);
+			TweenMax.staggerTo($('.mwti-text'), .5, { delay: 1.6, autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1) }, .3);
+			TweenMax.staggerTo($('.mwti-line .path'), 1, { delay: 1.6, autoAlpha: 1, ease: Power1.easeOut }, .3);
+		}
 	}
 
-	if ($('.faq').isInViewport() || scrollTop >= $('.faq').offset().top) {
-		let faqtl = new TimelineLite();
+	if ($('.faq').length) {
+		if ($('.faq').isInViewport() || scrollTop >= $('.faq').offset().top) {
+			let faqtl = new TimelineLite();
 
-		faqtl.to($('.faq__img img'), 1, { delay: 1.3, autoAlpha: 1, y: '10px', ease: Elastic.easeOut.config(1, 0.5) })
-			.to($('.faq .glitchy-btn.red-btn'), 0.7, { autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1) }, '-=0.5');
+			faqtl.to($('.faq__img img'), 1, { delay: 1.3, autoAlpha: 1, y: '10px', ease: Elastic.easeOut.config(1, 0.5) })
+				.to($('.faq .glitchy-btn.red-btn'), 0.7, { autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1) }, '-=0.5');
+		}
 	}
 }
 
@@ -481,20 +490,20 @@ const mainProductSlider = new Swiper('.cat-item__cnt.swiper', {
 		0: {
 			slidesPerView: 1,
 			spaceBetween: 20,
-		 },
+		},
 		640: {
-		  slidesPerView: 1,
-		  spaceBetween: 10,
+			slidesPerView: 1,
+			spaceBetween: 10,
 		},
 		768: {
-		  slidesPerView: 2,
-		  spaceBetween: 20,
+			slidesPerView: 2,
+			spaceBetween: 20,
 		},
 		1024: {
-		  slidesPerView: 3,
-		  spaceBetween: 30,
+			slidesPerView: 3,
+			spaceBetween: 30,
 		},
-	 },
+	},
 	navigation: {
 		nextEl: '.cat-item__cnt-btns .swiper-button-next',
 		prevEl: '.cat-item__cnt-btns .swiper-button-prev',
@@ -536,6 +545,81 @@ function faqSpoilers() {
 	});
 }
 
+if ($('.modal-video').length) {
+	$('.modal-video').keepRatio({
+		ratio: 16 / 9,
+		calculate: 'height'
+	});
+}
+
+
+$('.credit-how__item-label.start').on('click', function () {
+	let creditTl = new TimelineLite();
+	creditTl.to($('.crl-1'), 0.5, { width: '154px', ease: Power1.easeOut })
+		.to($('.crl-1'), 0.5, { height: '140px', ease: Power1.easeOut })
+		.to($('.credit-how__item:nth-child(2)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
+		.to($('.crl-2'), 0.3, { width: '55px', ease: Power1.easeOut })
+		.to($('.crl-2'), 0.5, { height: '192px', ease: Power1.easeOut })
+		.to($('.credit-how__item:nth-child(3)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
+		.to($('.crl-3'), 0.3, { width: '37px', ease: Power1.easeOut })
+		.to($('.credit-how__item:nth-child(4)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
+		.to($('.crl-4'), 0.3, { width: '154px', ease: Power1.easeOut })
+		.to($('.crl-4'), 0.5, { height: '192px', ease: Power1.easeOut })
+		.to($('.credit-how__item:nth-child(5)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
+		.to($('.crl-5'), 0.3, { width: '37px', ease: Power1.easeOut })
+});
+
+$('.leasing-how__item-label.start').on('click', function () {
+	let leasingTl = new TimelineLite();
+	leasingTl.to($('.ll-1'), 0.5, { width: '105px', ease: Power1.easeOut })
+		.to($('.leasing-how__item:nth-child(2)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
+		.to($('.ll-2'), 0.3, { width: '90px', ease: Power1.easeOut })
+		.to($('.leasing-how__item:nth-child(3)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
+		.to($('.ll-3'), 0.3, { width: '125px', ease: Power1.easeOut })
+		.to($('.leasing-how__item:nth-child(4)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
+		.to($('.ll-4'), 0.3, { width: '120px', ease: Power1.easeOut })
+});
+
+
+const AboutReviews = new Swiper('.about-reviews-swiper', {
+	slidesPerView: 4,
+	spaceBetween: 50,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	 },
+	 breakpoints: {
+		0: {
+			slidesPerView: 1,
+			spaceBetween: 20,
+		},
+		640: {
+			slidesPerView: 1,
+			spaceBetween: 20,
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 30,
+		},
+		1024: {
+			slidesPerView: 3,
+			spaceBetween: 40,
+		},		
+		1600: {
+			slidesPerView: 4,
+			spaceBetween: 40,
+		},
+	},
+  });
+
+
+  const AboutFeedback = new Swiper('.feedback-popup__img-swiper', {
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	 },
+  });
+  
 
 var phoneMask = IMask(
 	document.getElementById('phone-mask') || document.getElementById('phone-mask__callback'), {
