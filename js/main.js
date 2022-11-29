@@ -581,12 +581,12 @@ $('.leasing-how__item-label.start').on('click', function () {
 });
 
 
-const AboutReviews = new Swiper('.about-reviews-swiper', {
+const AboutReviews = new Swiper('.feedback-cnt', {
 	slidesPerView: 4,
 	spaceBetween: 50,
 	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev",
+		nextEl: ".swiper-button-next.about-page-feed-right",
+		prevEl: ".swiper-button-prev.about-page-feed-left",
 	 },
 	 breakpoints: {
 		0: {
@@ -615,11 +615,11 @@ const AboutReviews = new Swiper('.about-reviews-swiper', {
 
   const AboutFeedback = new Swiper('.feedback-popup__img-swiper', {
 	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev",
+		nextEl: ".swiper-button-next.modal-arrow-right",
+		prevEl: ".swiper-button-prev.modal-arrow-left",
 	 },
   });
-  
+
 
 var phoneMask = IMask(
 	document.getElementById('phone-mask') || document.getElementById('phone-mask__callback'), {

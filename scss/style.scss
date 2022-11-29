@@ -478,30 +478,6 @@ main {
 		grid-template-columns: repeat(3, 1fr);
 		gap: 50px;
 
-		.search-mobile__cnt {
-			display: none;
-
-			.search-row__cnt {
-				gap: 5px;
-
-				.search-btn .tpl-btn {
-					width: 50px;
-					min-width: auto;
-
-					.tpl-btn__first {
-						padding: 9px;
-
-						span {
-							background: url(../img/search-icon.svg) no-repeat center;
-							background-size: contain;
-							width: 25px;
-							height: 25px;
-						}
-					}
-				}
-			}
-		}
-
 		.menu-clm {
 			display: flex;
 			flex-direction: column;
@@ -677,6 +653,30 @@ main {
 				display: flex;
 				align-items: center;
 				color: $color_config;
+			}
+		}
+	}
+}
+
+.search-mobile__cnt {
+	display: none;
+
+	.search-row__cnt {
+		gap: 5px;
+
+		.search-btn .tpl-btn {
+			width: 50px;
+			min-width: auto;
+
+			.tpl-btn__first {
+				padding: 9px;
+
+				span {
+					background: url(../img/search-icon.svg) no-repeat center;
+					background-size: contain;
+					width: 25px;
+					height: 25px;
+				}
 			}
 		}
 	}
@@ -1508,7 +1508,7 @@ a.call-back {
 	}
 
 	.our-services__img {
-		margin-bottom: 50px;
+		margin-bottom: 40px;
 		img {
 			width: 100%;
 			height: 100%;
@@ -2604,14 +2604,14 @@ a.follow-us__icon {
 			flex: 1;
 			color: $color_default;
 			font-size: 15px;
-			line-height: 140%;
+			line-height: 160%;
 		}
 
 		.cat-item__char-cnt {
 			margin-bottom: 30px;
 			display: flex;
 			flex-direction: column;
-			gap: 11px;
+			gap: 15px;
 			flex: 1 1 auto;
 
 
@@ -5496,7 +5496,7 @@ a.tpl-link {
 }
 
 .delivery-section {
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 .quest {
@@ -5682,7 +5682,7 @@ a.tpl-link {
 	.delivery-adv__cnt {
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 180px;
+		gap: 10%;
 
 		.delivery-adv__item {
 			display: flex;
@@ -5691,6 +5691,11 @@ a.tpl-link {
 
 			.delivery-adv__img {
 				margin-bottom: 40px;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+				}
 			}
 
 			.delivery-adv__title {
@@ -5698,7 +5703,7 @@ a.tpl-link {
 				font-style: normal;
 				font-weight: 400;
 				font-size: 20px;
-				line-height: 30px;
+				line-height: 160%;
 				text-align: center;
 				text-transform: uppercase;
 				color: $color_default;
@@ -6747,8 +6752,6 @@ a.tpl-link {
 			text-transform: uppercase;
 			color: $color_default;
 		}
-
-		.job-adv__item-img {}
 	}
 }
 
@@ -7446,7 +7449,7 @@ ul.text-ul {
 
 .blog-item {
 	display: flex;
-	gap: 60px;
+	gap: 5%;
 	align-items: flex-start;
 
 	&:not(:last-child) {
@@ -7551,7 +7554,7 @@ a.blog-link {
 
 .blog-item__default {
 	display: flex;
-	gap: 10%;
+	gap: 5%;
 
 	.blog-item__default-content {
 		max-width: 775px;
@@ -7681,7 +7684,7 @@ a.blog-link {
 
 .blog-interest__cnt {
 	display: flex;
-	gap: 50px;
+	gap: 5%;
 	margin-bottom: 100px;
 
 	.blog-item {
@@ -7697,7 +7700,7 @@ a.blog-link {
 		}
 
 		.blog-img {
-			flex: 0 1 250px;
+			width: 100%;
 			display: flex;
 			max-width: 250px;
 			height: 250px;
@@ -8014,13 +8017,6 @@ a.blog-link {
 	}
 }
 
-
-
-
-
-
-
-
 /* new styles MAX*/
 
 /* btn*/
@@ -8036,6 +8032,7 @@ a.blog-link {
 	letter-spacing: 1px;
 	color: white;
 	height: 52px;
+	width: 100%;
 
 	&:hover {
 		color: white;
@@ -8224,11 +8221,6 @@ a.blog-link {
 		background: #EEEEEE;
 	}
 }
-
-
-
-
-
 
 
 @-webkit-keyframes glitchy {
