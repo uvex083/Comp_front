@@ -2705,6 +2705,7 @@ a.follow-us__icon.vk-icon:hover {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  mix-blend-mode: lighten;
 }
 .serias-main__img img {
   width: 100%;
