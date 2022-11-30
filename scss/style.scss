@@ -409,13 +409,12 @@ a.logo {
 	}
 }
 
-html.menu-open {
+html.menu-opened {
 	overflow: hidden;
 }
 
-body.menu-open {
+body.menu-opened {
 	overflow: hidden;
-	transition: all ease-in-out 0.2s;
 }
 
 main {
@@ -2427,6 +2426,7 @@ a.follow-us__icon {
 	color: white;
 	position: relative;
 	margin-top: -145px;
+	padding-top: 145px;
 	background-repeat: no-repeat;
 
 	&::after {
@@ -2452,12 +2452,14 @@ a.follow-us__icon {
 
 	.breadcrumbs-section {
 		flex: 1 1 auto;
-		margin-top: 145px;
 	}
 
 	.main-img-section__title {
 		z-index: 1;
 		margin-bottom: 50px;
+		h1.white-h1 {
+			margin-bottom: 20px;
+		}
 	}
 
 	.main-img-section__title-cnt {
@@ -2587,6 +2589,7 @@ a.follow-us__icon {
 
 		p {
 			text-align: left;
+			margin-bottom: 0px;
 		}
 
 		.cat-item__title {
@@ -2881,6 +2884,7 @@ a.follow-us__icon {
 			flex-wrap: nowrap;
 			align-items: center;
 			gap: 10px;
+			width: 100%;
 		}
 
 		.cat-item__buy {
@@ -4176,22 +4180,16 @@ a.follow-us__icon {
 				color: $color_config;
 				white-space: nowrap;
 			}
-
-
-
-
 		}
 	}
 }
 
 .main-img-section.podbor {
-	position: relative;
 
 	.breadcrumbs-section {
 		flex: inherit;
 		margin: 0;
 		z-index: 2;
-		margin-top: 145px;
 	}
 
 	.start-cnt {
@@ -4286,13 +4284,21 @@ a.follow-us__icon {
 			margin: 0;
 			display: flex;
 			flex-direction: column;
-			gap: 50px;
+			gap: 25px;
 			justify-content: center;
 
 			.selection__btn-name {
 				margin: 0;
 			}
 		}
+	}
+	.selection__btn-cnt .selection__btn .selection__btn-name {
+		width: 100%;
+		text-align: center;
+	}
+	.selection__btn-icon {
+		width: 220px;
+		justify-content: center;
 	}
 }
 
@@ -4350,7 +4356,6 @@ a.follow-us__icon {
 	}
 
 	.podbor-header {
-		display: flex;
 		justify-content: space-between;
 		font-family: 'Press Start 2P';
 		font-weight: 400;
@@ -4363,6 +4368,7 @@ a.follow-us__icon {
 		margin-bottom: 150px;
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
+		position: relative;
 
 		.podbor-header__back {
 			text-align: left;
@@ -4386,6 +4392,7 @@ a.follow-us__icon {
 			&:hover,
 			&:hover:before {
 				color: $color_orange;
+				animation: AnimationShadow 0.7s linear 0s infinite normal none;
 			}
 		}
 
@@ -4393,9 +4400,11 @@ a.follow-us__icon {
 			text-align: right;
 			cursor: pointer;
 			transition: all ease-in-out 0.2s;
+			white-space: nowrap;
 
 			&:hover {
 				color: $color_orange;
+				animation: AnimationShadow 0.7s linear 0s infinite normal none;
 			}
 		}
 	}
@@ -4429,11 +4438,17 @@ a.follow-us__icon {
 				opacity: 1;
 			}
 
-			.podbor-img img {
+			.podbor-img {
 				width: 100%;
 				max-width: 100px;
 				height: auto;
+				img {
+				width: 100%;
+				max-width: 100px;
+				height: auto;
+				object-fit: contain;
 			}
+		}
 
 			.podbor-title {
 				font-family: 'Press Start 2P';
@@ -4521,15 +4536,17 @@ a.follow-us__icon {
 				display: none;
 
 				.podbor-item__char-item {
-					display: grid;
-					grid-template-columns: repeat(2, minmax(0, 1fr));
-					gap: 10px;
+					display: flex;
+					width: 100%;
+					gap: 5%;
+					flex-wrap: wrap;
 
 					.podbor__char-name {
 						font-weight: 400;
 						font-size: 15px;
 						line-height: 140%;
 						color: #5F5F5F;
+						width: 50%;
 					}
 
 					.podbor__char-value {
@@ -4537,6 +4554,7 @@ a.follow-us__icon {
 						font-size: 15px;
 						line-height: 140%;
 						color: $color_btn_gray;
+						width: 45%;
 					}
 				}
 			}
@@ -4628,10 +4646,6 @@ a.follow-us__icon {
 			background-size: contain;
 		}
 	}
-}
-
-a.cat-item__img-link {
-	margin: 0 auto;
 }
 
 .compare-section {
@@ -4964,12 +4978,9 @@ a.cat-item__img-link {
 	background-position: center;
 	background: no-repeat;
 	margin-top: -145px;
+	padding-top: 145px;
 	position: relative;
-	background-size: cover;
-
-	.breadcrumbs-section {
-		padding-top: 145px;
-	}
+	background-size: cover;	
 
 	&:after {
 		content: "";
@@ -5502,7 +5513,7 @@ a.tpl-link {
 
 .quest {
 
-	overflow: hidden;
+	// overflow: hidden;
 
 	.quest-end__title {
 		margin: 0;
@@ -5594,7 +5605,7 @@ a.tpl-link {
 					content: '';
 					position: absolute;
 					top: 50%;
-					left: -31px;
+					left: 95px;
 					transform: translate(0, -50%);
 					background: url(../img/download-icon.svg) no-repeat center;
 					background-size: contain;
@@ -9057,6 +9068,151 @@ span.swiper-pagination-progressbar-fill {
 	justify-content: center;
 
 }
+
+/* new styles */
+
+.sw-main {
+	height: 540px;
+	margin: 0 auto;
+	max-width: 820px;
+ }
+ 
+ .sw-main .swiper-slide {
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0 !important;
+	&.swiper-slide-active {
+		opacity: 1 !important;
+	}
+ }
+ 
+ .sw-thumbs {
+	height: 90px;
+	max-width: 750px;
+	margin: 50px auto 0;
+ }
+ 
+ .sw-thumbs .swiper-slide {
+	cursor: pointer;
+	border-radius: 6px;
+	border: 2px solid #363A78;
+	background-position: center;
+	background-size: cover;
+ }
+ 
+ .sw-thumbs .swiper-slide:hover,
+ .sw-thumbs .swiper-slide-thumb-active {
+	border-color: #D0A220;
+ }
+ 
+ .cat-hero-slider-section:before {
+	content: "";
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	top: 30px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background-color: rgba(94, 100, 169, 0.5);
+	border-radius: 50%;
+	filter: blur(50px);
+	z-index: -1;
+ }
+ 
+ .cat-hero-slider-section {
+	position: relative;
+ }
+ 
+ .cat-hero-slider-tabs {
+	margin-bottom: 30px;
+ }
+ 
+ .color-link__item:not(:last-child){
+	margin-right: 55px;
+ }
+ 
+ .color-link__item {
+	position: relative;
+ }
+ 
+ .color-link__item:not(:last-child):before {
+	content: '';
+	position: absolute;
+	width: 55px;
+	height: 2px;
+	background: #B6B6B6;
+	right: -65px;
+	top: 14px;
+	transform: matrix(0.63, -0.93, 0.62, 0.66, 0, 0);
+ }
+ 
+ .chsc-item:not(.active){
+	display: none;
+ }
+ 
+ .color-link__item {
+	cursor: pointer;
+ }
+ 
+ .quest__item:not(:first-child),
+ .quest-end {
+	opacity: 0;
+	transform: scale(0.8);
+ }
+ 
+ .quest__item:nth-child(4) .quest__item-desc {
+	width: 80%;
+ }
+ 
+ .quest__item {
+	position: relative;
+ }
+ 
+ .quest-lines {
+	position: absolute;
+	top: 170px;
+	left: 100%;
+	height: 4px;
+	overflow: hidden;
+ }
+ 
+ .quest {
+	position: relative;
+	width: 1680px;
+ }
+ 
+ .questl-4 {
+	transform: rotate(-90deg);
+	width: 0;
+	transform-origin: right;
+	top: auto;
+	bottom: 170px;
+	z-index: -1;
+	right: 35px;
+	left: auto;
+ }
+ 
+ .questl-4-ql-2 {
+	position: absolute;
+	right: 35px;
+	bottom: -230px;
+	transform: rotate(180deg);
+	width: 0;
+ }
+ 
+ .questl-4 .ql-1 {
+	transform: rotate(180deg);  
+ }
+ 
+ .quest-wrap {
+	width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding-bottom: 15px;
+	position: relative;
+	z-index: 1;
+ }
 
 
 @import "_media";

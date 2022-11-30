@@ -272,7 +272,7 @@ $(document).ready(function () {
 			$(".switch-title.hide").fadeOut(0);
 			$(".switch-title.show").fadeIn(0);
 		};
-		$(".podbor-item__char-cnt").slideToggle(200);
+		$(".podbor-item__char-cnt").slideToggle(200).css("display", "flex");
 	});
 
 
@@ -391,8 +391,13 @@ $(document).ready(function () {
 	});
 });
 
+
+
+var scrollTop = $(window).scrollTop();
+
+
+
 function showElments() {
-	var scrollTop = $(window).scrollTop();
 
 	if ($('.seria-section').length) {
 		if ($('.seria-section').isInViewport() || scrollTop >= $('.seria-section').offset().top) {
@@ -441,6 +446,59 @@ function showElments() {
 
 			faqtl.to($('.faq__img img'), 1, { delay: 1.3, autoAlpha: 1, y: '10px', ease: Elastic.easeOut.config(1, 0.5) })
 				.to($('.faq .glitchy-btn.red-btn'), 0.7, { autoAlpha: 1, x: '0px', ease: Elastic.easeOut.config(2, 1) }, '-=0.5');
+		}
+	}
+
+	// delivery animation
+
+	if ($('.quest').length) {
+		if ($('.quest').isInViewport() || scrollTop >= $('.quest').offset().top) {
+			let questTl = new TimelineLite();
+			questTl.to($('.questl-1'), 0.5, { delay: 1, width: '85px', ease: Power1.easeOut })
+				.to($('.quest__item:nth-child(2)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
+				.to($('.questl-2'), 0.3, { width: '85px', ease: Power1.easeOut })
+				.to($('.quest__item:nth-child(3)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
+				.to($('.questl-3'), 0.3, { width: '85px', ease: Power1.easeOut })
+				.to($('.quest__item:nth-child(4)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
+				.to($('.questl-4'), 0.5, { width: '402px', ease: Power1.easeOut })
+				.to($('.questl-4-ql-2'), 1, { width: '80%', ease: Power1.easeOut })
+				.to($('.quest-end'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
+
+		}
+	}
+
+	// leasing animation
+
+	if ($('.leasing-how__cnt').length) {
+		if ($('.leasing-how__cnt').isInViewport() || scrollTop >= $('.leasing-how__cnt').offset().top) {
+			let leasingTl = new TimelineLite();
+			leasingTl.to($('.ll-1'), 0.5, { delay: 1, width: '105px', ease: Power1.easeOut })
+				.to($('.leasing-how__item:nth-child(2)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
+				.to($('.ll-2'), 0.3, { width: '90px', ease: Power1.easeOut })
+				.to($('.leasing-how__item:nth-child(3)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
+				.to($('.ll-3'), 0.3, { width: '125px', ease: Power1.easeOut })
+				.to($('.leasing-how__item:nth-child(4)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
+				.to($('.ll-4'), 0.3, { width: '120px', ease: Power1.easeOut });
+		}
+	}
+
+	// credit animation
+
+	if ($('.credit-how__cnt').length) {
+		if ($('.credit-how__cnt').isInViewport() || scrollTop >= $('.credit-how__cnt').offset().top) {
+			let creditTl = new TimelineLite();
+			creditTl.to($('.crl-1'), 0.5, { delay: 1, width: '154px', ease: Power1.easeOut })
+				.to($('.crl-1'), 0.5, { height: '140px', ease: Power1.easeOut })
+				.to($('.credit-how__item:nth-child(2)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
+				.to($('.crl-2'), 0.3, { width: '55px', ease: Power1.easeOut })
+				.to($('.crl-2'), 0.5, { height: '192px', ease: Power1.easeOut })
+				.to($('.credit-how__item:nth-child(3)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
+				.to($('.crl-3'), 0.3, { width: '37px', ease: Power1.easeOut })
+				.to($('.credit-how__item:nth-child(4)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
+				.to($('.crl-4'), 0.3, { width: '154px', ease: Power1.easeOut })
+				.to($('.crl-4'), 0.5, { height: '192px', ease: Power1.easeOut })
+				.to($('.credit-how__item:nth-child(5)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
+				.to($('.crl-5'), 0.3, { width: '37px', ease: Power1.easeOut });
 		}
 	}
 }
@@ -553,42 +611,14 @@ if ($('.modal-video').length) {
 }
 
 
-$('.credit-how__item-label.start').on('click', function () {
-	let creditTl = new TimelineLite();
-	creditTl.to($('.crl-1'), 0.5, { width: '154px', ease: Power1.easeOut })
-		.to($('.crl-1'), 0.5, { height: '140px', ease: Power1.easeOut })
-		.to($('.credit-how__item:nth-child(2)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
-		.to($('.crl-2'), 0.3, { width: '55px', ease: Power1.easeOut })
-		.to($('.crl-2'), 0.5, { height: '192px', ease: Power1.easeOut })
-		.to($('.credit-how__item:nth-child(3)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
-		.to($('.crl-3'), 0.3, { width: '37px', ease: Power1.easeOut })
-		.to($('.credit-how__item:nth-child(4)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
-		.to($('.crl-4'), 0.3, { width: '154px', ease: Power1.easeOut })
-		.to($('.crl-4'), 0.5, { height: '192px', ease: Power1.easeOut })
-		.to($('.credit-how__item:nth-child(5)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
-		.to($('.crl-5'), 0.3, { width: '37px', ease: Power1.easeOut })
-});
-
-$('.leasing-how__item-label.start').on('click', function () {
-	let leasingTl = new TimelineLite();
-	leasingTl.to($('.ll-1'), 0.5, { width: '105px', ease: Power1.easeOut })
-		.to($('.leasing-how__item:nth-child(2)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
-		.to($('.ll-2'), 0.3, { width: '90px', ease: Power1.easeOut })
-		.to($('.leasing-how__item:nth-child(3)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
-		.to($('.ll-3'), 0.3, { width: '125px', ease: Power1.easeOut })
-		.to($('.leasing-how__item:nth-child(4)'), 0.5, { autoAlpha: 1, scale: 1, ease: Elastic.easeOut.config(0.5, 0.3) })
-		.to($('.ll-4'), 0.3, { width: '120px', ease: Power1.easeOut })
-});
-
-
 const AboutReviews = new Swiper('.feedback-cnt', {
 	slidesPerView: 4,
 	spaceBetween: 50,
 	navigation: {
 		nextEl: ".swiper-button-next.about-page-feed-right",
 		prevEl: ".swiper-button-prev.about-page-feed-left",
-	 },
-	 breakpoints: {
+	},
+	breakpoints: {
 		0: {
 			slidesPerView: 1,
 			spaceBetween: 20,
@@ -604,36 +634,75 @@ const AboutReviews = new Swiper('.feedback-cnt', {
 		1024: {
 			slidesPerView: 3,
 			spaceBetween: 40,
-		},		
+		},
 		1600: {
 			slidesPerView: 4,
 			spaceBetween: 40,
 		},
 	},
-  });
+});
 
 
-  const AboutFeedback = new Swiper('.feedback-popup__img-swiper', {
+const AboutFeedback = new Swiper('.feedback-popup__img-swiper', {
 	navigation: {
 		nextEl: ".swiper-button-next.modal-arrow-right",
 		prevEl: ".swiper-button-prev.modal-arrow-left",
-	 },
-  });
-
-
-var phoneMask = IMask(
-	document.getElementById('phone-mask') || document.getElementById('phone-mask__callback'), {
-	mask: '+{7}(000)000-00-00'
+	},
 });
 
-var currencyMask = IMask(
-	document.getElementById('rub-mask'),
-	{
-		mask: 'num ₽',
-		blocks: {
-			num: {
-				mask: Number,
-				thousandsSeparator: ' '
-			}
-		}
+
+
+// catalog slider
+
+$('.chsc-item').each(function (i) {
+
+	$(this).addClass('c-slider-tab-' + i);
+
+	let swiperThumbs = new Swiper('.c-slider-tab-' + i + ' .sw-thumbs', {
+		spaceBetween: 30,
+		slidesPerView: 5,
+		centerInsufficientSlides: true,
+		watchSlidesProgress: true,
 	});
+
+	let swiperMain = new Swiper('.c-slider-tab-' + i + ' .sw-main', {
+		direction: 'horizontal',
+		effect: 'fade',
+		navigation: {
+			nextEl: '.c-slider-tab-' + i + ' .swiper-button-next',
+			prevEl: '.c-slider-tab-' + i + ' .swiper-button-prev'
+		},
+		thumbs: {
+			swiper: swiperThumbs,
+		},
+	});
+});
+
+
+$('.color-link__item').on('click', function () {
+	let index = $(this).index();
+
+	$('.chsc-item, .color-link__item').removeClass('active');
+	$(this).addClass('active');
+	$('.chsc-item').eq(index).addClass('active');
+});
+
+
+
+
+// var phoneMask = IMask(
+// 	document.getElementById('phone-mask') || document.getElementById('phone-mask__callback'), {
+// 	mask: '+{7}(000)000-00-00'
+// });
+
+// var currencyMask = IMask(
+// 	document.getElementById('rub-mask'),
+// 	{
+// 		mask: 'num ₽',
+// 		blocks: {
+// 			num: {
+// 				mask: Number,
+// 				thousandsSeparator: ' '
+// 			}
+// 		}
+// 	});
