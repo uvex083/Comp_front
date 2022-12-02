@@ -2435,7 +2435,7 @@ a.follow-us__icon.vk-icon:hover {
 }
 
 .breadcrumbs-section {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .cat-item__cnt {
@@ -8629,9 +8629,6 @@ h1.white-h1 {
   .blog-item {
     gap: 20px;
   }
-  .breadcrumbs-section {
-    margin-bottom: 30px;
-  }
   .blog-item__default .blog-item__default-content {
     max-width: 100%;
   }
@@ -8770,9 +8767,6 @@ h2.white-h2 {
   }
   .guarantee-item__cnt {
     grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-  .breadcrumbs-section {
-    margin-bottom: 20px;
   }
   .delivery-page .delivery-adv__cnt {
     display: flex;
@@ -8948,9 +8942,6 @@ h2.white-h2 {
   }
   .who-item__cnt {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .breadcrumbs-section {
-    margin-bottom: 10px;
   }
   .search-cnt {
     padding: 42px 10px;
