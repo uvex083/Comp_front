@@ -72,6 +72,12 @@ $(window).scroll(function () {
 
 
 
+	
+
+
+	
+
+
 /* Карточка товара Begin */
 
 $(document).ready(function () {
@@ -110,7 +116,15 @@ $(document).ready(function () {
 	});
 
 
+	$(".header-icon-cnt__login").click(function () {
+		 $(".signin-cnt").toggleClass("open");
+	});
 
+	$(".signin-close").click(function () {
+		$(".signin-cnt").removeClass("open");
+  });
+
+	
 
 
 	/* Красим блок с цветом */
@@ -580,10 +594,12 @@ function modalWindow() {
 		e.preventDefault();
 		let currentModal = $(this).attr('href');
 		$('.overlay, #' + currentModal).css('display', 'flex').hide().fadeIn(200);
+		$('html').css("overflow", "hidden");
 	});
 
 	$('.modal-close, .overlay').on('click', function () {
 		$('.modal, .overlay').fadeOut(200);
+		$('html').css("overflow", "auto");
 	});
 }
 

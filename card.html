@@ -40,8 +40,16 @@
 					</div>
 					<div class="header-icon-cnt">
 						<div class="header-icon-cnt__find"></div>
-						<a href="/compare.html" class="header-icon-cnt__compare"></a>
-						<a href="/cabinet.html" class="header-icon-cnt__login"></a>
+						<a href="/compare.html" compare-numb="5" class="header-icon-cnt__compare"></a>
+						<div class="header-icon-cnt__login">
+						</div>
+						<div class="signin-cnt">
+							<div class="signin-close"></div>
+							<a href="signin" class="signin-enter open-modal">Войти в личный кабинет</a>
+							<a href="/cabinet.html" class="cabinet-enter">Мои сборки</a>
+							<div class="signin-upload">Загрузить сборку</div>
+							<div class="signin-leave">Выйти</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -144,7 +152,8 @@
 							</div>
 							<div class="menu-blog__cnt">
 								<div class="menu-blog__item">
-									<div class="menu-blog__img"><a href="/blog_item.html"><img src="img/menu-blog-1.png" alt=""></a>
+									<div class="menu-blog__img"><a href="/blog_item.html"><img src="img/menu-blog-1.png"
+												alt=""></a>
 									</div>
 									<div class="menu-blog__desc">
 										<div class="menu-blog__title"><a href="/blog_item.html">20 игр с котиками на PC</a> </div>
@@ -153,7 +162,8 @@
 									</div>
 								</div>
 								<div class="menu-blog__item">
-									<div class="menu-blog__img"><a href="/blog_item.html"><img src="img/menu-blog-2.png" alt=""></a>
+									<div class="menu-blog__img"><a href="/blog_item.html"><img src="img/menu-blog-2.png"
+												alt=""></a>
 									</div>
 									<div class="menu-blog__desc">
 										<div class="menu-blog__title"><a href="/blog_item.html">Лучшие машины в 2022</a> </div>
@@ -271,7 +281,7 @@
 										value="no">
 									<label for="available">Комплектующие в наличии</label>
 								</div>
-								<div class="show-config">Полная конфигурация</div>
+								<a href="config" class="show-config open-modal">Полная конфигурация</a>
 							</div>
 						</div>
 						<div class="configurator-section">
@@ -744,36 +754,34 @@
 											<div class="card-preview__price">123 456 ₽</div>
 										</div>
 										<div class="card-preview__cmp-cnt">
-											<button class="cmp-btn">
-												<div class="cmp-btn__first"><span>Сравнить</span></div>
-												<div class="cmp-btn__second"></div>
-											</button>
+											<a href="/" class="glitchy-btn transparent">
+												<span class="link-inner">Сравнить</span>
+												<span class="btn-gray-element"></span>
+											</a>
 										</div>
 									</div>
 									<div class="card-preview__img"><img src="/img/card-preview.png" alt=""></div>
 									<div class="card-preview__order-btn">
-										<button class="tpl-btn">
-											<div class="tpl-btn__first">
-												<span>Заказать</span>
-											</div>
-											<div class="tpl-btn__second"></div>
-										</button>
-										<button class="cmp-btn">
-											<div class="cmp-btn__first"><span>Купить в кредит</span></div>
-											<div class="cmp-btn__second"></div>
-										</button>
-										<div class="card-preview__show-config">
+										<a href="order" class="glitchy-btn open-modal">
+											<span class="link-inner">Заказать</span>
+											<span class="btn-gray-element"></span>
+										</a>
+										<a href="/" class="glitchy-btn transparent">
+											<span class="link-inner">Купить в кредит</span>
+											<span class="btn-gray-element"></span>
+										</a>
+										<a href="config" class="card-preview__show-config open-modal">
 											Посмотреть конфигурацию
-										</div>
+										</a>
 									</div>
 								</div>
 								<div class="card-preview__add-bnt">
 									<div class="add-bnt__item save-config"><span></span>
 										<div>Сохранить</div>
 									</div>
-									<div class="add-bnt__item send-config"><span></span>
+									<a href="sendto" class="add-bnt__item send-config open-modal"><span></span>
 										<div>Отправить</div>
-									</div>
+								</a>
 									<div class="add-bnt__item reset-config"><span></span>
 										<div>Сбросить</div>
 									</div>
@@ -795,7 +803,8 @@
 								<div class="cat-item__label stock-label">В наличии</div>
 								<div class="cat-item__label promo-label">Акция
 									<div class="promo-label__desc">
-										В подарок клавиатура проводная Defender Spark GK-300L [45300] [мембранная, клавиш - 104,
+										В подарок клавиатура проводная Defender Spark GK-300L [45300]
+										[мембранная, клавиш - 104,
 										USB, черная]
 									</div>
 								</div>
@@ -808,7 +817,7 @@
 							<div class="cat-item__char-cnt">
 								<div class="cat-item__char">
 									<div class="cat-item__char-name">
-										<p>Цветовая схема</p>
+										Цветовая схема
 									</div>
 									<div class="cat-item__char-value">
 										<div class="item-color color-gray"></div>
@@ -817,18 +826,18 @@
 								</div>
 								<div class="cat-item__char">
 									<div class="cat-item__char-name">
-										<p>Процессор от</p>
+										Процессор от
 									</div>
 									<div class="cat-item__char-value">
-										<p>32 ядер</p>
+										32 ядер
 									</div>
 								</div>
 								<div class="cat-item__char">
 									<div class="cat-item__char-name">
-										<p>Видеокарта от</p>
+										Видеокарта от
 									</div>
 									<div class="cat-item__char-value">
-										<p>GeForce RTX 3090</p>
+										GeForce RTX 3090
 									</div>
 								</div>
 							</div>
@@ -838,13 +847,9 @@
 											000</span> <span>₽</span></div>
 									<div class="cat-item__payment">30 150 Р/мес</div>
 								</div>
-								<a class="tpl-btn__link" href="/">
-									<button class="tpl-btn">
-										<div class="tpl-btn__first">
-											<span>Подробнее</span>
-										</div>
-										<div class="tpl-btn__second"></div>
-									</button>
+								<a href="/" class="glitchy-btn">
+									<span class="link-inner">Подробнее</span>
+									<span class="btn-gray-element"></span>
 								</a>
 							</div>
 						</div>
@@ -855,7 +860,8 @@
 								<div class="cat-item__label stock-label">В наличии</div>
 								<div class="cat-item__label promo-label">Акция
 									<div class="promo-label__desc">
-										В подарок клавиатура проводная Defender Spark GK-300L [45300] [мембранная, клавиш - 104,
+										В подарок клавиатура проводная Defender Spark GK-300L [45300]
+										[мембранная, клавиш - 104,
 										USB, черная]
 									</div>
 								</div>
@@ -864,11 +870,11 @@
 								<img class="cat-item__img" src="img/top_comp_1.png" alt="">
 							</a>
 							<p>cерия</p>
-							<a class="cat-item__title" href="/">Робокоп</a>
+							<a class="cat-item__title" href="/">Терминатор</a>
 							<div class="cat-item__char-cnt">
 								<div class="cat-item__char">
 									<div class="cat-item__char-name">
-										<p>Цветовая схема</p>
+										Цветовая схема
 									</div>
 									<div class="cat-item__char-value">
 										<div class="item-color color-gray"></div>
@@ -877,18 +883,18 @@
 								</div>
 								<div class="cat-item__char">
 									<div class="cat-item__char-name">
-										<p>Процессор от</p>
+										Процессор от
 									</div>
 									<div class="cat-item__char-value">
-										<p>32 ядер</p>
+										32 ядер
 									</div>
 								</div>
 								<div class="cat-item__char">
 									<div class="cat-item__char-name">
-										<p>Видеокарта от</p>
+										Видеокарта от
 									</div>
 									<div class="cat-item__char-value">
-										<p>GeForce RTX 3090</p>
+										GeForce RTX 3090
 									</div>
 								</div>
 							</div>
@@ -898,13 +904,9 @@
 											000</span> <span>₽</span></div>
 									<div class="cat-item__payment">30 150 Р/мес</div>
 								</div>
-								<a class="tpl-btn__link" href="/">
-									<button class="tpl-btn">
-										<div class="tpl-btn__first">
-											<span>Подробнее</span>
-										</div>
-										<div class="tpl-btn__second"></div>
-									</button>
+								<a href="/" class="glitchy-btn">
+									<span class="link-inner">Подробнее</span>
+									<span class="btn-gray-element"></span>
 								</a>
 							</div>
 						</div>
@@ -915,7 +917,8 @@
 								<div class="cat-item__label stock-label">В наличии</div>
 								<div class="cat-item__label promo-label">Акция
 									<div class="promo-label__desc">
-										В подарок клавиатура проводная Defender Spark GK-300L [45300] [мембранная, клавиш - 104,
+										В подарок клавиатура проводная Defender Spark GK-300L [45300]
+										[мембранная, клавиш - 104,
 										USB, черная]
 									</div>
 								</div>
@@ -924,11 +927,11 @@
 								<img class="cat-item__img" src="img/top_comp_1.png" alt="">
 							</a>
 							<p>cерия</p>
-							<a class="cat-item__title" href="/">Супермен</a>
+							<a class="cat-item__title" href="/">Терминатор</a>
 							<div class="cat-item__char-cnt">
 								<div class="cat-item__char">
 									<div class="cat-item__char-name">
-										<p>Цветовая схема</p>
+										Цветовая схема
 									</div>
 									<div class="cat-item__char-value">
 										<div class="item-color color-gray"></div>
@@ -937,18 +940,18 @@
 								</div>
 								<div class="cat-item__char">
 									<div class="cat-item__char-name">
-										<p>Процессор от</p>
+										Процессор от
 									</div>
 									<div class="cat-item__char-value">
-										<p>32 ядер</p>
+										32 ядер
 									</div>
 								</div>
 								<div class="cat-item__char">
 									<div class="cat-item__char-name">
-										<p>Видеокарта от</p>
+										Видеокарта от
 									</div>
 									<div class="cat-item__char-value">
-										<p>GeForce RTX 3090</p>
+										GeForce RTX 3090
 									</div>
 								</div>
 							</div>
@@ -958,13 +961,9 @@
 											000</span> <span>₽</span></div>
 									<div class="cat-item__payment">30 150 Р/мес</div>
 								</div>
-								<a class="tpl-btn__link" href="/">
-									<button class="tpl-btn">
-										<div class="tpl-btn__first">
-											<span>Подробнее</span>
-										</div>
-										<div class="tpl-btn__second"></div>
-									</button>
+								<a href="/" class="glitchy-btn">
+									<span class="link-inner">Подробнее</span>
+									<span class="btn-gray-element"></span>
 								</a>
 							</div>
 						</div>
@@ -979,16 +978,20 @@
 				<div class="selection__cnt">
 					<div class="selection__btn-cnt">
 						<div class="selection__btn">
-							<div class="selection__btn-icon"><img src="img/select_param.png" alt=""></div>
+							<div class="selection__btn-icon">
+								<img src="img/select_param.gif" alt="">
+							</div>
 							<div class="selection__btn-name">Выбрать ПК по параметрам</div>
 						</div>
 						<div class="selection__btn">
-							<div class="selection__btn-icon"><img src="img/select_games.png" alt=""></div>
+							<div class="selection__btn-icon select_games_gif">
+								<img src="img/select_games.gif" alt="">
+							</div>
 							<div class="selection__btn-name">Выбрать ПК по игре</div>
 						</div>
 					</div>
 					<div class="selection__img-cnt">
-						<div class="selection__img"><img src="img/grandma_black.png" alt=""></div>
+						<div class="selection__img"><img src="img/gr2.png" alt=""></div>
 						<div class="selection__name">Бабуля знает, что понравится её пирожочку</div>
 					</div>
 				</div>
@@ -1000,16 +1003,14 @@
 							<a class="strip-cnt__phone" href="tel:88000000000">8-800-123-45-67</a>
 							<a class="strip-cnt__mail" href="mailto:comp@comp.ru">comp@comp.ru</a>
 						</div>
-						<button class="strip-btn">
-							<div class="strip-btn__first">
-								<span>Получить консультацию</span>
-							</div>
-							<div class="strip-btn__second"></div>
-
-						</button>
+						<a href="/" class="glitchy-btn red-btn">
+							<span class="link-inner">Получить консультацию</span>
+							<span class="btn-gray-element"></span>
+						</a>
 					</div>
 				</div>
 			</div>
+			<div class="animated-line"></div>
 		</section>
 
 	</main>
@@ -1083,9 +1084,231 @@
 		</div>
 	</footer>
 
+	<div class="overlay">
+	</div>
+
+	<div class="modal call-back__modal" id="call-back">
+		<div class="modal-close">
+		</div>
+		<div class="call-back__cnt">
+			<div class="call-back-title modal-title">Оставьте сообщение</div>
+			<div class="call-back-subtitle modal-subtitle">и мы свяжемся с вами и обсудим ваши любимые игры</div>
+			<div class="call-back__input-cnt modal__input-cnt">
+				<input type="text" class="cf__callback-name cf-modal" placeholder="Имя" name="cf__callback-name" value=""
+					required>
+				<input type="text" id="phone-mask__callback" class="cf__callback-tel cf-modal" placeholder="Телефон"
+					name="cf__callback-tel" value="" required>
+				<input type="text" id="" class="cf__callback-email cf-modal" placeholder="E-mail" name="cf__callback-email"
+					value="" required>
+				<textarea name="" id="" class="cf__callback-text cf-modal" cols="30" rows="4"></textarea>
+				<div class="call-back__personal modal-personal">
+					<input type="checkbox" class="custom-checkbox" id="cb" name="" value="yes">
+					<label class="custom-label" for="cb">Соглашаюсь на&nbsp;<a href="/copyright.html">обработку
+							персональньных данных</a></label>
+				</div>
+			</div>
+			<a href="/" class="glitchy-btn modal-button">
+				<span class="link-inner">Отправить</span>
+				<span class="btn-gray-element"></span>
+			</a>
+		</div>
+	</div>
+
+	<div class="modal signin-modal" id="signin">
+		<div class="modal-close">
+		</div>
+		<div class="signin-modal__cnt">
+			<div class="signin-title modal-title">Вход и регистрация</div>
+			<div class="signin-subtitle modal-subtitle">Введите номер телефона</div>
+			<div class="signin__input-cnt modal__input-cnt">
+				<input type="text" id="phone-mask__callback" class="cf__phone-signin cf-modal" placeholder="Телефон"
+					name="cf__phone-signin" value="" required>
+				<div class="modal-personal">
+					<input type="checkbox" class="custom-checkbox" id="si" name="" value="yes">
+					<label class="custom-label" for="si">Соглашаюсь на&nbsp;<a href="/copyright.html">обработку
+							персональньных данных</a></label>
+				</div>
+			</div>
+			<a href="/" class="glitchy-btn modal-button">
+				<span class="link-inner">Получить код</span>
+				<span class="btn-gray-element"></span>
+			</a>
+		</div>
+	</div>
+
+	<div class="modal code-modal" id="code">
+		<div class="modal-close">
+		</div>
+		<div class="code-modal__cnt">
+			<div class="code-title modal-title">Введите код</div>
+			<div class="code-subtitle modal-subtitle">Введите код для входа, высланый на телефон</div>
+			<div class="code-cnt modal__input-cnt">
+				<input type="number" class="cf__code-signin cf-modal" placeholder="" name="cf__callback-tel" value=""
+					maxlength="1" required>
+				<input type="number" class="cf__code-signin cf-modal" placeholder="" name="cf__callback-tel" value=""
+					maxlength="1" required>
+				<input type="number" class="cf__code-signin cf-modal" placeholder="" name="cf__callback-tel" value=""
+					maxlength="1" required>
+				<input type="number" class="cf__code-signin cf-modal" placeholder="" name="cf__callback-tel" value=""
+					maxlength="1" required>
+			</div>
+			<a href="/" class="glitchy-btn modal-button">
+				<span class="link-inner">Готово</span>
+				<span class="btn-gray-element"></span>
+			</a>
+		</div>
+	</div>
+
+	<div class="modal order-modal" id="order">
+		<div class="modal-close">
+		</div>
+		<div class="order__cnt">
+			<div class="order-title modal-title">Заказать конфигурацию</div>
+			<div class="order-subtitle modal-subtitle">Отправьте заявку и мы с вами свяжемся, чтобы обсудить детали</div>
+			<div class="order-cnt modal__input-cnt">
+				<input type="text" class="cf__order-name cf-modal" placeholder="Имя" name="cf__order-name" value=""
+					required>
+				<input type="text" id="phone-mask__callback" class="cf__order-tel cf-modal" placeholder="Телефон"
+					name="cf__order-tel" value="" required>
+				<input type="text" id="" class="order-email cf-modal" placeholder="E-mail" name="cf__order-email" value=""
+					required>
+				<textarea name="" id="" class="cf__order-text cf-modal" placeholder="Любая дополнительная информация"
+					cols="30" rows="4"></textarea>
+				<div class="call-back__personal modal-personal">
+					<input type="checkbox" class="custom-checkbox" id="cb" name="" value="yes">
+					<label class="custom-label" for="cb">Соглашаюсь на&nbsp;<a href="/copyright.html">обработку
+							персональньных данных</a></label>
+				</div>
+			</div>
+			<a href="/" class="glitchy-btn modal-button">
+				<span class="link-inner">Отправить</span>
+				<span class="btn-gray-element"></span>
+			</a>
+		</div>
+	</div>
+
+	<div class="modal config-modal" id="config">
+		<div class="modal-close">
+		</div>
+		<div class="config__cnt">
+			<div class="config-title modal-title">Конфигурация ТЕРМИНАТОР Т-1000</div>
+			<div class="config-cnt modal__input-cnt">
+				<div class="config-item__cnt">
+					<div class="config-item">
+						<div class="config-item__name">Персонализация</div>
+						<div class="config-item__char">
+							<div class="config-item__char-name">
+								Цвет корпуса:
+							</div>
+							<div class="config-item__char-value">
+								Черный
+							</div>
+						</div>
+						<div class="config-item__char">
+							<div class="config-item__char-name">
+								Подстветка куллера:
+							</div>
+							<div class="config-item__char-value">
+								Красная неоновая
+							</div>
+						</div>
+					</div>
+
+					<div class="config-item">
+						<div class="config-item__name">Комплектующие</div>
+						<div class="config-item__char">
+							<div class="config-item__char-name">
+								Процессор:
+							</div>
+							<div class="config-item__char-value">
+								AMD Ryzen 5 5600X
+							</div>
+						</div>
+						<div class="config-item__char">
+							<div class="config-item__char-name">
+								Материнская плата:
+							</div>
+							<div class="config-item__char-value">
+								ASUS PRIME B550M-A (Wi-Fi)
+							</div>
+						</div>
+						<div class="config-item__char">
+							<div class="config-item__char-name">
+								Видеокарта:
+							</div>
+							<div class="config-item__char-value">
+								GeForce RTX 3060
+							</div>
+						</div>
+						<div class="config-item__char">
+							<div class="config-item__char-name">
+								Оперативная память:
+							</div>
+							<div class="config-item__char-value">
+								16GB Kingston Fury Beast DDR4-3200 (2 x 8GB)
+							</div>
+						</div>
+					</div>
+
+					<div class="config-item config-modal-btn">
+						<a href="/" class="glitchy-btn modal-button">
+							<span class="link-inner">Отправить на почту</span>
+							<span class="btn-gray-element"></span>
+						</a>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal sendto-modal" id="sendto">
+		<div class="modal-close">
+		</div>
+		<div class="order__cnt">
+			<div class="sendto-title modal-title">Отравь себе свою собранную конфигурацию</div>
+			<div class="sendto-subtitle modal-subtitle">Ты сможешь заказать её чуть позже</div>
+			<div class="sendto-filter">
+				<div class="sendto-filter__item">
+					<input type="checkbox" class="custom-checkbox" id="st-1" name="st-1" value="yes">
+					<label class="custom-label" for="st-1">Почта</label>
+				</div>
+				<div class="sendto-filter__item">
+					<input type="checkbox" class="custom-checkbox" id="st-2" name="st-2" value="yes">
+					<label class="custom-label" for="st-2">Whatsapp</label>
+				</div>
+				<div class="sendto-filter__item">
+					<input type="checkbox" class="custom-checkbox" id="st-3" name="st-3" value="yes">
+					<label class="custom-label" for="st-3">Telegram</label>
+				</div>
+			</div>
+			<div class="sendto-cnt modal__input-cnt">
+				<input type="text" class="cf__sendto-name cf-modal" placeholder="Имя" name="cf__sendto-name" value=""
+					required>
+				<input type="text" id="phone-mask__callback" class="cf__sendto-tel cf-modal" placeholder="Телефон"
+					name="cf__sendto-tel" value="" required>
+				<input type="text" id="" class="sendto-email cf-modal" placeholder="E-mail" name="cf__sendto-email" value=""
+					required>
+				<div class="call-back__personal modal-personal">
+					<input type="checkbox" class="custom-checkbox" id="st-cb" name="" value="yes">
+					<label class="custom-label" for="st-cb">Соглашаюсь на&nbsp;<a href="/copyright.html">обработку
+							персональньных данных</a></label>
+				</div>
+			</div>
+			<a href="/" class="glitchy-btn modal-button">
+				<span class="link-inner">Отправить</span>
+				<span class="btn-gray-element"></span>
+			</a>
+		</div>
+	</div>
+
+
+
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/jquery.keep-ratio.js"></script>
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/imask.js"></script>
 	<script src="js/main.js"></script>
 
 </body>

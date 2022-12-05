@@ -40,8 +40,16 @@
 					</div>
 					<div class="header-icon-cnt">
 						<div class="header-icon-cnt__find"></div>
-						<a href="/compare.html" class="header-icon-cnt__compare"></a>
-						<a href="/cabinet.html" class="header-icon-cnt__login"></a>
+						<a href="/compare.html" compare-numb="5" class="header-icon-cnt__compare"></a>
+						<div class="header-icon-cnt__login">
+						</div>
+						<div class="signin-cnt">
+							<div class="signin-close"></div>
+							<a href="signin" class="signin-enter open-modal">Войти в личный кабинет</a>
+							<a href="/cabinet.html" class="cabinet-enter">Мои сборки</a>
+							<div class="signin-upload">Загрузить сборку</div>
+							<div class="signin-leave">Выйти</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -144,7 +152,8 @@
 							</div>
 							<div class="menu-blog__cnt">
 								<div class="menu-blog__item">
-									<div class="menu-blog__img"><a href="/blog_item.html"><img src="img/menu-blog-1.png" alt=""></a>
+									<div class="menu-blog__img"><a href="/blog_item.html"><img src="img/menu-blog-1.png"
+												alt=""></a>
 									</div>
 									<div class="menu-blog__desc">
 										<div class="menu-blog__title"><a href="/blog_item.html">20 игр с котиками на PC</a> </div>
@@ -153,7 +162,8 @@
 									</div>
 								</div>
 								<div class="menu-blog__item">
-									<div class="menu-blog__img"><a href="/blog_item.html"><img src="img/menu-blog-2.png" alt=""></a>
+									<div class="menu-blog__img"><a href="/blog_item.html"><img src="img/menu-blog-2.png"
+												alt=""></a>
 									</div>
 									<div class="menu-blog__desc">
 										<div class="menu-blog__title"><a href="/blog_item.html">Лучшие машины в 2022</a> </div>
@@ -224,8 +234,10 @@
 						<div class="main-section__img-swiper swiper">
 							<div class="swiper-wrapper">
 								<div class="main-section-slide swiper-slide" style="background-image: url(img/007.png);"></div>
-								<div class="main-section-slide swiper-slide" style="background-image: url(img/701_rr.png);"></div>
-								<div class="main-section-slide swiper-slide" style="background-image: url(img/373_r.png);"></div>
+								<div class="main-section-slide swiper-slide" style="background-image: url(img/701_rr.png);">
+								</div>
+								<div class="main-section-slide swiper-slide" style="background-image: url(img/373_r.png);">
+								</div>
 							</div>
 							<div class="main-section__img-swiper-babka"></div>
 						</div>
@@ -782,11 +794,11 @@
 							</div>
 							<div class="faq-body">
 								<div class="faq__answer">
-									<p>Мы сократили моменты сервиса, убрали топовое железо и моддинг, оставив
+									Мы сократили моменты сервиса, убрали топовое железо и моддинг, оставив
 										наше качество и возможности. Чем-то пришлось пожертвовать, но эффект от работы и
 										итоговой
 										цены
-										уже превзошел все ожидания!</p>
+										уже превзошел все ожидания!
 								</div>
 								<a href="/" class="glitchy-btn">
 									<span class="link-inner">Видео о бабке</span>
@@ -806,11 +818,11 @@
 							</div>
 							<div class="faq-body">
 								<div class="faq__answer">
-									<p>Мы сократили моменты сервиса, убрали топовое железо и моддинг, оставив
+									Мы сократили моменты сервиса, убрали топовое железо и моддинг, оставив
 										наше качество и возможности. Чем-то пришлось пожертвовать, но эффект от работы и
 										итоговой
 										цены
-										уже превзошел все ожидания!</p>
+										уже превзошел все ожидания!
 								</div>
 								<a href="/" class="glitchy-btn">
 									<span class="link-inner">Видео о бабке</span>
@@ -829,11 +841,11 @@
 							</div>
 							<div class="faq-body">
 								<div class="faq__answer">
-									<p>Мы сократили моменты сервиса, убрали топовое железо и моддинг, оставив
+									Мы сократили моменты сервиса, убрали топовое железо и моддинг, оставив
 										наше качество и возможности. Чем-то пришлось пожертвовать, но эффект от работы и
 										итоговой
 										цены
-										уже превзошел все ожидания!</p>
+										уже превзошел все ожидания!
 								</div>
 								<a href="/" class="glitchy-btn">
 									<span class="link-inner">Видео о бабке</span>
@@ -852,11 +864,11 @@
 							</div>
 							<div class="faq-body">
 								<div class="faq__answer">
-									<p>Мы сократили моменты сервиса, убрали топовое железо и моддинг, оставив
+									Мы сократили моменты сервиса, убрали топовое железо и моддинг, оставив
 										наше качество и возможности. Чем-то пришлось пожертвовать, но эффект от работы и
 										итоговой
 										цены
-										уже превзошел все ожидания!</p>
+										уже превзошел все ожидания!
 								</div>
 								<a href="/" class="glitchy-btn">
 									<span class="link-inner">Видео о бабке</span>
@@ -962,6 +974,7 @@
 
 	<div class="overlay">
 	</div>
+
 	<div class="modal modal-video" id="main_video">
 		<div class="modal-close">
 		</div>
@@ -970,20 +983,22 @@
 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 			allowfullscreen></iframe>
 	</div>
+
 	<div class="modal call-back__modal" id="call-back">
 		<div class="modal-close">
 		</div>
 		<div class="call-back__cnt">
-			<div class="call-back-title">Оставьте сообщение</div>
-			<div class="call-back-subtitle">и мы свяжемся с вами и обсудим ваши любимые игры</div>
-			<div class="call-back__input-cnt">
-				<input type="text" class="cf__callback-name" placeholder="Имя" name="cf__callback-name" value="" required>
-				<input type="text" id="phone-mask__callback" class="cf__callback-tel" placeholder="Телефон"
-					name="cf__callback-tel" value="" required>
-				<input type="text" id="" class="cf__callback-email" placeholder="E-mail" name="cf__callback-email" value=""
+			<div class="call-back-title modal-title">Оставьте сообщение</div>
+			<div class="call-back-subtitle modal-subtitle">и мы свяжемся с вами и обсудим ваши любимые игры</div>
+			<div class="call-back__input-cnt modal__input-cnt">
+				<input type="text" class="cf__callback-name cf-modal" placeholder="Имя" name="cf__callback-name" value=""
 					required>
-				<textarea name="" id="" class="cf__callback-text" cols="30" rows="4"></textarea>
-				<div class="call-back__personal">
+				<input type="text" id="phone-mask__callback" class="cf__callback-tel cf-modal" placeholder="Телефон"
+					name="cf__callback-tel" value="" required>
+				<input type="text" id="" class="cf__callback-email cf-modal" placeholder="E-mail" name="cf__callback-email"
+					value="" required>
+				<textarea name="" id="" class="cf__callback-text cf-modal" cols="30" rows="4"></textarea>
+				<div class="call-back__personal modal-personal">
 					<input type="checkbox" class="custom-checkbox" id="cb" name="" value="yes">
 					<label class="custom-label" for="cb">Соглашаюсь на&nbsp;<a href="/copyright.html">обработку
 							персональньных данных</a></label>
@@ -991,6 +1006,51 @@
 			</div>
 			<a href="/" class="glitchy-btn modal-button">
 				<span class="link-inner">Отправить</span>
+				<span class="btn-gray-element"></span>
+			</a>
+		</div>
+	</div>
+
+	<div class="modal signin-modal" id="signin">
+		<div class="modal-close">
+		</div>
+		<div class="signin-modal__cnt">
+			<div class="signin-title modal-title">Вход и регистрация</div>
+			<div class="signin-subtitle modal-subtitle">Введите номер телефона</div>
+			<div class="signin__input-cnt modal__input-cnt">
+				<input type="text" id="phone-mask__callback" class="cf__phone-signin cf-modal" placeholder="Телефон"
+					name="cf__phone-signin" value="" required>
+				<div class="modal-personal">
+					<input type="checkbox" class="custom-checkbox" id="si" name="" value="yes">
+					<label class="custom-label" for="si">Соглашаюсь на&nbsp;<a href="/copyright.html">обработку
+							персональньных данных</a></label>
+				</div>
+			</div>
+			<a href="/" class="glitchy-btn modal-button">
+				<span class="link-inner">Получить код</span>
+				<span class="btn-gray-element"></span>
+			</a>
+		</div>
+	</div>
+
+	<div class="modal code-modal" id="code">
+		<div class="modal-close">
+		</div>
+		<div class="code-modal__cnt">
+			<div class="code-title modal-title">Введите код</div>
+			<div class="code-subtitle modal-subtitle">Введите код для входа, высланый на телефон</div>
+			<div class="code-cnt modal__input-cnt">
+				<input type="number" class="cf__code-signin cf-modal" placeholder="" name="cf__callback-tel" value="" maxlength="1"
+					required>
+				<input type="number" class="cf__code-signin cf-modal" placeholder="" name="cf__callback-tel" value="" maxlength="1"
+					required>
+				<input type="number" class="cf__code-signin cf-modal" placeholder="" name="cf__callback-tel" value="" maxlength="1"
+					required>
+				<input type="number" class="cf__code-signin cf-modal" placeholder="" name="cf__callback-tel" value="" maxlength="1"
+					required>
+			</div>
+			<a href="/" class="glitchy-btn modal-button">
+				<span class="link-inner">Готово</span>
 				<span class="btn-gray-element"></span>
 			</a>
 		</div>

@@ -175,27 +175,27 @@
 	<main>
 		<section class="link-section">
 			<div class="center-cnt" style="display: flex; flex-direction: column">
-				<a href="/" target="_blank">Главная</a>
-				<a href="catalog_1.html" target="_blank">Каталог серий</a>
-				<a href="catalog_2.html" target="_blank">Каталог серии</a>
-				<a href="card.html" target="_blank">Карточка товара</a>
-				<a href="podbor.html" target="_blank">Подбор</a>
-				<a href="compare.html" target="_blank">Сравнение</a>
-				<a href="about.html" target="_blank">О нас</a>
-				<a href="cabinet.html" target="_blank">Кабинет</a>
-				<a href="feedback.html" target="_blank">Отзывы</a>
-				<a href="guarantee.html" target="_blank">Гарантия</a>
-				<a href="copyright.html" target="_blank">Копирайт</a>
-				<a href="delivery.html" target="_blank">Доставка</a>
-				<a href="credit.html" target="_blank">Кредит</a>
-				<a href="leasing.html" target="_blank">Лизинг</a>
-				<a href="job.html" target="_blank">Работа у нас</a>
-				<a href="blog.html" target="_blank">Блог список</a>
-				<a href="blog_item.html" target="_blank">Блог</a>
-				<a href="search.html" target="_blank">Поиск</a>
-				<a href="search_result.html" target="_blank">Поиск ничего не найдено</a>
-				<a href="stock.html" target="_blank">В наличии</a>
-				<a href="404.html" target="_blank">404</a>
+				<a href="/" target="_blank">Главная, поиск, модальное окно "видео", модальное окно "обратный звонок", модальное окно "авторизация", модальное окно "введите код", авторизация</a><br>
+				<a href="catalog_1.html" target="_blank">Каталог серий</a><br>
+				<a href="catalog_2.html" target="_blank">Каталог серии</a><br>
+				<a href="card.html" target="_blank">Карточка товара</a><br>
+				<a href="podbor.html" target="_blank">Подбор</a><br>
+				<a href="compare.html" target="_blank">Сравнение</a><br>
+				<a href="about.html" target="_blank">О нас</a><br>
+				<a href="cabinet.html" target="_blank">Кабинет</a><br>
+				<a href="feedback.html" target="_blank">Отзывы</a><br>
+				<a href="guarantee.html" target="_blank">Гарантия</a><br>
+				<a href="copyright.html" target="_blank">Копирайт</a><br>
+				<a href="delivery.html" target="_blank">Доставка</a><br>
+				<a href="credit.html" target="_blank">Кредит</a><br>
+				<a href="leasing.html" target="_blank">Лизинг</a><br>
+				<a href="job.html" target="_blank">Работа у нас</a><br>
+				<a href="blog.html" target="_blank">Блог список</a><br>
+				<a href="blog_item.html" target="_blank">Блог</a><br>
+				<a href="search.html" target="_blank">Поиск</a><br>
+				<a href="search_result.html" target="_blank">Поиск ничего не найдено</a><br>
+				<a href="stock.html" target="_blank">В наличии</a><br>
+				<a href="404.html" target="_blank">404</a><br>
 			</div>
 		</section>
 
@@ -251,9 +251,9 @@
 					<div class="footer-cnt__clm">
 						<div class="phone-footer__cnt">
 							<a class="phone-footer" href="tel:+123456789">8-800-123-45-67</a>
-							<div class="phone-footer__call-back">
+							<a href="call-back" class="phone-footer__call-back open-modal">
 								Заказать звонок
-							</div>
+							</a>
 						</div>
 						<div class="follow-us">
 							Мы в соц сетях
@@ -270,11 +270,49 @@
 		</div>
 	</footer>
 
+	<div class="overlay">
+	</div>
+	<div class="modal modal-video" id="main_video">
+		<div class="modal-close">
+		</div>
+		<iframe width="100%" height="100%" src="https://www.youtube.com/embed/_a1ked5Ebro" title="YouTube video player"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe>
+	</div>
+	<div class="modal call-back__modal" id="call-back">
+		<div class="modal-close">
+		</div>
+		<div class="call-back__cnt">
+			<div class="call-back-title">Оставьте сообщение</div>
+			<div class="call-back-subtitle">и мы свяжемся с вами и обсудим ваши любимые игры</div>
+			<div class="call-back__input-cnt">
+				<input type="text" class="cf__callback-name" placeholder="Имя" name="cf__callback-name" value="" required>
+				<input type="text" id="phone-mask__callback" class="cf__callback-tel" placeholder="Телефон"
+					name="cf__callback-tel" value="" required>
+				<input type="text" id="" class="cf__callback-email" placeholder="E-mail" name="cf__callback-email" value=""
+					required>
+				<textarea name="" id="" class="cf__callback-text" cols="30" rows="4"></textarea>
+				<div class="call-back__personal">
+					<input type="checkbox" class="custom-checkbox" id="cb" name="" value="yes">
+					<label class="custom-label" for="cb">Соглашаюсь на&nbsp;<a href="/copyright.html">обработку
+							персональньных данных</a></label>
+				</div>
+			</div>
+			<a href="/" class="glitchy-btn modal-button">
+				<span class="link-inner">Отправить</span>
+				<span class="btn-gray-element"></span>
+			</a>
+		</div>
+	</div>
+
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/jquery.keep-ratio.js"></script>
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/imask.js"></script>
 	<script src="js/main.js"></script>
-
 </body>
 
 </html>
