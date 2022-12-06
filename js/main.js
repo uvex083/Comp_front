@@ -112,7 +112,7 @@ $(document).ready(function () {
 
 	$("#conf-pers").click(function () {
 		$(".config-wrap").children().eq(0).toggleClass("open");
-		$(".config-wrap").children().eq(0).children(".config-wrap__item-body").slideToggle();
+		$(".config-wrap").children().eq(0).children(".config-wrap__item-body").slideToggle().css("display", "flex");
 	});
 
 
@@ -238,7 +238,7 @@ $(document).ready(function () {
 			$window = $(window);
 			$h = $nav.offset().top;
 			$window.scroll(function () {
-				if ($window.scrollTop() > ($h - 145)) {
+				if (($window.scrollTop() > ($h - 145)) && ($(window).width() > '1280')) {
 					$nav.addClass('fixed');
 				} else {
 					$nav.removeClass('fixed');

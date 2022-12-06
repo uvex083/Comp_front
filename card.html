@@ -273,9 +273,53 @@
 								</div>
 							</div>
 						</div>
+
+						<div class="card-preview__cnt card-preview-mobile">
+
+							<div class="card-preview__item">
+								<div class="card-preview__price-cmp">
+									<div class="card-preview__price-cnt">
+										<div class="card-preview__price-old">130 150 ₽</div>
+										<div class="card-preview__price">123 456 ₽</div>
+									</div>
+									<div class="card-preview__cmp-cnt">
+										<a href="add-compare" class="glitchy-btn transparent open-modal">
+											<span class="link-inner">Сравнить</span>
+											<span class="btn-gray-element"></span>
+										</a>
+									</div>
+								</div>
+								<div class="card-preview__order-btn">
+									<a href="order" class="glitchy-btn open-modal">
+										<span class="link-inner">Заказать</span>
+										<span class="btn-gray-element"></span>
+									</a>
+									<a href="credit.html" class="glitchy-btn transparent">
+										<span class="link-inner">Купить в кредит</span>
+										<span class="btn-gray-element"></span>
+									</a>
+									<a href="config" class="card-preview__show-config open-modal">
+										Посмотреть конфигурацию
+									</a>
+								</div>
+							</div>
+							<div class="card-preview__add-bnt">
+								<a href="add-config" class="add-bnt__item save-config open-modal"><span></span>
+									<div>Сохранить</div>
+								</a>
+								<a href="sendto" class="add-bnt__item send-config open-modal"><span></span>
+									<div>Отправить</div>
+								</a>
+								<a href="reset" class="add-bnt__item reset-config open-modal"><span></span>
+									<div>Сбросить</div>
+								</a>
+							</div>
+
+						</div>
+
 						<div class="card-filter__cnt">
 							<div class="card-filter">
-								<a class="back-link" href="">Назад к серии</a>
+								<a class="back-link" href="">Вернуться</a>
 								<div class="items-available">
 									<input type="checkbox" class="filter-checkbox" id="available" name="Комплектующие в наличии"
 										value="no">
@@ -317,7 +361,7 @@
 								</div>
 								<div class="config-wrap">
 									<div class="config-wrap__item">
-										<div class="config-wrap__item-title">1. Персонализация (внешний вид)</div>
+										<div class="config-wrap__item-title">1. Персонализация</div>
 										<div class="config-wrap__item-body column">
 											<div class="item-body__img"><img src="img/config_img.png" alt=""></div>
 											<div class="item-body__personal-cnt">
@@ -394,6 +438,17 @@
 												<div class="item-body__tab">G.skill</div>
 												<div class="item-body__tab">thermaltake</div>
 												<div class="item-body__tab">microne</div>
+												<div class="cs">
+													<div class="cs-input">
+														<div class="cs-value">FIFA 23</div>
+														<div class="cs-icon"><img src="/img/arr-cs-white.svg" alt=""></div>
+													</div>
+													<div class="cs-list">
+														<div class="cs-list__item">Doom Ethernal</div>
+														<div class="cs-list__item">Quake 3</div>
+														<div class="cs-list__item">Red dead redemption 2</div>
+													</div>
+												</div>
 											</div>
 
 											<div class="config-item__cnt row-view">
@@ -405,7 +460,7 @@
 													<div class="config-item__title">
 														<input type="radio" class="custom-radio" id="v1" name="color" value="">
 														<label for="v1">
-															<div>8Гб Kingston HyperX Fury 3000МГц<span class="info"></span>
+															<div>8Гб Kingston HyperX Fury 3000МГц<a href="details" class="info open-modal"></a>
 																<div class="stock-a"></div>
 															</div>
 														</label>
@@ -754,7 +809,7 @@
 											<div class="card-preview__price">123 456 ₽</div>
 										</div>
 										<div class="card-preview__cmp-cnt">
-											<a href="/" class="glitchy-btn transparent">
+											<a href="add-compare" class="glitchy-btn transparent open-modal">
 												<span class="link-inner">Сравнить</span>
 												<span class="btn-gray-element"></span>
 											</a>
@@ -776,15 +831,15 @@
 									</div>
 								</div>
 								<div class="card-preview__add-bnt">
-									<div class="add-bnt__item save-config"><span></span>
+									<a href="add-config" class="add-bnt__item save-config open-modal"><span></span>
 										<div>Сохранить</div>
-									</div>
+									</a>
 									<a href="sendto" class="add-bnt__item send-config open-modal"><span></span>
 										<div>Отправить</div>
-								</a>
-									<div class="add-bnt__item reset-config"><span></span>
+									</a>
+									<a href="reset" class="add-bnt__item reset-config open-modal"><span></span>
 										<div>Сбросить</div>
-									</div>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -1065,9 +1120,9 @@
 					<div class="footer-cnt__clm">
 						<div class="phone-footer__cnt">
 							<a class="phone-footer" href="tel:+123456789">8-800-123-45-67</a>
-							<div class="phone-footer__call-back">
+							<a href="call-back" class="phone-footer__call-back open-modal">
 								Заказать звонок
-							</div>
+							</a>
 						</div>
 						<div class="follow-us">
 							Мы в соц сетях
@@ -1164,6 +1219,7 @@
 		</div>
 		<div class="order__cnt">
 			<div class="order-title modal-title">Заказать конфигурацию</div>
+			<div class="order-config">"Терминатор Т-1000"</div>
 			<div class="order-subtitle modal-subtitle">Отправьте заявку и мы с вами свяжемся, чтобы обсудить детали</div>
 			<div class="order-cnt modal__input-cnt">
 				<input type="text" class="cf__order-name cf-modal" placeholder="Имя" name="cf__order-name" value=""
@@ -1251,10 +1307,10 @@
 					</div>
 
 					<div class="config-item config-modal-btn">
-						<a href="/" class="glitchy-btn modal-button">
+						<a href="sendto" class="glitchy-btn modal-button open-modal">
 							<span class="link-inner">Отправить на почту</span>
 							<span class="btn-gray-element"></span>
-						</a>	
+						</a>
 					</div>
 				</div>
 			</div>
@@ -1264,7 +1320,7 @@
 	<div class="modal sendto-modal" id="sendto">
 		<div class="modal-close">
 		</div>
-		<div class="order__cnt">
+		<div class="sendto-modal__cnt">
 			<div class="sendto-title modal-title">Отравь себе свою собранную конфигурацию</div>
 			<div class="sendto-subtitle modal-subtitle">Ты сможешь заказать её чуть позже</div>
 			<div class="sendto-filter">
@@ -1301,7 +1357,67 @@
 		</div>
 	</div>
 
+	<div class="modal add-config-modal" id="add-config">
+		<div class="modal-close">
+		</div>
+		<div class="add-config-modal__cnt">
+			<div class="add-config__msg">Мы сохранили вашу конфигурацию в личном кабинете</div>
+			<a href="cabinet.html" class="glitchy-btn modal-button">
+				<span class="link-inner">Проверить</span>
+				<span class="btn-gray-element"></span>
+			</a>
+		</div>
+	</div>
 
+	<div class="modal reset-modal" id="reset">
+		<div class="modal-close">
+		</div>
+		<div class="modal-reset__cnt">
+			<div class="reset__msg">Уверены, что хотите сбросить?</div>
+			<a href="/" class="glitchy-btn modal-button">
+				<span class="link-inner">Очень уверен</span>
+				<span class="btn-gray-element"></span>
+			</a>
+			<a href="/" class="glitchy-btn modal-button transparent">
+				<span class="link-inner">Пособираю еще</span>
+				<span class="btn-gray-element"></span>
+			</a>
+		</div>
+	</div>
+
+	<div class="modal add-compare-modal" id="add-compare">
+		<div class="modal-close">
+		</div>
+		<div class="add-compare-modal__cnt">
+			<div class="add-compare__msg">Конфигурация добавления к сравнению</div>
+			<a href="/" class="glitchy-btn modal-button">
+				<span class="link-inner">Перейти к сравнению</span>
+				<span class="btn-gray-element"></span>
+			</a>
+			<a href="/" class="glitchy-btn modal-button transparent">
+				<span class="link-inner">Пособираю еще</span>
+				<span class="btn-gray-element"></span>
+			</a>
+		</div>
+	</div>
+
+	<div class="modal details-modal" id="details">
+		<div class="modal-close">
+		</div>
+		<div class="details-modal__cnt">
+			<div class="details-modal__img">
+				<img src="/img/vc.png" alt="">
+			</div>
+			<div class="details-modal__char">
+				<h2>NVIDIA GeForce RTX 3060 Ti
+				</h2>
+				<div class="details-modal__desc">
+					<p>GeForce RTX™ 3060 обеспечивает оптимальную производительность в топовых играх благодаря возможностям Ampere — архитектуры NVIDIA RTX второго поколения. Оптимальная производительность и качество графики благодаря улучшенным ядрам RT и тензорным ядрам, новым потоковым мультипроцессорам и высокоскоростной памяти G6.</p>
+					<p>Производим установку видеокарт брендов: ASUS, MSI, GIGABYTE, Palit.</p>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
