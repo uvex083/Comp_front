@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
 	<title>Работа у нас</title>
 </head>
 
@@ -143,7 +144,8 @@
 							</div>
 							<div class="menu-blog__cnt">
 								<div class="menu-blog__item">
-									<div class="menu-blog__img"><a href="/blog_item.html"><img src="img/menu-blog-1.png" alt=""></a>
+									<div class="menu-blog__img"><a href="/blog_item.html"><img src="img/menu-blog-1.png"
+												alt=""></a>
 									</div>
 									<div class="menu-blog__desc">
 										<div class="menu-blog__title"><a href="/blog_item.html">20 игр с котиками на PC</a> </div>
@@ -152,7 +154,8 @@
 									</div>
 								</div>
 								<div class="menu-blog__item">
-									<div class="menu-blog__img"><a href="/blog_item.html"><img src="img/menu-blog-2.png" alt=""></a>
+									<div class="menu-blog__img"><a href="/blog_item.html"><img src="img/menu-blog-2.png"
+												alt=""></a>
 									</div>
 									<div class="menu-blog__desc">
 										<div class="menu-blog__title"><a href="/blog_item.html">Лучшие машины в 2022</a> </div>
@@ -233,13 +236,13 @@
 					</div>
 				</div>
 				<a href="/" class="tpl-link">
-					<span>Хочу стать частью команды</span>
+					<span>Хочу в команду</span>
 				</a>
 			</div>
 		</section>
 
 		<section class="why-we__section section-padding-170">
-			<div class="tpl-line"></div>
+			<div class="animated-line"></div>
 			<div class="center-cnt">
 				<ul>
 					<li>Мы тщательно подходим к выбору новых сотрудников.</li>
@@ -249,7 +252,7 @@
 						работы!</li>
 				</ul>
 			</div>
-			<div class="tpl-line"></div>
+			<div class="animated-line"></div>
 		</section>
 
 		<section class="vacancy__section">
@@ -271,17 +274,14 @@
 							<br>
 							<h5>Обязанности</h5>
 							<ul class="text-ul">
-								<li>Обработка запросов от входящих клиентов, и поиск новых</li>								
+								<li>Обработка запросов от входящих клиентов, и поиск новых</li>
 							</ul>
 						</div>
-						<div class="show-more">Подробнее</div>
 						<div class="vacancy__btn">
-							<button class="tpl-btn">
-								<div class="tpl-btn__first">
-									<span>Оставить заявку</span>
-								</div>
-								<div class="tpl-btn__second"></div>
-							</button>
+							<a href="job" class="glitchy-btn open-modal">
+								<span class="link-inner">Откликнуться</span>
+								<span class="btn-gray-element"></span>
+							</a>
 						</div>
 					</div>
 					<div class="vacancy-item">
@@ -311,12 +311,10 @@
 						</div>
 						<div class="show-more">Подробнее</div>
 						<div class="vacancy__btn">
-							<button class="tpl-btn">
-								<div class="tpl-btn__first">
-									<span>Оставить заявку</span>
-								</div>
-								<div class="tpl-btn__second"></div>
-							</button>
+							<a href="job" class="glitchy-btn open-modal">
+								<span class="link-inner">Откликнуться</span>
+								<span class="btn-gray-element"></span>
+							</a>
 						</div>
 					</div>
 					<div class="vacancy-item">
@@ -346,12 +344,10 @@
 						</div>
 						<div class="show-more">Подробнее</div>
 						<div class="vacancy__btn">
-							<button class="tpl-btn">
-								<div class="tpl-btn__first">
-									<span>Оставить заявку</span>
-								</div>
-								<div class="tpl-btn__second"></div>
-							</button>
+							<a href="job" class="glitchy-btn open-modal">
+								<span class="link-inner">Откликнуться</span>
+								<span class="btn-gray-element"></span>
+							</a>
 						</div>
 					</div>
 					<div class="vacancy-item find-job">
@@ -380,6 +376,7 @@
 				</div>
 			</div>
 		</div>
+		<div class="animated-line"></div>
 
 	</main>
 
@@ -433,9 +430,9 @@
 					<div class="footer-cnt__clm">
 						<div class="phone-footer__cnt">
 							<a class="phone-footer" href="tel:+123456789">8-800-123-45-67</a>
-							<div class="phone-footer__call-back">
+							<a href="call-back" class="phone-footer__call-back open-modal">
 								Заказать звонок
-							</div>
+							</a>
 						</div>
 						<div class="follow-us">
 							Мы в соц сетях
@@ -452,9 +449,50 @@
 		</div>
 	</footer>
 
+	<div class="overlay">
+	</div>
+
+	<div class="modal job-modal" id="job">
+		<div class="modal-close">
+		</div>
+		<div class="job__cnt">
+			<div class="job-title modal-title">Откликнуться на вакансию:</div>
+			<div class="order-config">МЕНЕДЖЕР ПО ПРОДАЖАМ IT ПРОДУКТОВ</div>
+			<div class="job-subtitle modal-subtitle">мы всё внимательно изучим и ответим</div>
+			<div class="job__input-cnt modal__input-cnt">
+				<input type="text" class="cf__job-name cf-modal" placeholder="Имя" name="cf__job-name" value="" required>
+				<input type="text" id="phone-mask__callback" class="cf__job-tel cf-modal" placeholder="Телефон"
+					name="cf__callback-tel" value="" required>
+				<input type="text" id="" class="cf__job-email cf-modal" placeholder="E-mail" name="cf__job-email" value=""
+					required>
+				<textarea name="" id="" class="cf__job-text cf-modal" placeholder="Немножко о себе" cols="30"
+					rows="4"></textarea>
+				<div class="input-file-row">
+					<label class="input-file">
+						<input type="file" name="file[]" multiple>
+						<span>Оставьте ваше резюме</span>
+					</label>
+					<div class="input-file-list"></div>
+				</div>
+				<div class="call-back__personal modal-personal">
+					<input type="checkbox" class="custom-checkbox" id="cb" name="" value="yes">
+					<label class="custom-label" for="cb">Соглашаюсь на&nbsp;<a href="/copyright.html">обработку
+							персональньных данных</a></label>
+				</div>
+			</div>
+			<a href="/" class="glitchy-btn modal-button">
+				<span class="link-inner">Отправить</span>
+				<span class="btn-gray-element"></span>
+			</a>
+		</div>
+	</div>
+
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/jquery.keep-ratio.js"></script>
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/imask.js"></script>
 	<script src="js/main.js"></script>
 
 </body>

@@ -72,10 +72,10 @@ $(window).scroll(function () {
 
 
 
-	
 
 
-	
+
+
 
 
 /* Карточка товара Begin */
@@ -117,14 +117,14 @@ $(document).ready(function () {
 
 
 	$(".header-icon-cnt__login").click(function () {
-		 $(".signin-cnt").toggleClass("open");
+		$(".signin-cnt").toggleClass("open");
 	});
 
 	$(".signin-close").click(function () {
 		$(".signin-cnt").removeClass("open");
-  });
+	});
 
-	
+
 
 
 	/* Красим блок с цветом */
@@ -351,6 +351,22 @@ $(document).ready(function () {
 
 	/* Кредит end */
 
+	/*Фиксируем слайдер сверху в сравнеии*/
+$(function () {
+	if($('.header-compare').length > 0){
+		 $head_height = 850;
+		 $nav = $('.header-compare');
+		 $window = $(window);
+		 $h = $nav.offset().top;
+		 $window.scroll(function () {
+			  if ($window.scrollTop() > $h + $head_height) {
+					$nav.slideDown(0).addClass('show');
+			  } else {
+					$nav.slideUp(0).removeClass('show');
+			  }
+		 });
+	}
+});
 
 
 
@@ -550,45 +566,6 @@ mainBabka.on('slideChange', function () {
 	}, 200);
 });
 
-const mainProductSlider = new Swiper('.cat-item__cnt.swiper', {
-	loop: false,
-	slidesPerView: 3,
-	spaceBetween: 30,
-	pagination: {
-		el: '.cat-item__cnt-scroll',
-		type: 'progressbar',
-	},
-	breakpoints: {
-		0: {
-			slidesPerView: 1,
-			spaceBetween: 20,
-		},
-		640: {
-			slidesPerView: 1,
-			spaceBetween: 10,
-		},
-		768: {
-			slidesPerView: 2,
-			spaceBetween: 20,
-		},
-		1024: {
-			slidesPerView: 3,
-			spaceBetween: 30,
-		},
-	},
-	navigation: {
-		nextEl: '.cat-item__cnt-btns .swiper-button-next',
-		prevEl: '.cat-item__cnt-btns .swiper-button-prev',
-	},
-	on: {
-		init: () => {
-			let productItems = $('.swiper-slide.cat-item__hover').length;
-
-			$('.cat-item__cnt-last-slide').html('0' + productItems);
-		},
-	},
-});
-
 function modalWindow() {
 	$('.open-modal').on('click', function (e) {
 		e.preventDefault();
@@ -626,7 +603,6 @@ if ($('.modal-video').length) {
 	});
 }
 
-
 const AboutReviews = new Swiper('.feedback-cnt', {
 	slidesPerView: 4,
 	spaceBetween: 50,
@@ -658,15 +634,12 @@ const AboutReviews = new Swiper('.feedback-cnt', {
 	},
 });
 
-
 const AboutFeedback = new Swiper('.feedback-popup__img-swiper', {
 	navigation: {
 		nextEl: ".swiper-button-next.modal-arrow-right",
 		prevEl: ".swiper-button-prev.modal-arrow-left",
 	},
 });
-
-
 
 // catalog slider
 
@@ -722,3 +695,195 @@ $('.color-link__item').on('click', function () {
 // 			}
 // 		}
 // 	});
+
+const mainProductSlider = new Swiper('.cat-item__cnt.swiper', {
+	loop: false,
+	slidesPerView: 3,
+	spaceBetween: 30,
+	pagination: {
+		el: '.cat-item__cnt-scroll',
+		type: 'progressbar',
+	},
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+			spaceBetween: 20,
+		},
+		640: {
+			slidesPerView: 1,
+			spaceBetween: 10,
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		1024: {
+			slidesPerView: 3,
+			spaceBetween: 30,
+		},
+	},
+	navigation: {
+		nextEl: '.cat-item__cnt-btns .swiper-button-next',
+		prevEl: '.cat-item__cnt-btns .swiper-button-prev',
+	},
+	on: {
+		init: () => {
+			let productItems = $('.swiper-slide.cat-item__hover').length;
+
+			$('.cat-item__cnt-last-slide').html('0' + productItems);
+		},
+	},
+});
+
+var swiperHeaderCompare = new Swiper(".compare-swiper.header-swiper.swiper", {
+	loop: false,
+	slidesPerView: 4,
+	spaceBetween: 30,
+	freeMode: true,
+	allowTouchMove: false,
+	keyboard: true,
+	speed: 500,
+	observer: true,
+	observeParents: true,
+	observeSlideChildren: true,
+	watchOverflow: true,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+			spaceBetween: 20,
+		},
+		640: {
+			slidesPerView: 1,
+			spaceBetween: 10,
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		1024: {
+			slidesPerView: 3,
+			spaceBetween: 30,
+		},
+		1680: {
+			slidesPerView: 4,
+			spaceBetween: 30,
+		},
+	},
+});
+
+var swiperCompare = new Swiper(".compare-swiper.swiper", {
+	loop: false,
+	slidesPerView: 4,
+	spaceBetween: 30,
+	freeMode: true,
+	allowTouchMove: false,
+	keyboard: true,
+	speed: 500,
+	observer: true,
+	observeParents: true,
+	observeSlideChildren: true,
+	watchOverflow: true,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+			spaceBetween: 20,
+		},
+		640: {
+			slidesPerView: 1,
+			spaceBetween: 10,
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		1024: {
+			slidesPerView: 3,
+			spaceBetween: 30,
+		},
+		1680: {
+			slidesPerView: 4,
+			spaceBetween: 30,
+		},
+	},
+});
+
+
+var swiperCharCompare = new Swiper(".compare-swiper.char-swiper.swiper", {
+	loop: false,
+	slidesPerView: 4,
+	spaceBetween: 30,
+	freeMode: true,
+	allowTouchMove: false,
+	keyboard: true,
+	speed: 500,
+	observer: true,
+	observeParents: true,
+	observeSlideChildren: true,
+	watchOverflow: true,
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+			spaceBetween: 20,
+		},
+		640: {
+			slidesPerView: 1,
+			spaceBetween: 10,
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		1024: {
+			slidesPerView: 3,
+			spaceBetween: 30,
+		},
+		1680: {
+			slidesPerView: 4,
+			spaceBetween: 30,
+		},
+	},
+});
+
+var dt = new DataTransfer();
+ 
+$('.input-file input[type=file]').on('change', function(){
+	let $files_list = $(this).closest('.input-file').next();
+	$files_list.empty();
+ 
+	for(var i = 0; i < this.files.length; i++){
+		let new_file_input = '<div class="input-file-list-item">' +
+			'<span class="input-file-list-name">' + this.files.item(i).name + '</span>' +
+			'<a href="#" onclick="removeFilesItem(this); return false;" class="input-file-list-remove">x</a>' +
+			'</div>';
+		$files_list.append(new_file_input);
+		dt.items.add(this.files.item(i));
+	};
+	this.files = dt.files;
+});
+ 
+function removeFilesItem(target){
+	let name = $(target).prev().text();
+	let input = $(target).closest('.input-file-row').find('input[type=file]');	
+	$(target).closest('.input-file-list-item').remove();	
+	for(let i = 0; i < dt.items.length; i++){
+		if(name === dt.items[i].getAsFile().name){
+			dt.items.remove(i);
+		}
+	}
+	input[0].files = dt.files;  
+}
+
+
+
+
+
+
+

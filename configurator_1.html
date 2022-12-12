@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Конфигуратор</title>
+</head>
+
+<body>
+	<header>
+		<div class="center-cnt">
+			<div class="header-cnt">
+				<div class="header-cnt-side">
+					<div class="burger-btn">
+						<span class="burger-menu-piece"></span>
+						<span class="burger-menu-piece"></span>
+						<span class="burger-menu-piece"></span>
+					</div>
+					<a class="logo" href="/">
+						<img src="img/logo_l.png" alt="">
+					</a>
+				</div>
+				<div class="header-cnt-side">
+					<nav class="header-nav">
+						<a href="/catalog_1.html">Игровые ПК</a>
+						<a href="/catalog_1.html">Офисные ПК</a>
+						<a href="/catalog_1.html">Профессиональные ПК</a>
+						<a href="/stock.html">Конфигуратор</a>
+						<a href="/podbor.html">Подобрать</a>
+					</nav>
+				</div>
+				<div class="header-cnt-side">
+					<div class="header-phone">
+						<a href="tel:+123456789">8-800-123-45-67</a>
+						<a href="call-back" class="call-back open-modal">Заказать звонок</a>
+					</div>
+					<div class="header-icon-cnt">
+						<div class="header-icon-cnt__find"></div>
+						<a href="/compare.html" class="header-icon-cnt__compare"></a>
+						<a href="/cabinet.html" class="header-icon-cnt__login"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="search-cnt header-search">
+			<div class="center-cnt">
+				<div class="search-row__cnt">
+					<div class="search-field">
+						<input class="search-field" type="search" name="" id="search" placeholder="Поиск" pattern=".{1,}"
+							required="">
+						<div class="clear-search"></div>
+					</div>
+					<div class="search-btn">
+						<button class="tpl-btn">
+							<div class="tpl-btn__first">
+								<span>Искать</span>
+							</div>
+							<div class="tpl-btn__second"></div>
+						</button>
+					</div>
+					<div class="search-close"></div>
+				</div>
+			</div>
+		</div>
+		<div class="dropdown-menu">
+			<div class="center-cnt">
+				<div class="menu__cnt">
+					<div class="search-mobile__cnt">
+						<div class="search-row__cnt">
+							<div class="search-field">
+								<input class="search-field" type="search" name="" id="search" placeholder="Поиск"
+									pattern=".{1,}" required="">
+								<div class="clear-search"></div>
+							</div>
+							<div class="search-btn">
+								<button class="tpl-btn">
+									<div class="tpl-btn__first">
+										<span></span>
+									</div>
+									<div class="tpl-btn__second"></div>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="menu-clm">
+						<div class="menu-title">
+							<h3>Мы предлагаем</h3>
+						</div>
+						<a class="menu-link" href="/catalog_1.html">Игровые ПК</a>
+						<a class="menu-link" href="/catalog_1.html">Офисные ПК</a>
+						<a class="menu-link" href="/catalog_1.html">Профессиональные ПК</a>
+						<a class="menu-link" href="/podbor.html">Подбор</a>
+						<a class="menu-link" href="/stock.html">Конфигуратор</a>
+						<a class="menu-link" href="/about.html">Кто мы</a>
+						<a class="menu-link" href="/feedback.html">Отзывы</a>
+						<a class="menu-link" href="/delivery.html">Доставка и оплата</a>
+						<a class="menu-link" href="/job.html">Работа у нас</a>
+						<a class="menu-link" href="/blog.html">Наш блог</a>
+						<a class="menu-link" href="/credit.html">Расчитать кредит</a>
+					</div>
+					<div class="menu-clm">
+						<div class="menu-clm__row">
+							<div class="menu-title">
+								<h3>Контакты</h3>
+							</div>
+							<div class="menu-adress">
+								БЦ Клевер парк, Ткачей, 23, офис 714
+							</div>
+							<div class="menu-time">
+								Понедельник-Пятница 9:00 - 18:00
+							</div>
+							<span>Приходите в гости и не забудьте документ
+								удостоверяющий личность</span>
+						</div>
+						<div class="menu-clm__row">
+							<div class="menu-title">
+								<h3>На связи</h3>
+							</div>
+							<div class="menu-phone"><a href="tel:+78005518012">+7 (800) 551-80-12</a></div>
+							<div class="messenger">
+								<a class="messenger__wa" href="/"></a>
+								<a class="messenger__tg" href="/"></a>
+							</div>
+						</div>
+						<div class="menu-clm__row">
+							<div class="menu-title">
+								<h3>В соцсетях</h3>
+							</div>
+							<div class="follow-us__icon-cnt">
+								<a href="" class="follow-us__icon inst-icon"></a>
+								<a href="" class="follow-us__icon yt-icon"></a>
+								<a href="" class="follow-us__icon vk-icon"></a>
+							</div>
+						</div>
+					</div>
+					<div class="menu-clm">
+						<div class="menu-clm__row">
+							<div class="menu-title">
+								<h3>Блог</h3>
+							</div>
+							<div class="menu-blog__cnt">
+								<div class="menu-blog__item">
+									<div class="menu-blog__img"><a href="/blog_item.html"><img src="img/menu-blog-1.png" alt=""></a>
+									</div>
+									<div class="menu-blog__desc">
+										<div class="menu-blog__title"><a href="/blog_item.html">20 игр с котиками на PC</a> </div>
+										<div class="menu-blog__link"><a href="/blog_item.html"><span>Читать
+													статью</span><span>>></span></a></div>
+									</div>
+								</div>
+								<div class="menu-blog__item">
+									<div class="menu-blog__img"><a href="/blog_item.html"><img src="img/menu-blog-2.png" alt=""></a>
+									</div>
+									<div class="menu-blog__desc">
+										<div class="menu-blog__title"><a href="/blog_item.html">Лучшие машины в 2022</a> </div>
+										<div class="menu-blog__link"><a href="/blog_item.html"><span>Читать
+													статью</span><span>>></span></a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="menu-clm__row">
+							<div class="menu-blog__all"><a href="/blog.html"><span>Почитать наш блог</span><span>>></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<main>
+		<section class="main-img-section" style="background-image: url(/img/130.jpg);">
+			<div class="breadcrumbs-section">
+				<div class="center-cnt">
+					<div class="bread-cnt">
+						<div class="bread-item"><a href="/">Главная</a></div>
+						<div class="bread-item divider"><img src="/img/bread_arr.svg" alt=""></div>
+						<div class="bread-item">Конфигуратор</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="main-img-section__title">
+				<div class="center-cnt">
+					<div class="main-img-section__title-cnt">	
+						<h1 class="white-h1">Собери своего монстра</h1>
+						<p>Выбери платформу и дополни необходимым</p>
+					</div>
+					<div class="arr-down"><img src="/img/arr_down.svg" alt=""></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="seria-section section-padding-170">
+			<div class="center-cnt">
+				<div class="cat-item__cnt assemble-cnt">
+					<div class="cat-item__hover">
+						<div class="cat-item__item">
+							<div class="cat-item__label-cnt">
+								<div class="cat-item__label stock-label">В наличии</div>
+								<div class="cat-item__label promo-label">Акция
+									<div class="promo-label__desc">
+										В подарок клавиатура проводная Defender Spark GK-300L [45300]
+										[мембранная, клавиш - 104,
+										USB, черная]
+									</div>
+								</div>
+							</div>
+							<a class="cat-item__img-link" href="/">
+								<img class="cat-item__img" src="img/top_comp_1.png" alt="">
+							</a>
+							<p>cерия</p>
+							<a class="cat-item__title" href="/">Терминатор</a>
+							<div class="cat-item__char-cnt">
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Цветовая схема
+									</div>
+									<div class="cat-item__char-value">
+										<div class="item-color color-gray"></div>
+										<div class="item-color color-black"></div>
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Процессор от
+									</div>
+									<div class="cat-item__char-value">
+										32 ядер
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Видеокарта от
+									</div>
+									<div class="cat-item__char-value">
+										GeForce RTX 3090
+									</div>
+								</div>
+							</div>
+							<div class="cat-item__buy-cnt">
+								<div class="cat-item__buy">
+									<div class="cat-item__price">от <span class="cat-item__price-value">87
+											000</span> <span>₽</span></div>
+									<div class="cat-item__payment">30 150 Р/мес</div>
+								</div>
+								<a href="/" class="glitchy-btn">
+									<span class="link-inner">Подробнее</span>
+									<span class="btn-gray-element"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="cat-item__hover">
+						<div class="cat-item__item">
+							<div class="cat-item__label-cnt">
+								<div class="cat-item__label stock-label">В наличии</div>
+								<div class="cat-item__label promo-label">Акция
+									<div class="promo-label__desc">
+										В подарок клавиатура проводная Defender Spark GK-300L [45300]
+										[мембранная, клавиш - 104,
+										USB, черная]
+									</div>
+								</div>
+							</div>
+							<a class="cat-item__img-link" href="/">
+								<img class="cat-item__img" src="img/top_comp_1.png" alt="">
+							</a>
+							<p>cерия</p>
+							<a class="cat-item__title" href="/">Робокоп</a>
+							<div class="cat-item__char-cnt">
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Цветовая схема
+									</div>
+									<div class="cat-item__char-value">
+										<div class="item-color color-gray"></div>
+										<div class="item-color color-black"></div>
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Процессор от
+									</div>
+									<div class="cat-item__char-value">
+										32 ядер
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Видеокарта от
+									</div>
+									<div class="cat-item__char-value">
+										GeForce RTX 3090
+									</div>
+								</div>
+							</div>
+							<div class="cat-item__buy-cnt">
+								<div class="cat-item__buy">
+									<div class="cat-item__price">от <span class="cat-item__price-value">87
+											000</span> <span>₽</span></div>
+									<div class="cat-item__payment">30 150 Р/мес</div>
+								</div>
+								<a href="/" class="glitchy-btn">
+									<span class="link-inner">Подробнее</span>
+									<span class="btn-gray-element"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="cat-item__hover">
+						<div class="cat-item__item">
+							<div class="cat-item__label-cnt">
+								<div class="cat-item__label stock-label">В наличии</div>
+								<div class="cat-item__label promo-label">Акция
+									<div class="promo-label__desc">
+										В подарок клавиатура проводная Defender Spark GK-300L [45300]
+										[мембранная, клавиш - 104,
+										USB, черная]
+									</div>
+								</div>
+							</div>
+							<a class="cat-item__img-link" href="/">
+								<img class="cat-item__img" src="img/top_comp_1.png" alt="">
+							</a>
+							<p>cерия</p>
+							<a class="cat-item__title" href="/">Рэмбо</a>
+							<div class="cat-item__char-cnt">
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Цветовая схема
+									</div>
+									<div class="cat-item__char-value">
+										<div class="item-color color-gray"></div>
+										<div class="item-color color-black"></div>
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Процессор от
+									</div>
+									<div class="cat-item__char-value">
+										32 ядер
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Видеокарта от
+									</div>
+									<div class="cat-item__char-value">
+										GeForce RTX 3090
+									</div>
+								</div>
+							</div>
+							<div class="cat-item__buy-cnt">
+								<div class="cat-item__buy">
+									<div class="cat-item__price">от <span class="cat-item__price-value">87
+											000</span> <span>₽</span></div>
+									<div class="cat-item__payment">30 150 Р/мес</div>
+								</div>
+								<a href="/" class="glitchy-btn">
+									<span class="link-inner">Подробнее</span>
+									<span class="btn-gray-element"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="cat-item__hover">
+						<div class="cat-item__item">
+							<div class="cat-item__label-cnt">
+								<div class="cat-item__label stock-label">В наличии</div>
+								<div class="cat-item__label promo-label">Акция
+									<div class="promo-label__desc">
+										В подарок клавиатура проводная Defender Spark GK-300L [45300]
+										[мембранная, клавиш - 104,
+										USB, черная]
+									</div>
+								</div>
+							</div>
+							<a class="cat-item__img-link" href="/">
+								<img class="cat-item__img" src="img/top_comp_1.png" alt="">
+							</a>
+							<p>cерия</p>
+							<a class="cat-item__title" href="/">Спайдермен</a>
+							<div class="cat-item__char-cnt">
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Цветовая схема
+									</div>
+									<div class="cat-item__char-value">
+										<div class="item-color color-gray"></div>
+										<div class="item-color color-black"></div>
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Процессор от
+									</div>
+									<div class="cat-item__char-value">
+										32 ядер
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Видеокарта от
+									</div>
+									<div class="cat-item__char-value">
+										GeForce RTX 3090
+									</div>
+								</div>
+							</div>
+							<div class="cat-item__buy-cnt">
+								<div class="cat-item__buy">
+									<div class="cat-item__price">от <span class="cat-item__price-value">87
+											000</span> <span>₽</span></div>
+									<div class="cat-item__payment">30 150 Р/мес</div>
+								</div>
+								<a href="/" class="glitchy-btn">
+									<span class="link-inner">Подробнее</span>
+									<span class="btn-gray-element"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="cat-item__hover">
+						<div class="cat-item__item">
+							<div class="cat-item__label-cnt">
+								<div class="cat-item__label stock-label">В наличии</div>
+								<div class="cat-item__label promo-label">Акция
+									<div class="promo-label__desc">
+										В подарок клавиатура проводная Defender Spark GK-300L [45300]
+										[мембранная, клавиш - 104,
+										USB, черная]
+									</div>
+								</div>
+							</div>
+							<a class="cat-item__img-link" href="/">
+								<img class="cat-item__img" src="img/top_comp_1.png" alt="">
+							</a>
+							<p>cерия</p>
+							<a class="cat-item__title" href="/">Чудо женшина</a>
+							<div class="cat-item__char-cnt">
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Цветовая схема
+									</div>
+									<div class="cat-item__char-value">
+										<div class="item-color color-gray"></div>
+										<div class="item-color color-black"></div>
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Процессор от
+									</div>
+									<div class="cat-item__char-value">
+										32 ядер
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Видеокарта от
+									</div>
+									<div class="cat-item__char-value">
+										GeForce RTX 3090
+									</div>
+								</div>
+							</div>
+							<div class="cat-item__buy-cnt">
+								<div class="cat-item__buy">
+									<div class="cat-item__price">от <span class="cat-item__price-value">87
+											000</span> <span>₽</span></div>
+									<div class="cat-item__payment">30 150 Р/мес</div>
+								</div>
+								<a href="/" class="glitchy-btn">
+									<span class="link-inner">Подробнее</span>
+									<span class="btn-gray-element"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="cat-item__hover">
+						<div class="cat-item__item">
+							<div class="cat-item__label-cnt">
+								<div class="cat-item__label stock-label">В наличии</div>
+								<div class="cat-item__label promo-label">Акция
+									<div class="promo-label__desc">
+										В подарок клавиатура проводная Defender Spark GK-300L [45300]
+										[мембранная, клавиш - 104,
+										USB, черная]
+									</div>
+								</div>
+							</div>
+							<a class="cat-item__img-link" href="/">
+								<img class="cat-item__img" src="img/top_comp_1.png" alt="">
+							</a>
+							<p>cерия</p>
+							<a class="cat-item__title" href="/">Спайдермен</a>
+							<div class="cat-item__char-cnt">
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Цветовая схема
+									</div>
+									<div class="cat-item__char-value">
+										<div class="item-color color-gray"></div>
+										<div class="item-color color-black"></div>
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Процессор от
+									</div>
+									<div class="cat-item__char-value">
+										32 ядер
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Видеокарта от
+									</div>
+									<div class="cat-item__char-value">
+										GeForce RTX 3090
+									</div>
+								</div>
+							</div>
+							<div class="cat-item__buy-cnt">
+								<div class="cat-item__buy">
+									<div class="cat-item__price">от <span class="cat-item__price-value">87
+											000</span> <span>₽</span></div>
+									<div class="cat-item__payment">30 150 Р/мес</div>
+								</div>
+								<a href="/" class="glitchy-btn">
+									<span class="link-inner">Подробнее</span>
+									<span class="btn-gray-element"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="cat-item__hover">
+						<div class="cat-item__item">
+							<div class="cat-item__label-cnt">
+								<div class="cat-item__label stock-label">В наличии</div>
+								<div class="cat-item__label promo-label">Акция
+									<div class="promo-label__desc">
+										В подарок клавиатура проводная Defender Spark GK-300L [45300]
+										[мембранная, клавиш - 104,
+										USB, черная]
+									</div>
+								</div>
+							</div>
+							<a class="cat-item__img-link" href="/">
+								<img class="cat-item__img" src="img/top_comp_1.png" alt="">
+							</a>
+							<p>cерия</p>
+							<a class="cat-item__title" href="/">Чудо женшина</a>
+							<div class="cat-item__char-cnt">
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Цветовая схема
+									</div>
+									<div class="cat-item__char-value">
+										<div class="item-color color-gray"></div>
+										<div class="item-color color-black"></div>
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Процессор от
+									</div>
+									<div class="cat-item__char-value">
+										32 ядер
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Видеокарта от
+									</div>
+									<div class="cat-item__char-value">
+										GeForce RTX 3090
+									</div>
+								</div>
+							</div>
+							<div class="cat-item__buy-cnt">
+								<div class="cat-item__buy">
+									<div class="cat-item__price">от <span class="cat-item__price-value">87
+											000</span> <span>₽</span></div>
+									<div class="cat-item__payment">30 150 Р/мес</div>
+								</div>
+								<a href="/" class="glitchy-btn">
+									<span class="link-inner">Подробнее</span>
+									<span class="btn-gray-element"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="cat-item__hover">
+						<div class="cat-item__item">
+							<div class="cat-item__label-cnt">
+								<div class="cat-item__label stock-label">В наличии</div>
+								<div class="cat-item__label promo-label">Акция
+									<div class="promo-label__desc">
+										В подарок клавиатура проводная Defender Spark GK-300L [45300]
+										[мембранная, клавиш - 104,
+										USB, черная]
+									</div>
+								</div>
+							</div>
+							<a class="cat-item__img-link" href="/">
+								<img class="cat-item__img" src="img/top_comp_1.png" alt="">
+							</a>
+							<p>cерия</p>
+							<a class="cat-item__title" href="/">Спайдермен</a>
+							<div class="cat-item__char-cnt">
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Цветовая схема
+									</div>
+									<div class="cat-item__char-value">
+										<div class="item-color color-gray"></div>
+										<div class="item-color color-black"></div>
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Процессор от
+									</div>
+									<div class="cat-item__char-value">
+										32 ядер
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Видеокарта от
+									</div>
+									<div class="cat-item__char-value">
+										GeForce RTX 3090
+									</div>
+								</div>
+							</div>
+							<div class="cat-item__buy-cnt">
+								<div class="cat-item__buy">
+									<div class="cat-item__price">от <span class="cat-item__price-value">87
+											000</span> <span>₽</span></div>
+									<div class="cat-item__payment">30 150 Р/мес</div>
+								</div>
+								<a href="/" class="glitchy-btn">
+									<span class="link-inner">Подробнее</span>
+									<span class="btn-gray-element"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="cat-item__hover">
+						<div class="cat-item__item">
+							<div class="cat-item__label-cnt">
+								<div class="cat-item__label stock-label">В наличии</div>
+								<div class="cat-item__label promo-label">Акция
+									<div class="promo-label__desc">
+										В подарок клавиатура проводная Defender Spark GK-300L [45300]
+										[мембранная, клавиш - 104,
+										USB, черная]
+									</div>
+								</div>
+							</div>
+							<a class="cat-item__img-link" href="/">
+								<img class="cat-item__img" src="img/top_comp_1.png" alt="">
+							</a>
+							<p>cерия</p>
+							<a class="cat-item__title" href="/">Чудо женшина</a>
+							<div class="cat-item__char-cnt">
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Цветовая схема
+									</div>
+									<div class="cat-item__char-value">
+										<div class="item-color color-gray"></div>
+										<div class="item-color color-black"></div>
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Процессор от
+									</div>
+									<div class="cat-item__char-value">
+										32 ядер
+									</div>
+								</div>
+								<div class="cat-item__char">
+									<div class="cat-item__char-name">
+										Видеокарта от
+									</div>
+									<div class="cat-item__char-value">
+										GeForce RTX 3090
+									</div>
+								</div>
+							</div>
+							<div class="cat-item__buy-cnt">
+								<div class="cat-item__buy">
+									<div class="cat-item__price">от <span class="cat-item__price-value">87
+											000</span> <span>₽</span></div>
+									<div class="cat-item__payment">30 150 Р/мес</div>
+								</div>
+								<a href="/" class="glitchy-btn">
+									<span class="link-inner">Подробнее</span>
+									<span class="btn-gray-element"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="strip">
+			<div class="center-cnt">
+				<div class="strip-cnt">
+					<div class="strip-cnt__ref">
+						<a class="strip-cnt__phone" href="tel:88000000000">8-800-123-45-67</a>
+						<a class="strip-cnt__mail" href="mailto:comp@comp.ru">comp@comp.ru</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="animated-line"></div>
+	</main>
+
+	<footer>
+		<div class="center-cnt">
+			<div class="footer-cnt">
+				<div class="footer-cnt__logo">
+					<a href=""><img src="img/logo_l.png" alt=""></a>
+					<div>
+						Тут есть твой компьютер
+					</div>
+				</div>
+				<div class="footer-cnt__clm-cnt">
+					<div class="footer-cnt__clm">
+						<div class="footer-cnt__clm-title">Каталог</div>
+						<a href="/">
+							Игровые ПК
+						</a>
+						<a href="/">
+							Офисные ПК
+						</a>
+						<a href="/">
+							Для работы ПК
+						</a>
+					</div>
+					<div class="footer-cnt__clm">
+						<div class="footer-cnt__clm-title">Наши сервисы</div>
+						<a href="/">
+							Конфигуратор
+						</a>
+						<a href="/">
+							ПК в наличии
+						</a>
+						<a href="/">
+							Расчет кредита
+						</a>
+					</div>
+					<div class="footer-cnt__clm">
+						<div class="footer-cnt__clm-title">Контакты</div>
+						<a href="mailto:comp@mail.ru">
+							comp@mail.ru
+						</a>
+						<a href="/contacts.html">
+							Екатеринбург,<br>ул. Ленина, 245,<br> оф. 25
+						</a>
+						<div class="messenger">
+							<a class="messenger__wa" href="/"></a>
+							<a class="messenger__tg" href="/"></a>
+						</div>
+					</div>
+					<div class="footer-cnt__clm">
+						<div class="phone-footer__cnt">
+							<a class="phone-footer" href="tel:+123456789">8-800-123-45-67</a>
+							<a href="call-back" class="phone-footer__call-back open-modal">
+								Заказать звонок
+							</a>
+						</div>
+						<div class="follow-us">
+							Мы в соц сетях
+							<div class="follow-us__icon-cnt">
+								<a href="" class="follow-us__icon inst-icon"></a>
+								<a href="" class="follow-us__icon yt-icon"></a>
+								<a href="" class="follow-us__icon vk-icon"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">&copy; 2022. Все права защищены</div>
+		</div>
+	</footer>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/jquery.keep-ratio.js"></script>
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/imask.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
