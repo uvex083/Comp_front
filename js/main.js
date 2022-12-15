@@ -142,7 +142,15 @@ $(document).ready(function () {
 	/* Выпадающий кастомный список начало */
 
 	$(".cs-input").click(function () {
+		$(this).children('.cs-icon').toggleClass('open');
 		$(this).next().toggleClass('open');
+	});
+
+
+	$(".stock-item__sort-cnt").click(function () {
+		$(this).toggleClass('open');
+		$(this).children('.stock-item__sort-list').toggleClass('open');
+		$(this).children('.stock-item__sort').toggleClass('open');
 	});
 
 

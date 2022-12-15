@@ -339,6 +339,11 @@ ul {
 			align-items: center;
 			background-color: #5E64A9;
 			padding: 0 10px;
+
+			&.open img {
+				transform: rotate(180deg);
+				transition: all ease-in-out 0.1s;
+			}
 		}
 	}
 
@@ -4069,9 +4074,12 @@ a.follow-us__icon {
 								gap: 10px;
 								margin-left: 20px;
 
-								.cs-icon img {
-									width: 14px;
-									height: 8px;
+								.cs-icon {
+
+									img {
+										width: 14px;
+										height: 8px;
+									}
 								}
 
 								.config-item__price {
@@ -8212,11 +8220,29 @@ a.blog-link {
 					transition: all ease-in-out 0.2s;
 				}
 
+				&.open:before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 0;
+					transform: translate(0, -50%);
+					background: url(../img/sort-icon__y.svg) no-repeat center;
+					background-size: contain;
+					width: 20px;
+					height: 16px;
+					transition: all ease-in-out 0.2s;
+				}
+
 				.stock-item__sort {
 					border-bottom: 2px dotted $color_config;
 					padding-bottom: 5px;
 					width: fit-content;
 					transition: all ease-in-out 0.2s;
+					&.open {
+						
+						border-bottom: 2px dotted $color_bg;
+						color: $color_orange;
+					}
 				}
 			}
 
@@ -8228,6 +8254,11 @@ a.blog-link {
 				left: 0px;
 				min-width: 300px;
 				z-index: 2;
+				display: none;
+				&.open {
+					display: flex;
+					flex-direction: column;
+				}
 
 				.stock-item__list-item {
 					padding: 15px 40px;
@@ -8237,10 +8268,12 @@ a.blog-link {
 						color: $color_orange;
 						background: #8c8c8c20;
 					}
+
 					&:first-child {
 						border-top-left-radius: 6px;
 						border-top-right-radius: 6px;
 					}
+
 					&:last-child {
 						border-bottom-left-radius: 6px;
 						border-bottom-right-radius: 6px;
