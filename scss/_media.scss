@@ -92,7 +92,12 @@
 	.vacancy__section .vacancy-cnt .vacancy-item {
 		padding: 40px;
 	}
-
+	.configurator-section .config-cnt .config-wrap .config-wrap__item .config-wrap__item-body {
+		padding: 30px 25px;
+	}
+	.stock-cnt .stock-item__cnt .cat-item__cnt {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
 }
 
 @media (max-width: 1280px) {
@@ -414,6 +419,39 @@
 		font-size: 15px;
 		margin-bottom: 30px;
 	}
+	.adress-map__cnt .adress-cnt {
+		width: 30%;
+	}
+	.adress-map__cnt .adress-cnt .adress-street,
+	.adress-map__cnt .adress-cnt .adress-phone,
+	.adress-map__cnt .adress-cnt .adress-time {
+		font-size: 18px;
+	}
+	.adress-map__cnt .adress-cnt .adress-office {
+		padding-bottom: 40px;
+	}
+	.adress-map__cnt .adress-cnt .adress-storage {
+		margin-top: 40px;
+	}
+	.adress-map__cnt .adress-cnt .adress-title {
+		margin-bottom: 20px;
+	}
+	.adress-map__cnt .adress-cnt .adress-street,
+	.adress-map__cnt .adress-cnt .adress-phone {
+		margin-bottom: 15px;
+	}
+	.modal {
+		max-width: 90vw;
+	}	
+}
+
+@media (min-width: 1023px) and (max-width: 1279px) {
+	.stock-item__cnt .cat-item__cnt.catalog-cnt .cat-item__char-cnt.catalog-cnt .cat-item__char {
+		flex-direction: column;
+	}
+	.stock-item__cnt .cat-item__cnt.catalog-cnt .cat-item__char-cnt.catalog-cnt .cat-item__char-name {
+		width: 100%;
+	}
 }
 
 @media (max-width: 1024px) {
@@ -705,6 +743,24 @@
 	.vacancy__section .vacancy-cnt {
 		grid-template-columns: repeat(1, minmax(0, 1fr));
 	}
+	.leasing-calc__section .leasing-calc__cnt {
+		padding: 60px 70px;
+	}
+	.adress-map__cnt .adress-cnt {
+		width: 100%;
+	}
+	.quality-section .quality-cnt {
+		padding: 40px;
+	}
+	.quality-section .quality-cnt .quality-row .quality-img {
+		flex: 0 1 35%;
+	}
+	.quality-section .quality-cnt .quality-row .quality-content__cnt {
+		flex: 0 1 60%;
+	}
+	.quality-section .quality-cnt .quality-row .quality-img {
+		height: 100%;
+	}
 }
 
 @media (max-width: 880px) {
@@ -754,7 +810,7 @@
 	}
 
 	ul li:not(:last-child) {
-		margin-bottom: 25px;
+		margin-bottom: 20px;
 	}
 
 	.guarantee-section {
@@ -826,9 +882,6 @@
 			margin-bottom: 15px;
 		}
 	}
-
-
-
 	.our-services__bg {
 		padding: 80px 0;
 	}
@@ -1084,6 +1137,12 @@
 	.job-adv__cnt {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
+
+	.leasing-form__section .leasing-form__subtitle {
+		margin-bottom: 50px;
+	}
+
+	
 }
 
 @media (max-width: 660px) {
@@ -1279,10 +1338,6 @@
 		}
 	}
 
-	.cat-hero-slider-tabs {
-		margin-bottom: 0;
-	}
-
 	.swiper-thumbs {
 		display: none;
 	}
@@ -1407,6 +1462,12 @@
 	}
 	.job-adv__cnt {
 		gap: 30px 40px;
+	}
+	.quality-section .quality-cnt .quality-row .quality-img {
+		flex: 1 0 100%;
+	}
+	.quality-section .quality-cnt .quality-row .quality-content__cnt {
+		flex: 1;
 	}
 }
 
@@ -1638,6 +1699,12 @@
 	}
 	.job-adv__cnt {
 		gap: 30px 10px;
+	}
+	.quality-section .quality-cnt {
+		padding: 20px;
+	}
+	.download-btn span:before {
+		left: 5%;
 	}
 }
 
