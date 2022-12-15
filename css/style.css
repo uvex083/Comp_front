@@ -3869,8 +3869,10 @@ a.follow-us__icon.vk-icon:hover {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-left: 40px;
   transform: translateX(-75px);
+  width: 100%;
+  position: relative;
+  z-index: 1;
 }
 .tab-view .config-item .config-item__bottom .cs-icon img {
   width: 14px;
@@ -8195,7 +8197,7 @@ span.swiper-pagination-progressbar-fill {
   align-items: center;
   text-transform: uppercase;
   color: #EEEEEE;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .modal-subtitle {
@@ -8629,7 +8631,7 @@ input.cf__code-signin[type=number] {
 .sendto-filter {
   display: flex;
   justify-content: space-between;
-  gap: 5%;
+  gap: 10px 5%;
   width: 100%;
   margin-bottom: 30px;
 }
@@ -9202,7 +9204,7 @@ h1.white-h1 {
     margin-bottom: 15px;
   }
   .modal {
-    max-width: 90vw;
+    max-width: 90vw !important;
   }
 }
 @media (min-width: 1023px) and (max-width: 1279px) {
@@ -9773,6 +9775,9 @@ h2.white-h2 {
   .leasing-form__section .leasing-form__subtitle {
     margin-bottom: 50px;
   }
+  .modal-title {
+    font-size: 24px;
+  }
 }
 @media (max-width: 660px) {
   .header-phone {
@@ -10213,6 +10218,9 @@ h2.white-h2 {
   }
   .download-btn span:before {
     left: 5%;
+  }
+  .sendto-filter {
+    flex-direction: column;
   }
 }
 @media (max-width: 410px) {

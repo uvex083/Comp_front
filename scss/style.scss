@@ -4177,8 +4177,11 @@ a.follow-us__icon {
 			display: flex;
 			align-items: center;
 			gap: 15px;
-			margin-left: 40px;
+			//margin-left: 40px;
 			transform: translateX(-75px);
+			width: 100%;
+			position: relative;
+			z-index: 1;
 
 			.cs-icon img {
 				width: 14px;
@@ -9186,7 +9189,7 @@ span.swiper-pagination-progressbar-fill {
 	align-items: center;
 	text-transform: uppercase;
 	color: $color_default;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 
 .modal-subtitle {
@@ -9650,7 +9653,7 @@ input.cf__code-signin[type=number] {
 .sendto-filter {
 	display: flex;
 	justify-content: space-between;
-	gap: 5%;
+	gap: 10px 5%;
 	width: 100%;
 	margin-bottom: 30px;
 

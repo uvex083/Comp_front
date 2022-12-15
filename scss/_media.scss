@@ -441,7 +441,7 @@
 		margin-bottom: 15px;
 	}
 	.modal {
-		max-width: 90vw;
+		max-width: 90vw !important;
 	}	
 }
 
@@ -1141,7 +1141,9 @@
 	.leasing-form__section .leasing-form__subtitle {
 		margin-bottom: 50px;
 	}
-
+	.modal-title {
+		font-size: 24px;
+	}
 	
 }
 
@@ -1705,6 +1707,9 @@
 	}
 	.download-btn span:before {
 		left: 5%;
+	}
+	.sendto-filter {
+		flex-direction: column;
 	}
 }
 
