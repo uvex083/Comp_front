@@ -337,12 +337,12 @@
 
 	.main-img-section .main-img-section__title-cnt .quest-sign.right {
 		right: 10%;
-		bottom: 20%;
+		bottom: 15%;
 	}
 
 	.main-img-section .main-img-section__title-cnt .quest-sign.left {
 		left: 10%;
-		bottom: 25%;
+		bottom: 20%;
 	}
 
 	.main-img-section .main-img-section__title-cnt .quest-sign.center {
@@ -439,9 +439,6 @@
 	.adress-map__cnt .adress-cnt .adress-street,
 	.adress-map__cnt .adress-cnt .adress-phone {
 		margin-bottom: 15px;
-	}
-	.modal {
-		max-width: 90vw !important;
 	}	
 }
 
@@ -716,6 +713,10 @@
 		gap: 60px 80px;
 	}
 
+	.lvl-finish__btn-cnt {
+		margin-bottom: 120px;
+	}
+
 	.leasing-main__section {
 		height: auto;
 	}
@@ -791,6 +792,10 @@
 
 	.our-services__bg {
 		padding: 80px 0;
+	}
+
+	.lvl-finish__btn-cnt {
+		margin-bottom: 80px;
 	}
 
 	.configurator-section {
@@ -1329,8 +1334,6 @@
 	.serias-main__color-link {
 		flex-direction: column;
 
-		.color-link__item {}
-
 		.color-link__item:not(:last-child) {
 			margin-right: 0;
 		}
@@ -1471,6 +1474,9 @@
 	.quality-section .quality-cnt .quality-row .quality-content__cnt {
 		flex: 1;
 	}
+	.modal {
+		max-width: 90vw !important;
+	}	
 }
 
 
@@ -1768,5 +1774,8 @@
 	}
 	.vacancy__section .vacancy-cnt .vacancy-item {
 		padding: 40px 20px;
+	}
+	.repeat-btn .repeat-icon {
+		left: 6%;
 	}
 }

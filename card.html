@@ -460,7 +460,8 @@
 													<div class="config-item__title">
 														<input type="radio" class="custom-radio" id="v1" name="color" value="">
 														<label for="v1">
-															<div>8Гб Kingston HyperX Fury 3000МГц<a href="details" class="info open-modal"></a>
+															<div>8Гб Kingston HyperX Fury 3000МГц<a href="details"
+																	class="info open-modal"></a>
 																<div class="stock-a"></div>
 															</div>
 														</label>
@@ -1218,28 +1219,33 @@
 		<div class="modal-close">
 		</div>
 		<div class="order__cnt">
-			<div class="order-title modal-title">Заказать конфигурацию</div>
-			<div class="order-config">"Терминатор Т-1000"</div>
-			<div class="order-subtitle modal-subtitle">Отправьте заявку и мы с вами свяжемся, чтобы обсудить детали</div>
-			<div class="order-cnt modal__input-cnt">
-				<input type="text" class="cf__order-name cf-modal" placeholder="Имя" name="cf__order-name" value=""
-					required>
-				<input type="text" id="phone-mask__callback" class="cf__order-tel cf-modal" placeholder="Телефон"
-					name="cf__order-tel" value="" required>
-				<input type="text" id="" class="order-email cf-modal" placeholder="E-mail" name="cf__order-email" value=""
-					required>
-				<textarea name="" id="" class="cf__order-text cf-modal" placeholder="Любая дополнительная информация"
-					cols="30" rows="4"></textarea>
-				<div class="call-back__personal modal-personal">
-					<input type="checkbox" class="custom-checkbox" id="cb" name="" value="yes">
-					<label class="custom-label" for="cb">Соглашаюсь на&nbsp;<a href="/copyright.html">обработку
-							персональньных данных</a></label>
+			<form action="" class="form">
+				<div class="order-title modal-title">Заказать конфигурацию</div>
+				<div class="order-config">"Терминатор Т-1000"</div>
+				<div class="order-subtitle modal-subtitle">Отправьте заявку и мы с вами свяжемся, чтобы обсудить детали
 				</div>
-			</div>
-			<a href="/" class="glitchy-btn modal-button">
-				<span class="link-inner">Отправить</span>
-				<span class="btn-gray-element"></span>
-			</a>
+				<div class="order-cnt modal__input-cnt">
+					<input type="text" class="cf__order-name cf-modal" placeholder="Имя" name="cf__order-name" value=""
+						required>
+					<input type="text" id="phone-mask__callback" class="cf__order-tel cf-modal" placeholder="Телефон"
+						name="cf__order-tel" value="" required>
+					<input type="text" id="" class="order-email cf-modal" placeholder="E-mail" name="cf__order-email"
+						value="" required>
+					<textarea name="" id="" class="cf__order-text cf-modal" placeholder="Любая дополнительная информация"
+						cols="30" rows="4"></textarea>
+					<div class="call-back__personal modal-personal">
+						<input type="checkbox" class="custom-checkbox" id="cb" name="" value="yes">
+						<label class="custom-label" for="cb">Соглашаюсь на&nbsp;<a href="/copyright.html">обработку
+								персональньных данных</a></label>
+					</div>
+				</div>
+				<button class="submit">
+					<a href="/" class="glitchy-btn modal-button">
+						<span class="link-inner">Отправить</span>
+						<span class="btn-gray-element"></span>
+					</a>
+				</button>
+			</form>
 		</div>
 	</div>
 
@@ -1321,39 +1327,43 @@
 		<div class="modal-close">
 		</div>
 		<div class="sendto-modal__cnt">
-			<div class="sendto-title modal-title">Отравь себе свою собранную конфигурацию</div>
-			<div class="sendto-subtitle modal-subtitle">Ты сможешь заказать её чуть позже</div>
-			<div class="sendto-filter">
-				<div class="sendto-filter__item">
-					<input type="checkbox" class="custom-checkbox" id="st-1" name="st-1" value="yes">
-					<label class="custom-label" for="st-1">Почта</label>
+			<form action="" class="form">
+				<div class="sendto-title modal-title">Отравь себе свою собранную конфигурацию</div>
+				<div class="sendto-subtitle modal-subtitle">Ты сможешь заказать её чуть позже</div>
+				<div class="sendto-filter">
+					<div class="sendto-filter__item">
+						<input type="checkbox" class="custom-checkbox" id="st-1" name="st-1" value="yes">
+						<label class="custom-label" for="st-1">Почта</label>
+					</div>
+					<div class="sendto-filter__item">
+						<input type="checkbox" class="custom-checkbox" id="st-2" name="st-2" value="yes">
+						<label class="custom-label" for="st-2">Whatsapp</label>
+					</div>
+					<div class="sendto-filter__item">
+						<input type="checkbox" class="custom-checkbox" id="st-3" name="st-3" value="yes">
+						<label class="custom-label" for="st-3">Telegram</label>
+					</div>
 				</div>
-				<div class="sendto-filter__item">
-					<input type="checkbox" class="custom-checkbox" id="st-2" name="st-2" value="yes">
-					<label class="custom-label" for="st-2">Whatsapp</label>
+				<div class="sendto-cnt modal__input-cnt">
+					<input type="text" class="cf__sendto-name cf-modal" placeholder="Имя" name="cf__sendto-name" value=""
+						required>
+					<input type="text" id="phone-mask__callback" class="cf__sendto-tel cf-modal" placeholder="Телефон"
+						name="cf__sendto-tel" value="" required>
+					<input type="text" id="" class="sendto-email cf-modal" placeholder="E-mail" name="cf__sendto-email"
+						value="" required>
+					<div class="call-back__personal modal-personal">
+						<input type="checkbox" class="custom-checkbox" id="st-cb" name="" value="yes">
+						<label class="custom-label" for="st-cb">Соглашаюсь на&nbsp;<a href="/copyright.html">обработку
+								персональньных данных</a></label>
+					</div>
 				</div>
-				<div class="sendto-filter__item">
-					<input type="checkbox" class="custom-checkbox" id="st-3" name="st-3" value="yes">
-					<label class="custom-label" for="st-3">Telegram</label>
-				</div>
-			</div>
-			<div class="sendto-cnt modal__input-cnt">
-				<input type="text" class="cf__sendto-name cf-modal" placeholder="Имя" name="cf__sendto-name" value=""
-					required>
-				<input type="text" id="phone-mask__callback" class="cf__sendto-tel cf-modal" placeholder="Телефон"
-					name="cf__sendto-tel" value="" required>
-				<input type="text" id="" class="sendto-email cf-modal" placeholder="E-mail" name="cf__sendto-email" value=""
-					required>
-				<div class="call-back__personal modal-personal">
-					<input type="checkbox" class="custom-checkbox" id="st-cb" name="" value="yes">
-					<label class="custom-label" for="st-cb">Соглашаюсь на&nbsp;<a href="/copyright.html">обработку
-							персональньных данных</a></label>
-				</div>
-			</div>
-			<a href="/" class="glitchy-btn modal-button">
-				<span class="link-inner">Отправить</span>
-				<span class="btn-gray-element"></span>
-			</a>
+				<button class="submit">
+					<a href="/" class="glitchy-btn modal-button">
+						<span class="link-inner">Отправить</span>
+						<span class="btn-gray-element"></span>
+					</a>
+				</button>
+			</form>
 		</div>
 	</div>
 
@@ -1412,7 +1422,10 @@
 				<h2>NVIDIA GeForce RTX 3060 Ti
 				</h2>
 				<div class="details-modal__desc">
-					<p>GeForce RTX™ 3060 обеспечивает оптимальную производительность в топовых играх благодаря возможностям Ampere — архитектуры NVIDIA RTX второго поколения. Оптимальная производительность и качество графики благодаря улучшенным ядрам RT и тензорным ядрам, новым потоковым мультипроцессорам и высокоскоростной памяти G6.</p>
+					<p>GeForce RTX™ 3060 обеспечивает оптимальную производительность в топовых играх благодаря возможностям
+						Ampere — архитектуры NVIDIA RTX второго поколения. Оптимальная производительность и качество графики
+						благодаря улучшенным ядрам RT и тензорным ядрам, новым потоковым мультипроцессорам и высокоскоростной
+						памяти G6.</p>
 					<p>Производим установку видеокарт брендов: ASUS, MSI, GIGABYTE, Palit.</p>
 				</div>
 			</div>

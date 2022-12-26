@@ -4284,21 +4284,6 @@ a.follow-us__icon.vk-icon:hover {
   justify-content: center;
   flex-wrap: wrap;
 }
-.lvl-finish__btn-cnt .repeat-btn .tpl-btn__first {
-  display: flex;
-  gap: 10px;
-}
-.lvl-finish__btn-cnt .repeat-btn .repeat-icon {
-  width: 24px;
-  height: 24px;
-  background: url(../img/repeat-icon.svg) no-repeat center;
-  background-size: contain;
-  transition: all ease-in-out 0.2s;
-}
-.lvl-finish__btn-cnt .repeat-btn:hover .repeat-icon {
-  background: url(../img/repeat-icon__w.svg) no-repeat center;
-  background-size: contain;
-}
 
 .compare-section .cat-item__sub-title {
   margin-bottom: 40px;
@@ -4432,6 +4417,22 @@ a.follow-us__icon.vk-icon:hover {
   line-height: 140%;
   color: #B6B6B6;
   border-left: 2px dashed #545454;
+}
+
+.repeat-btn .repeat-icon {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: 24px;
+  height: 24px;
+  background: url(../img/repeat-icon.svg) no-repeat center;
+  background-size: contain;
+  transition: all ease-in-out 0.2s;
+  transform: translateY(-60%);
+}
+.repeat-btn:hover .repeat-icon {
+  background: url(../img/repeat-icon__w.svg) no-repeat center;
+  background-size: contain;
 }
 
 .compare-swiper.swiper {
@@ -8225,6 +8226,10 @@ span.swiper-pagination-progressbar-fill {
   border: 2px solid #5E64A9;
 }
 
+button.submit {
+  display: contents;
+}
+
 input.cf__code-signin::-webkit-outer-spin-button,
 input.cf__code-signin::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -9105,11 +9110,11 @@ h1.white-h1 {
   }
   .main-img-section .main-img-section__title-cnt .quest-sign.right {
     right: 10%;
-    bottom: 20%;
+    bottom: 15%;
   }
   .main-img-section .main-img-section__title-cnt .quest-sign.left {
     left: 10%;
-    bottom: 25%;
+    bottom: 20%;
   }
   .main-img-section .main-img-section__title-cnt .quest-sign.center {
     top: 10%;
@@ -9202,9 +9207,6 @@ h1.white-h1 {
   .adress-map__cnt .adress-cnt .adress-street,
 .adress-map__cnt .adress-cnt .adress-phone {
     margin-bottom: 15px;
-  }
-  .modal {
-    max-width: 90vw !important;
   }
 }
 @media (min-width: 1023px) and (max-width: 1279px) {
@@ -9431,6 +9433,9 @@ h1.white-h1 {
   .leasing-adv__cnt {
     gap: 60px 80px;
   }
+  .lvl-finish__btn-cnt {
+    margin-bottom: 120px;
+  }
   .leasing-main__section {
     height: auto;
   }
@@ -9499,6 +9504,9 @@ h1.white-h1 {
   }
   .our-services__bg {
     padding: 80px 0;
+  }
+  .lvl-finish__btn-cnt {
+    margin-bottom: 80px;
   }
   .configurator-section {
     margin-bottom: 80px;
@@ -10034,6 +10042,9 @@ h2.white-h2 {
   .quality-section .quality-cnt .quality-row .quality-content__cnt {
     flex: 1;
   }
+  .modal {
+    max-width: 90vw !important;
+  }
 }
 @media (max-width: 480px) {
   .glitchy-btn .link-inner:after {
@@ -10270,5 +10281,8 @@ h2.white-h2 {
   }
   .vacancy__section .vacancy-cnt .vacancy-item {
     padding: 40px 20px;
+  }
+  .repeat-btn .repeat-icon {
+    left: 6%;
   }
 }
