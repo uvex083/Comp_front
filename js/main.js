@@ -160,19 +160,20 @@ $(document).ready(function () {
 	/* Добавление товара в конфигураторе */
 
 	$(".config-item__title").click(function () {
+
 		$(".config-item__title label").css('color', '#B6B6B6');
 		$(".config-item__price").css('color', '#545454');
 		$(".config-item__qnt").css('visibility', 'hidden');
-		$(this).find("label").css('color', '#D0A220');
-		$(this).siblings(".config-item__bottom").find(".config-item__price").css('color', '#D0A220');
-		$(this).siblings(".config-item__bottom").find(".config-item__qnt").css('visibility', 'visible');
+
+		$(this).parent(".config-item__title-cnt").siblings(".config-item__bottom").find(".config-item__qnt").css('visibility', 'visible');
+		$(this).parent(".config-item__title-cnt").siblings(".config-item__bottom").find(".config-item__price").css('color', '#D0A220');
+		$(this).parent(".config-item__title-cnt").find(".config-item__title label").css('color', '#D0A220');
 
 		if ($(this).parents(".config-item__cnt").hasClass("tab-view")) {
 			$(".config-item__bottom").css('transform', 'translate(-75px)');
-			$(this).next().css('transform', 'translate(0)');
+			$(this).parent(".config-item__title-cnt").next().css('transform', 'translate(0)');
 		};
 	});
-
 
 
 
@@ -231,7 +232,6 @@ $(document).ready(function () {
 		}
 
 	});
-
 
 
 
@@ -360,23 +360,21 @@ $(document).ready(function () {
 	/* Кредит end */
 
 	/*Фиксируем слайдер сверху в сравнеии*/
-$(function () {
-	if($('.header-compare').length > 0){
-		 $head_height = 850;
-		 $nav = $('.header-compare');
-		 $window = $(window);
-		 $h = $nav.offset().top;
-		 $window.scroll(function () {
-			  if ($window.scrollTop() > $h + $head_height) {
+	$(function () {
+		if ($('.header-compare').length > 0) {
+			$head_height = 850;
+			$nav = $('.header-compare');
+			$window = $(window);
+			$h = $nav.offset().top;
+			$window.scroll(function () {
+				if ($window.scrollTop() > $h + $head_height) {
 					$nav.slideDown(0).addClass('show');
-			  } else {
+				} else {
 					$nav.slideUp(0).removeClass('show');
-			  }
-		 });
-	}
-});
-
-
+				}
+			});
+		}
+	});
 
 });
 
@@ -861,12 +859,12 @@ var swiperCharCompare = new Swiper(".compare-swiper.char-swiper.swiper", {
 });
 
 var dt = new DataTransfer();
- 
-$('.input-file input[type=file]').on('change', function(){
+
+$('.input-file input[type=file]').on('change', function () {
 	let $files_list = $(this).closest('.input-file').next();
 	$files_list.empty();
- 
-	for(var i = 0; i < this.files.length; i++){
+
+	for (var i = 0; i < this.files.length; i++) {
 		let new_file_input = '<div class="input-file-list-item">' +
 			'<span class="input-file-list-name">' + this.files.item(i).name + '</span>' +
 			'<a href="#" onclick="removeFilesItem(this); return false;" class="input-file-list-remove">x</a>' +
@@ -876,17 +874,17 @@ $('.input-file input[type=file]').on('change', function(){
 	};
 	this.files = dt.files;
 });
- 
-function removeFilesItem(target){
+
+function removeFilesItem(target) {
 	let name = $(target).prev().text();
-	let input = $(target).closest('.input-file-row').find('input[type=file]');	
-	$(target).closest('.input-file-list-item').remove();	
-	for(let i = 0; i < dt.items.length; i++){
-		if(name === dt.items[i].getAsFile().name){
+	let input = $(target).closest('.input-file-row').find('input[type=file]');
+	$(target).closest('.input-file-list-item').remove();
+	for (let i = 0; i < dt.items.length; i++) {
+		if (name === dt.items[i].getAsFile().name) {
 			dt.items.remove(i);
 		}
 	}
-	input[0].files = dt.files;  
+	input[0].files = dt.files;
 }
 
 

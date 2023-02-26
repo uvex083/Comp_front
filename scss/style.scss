@@ -208,7 +208,7 @@ ul {
 	display: inline-block;
 	width: 29px;
 	height: 29px;
-	border: 2px solid $color_orange;
+	border: 2px solid $color_p;
 	border-radius: 50%;
 	margin-right: 25px;
 	flex-shrink: 0;
@@ -236,7 +236,7 @@ ul {
 	height: 18px;
 	background-size: contain;
 	cursor: pointer;
-	transition: all ease-in-out 0.2s;
+	transition: background ease-in-out 0.2s;
 
 	&:hover {
 		content: '';
@@ -268,7 +268,7 @@ ul {
 	flex-grow: 0;
 	border: 2px solid $color_p;
 	border-radius: 6px;
-	margin-right: 18px;
+	margin-right: 25px;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 50% 50%;
@@ -3661,6 +3661,13 @@ a.follow-us__icon {
 				border: 2px solid $color_config;
 				border-radius: 6px;
 				gap: 24px;
+				transition: all ease-in-out 0.2s;
+				&:hover {
+					border: 2px solid $color_orange;
+				}
+				&.open:hover {
+					border: 2px solid $color_config;
+				}
 
 				&.open .config-wrap__item-title {
 					color: $color_orange;
@@ -3712,7 +3719,7 @@ a.follow-us__icon {
 					line-height: 120%;
 					text-transform: uppercase;
 					color: $color_config;
-					padding: 24px 0 24px 48px;
+					padding: 24px 0 24px 30px;
 					position: relative;
 					transition: all ease-in-out 0.2s;
 					cursor: pointer;
@@ -3732,7 +3739,7 @@ a.follow-us__icon {
 
 				.config-wrap__item-body {
 					display: none;
-					padding: 50px 48px;
+					padding: 30px 30px;
 
 					&:not(:last-child) {
 						border-bottom: 1px solid $color_config;
@@ -3861,6 +3868,7 @@ a.follow-us__icon {
 							.info {
 								top: -6px;
 								right: -23px;
+								display: none;
 							}
 						}
 					}
@@ -3943,6 +3951,7 @@ a.follow-us__icon {
 							cursor: pointer;
 							transition: all ease-in-out 0.2s;
 							position: relative;
+							display: none;
 
 							&:hover {
 								width: 25px;
@@ -3998,6 +4007,11 @@ a.follow-us__icon {
 						align-items: flex-end;
 						position: relative;
 
+						.config-item__title-cnt {
+							display: flex;
+							flex: 1;
+						}
+
 						.config-item__qnt {
 							visibility: hidden;
 						}
@@ -4021,27 +4035,22 @@ a.follow-us__icon {
 						.config-item {
 							display: flex;
 							align-items: center;
-							width: 75%;
-
-							span.info {
-								margin-top: 2px;
-								width: 30px;
-								background-position: right;
-							}
+							width: 100%;
 
 							a.info {
-								margin-top: 2px;
+								position: inherit;
+								margin-top: -10px;
 								width: 30px;
 								background-position: right;
 							}
 
 							.config-item__img {
-								margin: 0;
-								display: none;
+								margin: 0 20px 0 0;
+								width: 100px;
 
 								img {
 									width: 100%;
-									height: 110px;
+									height: 80px;
 									object-fit: contain;
 								}
 							}
@@ -4049,7 +4058,6 @@ a.follow-us__icon {
 							.config-item__title {
 								position: relative;
 								margin-bottom: 0;
-								flex: 1;
 								z-index: 0;
 
 								label {
@@ -4107,6 +4115,11 @@ a.follow-us__icon {
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: 50px;
 
+	.config-item__title-cnt {
+		display: flex;
+		flex: 1;
+	}
+
 	label div {
 		padding-top: 5px;
 	}
@@ -4121,16 +4134,8 @@ a.follow-us__icon {
 		display: flex;
 		flex-direction: column;
 
-		span.info {
-			margin-top: 2px;
-			width: 30px;
-			background-position: right;
-		}
-
 		a.info {
-			margin-top: 2px;
-			width: 30px;
-			background-position: right;
+			right: -10px;
 		}
 
 		.config-item__img {
@@ -4146,7 +4151,6 @@ a.follow-us__icon {
 		.config-item__title {
 			position: relative;
 			margin-bottom: 14px;
-			flex: 1;
 
 			label {
 				font-weight: 400;
@@ -4818,22 +4822,22 @@ a.follow-us__icon {
 
 
 .repeat-btn {
-.repeat-icon {
-	position: absolute;
-	top: 50%;
-	left: 10%;
-	width: 24px;
-	height: 24px;
-	background: url(../img/repeat-icon.svg) no-repeat center;
-	background-size: contain;
-	transition: all ease-in-out 0.2s;
-	transform: translateY(-60%);
-}
+	.repeat-icon {
+		position: absolute;
+		top: 50%;
+		left: 10%;
+		width: 24px;
+		height: 24px;
+		background: url(../img/repeat-icon.svg) no-repeat center;
+		background-size: contain;
+		transition: all ease-in-out 0.2s;
+		transform: translateY(-60%);
+	}
 
-&:hover .repeat-icon {
-	background: url(../img/repeat-icon__w.svg) no-repeat center;
-	background-size: contain;
-}
+	&:hover .repeat-icon {
+		background: url(../img/repeat-icon__w.svg) no-repeat center;
+		background-size: contain;
+	}
 }
 
 .compare-swiper.swiper {
@@ -6908,7 +6912,7 @@ a.tpl-link {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		gap: 40px;		
+		gap: 40px;
 
 		.job-adv__item-title {
 			font-style: normal;
@@ -9111,7 +9115,8 @@ span.swiper-pagination-progressbar-fill {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-
+		padding: 50px 50px 100px 50px;
+		height: auto;
 	}
 }
 
@@ -9167,9 +9172,13 @@ span.swiper-pagination-progressbar-fill {
 }
 
 
-.modal.call-back__modal {
-	padding: 50px 50px 100px 50px;
-	height: auto;
+.modal.new-review__modal {
+	max-width: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px 50px 100px 50px;
+    height: auto;
 }
 
 .modal-title {
@@ -9181,6 +9190,10 @@ span.swiper-pagination-progressbar-fill {
 	text-transform: uppercase;
 	color: $color_default;
 	margin-bottom: 10px;
+}
+
+.new-review-title.modal-title {
+	margin-bottom: 50px;
 }
 
 .modal-subtitle {

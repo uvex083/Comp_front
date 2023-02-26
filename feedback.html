@@ -189,7 +189,7 @@
 			<div class="center-cnt">
 				<h1 class="white-h1">Отзывы</h1>
 				<div class="ms-btn-container" style="left: 0px; visibility: inherit; opacity: 1;">
-					<a href="/" class="glitchy-btn feedback-btn">
+					<a href="new-review" class="glitchy-btn feedback-btn open-modal">
 						<span class="link-inner">Оставить отзыв</span>
 						<span class="btn-gray-element"></span>
 					</a>
@@ -455,6 +455,39 @@
 				<div class="swiper-button-next slider-arrow-right modal-arrow-right"></div>
 			<div class="swiper-button-prev slider-arrow-left modal-arrow-left"></div>
 			</div>
+		</div>
+	</div>
+
+	<div class="modal new-review__modal" id="new-review">
+		<div class="modal-close">
+		</div>
+		<div class="call-back__cnt">
+			<form action="" class="form">
+				<div class="new-review-title modal-title">Оставьте свой отзыв</div>
+				<div class="new-review__input-cnt modal__input-cnt">
+					<input type="text" class="cf__new-review-name cf-modal" placeholder="Имя" name="cf__callback-name" value=""
+						required>
+					<textarea name="" id="" class="cf__new-review-text cf-modal" cols="30" rows="8"></textarea>
+					<div class="input-file-row">
+						<label class="input-file">
+							<input type="file" name="file[]" multiple>
+							<span>Прикрепить фото</span>
+						</label>
+						<div class="input-file-list"></div>
+					</div>
+					<div class="new-review__personal modal-personal">
+						<input type="checkbox" class="custom-checkbox" id="cb" name="" value="yes">
+						<label class="custom-label" for="cb">Соглашаюсь на&nbsp;<a href="/copyright.html">обработку
+								персональньных данных</a></label>
+					</div>
+				</div>
+				<button class="submit">
+					<a href="/" class="glitchy-btn modal-button">
+						<span class="link-inner">Отправить</span>
+						<span class="btn-gray-element"></span>
+					</a>
+				</button>
+			</form>
 		</div>
 	</div>
 

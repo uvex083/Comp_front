@@ -1,0 +1,3138 @@
+<!-- Emails use the XHTML Strict doctype --> <!-- The character set should be utf-8 --> <!-- Enables media queries -->
+<!-- Link to the email's CSS, which will be inlined into the email -->
+<style>
+	a {
+		color: #3198a7;
+		color: #3198a7 !important;
+	}
+
+	@media only screen and (max-width:825px) {
+		.small-float-center {
+			margin: 0 auto !important;
+			float: none !important;
+		}
+
+		.small-float-center,
+		.small-text-center {
+			text-align: center !important;
+		}
+
+		.small-text-left {
+			text-align: left !important;
+		}
+
+		.small-text-right {
+			text-align: right !important;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+		table.body table.container .hide-for-large {
+			display: block !important;
+			width: auto !important;
+			overflow: visible !important;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+		table.body table.container .row.hide-for-large {
+			display: table !important;
+			width: 100% !important;
+		}
+
+		table.body table.container .show-for-large {
+			display: none !important;
+			width: 0;
+			mso-hide: all;
+			overflow: hidden;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+		table.body img {
+			height: auto !important;
+		}
+
+		table.body center {
+			min-width: 0 !important;
+		}
+
+		table.body .container {
+			width: 95% !important;
+		}
+
+		table.body .column,
+		table.body .columns {
+			height: auto !important;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			padding-left: 15px !important;
+			padding-right: 15px !important;
+		}
+
+		table.body .collapse .column,
+		table.body .collapse .columns,
+		table.body .column .column,
+		table.body .column .columns,
+		table.body .columns .column,
+		table.body .columns .columns {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+
+		.body .column td.small-1,
+		.body .column th.small-1,
+		.body .columns td.small-1,
+		.body .columns th.small-1,
+		td.small-1,
+		td.small-1 center,
+		th.small-1,
+		th.small-1 center {
+			display: inline-block !important;
+			width: 8.33333% !important;
+		}
+
+		.body .column td.small-2,
+		.body .column th.small-2,
+		.body .columns td.small-2,
+		.body .columns th.small-2,
+		td.small-2,
+		td.small-2 center,
+		th.small-2,
+		th.small-2 center {
+			display: inline-block !important;
+			width: 16.66667% !important;
+		}
+
+		.body .column td.small-3,
+		.body .column th.small-3,
+		.body .columns td.small-3,
+		.body .columns th.small-3,
+		td.small-3,
+		td.small-3 center,
+		th.small-3,
+		th.small-3 center {
+			display: inline-block !important;
+			width: 25% !important;
+		}
+
+		.body .column td.small-4,
+		.body .column th.small-4,
+		.body .columns td.small-4,
+		.body .columns th.small-4,
+		td.small-4,
+		td.small-4 center,
+		th.small-4,
+		th.small-4 center {
+			display: inline-block !important;
+			width: 33.33333% !important;
+		}
+
+		.body .column td.small-5,
+		.body .column th.small-5,
+		.body .columns td.small-5,
+		.body .columns th.small-5,
+		td.small-5,
+		td.small-5 center,
+		th.small-5,
+		th.small-5 center {
+			display: inline-block !important;
+			width: 41.66667% !important;
+		}
+
+		.body .column td.small-6,
+		.body .column th.small-6,
+		.body .columns td.small-6,
+		.body .columns th.small-6,
+		td.small-6,
+		td.small-6 center,
+		th.small-6,
+		th.small-6 center {
+			display: inline-block !important;
+			width: 50% !important;
+		}
+
+		.body .column td.small-7,
+		.body .column th.small-7,
+		.body .columns td.small-7,
+		.body .columns th.small-7,
+		td.small-7,
+		td.small-7 center,
+		th.small-7,
+		th.small-7 center {
+			display: inline-block !important;
+			width: 58.33333% !important;
+		}
+
+		.body .column td.small-8,
+		.body .column th.small-8,
+		.body .columns td.small-8,
+		.body .columns th.small-8,
+		td.small-8,
+		td.small-8 center,
+		th.small-8,
+		th.small-8 center {
+			display: inline-block !important;
+			width: 66.66667% !important;
+		}
+
+		.body .column td.small-9,
+		.body .column th.small-9,
+		.body .columns td.small-9,
+		.body .columns th.small-9,
+		td.small-9,
+		td.small-9 center,
+		th.small-9,
+		th.small-9 center {
+			display: inline-block !important;
+			width: 75% !important;
+		}
+
+		.body .column td.small-10,
+		.body .column th.small-10,
+		.body .columns td.small-10,
+		.body .columns th.small-10,
+		td.small-10,
+		td.small-10 center,
+		th.small-10,
+		th.small-10 center {
+			display: inline-block !important;
+			width: 83.33333% !important;
+		}
+
+		.body .column td.small-11,
+		.body .column th.small-11,
+		.body .columns td.small-11,
+		.body .columns th.small-11,
+		td.small-11,
+		td.small-11 center,
+		th.small-11,
+		th.small-11 center {
+			display: inline-block !important;
+			width: 91.66667% !important;
+		}
+
+		table.menu td,
+		table.menu th,
+		td.small-12,
+		th.small-12 {
+			display: inline-block !important;
+			width: 100% !important;
+		}
+
+		.column td.small-12,
+		.column th.small-12,
+		.columns td.small-12,
+		.columns th.small-12 {
+			display: block !important;
+			width: 100% !important;
+		}
+
+		table.body td.small-offset-1,
+		table.body th.small-offset-1 {
+			margin-left: 8.33333% !important;
+			Margin-left: 8.33333% !important;
+		}
+
+		table.body td.small-offset-2,
+		table.body th.small-offset-2 {
+			margin-left: 16.66667% !important;
+			Margin-left: 16.66667% !important;
+		}
+
+		table.body td.small-offset-3,
+		table.body th.small-offset-3 {
+			margin-left: 25% !important;
+			Margin-left: 25% !important;
+		}
+
+		table.body td.small-offset-4,
+		table.body th.small-offset-4 {
+			margin-left: 33.33333% !important;
+			Margin-left: 33.33333% !important;
+		}
+
+		table.body td.small-offset-5,
+		table.body th.small-offset-5 {
+			margin-left: 41.66667% !important;
+			Margin-left: 41.66667% !important;
+		}
+
+		table.body td.small-offset-6,
+		table.body th.small-offset-6 {
+			margin-left: 50% !important;
+			Margin-left: 50% !important;
+		}
+
+		table.body td.small-offset-7,
+		table.body th.small-offset-7 {
+			margin-left: 58.33333% !important;
+			Margin-left: 58.33333% !important;
+		}
+
+		table.body td.small-offset-8,
+		table.body th.small-offset-8 {
+			margin-left: 66.66667% !important;
+			Margin-left: 66.66667% !important;
+		}
+
+		table.body td.small-offset-9,
+		table.body th.small-offset-9 {
+			margin-left: 75% !important;
+			Margin-left: 75% !important;
+		}
+
+		table.body td.small-offset-10,
+		table.body th.small-offset-10 {
+			margin-left: 83.33333% !important;
+			Margin-left: 83.33333% !important;
+		}
+
+		table.body td.small-offset-11,
+		table.body th.small-offset-11 {
+			margin-left: 91.66667% !important;
+			Margin-left: 91.66667% !important;
+		}
+
+		table.body table.columns td.expander,
+		table.body table.columns th.expander {
+			display: none !important;
+		}
+
+		table.body .right-text-pad,
+		table.body .text-pad-right {
+			padding-left: 10px !important;
+		}
+
+		table.body .left-text-pad,
+		table.body .text-pad-left {
+			padding-right: 10px !important;
+		}
+
+		table.menu td,
+		table.menu th {
+			width: auto !important;
+		}
+
+		table.menu.small-vertical td,
+		table.menu.small-vertical th,
+		table.menu.vertical td,
+		table.menu.vertical th {
+			display: block !important;
+		}
+
+		table.body img,
+		table.menu[align=center] {
+			width: auto !important;
+		}
+
+		table.button.expand,
+		table.menu {
+			width: 100% !important;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+
+		.arr,
+		.str1-img,
+		.str2-img {
+			display: none !important;
+		}
+
+		.footer-text,
+		.manager {
+			text-align: center !important;
+		}
+
+		.f-tel,
+		.manager {
+			margin: 0 !important;
+		}
+
+		.y-btn {
+			margin-bottom: 10px !important;
+		}
+
+		.big-white {
+			line-height: 1.2 !important;
+		}
+
+		.blue-str {
+			padding: 24px 24px 24px 52px;
+		}
+
+		.hello-section .yellow {
+			margin-top: 10px;
+		}
+	}
+</style> <!--[if mso]>
+<style type=”text/css”>
+    td {
+        font-family: Arial, sans-serif !important;
+    }
+    .p-text {
+        color: #333 !important;
+    }
+    .red-border {
+        border: none !important;
+    }
+</style>
+<![endif]--> <!-- Emails use the XHTML Strict doctype --> <!-- The character set should be utf-8 -->
+<!-- Enables media queries --> <!-- Link to the email's CSS, which will be inlined into the email -->
+<style>
+	@media only screen and (max-width:825px) {
+		.small-float-center {
+			margin: 0 auto !important;
+			float: none !important;
+		}
+
+		.small-float-center,
+		.small-text-center {
+			text-align: center !important;
+		}
+
+		.small-text-left {
+			text-align: left !important;
+		}
+
+		.small-text-right {
+			text-align: right !important;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+		table.body table.container .hide-for-large {
+			display: block !important;
+			width: auto !important;
+			overflow: visible !important;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+		table.body table.container .row.hide-for-large {
+			display: table !important;
+			width: 100% !important;
+		}
+
+		table.body table.container .show-for-large {
+			display: none !important;
+			width: 0;
+			mso-hide: all;
+			overflow: hidden;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+		table.body img {
+			height: auto !important;
+		}
+
+		table.body center {
+			min-width: 0 !important;
+		}
+
+		table.body .container {
+			width: 95% !important;
+		}
+
+		table.body .column,
+		table.body .columns {
+			height: auto !important;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			padding-left: 15px !important;
+			padding-right: 15px !important;
+		}
+
+		table.body .collapse .column,
+		table.body .collapse .columns,
+		table.body .column .column,
+		table.body .column .columns,
+		table.body .columns .column,
+		table.body .columns .columns {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+
+		.body .column td.small-1,
+		.body .column th.small-1,
+		.body .columns td.small-1,
+		.body .columns th.small-1,
+		td.small-1,
+		td.small-1 center,
+		th.small-1,
+		th.small-1 center {
+			display: inline-block !important;
+			width: 8.33333% !important;
+		}
+
+		.body .column td.small-2,
+		.body .column th.small-2,
+		.body .columns td.small-2,
+		.body .columns th.small-2,
+		td.small-2,
+		td.small-2 center,
+		th.small-2,
+		th.small-2 center {
+			display: inline-block !important;
+			width: 16.66667% !important;
+		}
+
+		.body .column td.small-3,
+		.body .column th.small-3,
+		.body .columns td.small-3,
+		.body .columns th.small-3,
+		td.small-3,
+		td.small-3 center,
+		th.small-3,
+		th.small-3 center {
+			display: inline-block !important;
+			width: 25% !important;
+		}
+
+		.body .column td.small-4,
+		.body .column th.small-4,
+		.body .columns td.small-4,
+		.body .columns th.small-4,
+		td.small-4,
+		td.small-4 center,
+		th.small-4,
+		th.small-4 center {
+			display: inline-block !important;
+			width: 33.33333% !important;
+		}
+
+		.body .column td.small-5,
+		.body .column th.small-5,
+		.body .columns td.small-5,
+		.body .columns th.small-5,
+		td.small-5,
+		td.small-5 center,
+		th.small-5,
+		th.small-5 center {
+			display: inline-block !important;
+			width: 41.66667% !important;
+		}
+
+		.body .column td.small-6,
+		.body .column th.small-6,
+		.body .columns td.small-6,
+		.body .columns th.small-6,
+		td.small-6,
+		td.small-6 center,
+		th.small-6,
+		th.small-6 center {
+			display: inline-block !important;
+			width: 50% !important;
+		}
+
+		.body .column td.small-7,
+		.body .column th.small-7,
+		.body .columns td.small-7,
+		.body .columns th.small-7,
+		td.small-7,
+		td.small-7 center,
+		th.small-7,
+		th.small-7 center {
+			display: inline-block !important;
+			width: 58.33333% !important;
+		}
+
+		.body .column td.small-8,
+		.body .column th.small-8,
+		.body .columns td.small-8,
+		.body .columns th.small-8,
+		td.small-8,
+		td.small-8 center,
+		th.small-8,
+		th.small-8 center {
+			display: inline-block !important;
+			width: 66.66667% !important;
+		}
+
+		.body .column td.small-9,
+		.body .column th.small-9,
+		.body .columns td.small-9,
+		.body .columns th.small-9,
+		td.small-9,
+		td.small-9 center,
+		th.small-9,
+		th.small-9 center {
+			display: inline-block !important;
+			width: 75% !important;
+		}
+
+		.body .column td.small-10,
+		.body .column th.small-10,
+		.body .columns td.small-10,
+		.body .columns th.small-10,
+		td.small-10,
+		td.small-10 center,
+		th.small-10,
+		th.small-10 center {
+			display: inline-block !important;
+			width: 83.33333% !important;
+		}
+
+		.body .column td.small-11,
+		.body .column th.small-11,
+		.body .columns td.small-11,
+		.body .columns th.small-11,
+		td.small-11,
+		td.small-11 center,
+		th.small-11,
+		th.small-11 center {
+			display: inline-block !important;
+			width: 91.66667% !important;
+		}
+
+		table.menu td,
+		table.menu th,
+		td.small-12,
+		th.small-12 {
+			display: inline-block !important;
+			width: 100% !important;
+		}
+
+		.column td.small-12,
+		.column th.small-12,
+		.columns td.small-12,
+		.columns th.small-12 {
+			display: block !important;
+			width: 100% !important;
+		}
+
+		table.body td.small-offset-1,
+		table.body th.small-offset-1 {
+			margin-left: 8.33333% !important;
+			Margin-left: 8.33333% !important;
+		}
+
+		table.body td.small-offset-2,
+		table.body th.small-offset-2 {
+			margin-left: 16.66667% !important;
+			Margin-left: 16.66667% !important;
+		}
+
+		table.body td.small-offset-3,
+		table.body th.small-offset-3 {
+			margin-left: 25% !important;
+			Margin-left: 25% !important;
+		}
+
+		table.body td.small-offset-4,
+		table.body th.small-offset-4 {
+			margin-left: 33.33333% !important;
+			Margin-left: 33.33333% !important;
+		}
+
+		table.body td.small-offset-5,
+		table.body th.small-offset-5 {
+			margin-left: 41.66667% !important;
+			Margin-left: 41.66667% !important;
+		}
+
+		table.body td.small-offset-6,
+		table.body th.small-offset-6 {
+			margin-left: 50% !important;
+			Margin-left: 50% !important;
+		}
+
+		table.body td.small-offset-7,
+		table.body th.small-offset-7 {
+			margin-left: 58.33333% !important;
+			Margin-left: 58.33333% !important;
+		}
+
+		table.body td.small-offset-8,
+		table.body th.small-offset-8 {
+			margin-left: 66.66667% !important;
+			Margin-left: 66.66667% !important;
+		}
+
+		table.body td.small-offset-9,
+		table.body th.small-offset-9 {
+			margin-left: 75% !important;
+			Margin-left: 75% !important;
+		}
+
+		table.body td.small-offset-10,
+		table.body th.small-offset-10 {
+			margin-left: 83.33333% !important;
+			Margin-left: 83.33333% !important;
+		}
+
+		table.body td.small-offset-11,
+		table.body th.small-offset-11 {
+			margin-left: 91.66667% !important;
+			Margin-left: 91.66667% !important;
+		}
+
+		table.body table.columns td.expander,
+		table.body table.columns th.expander {
+			display: none !important;
+		}
+
+		table.body .right-text-pad,
+		table.body .text-pad-right {
+			padding-left: 10px !important;
+		}
+
+		table.body .left-text-pad,
+		table.body .text-pad-left {
+			padding-right: 10px !important;
+		}
+
+		table.menu td,
+		table.menu th {
+			width: auto !important;
+		}
+
+		table.menu.small-vertical td,
+		table.menu.small-vertical th,
+		table.menu.vertical td,
+		table.menu.vertical th {
+			display: block !important;
+		}
+
+		table.body img,
+		table.menu[align=center] {
+			width: auto !important;
+		}
+
+		table.button.expand,
+		table.menu {
+			width: 100% !important;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+
+		.arr,
+		.str1-img,
+		.str2-img {
+			display: none !important;
+		}
+
+		.footer-text,
+		.manager {
+			text-align: center !important;
+		}
+
+		.f-tel,
+		.manager {
+			margin: 0 !important;
+		}
+
+		.y-btn {
+			margin-bottom: 10px !important;
+		}
+
+		.big-white {
+			line-height: 1.2 !important;
+		}
+
+		.blue-str {
+			padding: 24px 24px 24px 52px;
+		}
+
+		.hello-section .yellow {
+			margin-top: 10px;
+		}
+	}
+</style> <!--[if mso]>
+<style type=”text/css”>
+    td {
+        font-family: Arial, sans-serif !important;
+    }
+    .p-text {
+        color: #333 !important;
+    }
+    .red-border {
+        border: none !important;
+    }
+</style>
+<![endif]--> <!-- Emails use the XHTML Strict doctype --> <!-- The character set should be utf-8 -->
+<!-- Enables media queries --> <!-- Link to the email's CSS, which will be inlined into the email -->
+<style>
+	@media only screen and (max-width:825px) {
+		.small-float-center {
+			margin: 0 auto !important;
+			float: none !important;
+		}
+
+		.small-float-center,
+		.small-text-center {
+			text-align: center !important;
+		}
+
+		.small-text-left {
+			text-align: left !important;
+		}
+
+		.small-text-right {
+			text-align: right !important;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+		table.body table.container .hide-for-large {
+			display: block !important;
+			width: auto !important;
+			overflow: visible !important;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+		table.body table.container .row.hide-for-large {
+			display: table !important;
+			width: 100% !important;
+		}
+
+		table.body table.container .show-for-large {
+			display: none !important;
+			width: 0;
+			mso-hide: all;
+			overflow: hidden;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+		table.body img {
+			height: auto !important;
+		}
+
+		table.body center {
+			min-width: 0 !important;
+		}
+
+		table.body .container {
+			width: 95% !important;
+		}
+
+		table.body .column,
+		table.body .columns {
+			height: auto !important;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			padding-left: 15px !important;
+			padding-right: 15px !important;
+		}
+
+		table.body .collapse .column,
+		table.body .collapse .columns,
+		table.body .column .column,
+		table.body .column .columns,
+		table.body .columns .column,
+		table.body .columns .columns {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+
+		.body .column td.small-1,
+		.body .column th.small-1,
+		.body .columns td.small-1,
+		.body .columns th.small-1,
+		td.small-1,
+		td.small-1 center,
+		th.small-1,
+		th.small-1 center {
+			display: inline-block !important;
+			width: 8.33333% !important;
+		}
+
+		.body .column td.small-2,
+		.body .column th.small-2,
+		.body .columns td.small-2,
+		.body .columns th.small-2,
+		td.small-2,
+		td.small-2 center,
+		th.small-2,
+		th.small-2 center {
+			display: inline-block !important;
+			width: 16.66667% !important;
+		}
+
+		.body .column td.small-3,
+		.body .column th.small-3,
+		.body .columns td.small-3,
+		.body .columns th.small-3,
+		td.small-3,
+		td.small-3 center,
+		th.small-3,
+		th.small-3 center {
+			display: inline-block !important;
+			width: 25% !important;
+		}
+
+		.body .column td.small-4,
+		.body .column th.small-4,
+		.body .columns td.small-4,
+		.body .columns th.small-4,
+		td.small-4,
+		td.small-4 center,
+		th.small-4,
+		th.small-4 center {
+			display: inline-block !important;
+			width: 33.33333% !important;
+		}
+
+		.body .column td.small-5,
+		.body .column th.small-5,
+		.body .columns td.small-5,
+		.body .columns th.small-5,
+		td.small-5,
+		td.small-5 center,
+		th.small-5,
+		th.small-5 center {
+			display: inline-block !important;
+			width: 41.66667% !important;
+		}
+
+		.body .column td.small-6,
+		.body .column th.small-6,
+		.body .columns td.small-6,
+		.body .columns th.small-6,
+		td.small-6,
+		td.small-6 center,
+		th.small-6,
+		th.small-6 center {
+			display: inline-block !important;
+			width: 50% !important;
+		}
+
+		.body .column td.small-7,
+		.body .column th.small-7,
+		.body .columns td.small-7,
+		.body .columns th.small-7,
+		td.small-7,
+		td.small-7 center,
+		th.small-7,
+		th.small-7 center {
+			display: inline-block !important;
+			width: 58.33333% !important;
+		}
+
+		.body .column td.small-8,
+		.body .column th.small-8,
+		.body .columns td.small-8,
+		.body .columns th.small-8,
+		td.small-8,
+		td.small-8 center,
+		th.small-8,
+		th.small-8 center {
+			display: inline-block !important;
+			width: 66.66667% !important;
+		}
+
+		.body .column td.small-9,
+		.body .column th.small-9,
+		.body .columns td.small-9,
+		.body .columns th.small-9,
+		td.small-9,
+		td.small-9 center,
+		th.small-9,
+		th.small-9 center {
+			display: inline-block !important;
+			width: 75% !important;
+		}
+
+		.body .column td.small-10,
+		.body .column th.small-10,
+		.body .columns td.small-10,
+		.body .columns th.small-10,
+		td.small-10,
+		td.small-10 center,
+		th.small-10,
+		th.small-10 center {
+			display: inline-block !important;
+			width: 83.33333% !important;
+		}
+
+		.body .column td.small-11,
+		.body .column th.small-11,
+		.body .columns td.small-11,
+		.body .columns th.small-11,
+		td.small-11,
+		td.small-11 center,
+		th.small-11,
+		th.small-11 center {
+			display: inline-block !important;
+			width: 91.66667% !important;
+		}
+
+		table.menu td,
+		table.menu th,
+		td.small-12,
+		th.small-12 {
+			display: inline-block !important;
+			width: 100% !important;
+		}
+
+		.column td.small-12,
+		.column th.small-12,
+		.columns td.small-12,
+		.columns th.small-12 {
+			display: block !important;
+			width: 100% !important;
+		}
+
+		table.body td.small-offset-1,
+		table.body th.small-offset-1 {
+			margin-left: 8.33333% !important;
+			Margin-left: 8.33333% !important;
+		}
+
+		table.body td.small-offset-2,
+		table.body th.small-offset-2 {
+			margin-left: 16.66667% !important;
+			Margin-left: 16.66667% !important;
+		}
+
+		table.body td.small-offset-3,
+		table.body th.small-offset-3 {
+			margin-left: 25% !important;
+			Margin-left: 25% !important;
+		}
+
+		table.body td.small-offset-4,
+		table.body th.small-offset-4 {
+			margin-left: 33.33333% !important;
+			Margin-left: 33.33333% !important;
+		}
+
+		table.body td.small-offset-5,
+		table.body th.small-offset-5 {
+			margin-left: 41.66667% !important;
+			Margin-left: 41.66667% !important;
+		}
+
+		table.body td.small-offset-6,
+		table.body th.small-offset-6 {
+			margin-left: 50% !important;
+			Margin-left: 50% !important;
+		}
+
+		table.body td.small-offset-7,
+		table.body th.small-offset-7 {
+			margin-left: 58.33333% !important;
+			Margin-left: 58.33333% !important;
+		}
+
+		table.body td.small-offset-8,
+		table.body th.small-offset-8 {
+			margin-left: 66.66667% !important;
+			Margin-left: 66.66667% !important;
+		}
+
+		table.body td.small-offset-9,
+		table.body th.small-offset-9 {
+			margin-left: 75% !important;
+			Margin-left: 75% !important;
+		}
+
+		table.body td.small-offset-10,
+		table.body th.small-offset-10 {
+			margin-left: 83.33333% !important;
+			Margin-left: 83.33333% !important;
+		}
+
+		table.body td.small-offset-11,
+		table.body th.small-offset-11 {
+			margin-left: 91.66667% !important;
+			Margin-left: 91.66667% !important;
+		}
+
+		table.body table.columns td.expander,
+		table.body table.columns th.expander {
+			display: none !important;
+		}
+
+		table.body .right-text-pad,
+		table.body .text-pad-right {
+			padding-left: 10px !important;
+		}
+
+		table.body .left-text-pad,
+		table.body .text-pad-left {
+			padding-right: 10px !important;
+		}
+
+		table.menu td,
+		table.menu th {
+			width: auto !important;
+		}
+
+		table.menu.small-vertical td,
+		table.menu.small-vertical th,
+		table.menu.vertical td,
+		table.menu.vertical th {
+			display: block !important;
+		}
+
+		table.body img,
+		table.menu[align=center] {
+			width: auto !important;
+		}
+
+		table.button.expand,
+		table.menu {
+			width: 100% !important;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+
+		.arr,
+		.str1-img,
+		.str2-img {
+			display: none !important;
+		}
+
+		.footer-text,
+		.manager {
+			text-align: center !important;
+		}
+
+		.f-tel,
+		.manager {
+			margin: 0 !important;
+		}
+
+		.y-btn {
+			margin-bottom: 10px !important;
+		}
+
+		.big-white {
+			line-height: 1.2 !important;
+		}
+
+		.blue-str {
+			padding: 24px 24px 24px 52px;
+		}
+
+		.hello-section .yellow {
+			margin-top: 10px;
+		}
+	}
+</style> <!--[if mso]>
+<style type=”text/css”>
+    td {
+        font-family: Arial, sans-serif !important;
+    }
+    .p-text {
+        color: #333 !important;
+    }
+    .red-border {
+        border: none !important;
+    }
+</style>
+<![endif]--> <!-- Emails use the XHTML Strict doctype --> <!-- The character set should be utf-8 -->
+<!-- Enables media queries --> <!-- Link to the email's CSS, which will be inlined into the email -->
+<style>
+	@media only screen and (max-width:825px) {
+		.small-float-center {
+			margin: 0 auto !important;
+			float: none !important;
+		}
+
+		.small-float-center,
+		.small-text-center {
+			text-align: center !important;
+		}
+
+		.small-text-left {
+			text-align: left !important;
+		}
+
+		.small-text-right {
+			text-align: right !important;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+		table.body table.container .hide-for-large {
+			display: block !important;
+			width: auto !important;
+			overflow: visible !important;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+		table.body table.container .row.hide-for-large {
+			display: table !important;
+			width: 100% !important;
+		}
+
+		table.body table.container .show-for-large {
+			display: none !important;
+			width: 0;
+			mso-hide: all;
+			overflow: hidden;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+		table.body img {
+			height: auto !important;
+		}
+
+		table.body center {
+			min-width: 0 !important;
+		}
+
+		table.body .container {
+			width: 95% !important;
+		}
+
+		table.body .column,
+		table.body .columns {
+			height: auto !important;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			padding-left: 15px !important;
+			padding-right: 15px !important;
+		}
+
+		table.body .collapse .column,
+		table.body .collapse .columns,
+		table.body .column .column,
+		table.body .column .columns,
+		table.body .columns .column,
+		table.body .columns .columns {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+
+		.body .column td.small-1,
+		.body .column th.small-1,
+		.body .columns td.small-1,
+		.body .columns th.small-1,
+		td.small-1,
+		td.small-1 center,
+		th.small-1,
+		th.small-1 center {
+			display: inline-block !important;
+			width: 8.33333% !important;
+		}
+
+		.body .column td.small-2,
+		.body .column th.small-2,
+		.body .columns td.small-2,
+		.body .columns th.small-2,
+		td.small-2,
+		td.small-2 center,
+		th.small-2,
+		th.small-2 center {
+			display: inline-block !important;
+			width: 16.66667% !important;
+		}
+
+		.body .column td.small-3,
+		.body .column th.small-3,
+		.body .columns td.small-3,
+		.body .columns th.small-3,
+		td.small-3,
+		td.small-3 center,
+		th.small-3,
+		th.small-3 center {
+			display: inline-block !important;
+			width: 25% !important;
+		}
+
+		.body .column td.small-4,
+		.body .column th.small-4,
+		.body .columns td.small-4,
+		.body .columns th.small-4,
+		td.small-4,
+		td.small-4 center,
+		th.small-4,
+		th.small-4 center {
+			display: inline-block !important;
+			width: 33.33333% !important;
+		}
+
+		.body .column td.small-5,
+		.body .column th.small-5,
+		.body .columns td.small-5,
+		.body .columns th.small-5,
+		td.small-5,
+		td.small-5 center,
+		th.small-5,
+		th.small-5 center {
+			display: inline-block !important;
+			width: 41.66667% !important;
+		}
+
+		.body .column td.small-6,
+		.body .column th.small-6,
+		.body .columns td.small-6,
+		.body .columns th.small-6,
+		td.small-6,
+		td.small-6 center,
+		th.small-6,
+		th.small-6 center {
+			display: inline-block !important;
+			width: 50% !important;
+		}
+
+		.body .column td.small-7,
+		.body .column th.small-7,
+		.body .columns td.small-7,
+		.body .columns th.small-7,
+		td.small-7,
+		td.small-7 center,
+		th.small-7,
+		th.small-7 center {
+			display: inline-block !important;
+			width: 58.33333% !important;
+		}
+
+		.body .column td.small-8,
+		.body .column th.small-8,
+		.body .columns td.small-8,
+		.body .columns th.small-8,
+		td.small-8,
+		td.small-8 center,
+		th.small-8,
+		th.small-8 center {
+			display: inline-block !important;
+			width: 66.66667% !important;
+		}
+
+		.body .column td.small-9,
+		.body .column th.small-9,
+		.body .columns td.small-9,
+		.body .columns th.small-9,
+		td.small-9,
+		td.small-9 center,
+		th.small-9,
+		th.small-9 center {
+			display: inline-block !important;
+			width: 75% !important;
+		}
+
+		.body .column td.small-10,
+		.body .column th.small-10,
+		.body .columns td.small-10,
+		.body .columns th.small-10,
+		td.small-10,
+		td.small-10 center,
+		th.small-10,
+		th.small-10 center {
+			display: inline-block !important;
+			width: 83.33333% !important;
+		}
+
+		.body .column td.small-11,
+		.body .column th.small-11,
+		.body .columns td.small-11,
+		.body .columns th.small-11,
+		td.small-11,
+		td.small-11 center,
+		th.small-11,
+		th.small-11 center {
+			display: inline-block !important;
+			width: 91.66667% !important;
+		}
+
+		table.menu td,
+		table.menu th,
+		td.small-12,
+		th.small-12 {
+			display: inline-block !important;
+			width: 100% !important;
+		}
+
+		.column td.small-12,
+		.column th.small-12,
+		.columns td.small-12,
+		.columns th.small-12 {
+			display: block !important;
+			width: 100% !important;
+		}
+
+		table.body td.small-offset-1,
+		table.body th.small-offset-1 {
+			margin-left: 8.33333% !important;
+			Margin-left: 8.33333% !important;
+		}
+
+		table.body td.small-offset-2,
+		table.body th.small-offset-2 {
+			margin-left: 16.66667% !important;
+			Margin-left: 16.66667% !important;
+		}
+
+		table.body td.small-offset-3,
+		table.body th.small-offset-3 {
+			margin-left: 25% !important;
+			Margin-left: 25% !important;
+		}
+
+		table.body td.small-offset-4,
+		table.body th.small-offset-4 {
+			margin-left: 33.33333% !important;
+			Margin-left: 33.33333% !important;
+		}
+
+		table.body td.small-offset-5,
+		table.body th.small-offset-5 {
+			margin-left: 41.66667% !important;
+			Margin-left: 41.66667% !important;
+		}
+
+		table.body td.small-offset-6,
+		table.body th.small-offset-6 {
+			margin-left: 50% !important;
+			Margin-left: 50% !important;
+		}
+
+		table.body td.small-offset-7,
+		table.body th.small-offset-7 {
+			margin-left: 58.33333% !important;
+			Margin-left: 58.33333% !important;
+		}
+
+		table.body td.small-offset-8,
+		table.body th.small-offset-8 {
+			margin-left: 66.66667% !important;
+			Margin-left: 66.66667% !important;
+		}
+
+		table.body td.small-offset-9,
+		table.body th.small-offset-9 {
+			margin-left: 75% !important;
+			Margin-left: 75% !important;
+		}
+
+		table.body td.small-offset-10,
+		table.body th.small-offset-10 {
+			margin-left: 83.33333% !important;
+			Margin-left: 83.33333% !important;
+		}
+
+		table.body td.small-offset-11,
+		table.body th.small-offset-11 {
+			margin-left: 91.66667% !important;
+			Margin-left: 91.66667% !important;
+		}
+
+		table.body table.columns td.expander,
+		table.body table.columns th.expander {
+			display: none !important;
+		}
+
+		table.body .right-text-pad,
+		table.body .text-pad-right {
+			padding-left: 10px !important;
+		}
+
+		table.body .left-text-pad,
+		table.body .text-pad-left {
+			padding-right: 10px !important;
+		}
+
+		table.menu td,
+		table.menu th {
+			width: auto !important;
+		}
+
+		table.menu.small-vertical td,
+		table.menu.small-vertical th,
+		table.menu.vertical td,
+		table.menu.vertical th {
+			display: block !important;
+		}
+
+		table.body img,
+		table.menu[align=center] {
+			width: auto !important;
+		}
+
+		table.button.expand,
+		table.menu {
+			width: 100% !important;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+
+		.arr,
+		.str1-img,
+		.str2-img {
+			display: none !important;
+		}
+
+		.footer-text,
+		.manager {
+			text-align: center !important;
+		}
+
+		.f-tel,
+		.manager {
+			margin: 0 !important;
+		}
+
+		.y-btn {
+			margin-bottom: 10px !important;
+		}
+
+		.big-white {
+			line-height: 1.2 !important;
+		}
+
+		.blue-str {
+			padding: 24px 24px 24px 52px;
+		}
+
+		.hello-section .yellow {
+			margin-top: 10px;
+		}
+	}
+</style> <!--[if mso]>
+<style type=”text/css”>
+    td {
+        font-family: Arial, sans-serif !important;
+    }
+    .p-text {
+        color: #333 !important;
+    }
+    .red-border {
+        border: none !important;
+    }
+</style>
+<![endif]--> <!-- Emails use the XHTML Strict doctype --> <!-- The character set should be utf-8 -->
+<!-- Enables media queries --> <!-- Link to the email's CSS, which will be inlined into the email -->
+<style>
+	@media only screen and (max-width:825px) {
+		.small-float-center {
+			margin: 0 auto !important;
+			float: none !important;
+		}
+
+		.small-float-center,
+		.small-text-center {
+			text-align: center !important;
+		}
+
+		.small-text-left {
+			text-align: left !important;
+		}
+
+		.small-text-right {
+			text-align: right !important;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+		table.body table.container .hide-for-large {
+			display: block !important;
+			width: auto !important;
+			overflow: visible !important;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+		table.body table.container .row.hide-for-large {
+			display: table !important;
+			width: 100% !important;
+		}
+
+		table.body table.container .show-for-large {
+			display: none !important;
+			width: 0;
+			mso-hide: all;
+			overflow: hidden;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+		table.body img {
+			height: auto !important;
+		}
+
+		table.body center {
+			min-width: 0 !important;
+		}
+
+		table.body .container {
+			width: 95% !important;
+		}
+
+		table.body .column,
+		table.body .columns {
+			height: auto !important;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			padding-left: 15px !important;
+			padding-right: 15px !important;
+		}
+
+		table.body .collapse .column,
+		table.body .collapse .columns,
+		table.body .column .column,
+		table.body .column .columns,
+		table.body .columns .column,
+		table.body .columns .columns {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+
+		.body .column td.small-1,
+		.body .column th.small-1,
+		.body .columns td.small-1,
+		.body .columns th.small-1,
+		td.small-1,
+		td.small-1 center,
+		th.small-1,
+		th.small-1 center {
+			display: inline-block !important;
+			width: 8.33333% !important;
+		}
+
+		.body .column td.small-2,
+		.body .column th.small-2,
+		.body .columns td.small-2,
+		.body .columns th.small-2,
+		td.small-2,
+		td.small-2 center,
+		th.small-2,
+		th.small-2 center {
+			display: inline-block !important;
+			width: 16.66667% !important;
+		}
+
+		.body .column td.small-3,
+		.body .column th.small-3,
+		.body .columns td.small-3,
+		.body .columns th.small-3,
+		td.small-3,
+		td.small-3 center,
+		th.small-3,
+		th.small-3 center {
+			display: inline-block !important;
+			width: 25% !important;
+		}
+
+		.body .column td.small-4,
+		.body .column th.small-4,
+		.body .columns td.small-4,
+		.body .columns th.small-4,
+		td.small-4,
+		td.small-4 center,
+		th.small-4,
+		th.small-4 center {
+			display: inline-block !important;
+			width: 33.33333% !important;
+		}
+
+		.body .column td.small-5,
+		.body .column th.small-5,
+		.body .columns td.small-5,
+		.body .columns th.small-5,
+		td.small-5,
+		td.small-5 center,
+		th.small-5,
+		th.small-5 center {
+			display: inline-block !important;
+			width: 41.66667% !important;
+		}
+
+		.body .column td.small-6,
+		.body .column th.small-6,
+		.body .columns td.small-6,
+		.body .columns th.small-6,
+		td.small-6,
+		td.small-6 center,
+		th.small-6,
+		th.small-6 center {
+			display: inline-block !important;
+			width: 50% !important;
+		}
+
+		.body .column td.small-7,
+		.body .column th.small-7,
+		.body .columns td.small-7,
+		.body .columns th.small-7,
+		td.small-7,
+		td.small-7 center,
+		th.small-7,
+		th.small-7 center {
+			display: inline-block !important;
+			width: 58.33333% !important;
+		}
+
+		.body .column td.small-8,
+		.body .column th.small-8,
+		.body .columns td.small-8,
+		.body .columns th.small-8,
+		td.small-8,
+		td.small-8 center,
+		th.small-8,
+		th.small-8 center {
+			display: inline-block !important;
+			width: 66.66667% !important;
+		}
+
+		.body .column td.small-9,
+		.body .column th.small-9,
+		.body .columns td.small-9,
+		.body .columns th.small-9,
+		td.small-9,
+		td.small-9 center,
+		th.small-9,
+		th.small-9 center {
+			display: inline-block !important;
+			width: 75% !important;
+		}
+
+		.body .column td.small-10,
+		.body .column th.small-10,
+		.body .columns td.small-10,
+		.body .columns th.small-10,
+		td.small-10,
+		td.small-10 center,
+		th.small-10,
+		th.small-10 center {
+			display: inline-block !important;
+			width: 83.33333% !important;
+		}
+
+		.body .column td.small-11,
+		.body .column th.small-11,
+		.body .columns td.small-11,
+		.body .columns th.small-11,
+		td.small-11,
+		td.small-11 center,
+		th.small-11,
+		th.small-11 center {
+			display: inline-block !important;
+			width: 91.66667% !important;
+		}
+
+		table.menu td,
+		table.menu th,
+		td.small-12,
+		th.small-12 {
+			display: inline-block !important;
+			width: 100% !important;
+		}
+
+		.column td.small-12,
+		.column th.small-12,
+		.columns td.small-12,
+		.columns th.small-12 {
+			display: block !important;
+			width: 100% !important;
+		}
+
+		table.body td.small-offset-1,
+		table.body th.small-offset-1 {
+			margin-left: 8.33333% !important;
+			Margin-left: 8.33333% !important;
+		}
+
+		table.body td.small-offset-2,
+		table.body th.small-offset-2 {
+			margin-left: 16.66667% !important;
+			Margin-left: 16.66667% !important;
+		}
+
+		table.body td.small-offset-3,
+		table.body th.small-offset-3 {
+			margin-left: 25% !important;
+			Margin-left: 25% !important;
+		}
+
+		table.body td.small-offset-4,
+		table.body th.small-offset-4 {
+			margin-left: 33.33333% !important;
+			Margin-left: 33.33333% !important;
+		}
+
+		table.body td.small-offset-5,
+		table.body th.small-offset-5 {
+			margin-left: 41.66667% !important;
+			Margin-left: 41.66667% !important;
+		}
+
+		table.body td.small-offset-6,
+		table.body th.small-offset-6 {
+			margin-left: 50% !important;
+			Margin-left: 50% !important;
+		}
+
+		table.body td.small-offset-7,
+		table.body th.small-offset-7 {
+			margin-left: 58.33333% !important;
+			Margin-left: 58.33333% !important;
+		}
+
+		table.body td.small-offset-8,
+		table.body th.small-offset-8 {
+			margin-left: 66.66667% !important;
+			Margin-left: 66.66667% !important;
+		}
+
+		table.body td.small-offset-9,
+		table.body th.small-offset-9 {
+			margin-left: 75% !important;
+			Margin-left: 75% !important;
+		}
+
+		table.body td.small-offset-10,
+		table.body th.small-offset-10 {
+			margin-left: 83.33333% !important;
+			Margin-left: 83.33333% !important;
+		}
+
+		table.body td.small-offset-11,
+		table.body th.small-offset-11 {
+			margin-left: 91.66667% !important;
+			Margin-left: 91.66667% !important;
+		}
+
+		table.body table.columns td.expander,
+		table.body table.columns th.expander {
+			display: none !important;
+		}
+
+		table.body .right-text-pad,
+		table.body .text-pad-right {
+			padding-left: 10px !important;
+		}
+
+		table.body .left-text-pad,
+		table.body .text-pad-left {
+			padding-right: 10px !important;
+		}
+
+		table.menu td,
+		table.menu th {
+			width: auto !important;
+		}
+
+		table.menu.small-vertical td,
+		table.menu.small-vertical th,
+		table.menu.vertical td,
+		table.menu.vertical th {
+			display: block !important;
+		}
+
+		table.body img,
+		table.menu[align=center] {
+			width: auto !important;
+		}
+
+		table.button.expand,
+		table.menu {
+			width: 100% !important;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+
+		.arr,
+		.str1-img,
+		.str2-img {
+			display: none !important;
+		}
+
+		.footer-text,
+		.manager {
+			text-align: center !important;
+		}
+
+		.f-tel,
+		.manager {
+			margin: 0 !important;
+		}
+
+		.y-btn {
+			margin-bottom: 10px !important;
+		}
+
+		.big-white {
+			line-height: 1.2 !important;
+		}
+
+		.blue-str {
+			padding: 24px 24px 24px 52px;
+		}
+
+		.hello-section .yellow {
+			margin-top: 10px;
+		}
+	}
+</style> <!--[if mso]>
+<style type=”text/css”>
+    td {
+        font-family: Arial, sans-serif !important;
+    }
+    .p-text {
+        color: #333 !important;
+    }
+    .red-border {
+        border: none !important;
+    }
+</style>
+<![endif]--> <!-- Emails use the XHTML Strict doctype --> <!-- The character set should be utf-8 -->
+<!-- Enables media queries --> <!-- Link to the email's CSS, which will be inlined into the email -->
+<style>
+	@media only screen and (max-width:825px) {
+		.small-float-center {
+			margin: 0 auto !important;
+			float: none !important;
+		}
+
+		.small-float-center,
+		.small-text-center {
+			text-align: center !important;
+		}
+
+		.small-text-left {
+			text-align: left !important;
+		}
+
+		.small-text-right {
+			text-align: right !important;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+		table.body table.container .hide-for-large {
+			display: block !important;
+			width: auto !important;
+			overflow: visible !important;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+		table.body table.container .row.hide-for-large {
+			display: table !important;
+			width: 100% !important;
+		}
+
+		table.body table.container .show-for-large {
+			display: none !important;
+			width: 0;
+			mso-hide: all;
+			overflow: hidden;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+		table.body img {
+			height: auto !important;
+		}
+
+		table.body center {
+			min-width: 0 !important;
+		}
+
+		table.body .container {
+			width: 95% !important;
+		}
+
+		table.body .column,
+		table.body .columns {
+			height: auto !important;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			padding-left: 15px !important;
+			padding-right: 15px !important;
+		}
+
+		table.body .collapse .column,
+		table.body .collapse .columns,
+		table.body .column .column,
+		table.body .column .columns,
+		table.body .columns .column,
+		table.body .columns .columns {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+
+		.body .column td.small-1,
+		.body .column th.small-1,
+		.body .columns td.small-1,
+		.body .columns th.small-1,
+		td.small-1,
+		td.small-1 center,
+		th.small-1,
+		th.small-1 center {
+			display: inline-block !important;
+			width: 8.33333% !important;
+		}
+
+		.body .column td.small-2,
+		.body .column th.small-2,
+		.body .columns td.small-2,
+		.body .columns th.small-2,
+		td.small-2,
+		td.small-2 center,
+		th.small-2,
+		th.small-2 center {
+			display: inline-block !important;
+			width: 16.66667% !important;
+		}
+
+		.body .column td.small-3,
+		.body .column th.small-3,
+		.body .columns td.small-3,
+		.body .columns th.small-3,
+		td.small-3,
+		td.small-3 center,
+		th.small-3,
+		th.small-3 center {
+			display: inline-block !important;
+			width: 25% !important;
+		}
+
+		.body .column td.small-4,
+		.body .column th.small-4,
+		.body .columns td.small-4,
+		.body .columns th.small-4,
+		td.small-4,
+		td.small-4 center,
+		th.small-4,
+		th.small-4 center {
+			display: inline-block !important;
+			width: 33.33333% !important;
+		}
+
+		.body .column td.small-5,
+		.body .column th.small-5,
+		.body .columns td.small-5,
+		.body .columns th.small-5,
+		td.small-5,
+		td.small-5 center,
+		th.small-5,
+		th.small-5 center {
+			display: inline-block !important;
+			width: 41.66667% !important;
+		}
+
+		.body .column td.small-6,
+		.body .column th.small-6,
+		.body .columns td.small-6,
+		.body .columns th.small-6,
+		td.small-6,
+		td.small-6 center,
+		th.small-6,
+		th.small-6 center {
+			display: inline-block !important;
+			width: 50% !important;
+		}
+
+		.body .column td.small-7,
+		.body .column th.small-7,
+		.body .columns td.small-7,
+		.body .columns th.small-7,
+		td.small-7,
+		td.small-7 center,
+		th.small-7,
+		th.small-7 center {
+			display: inline-block !important;
+			width: 58.33333% !important;
+		}
+
+		.body .column td.small-8,
+		.body .column th.small-8,
+		.body .columns td.small-8,
+		.body .columns th.small-8,
+		td.small-8,
+		td.small-8 center,
+		th.small-8,
+		th.small-8 center {
+			display: inline-block !important;
+			width: 66.66667% !important;
+		}
+
+		.body .column td.small-9,
+		.body .column th.small-9,
+		.body .columns td.small-9,
+		.body .columns th.small-9,
+		td.small-9,
+		td.small-9 center,
+		th.small-9,
+		th.small-9 center {
+			display: inline-block !important;
+			width: 75% !important;
+		}
+
+		.body .column td.small-10,
+		.body .column th.small-10,
+		.body .columns td.small-10,
+		.body .columns th.small-10,
+		td.small-10,
+		td.small-10 center,
+		th.small-10,
+		th.small-10 center {
+			display: inline-block !important;
+			width: 83.33333% !important;
+		}
+
+		.body .column td.small-11,
+		.body .column th.small-11,
+		.body .columns td.small-11,
+		.body .columns th.small-11,
+		td.small-11,
+		td.small-11 center,
+		th.small-11,
+		th.small-11 center {
+			display: inline-block !important;
+			width: 91.66667% !important;
+		}
+
+		table.menu td,
+		table.menu th,
+		td.small-12,
+		th.small-12 {
+			display: inline-block !important;
+			width: 100% !important;
+		}
+
+		.column td.small-12,
+		.column th.small-12,
+		.columns td.small-12,
+		.columns th.small-12 {
+			display: block !important;
+			width: 100% !important;
+		}
+
+		table.body td.small-offset-1,
+		table.body th.small-offset-1 {
+			margin-left: 8.33333% !important;
+			Margin-left: 8.33333% !important;
+		}
+
+		table.body td.small-offset-2,
+		table.body th.small-offset-2 {
+			margin-left: 16.66667% !important;
+			Margin-left: 16.66667% !important;
+		}
+
+		table.body td.small-offset-3,
+		table.body th.small-offset-3 {
+			margin-left: 25% !important;
+			Margin-left: 25% !important;
+		}
+
+		table.body td.small-offset-4,
+		table.body th.small-offset-4 {
+			margin-left: 33.33333% !important;
+			Margin-left: 33.33333% !important;
+		}
+
+		table.body td.small-offset-5,
+		table.body th.small-offset-5 {
+			margin-left: 41.66667% !important;
+			Margin-left: 41.66667% !important;
+		}
+
+		table.body td.small-offset-6,
+		table.body th.small-offset-6 {
+			margin-left: 50% !important;
+			Margin-left: 50% !important;
+		}
+
+		table.body td.small-offset-7,
+		table.body th.small-offset-7 {
+			margin-left: 58.33333% !important;
+			Margin-left: 58.33333% !important;
+		}
+
+		table.body td.small-offset-8,
+		table.body th.small-offset-8 {
+			margin-left: 66.66667% !important;
+			Margin-left: 66.66667% !important;
+		}
+
+		table.body td.small-offset-9,
+		table.body th.small-offset-9 {
+			margin-left: 75% !important;
+			Margin-left: 75% !important;
+		}
+
+		table.body td.small-offset-10,
+		table.body th.small-offset-10 {
+			margin-left: 83.33333% !important;
+			Margin-left: 83.33333% !important;
+		}
+
+		table.body td.small-offset-11,
+		table.body th.small-offset-11 {
+			margin-left: 91.66667% !important;
+			Margin-left: 91.66667% !important;
+		}
+
+		table.body table.columns td.expander,
+		table.body table.columns th.expander {
+			display: none !important;
+		}
+
+		table.body .right-text-pad,
+		table.body .text-pad-right {
+			padding-left: 10px !important;
+		}
+
+		table.body .left-text-pad,
+		table.body .text-pad-left {
+			padding-right: 10px !important;
+		}
+
+		table.menu td,
+		table.menu th {
+			width: auto !important;
+		}
+
+		table.menu.small-vertical td,
+		table.menu.small-vertical th,
+		table.menu.vertical td,
+		table.menu.vertical th {
+			display: block !important;
+		}
+
+		table.body img,
+		table.menu[align=center] {
+			width: auto !important;
+		}
+
+		table.button.expand,
+		table.menu {
+			width: 100% !important;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+
+		.arr,
+		.str1-img,
+		.str2-img {
+			display: none !important;
+		}
+
+		.footer-text,
+		.manager {
+			text-align: center !important;
+		}
+
+		.f-tel,
+		.manager {
+			margin: 0 !important;
+		}
+
+		.y-btn {
+			margin-bottom: 10px !important;
+		}
+
+		.big-white {
+			line-height: 1.2 !important;
+		}
+
+		.blue-str {
+			padding: 24px 24px 24px 52px;
+		}
+
+		.hello-section .yellow {
+			margin-top: 10px;
+		}
+	}
+</style> <!--[if mso]>
+<style type=”text/css”>
+    td {
+        font-family: Arial, sans-serif !important;
+    }
+    .p-text {
+        color: #333 !important;
+    }
+    .red-border {
+        border: none !important;
+    }
+</style>
+<![endif]--> <!-- Emails use the XHTML Strict doctype --> <!-- The character set should be utf-8 -->
+<!-- Enables media queries --> <!-- Link to the email's CSS, which will be inlined into the email -->
+<style>
+	@media only screen and (max-width:825px) {
+		.small-float-center {
+			margin: 0 auto !important;
+			float: none !important;
+		}
+
+		.small-float-center,
+		.small-text-center {
+			text-align: center !important;
+		}
+
+		.small-text-left {
+			text-align: left !important;
+		}
+
+		.small-text-right {
+			text-align: right !important;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+		table.body table.container .hide-for-large {
+			display: block !important;
+			width: auto !important;
+			overflow: visible !important;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+		table.body table.container .row.hide-for-large {
+			display: table !important;
+			width: 100% !important;
+		}
+
+		table.body table.container .show-for-large {
+			display: none !important;
+			width: 0;
+			mso-hide: all;
+			overflow: hidden;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+		table.body img {
+			height: auto !important;
+		}
+
+		table.body center {
+			min-width: 0 !important;
+		}
+
+		table.body .container {
+			width: 95% !important;
+		}
+
+		table.body .column,
+		table.body .columns {
+			height: auto !important;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			padding-left: 15px !important;
+			padding-right: 15px !important;
+		}
+
+		table.body .collapse .column,
+		table.body .collapse .columns,
+		table.body .column .column,
+		table.body .column .columns,
+		table.body .columns .column,
+		table.body .columns .columns {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+
+		.body .column td.small-1,
+		.body .column th.small-1,
+		.body .columns td.small-1,
+		.body .columns th.small-1,
+		td.small-1,
+		td.small-1 center,
+		th.small-1,
+		th.small-1 center {
+			display: inline-block !important;
+			width: 8.33333% !important;
+		}
+
+		.body .column td.small-2,
+		.body .column th.small-2,
+		.body .columns td.small-2,
+		.body .columns th.small-2,
+		td.small-2,
+		td.small-2 center,
+		th.small-2,
+		th.small-2 center {
+			display: inline-block !important;
+			width: 16.66667% !important;
+		}
+
+		.body .column td.small-3,
+		.body .column th.small-3,
+		.body .columns td.small-3,
+		.body .columns th.small-3,
+		td.small-3,
+		td.small-3 center,
+		th.small-3,
+		th.small-3 center {
+			display: inline-block !important;
+			width: 25% !important;
+		}
+
+		.body .column td.small-4,
+		.body .column th.small-4,
+		.body .columns td.small-4,
+		.body .columns th.small-4,
+		td.small-4,
+		td.small-4 center,
+		th.small-4,
+		th.small-4 center {
+			display: inline-block !important;
+			width: 33.33333% !important;
+		}
+
+		.body .column td.small-5,
+		.body .column th.small-5,
+		.body .columns td.small-5,
+		.body .columns th.small-5,
+		td.small-5,
+		td.small-5 center,
+		th.small-5,
+		th.small-5 center {
+			display: inline-block !important;
+			width: 41.66667% !important;
+		}
+
+		.body .column td.small-6,
+		.body .column th.small-6,
+		.body .columns td.small-6,
+		.body .columns th.small-6,
+		td.small-6,
+		td.small-6 center,
+		th.small-6,
+		th.small-6 center {
+			display: inline-block !important;
+			width: 50% !important;
+		}
+
+		.body .column td.small-7,
+		.body .column th.small-7,
+		.body .columns td.small-7,
+		.body .columns th.small-7,
+		td.small-7,
+		td.small-7 center,
+		th.small-7,
+		th.small-7 center {
+			display: inline-block !important;
+			width: 58.33333% !important;
+		}
+
+		.body .column td.small-8,
+		.body .column th.small-8,
+		.body .columns td.small-8,
+		.body .columns th.small-8,
+		td.small-8,
+		td.small-8 center,
+		th.small-8,
+		th.small-8 center {
+			display: inline-block !important;
+			width: 66.66667% !important;
+		}
+
+		.body .column td.small-9,
+		.body .column th.small-9,
+		.body .columns td.small-9,
+		.body .columns th.small-9,
+		td.small-9,
+		td.small-9 center,
+		th.small-9,
+		th.small-9 center {
+			display: inline-block !important;
+			width: 75% !important;
+		}
+
+		.body .column td.small-10,
+		.body .column th.small-10,
+		.body .columns td.small-10,
+		.body .columns th.small-10,
+		td.small-10,
+		td.small-10 center,
+		th.small-10,
+		th.small-10 center {
+			display: inline-block !important;
+			width: 83.33333% !important;
+		}
+
+		.body .column td.small-11,
+		.body .column th.small-11,
+		.body .columns td.small-11,
+		.body .columns th.small-11,
+		td.small-11,
+		td.small-11 center,
+		th.small-11,
+		th.small-11 center {
+			display: inline-block !important;
+			width: 91.66667% !important;
+		}
+
+		table.menu td,
+		table.menu th,
+		td.small-12,
+		th.small-12 {
+			display: inline-block !important;
+			width: 100% !important;
+		}
+
+		.column td.small-12,
+		.column th.small-12,
+		.columns td.small-12,
+		.columns th.small-12 {
+			display: block !important;
+			width: 100% !important;
+		}
+
+		table.body td.small-offset-1,
+		table.body th.small-offset-1 {
+			margin-left: 8.33333% !important;
+			Margin-left: 8.33333% !important;
+		}
+
+		table.body td.small-offset-2,
+		table.body th.small-offset-2 {
+			margin-left: 16.66667% !important;
+			Margin-left: 16.66667% !important;
+		}
+
+		table.body td.small-offset-3,
+		table.body th.small-offset-3 {
+			margin-left: 25% !important;
+			Margin-left: 25% !important;
+		}
+
+		table.body td.small-offset-4,
+		table.body th.small-offset-4 {
+			margin-left: 33.33333% !important;
+			Margin-left: 33.33333% !important;
+		}
+
+		table.body td.small-offset-5,
+		table.body th.small-offset-5 {
+			margin-left: 41.66667% !important;
+			Margin-left: 41.66667% !important;
+		}
+
+		table.body td.small-offset-6,
+		table.body th.small-offset-6 {
+			margin-left: 50% !important;
+			Margin-left: 50% !important;
+		}
+
+		table.body td.small-offset-7,
+		table.body th.small-offset-7 {
+			margin-left: 58.33333% !important;
+			Margin-left: 58.33333% !important;
+		}
+
+		table.body td.small-offset-8,
+		table.body th.small-offset-8 {
+			margin-left: 66.66667% !important;
+			Margin-left: 66.66667% !important;
+		}
+
+		table.body td.small-offset-9,
+		table.body th.small-offset-9 {
+			margin-left: 75% !important;
+			Margin-left: 75% !important;
+		}
+
+		table.body td.small-offset-10,
+		table.body th.small-offset-10 {
+			margin-left: 83.33333% !important;
+			Margin-left: 83.33333% !important;
+		}
+
+		table.body td.small-offset-11,
+		table.body th.small-offset-11 {
+			margin-left: 91.66667% !important;
+			Margin-left: 91.66667% !important;
+		}
+
+		table.body table.columns td.expander,
+		table.body table.columns th.expander {
+			display: none !important;
+		}
+
+		table.body .right-text-pad,
+		table.body .text-pad-right {
+			padding-left: 10px !important;
+		}
+
+		table.body .left-text-pad,
+		table.body .text-pad-left {
+			padding-right: 10px !important;
+		}
+
+		table.menu td,
+		table.menu th {
+			width: auto !important;
+		}
+
+		table.menu.small-vertical td,
+		table.menu.small-vertical th,
+		table.menu.vertical td,
+		table.menu.vertical th {
+			display: block !important;
+		}
+
+		table.body img,
+		table.menu[align=center] {
+			width: auto !important;
+		}
+
+		table.button.expand,
+		table.menu {
+			width: 100% !important;
+		}
+	}
+
+
+	@media only screen and (max-width:825px) {
+
+		.arr,
+		.str1-img,
+		.str2-img {
+			display: none !important;
+		}
+
+		.footer-text,
+		.manager {
+			text-align: center !important;
+		}
+
+		.f-tel,
+		.manager {
+			margin: 0 !important;
+		}
+
+		.y-btn {
+			margin-bottom: 10px !important;
+		}
+
+		.big-white {
+			line-height: 1.2 !important;
+		}
+
+		.blue-str {
+			padding: 24px 24px 24px 52px;
+		}
+
+		.hello-section .yellow {
+			margin-top: 10px;
+		}
+	}
+</style> <!--[if mso]>
+<style type=”text/css”>
+    td {
+        font-family: Arial, sans-serif !important;
+    }
+    .p-text {
+        color: #333 !important;
+    }
+    .red-border {
+        border: none !important;
+    }
+</style>
+<![endif]-->
+<style>
+	a {
+		color: #3198a7;
+		color: #3198a7 !important;
+	}
+</style>
+<table class="body" style="background-color: #edf8fc; max-width: 600px; padding: 20px;">
+	<tbody>
+		<tr>
+			<td>
+				<!--хедер начало-->
+				<div class="container1">
+					<table class="container" align="center">
+						<tbody>
+							<tr>
+								<td>
+									<!--<a href="www.ittelo.ru/?utm_source=email&utm_campaign=offers"><img src="https://raw.githubusercontent.com/SkiperX/images/master/31.jpg" alt=""></a>-->
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+
+				<div class="header_letter"
+					style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+					<div class="logo_letter">
+						<img src=""><img width="91" alt="logo (1).png"
+							src="/upload/medialibrary/837/83781ea58f431f9a3c36142958700236.png" height="34"
+							title="logo (1).png">
+					</div>
+					<div class="phone_letter_cnt" style="display: flex; flex-direction: column;">
+						<div>
+							<a class="phone_letter" href="tel:88005517166">8 800 551-71-66</a>
+						</div>
+						<div class="phone_letter_sub">
+							Бесплатный звонок по России
+						</div>
+					</div>
+				</div>
+
+				<!--хедер  конец-->
+				<div class="hello-section">
+					<!-- <table class="spacer">
+						<tbody>
+							<tr>
+								<td height="40px">
+									&nbsp;
+								</td>
+							</tr>
+						</tbody>
+					</table> -->
+					<table class="container" align="center">
+						<tbody>
+							<tr>
+								<td>
+									<div class="hello">
+										<b>
+											Предлагаем вам рассмотреть приобретение оборудования в следующей конфигурации: </b>
+										<br>
+										<br>
+										<!-- <table class="spacer">
+											<tbody>
+												<tr>
+													<td height="10px">
+														&nbsp;
+													</td>
+												</tr>
+											</tbody>
+										</table> -->
+										<div class="page-title-big">
+											#itemName#
+										</div>
+										<!-- <table class="row">
+											<tbody>
+												<tr>
+													<th class="small-12 large-6 columns first">
+														<table>
+															<tbody>
+																<tr>
+																	<th>
+																		<img width="360" src="https://www.ittelo.ru#src#" height="240"
+																			alt="">
+																	</th>
+																</tr>
+															</tbody>
+														</table>
+													</th>
+													<th class="small-12 large-6 columns last">
+														<table>
+															<tbody>
+																<tr>
+																	<th>
+																		<div class="product-lines">
+																			#props#
+																		</div>
+																	</th>
+																</tr>
+															</tbody>
+														</table>
+													</th>
+												</tr>
+											</tbody>
+										</table> -->
+										<!-- <table class="spacer">
+											<tbody>
+												<tr>
+													<td height="15px">
+														&nbsp;
+													</td>
+												</tr>
+											</tbody>
+										</table> -->
+										Имя<br>
+										*******************************<br>
+										#name#<br>
+										<br>
+										Email<br>
+										*******************************<br>
+										#email#<br>
+										<br>
+										Телефон<br>
+										*******************************<br>
+										#phone#<br>
+										<br>
+										Конфигурация<br>
+										*******************************<br>
+										#conf#<br>
+										<br>
+										Ссылка на оборудование<br>
+										*******************************<br>
+										<a href="#item#?utm_source=email&utm_campaign=offers">#item#</a><br>
+										<br>
+										Комментарий:<br>
+										*******************************<br>
+										#comment#
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<br>
+				<!-- <div class="contact-section l-green">
+			<table class="spacer">
+			<tbody>
+			<tr>
+				<td height="30px">
+					 &nbsp;
+				</td>
+			</tr>
+			</tbody>
+			</table>
+			<table class="container" align="center">
+			<tbody>
+			<tr>
+				<td>
+					<table class="row">
+					<tbody>
+					<tr>
+						<th class="small-12 large-2 columns first">
+							<table>
+							<tbody>
+							<tr>
+								<th>
+									<div class="text-center">
+ <img src="https://raw.githubusercontent.com/SkiperX/images/master/k1.png" alt="" class="peim">
+									</div>
+									<table class="spacer">
+									<tbody>
+									<tr>
+										<td height="15px">
+											 &nbsp;
+										</td>
+									</tr>
+									</tbody>
+									</table>
+									<div class="text2">
+										 Нагрузочные тесты пройдены
+									</div>
+								</th>
+							</tr>
+							</tbody>
+							</table>
+						</th>
+						<th class="small-12 large-1 columns">
+							<table>
+							<tbody>
+							<tr>
+								<th>
+									<table class="spacer">
+									<tbody>
+									<tr>
+										<td height="30px">
+											 &nbsp;
+										</td>
+									</tr>
+									</tbody>
+									</table>
+									<div class="text-center">
+ <img src="https://raw.githubusercontent.com/SkiperX/images/master/arr.png" alt="" class="arr">
+									</div>
+								</th>
+							</tr>
+							</tbody>
+							</table>
+						</th>
+						<th class="small-12 large-2 columns">
+							<table>
+							<tbody>
+							<tr>
+								<th>
+									<div class="text-center">
+ <img src="https://raw.githubusercontent.com/SkiperX/images/master/k2.png" alt="" class="peim">
+									</div>
+									<table class="spacer">
+									<tbody>
+									<tr>
+										<td height="15px">
+											 &nbsp;
+										</td>
+									</tr>
+									</tbody>
+									</table>
+									<div class="text2">
+										 Бесплатная доставка
+									</div>
+								</th>
+							</tr>
+							</tbody>
+							</table>
+						</th>
+						<th class="small-12 large-1 columns">
+							<table>
+							<tbody>
+							<tr>
+								<th>
+									<table class="spacer">
+									<tbody>
+									<tr>
+										<td height="30px">
+											 &nbsp;
+										</td>
+									</tr>
+									</tbody>
+									</table>
+ <img src="https://raw.githubusercontent.com/SkiperX/images/master/arr.png" alt="" class="arr">
+								</th>
+							</tr>
+							</tbody>
+							</table>
+						</th>
+						<th class="small-12 large-2 columns">
+							<table>
+							<tbody>
+							<tr>
+								<th>
+ <img src="https://raw.githubusercontent.com/SkiperX/images/master/k3.png" alt="" class="peim">
+									<table class="spacer">
+									<tbody>
+									<tr>
+										<td height="15px">
+											 &nbsp;
+										</td>
+									</tr>
+									</tbody>
+									</table>
+									<div class="text2">
+										 Тест-драйв у Вас
+									</div>
+								</th>
+							</tr>
+							</tbody>
+							</table>
+						</th>
+						<th class="small-12 large-1 columns">
+							<table>
+							<tbody>
+							<tr>
+								<th>
+									<table class="spacer">
+									<tbody>
+									<tr>
+										<td height="30px">
+											 &nbsp;
+										</td>
+									</tr>
+									</tbody>
+									</table>
+ <img src="https://raw.githubusercontent.com/SkiperX/images/master/arr.png" alt="" class="arr">
+								</th>
+							</tr>
+							</tbody>
+							</table>
+						</th>
+						<th class="small-12 large-2 columns">
+							<table>
+							<tbody>
+							<tr>
+								<th>
+ <img src="https://raw.githubusercontent.com/SkiperX/images/master/k4.png" alt="" class="peim">
+									<table class="spacer">
+									<tbody>
+									<tr>
+										<td height="15px">
+											 &nbsp;
+										</td>
+									</tr>
+									</tbody>
+									</table>
+									<div class="text2">
+										 Постоплата
+									</div>
+								</th>
+							</tr>
+							</tbody>
+							</table>
+						</th>
+						<th class="small-12 large-1 columns">
+							<table>
+							<tbody>
+							<tr>
+								<th>
+									<table class="spacer">
+									<tbody>
+									<tr>
+										<td height="30px">
+											 &nbsp;
+										</td>
+									</tr>
+									</tbody>
+									</table>
+ <img src="https://raw.githubusercontent.com/SkiperX/images/master/arr.png" alt="" class="arr">
+								</th>
+							</tr>
+							</tbody>
+							</table>
+						</th>
+						<th class="small-12 large-2 columns last">
+							<table>
+							<tbody>
+							<tr>
+								<th>
+ <img src="https://raw.githubusercontent.com/SkiperX/images/master/k5.png" alt="" class="peim">
+									<table class="spacer">
+									<tbody>
+									<tr>
+										<td height="15px">
+											 &nbsp;
+										</td>
+									</tr>
+									</tbody>
+									</table>
+									<div class="text2">
+										 Гарантия 12 месяцев
+									</div>
+								</th>
+							</tr>
+							</tbody>
+							</table>
+						</th>
+					</tr>
+					</tbody>
+					</table>
+					<table class="spacer">
+					<tbody>
+					<tr>
+						<td height="20px">
+							 &nbsp;
+						</td>
+					</tr>
+					</tbody>
+					</table>
+				</td>
+			</tr>
+			</tbody>
+			</table>
+		</div> --> <br>
+				<br>
+				<!-- <table class="container" align="center">
+		<tbody>
+		<tr>
+			<td>
+				<div class="hello">
+ <br>
+					 Высококвалифицированные специалисты&nbsp;<noindex><a href="https://www.ittelo.ru/?utm_source=email&utm_campaign=offers">ittelo.ru</a></noindex>&nbsp;могут помочь вам подобрать оборудование под вашу задачу - от простейших инсталяций до отказоустойчивых кластеров с использованием технологий виртуализации и программно-определяемой СХД.<br>
+				</div>
+ <br>
+ <br>
+ <br>
+			</td>
+		</tr>
+		</tbody>
+		</table> -->
+				<div>
+					<table class="container" align="center">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row">
+										<tbody>
+											<tr>
+												<th class="small-12 large-4 columns first">
+													<table>
+														<tbody>
+															<tr>
+																<th>
+																	<div class="footer-cop">
+																		<a href="tel:+78005517036"> +7 (800) 551-70-36</a>
+																	</div>
+																</th>
+															</tr>
+														</tbody>
+													</table>
+												</th>
+												<th class="small-12 large-4 columns">
+													<table>
+														<tbody>
+															<tr>
+																<th>
+																	<br>
+																</th>
+															</tr>
+														</tbody>
+													</table>
+												</th>
+												<th class="small-12 large-4 columns last">
+													<table>
+														<tbody>
+															<tr>
+																<th>
+																	<div class="footer-cop">
+																		<a href="https://www.ittelo.ru/?utm_source=email&utm_campaign=offers"
+																			class="blue-link"> www.ittelo.ru </a>
+																	</div>
+																</th>
+															</tr>
+														</tbody>
+													</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- <table class="spacer">
+					<tbody>
+						<tr>
+							<td height="50px">
+								&nbsp;
+							</td>
+						</tr>
+					</tbody>
+				</table> -->
+				<div class="footer">
+					<table class="container" align="center">
+						<tbody>
+							<tr>
+								<td>
+									<!-- <a href="http://www.ittelo.ru/?utm_source=email&utm_campaign=offers"><img src="https://raw.githubusercontent.com/SkiperX/images/master/38.png" alt=""></a> -->
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
